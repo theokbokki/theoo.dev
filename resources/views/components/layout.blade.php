@@ -130,20 +130,33 @@
             }
 
             .app {
+                display: grid;
+                row: 5rem;
                 width: 87.2%;
-                margin: 0 auto;
+                margin: 2.5rem auto 1.5rem;
                 max-width: 50rem;
-                font-family: var(--pixel);
+                font-family: var(--sans);
+
+                @media screen and (min-width: 60rem) {
+                    margin: 5rem auto 2.5rem;
+                    row: 7.5rem;
+                }
             }
+
+
         </style>
         @stack('styles')
     </head>
     <body class="app">
         <h1 class="sro">{{ $title }}</h1>
 
-        {{ $nav }}
+        <header class="app_header">
+            {{ $nav }}
+        </header>
 
-        {{ $slot }}
+        <main class="app__content">
+            {{ $slot }}
+        </main>
     </body>
 
     @stack('scripts')

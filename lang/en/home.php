@@ -2,4 +2,5 @@
 
 return [
     'title' => 'Home page of Théoo\'s portfolio',
+    'email' => 'Email',
 ];

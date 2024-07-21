@@ -6,4 +6,6 @@
     <x-slot name="nav">
         <x-home-nav />
     </x-slot>
+
+    <x-intro />
 </x-layout>

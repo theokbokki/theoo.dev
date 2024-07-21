@@ -134,6 +134,7 @@
                 margin: 2.5rem auto 1.5rem;
                 max-width: 50rem;
                 font-family: var(--sans);
+                color: rgb(var(--black));
 
                 @media screen and (min-width: 60rem) {
                     margin: 5rem auto 2.5rem;

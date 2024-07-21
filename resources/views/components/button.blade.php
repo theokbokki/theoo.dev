@@ -69,6 +69,11 @@
 
     .button[data-color=light-grey] {
         background: rgb(var(--light-grey));
+        color: rgb(var(--black));
+
+        &:hover {
+            filter: brightness(105%);
+        }
 
         &:focus-visible {
             box-shadow: 0 0 0 2px rgba(var(--lightgray), .5)

@@ -8,4 +8,27 @@
     </x-slot>
 
     <x-intro />
+
+    <x-list title="{{ __('home.projects.title') }}"
+        button="{{ __('home.projects.button') }}"
+        href="{{ LaravelLocalization::localizeUrl(route('projects')) }}"
+    >
+        <x-item
+            title="Bookmarks"
+            href="#"
+            text="The place where I store and sort the stuff I find interesting"
+        />
+
+        <x-item
+            title="Bookmarks"
+            href="#"
+            text="The place where I store and sort the stuff I find interesting"
+        />
+    </x-list>
+
+    <x-list title="{{ __('home.articles.title') }}"
+        button="{{ __('home.articles.button') }}"
+        href="{{ LaravelLocalization::localizeUrl(route('articles')) }}"
+    >
+    </x-list>
 </x-layout>

@@ -73,7 +73,6 @@
 
                 font-weight: normal;
                 font-style: normal;
-                font-display: swap;
             }
 
             @font-face {
@@ -86,7 +85,6 @@
 
                 font-weight: normal;
                 font-style: normal;
-                font-display: swap;
             }
 
 
@@ -131,7 +129,7 @@
 
             .app {
                 display: grid;
-                row: 5rem;
+                row-gap: 5rem;
                 width: 87.2%;
                 margin: 2.5rem auto 1.5rem;
                 max-width: 50rem;
@@ -139,11 +137,14 @@
 
                 @media screen and (min-width: 60rem) {
                     margin: 5rem auto 2.5rem;
-                    row: 7.5rem;
+                    row-gap: 7.5rem;
                 }
             }
 
-
+            .app__content {
+                display: grid;
+                row-gap: 4rem;
+            }
         </style>
         @stack('styles')
     </head>

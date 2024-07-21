@@ -1,9 +1,10 @@
 <x-nav>
     <x-slot name="left">
         <div>
-            <a href="{{ route('home') }}"
+            <a href="{{ LaravelLocalization::localizeUrl(route('home')) }}"
                 class="nav__logo"
             >
+                <span class="sro">@lang('home.home-link')</span>
                 @icon('logo')
             </a>
         </div>

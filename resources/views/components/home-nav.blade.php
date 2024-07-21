@@ -42,6 +42,12 @@
         display: inline-block;
         color: rgb(var(--black));
         text-decoration: none;
+        height: 1rem;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .nav__contact {

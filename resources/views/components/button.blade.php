@@ -21,7 +21,7 @@
         width: max-content;
         padding: 0.375rem .5rem .25rem;
         font-family: var(--pixel);
-        font-size: .875rem;
+        font-size: 1rem;
         text-decoration: none;
         text-transform: uppercase;
         color: rgb(var(--white));
@@ -77,9 +77,14 @@
 
     .button__icon {
         display: inline-block;
-        width: .875rem;
-        height: .875rem;
+        width: 1rem;
+        height: 1rem;
         margin: auto;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
     }
 </style>
 @endPushOnce

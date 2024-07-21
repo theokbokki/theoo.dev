@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>{{ env('APP_NAME') }}</title>
 
@@ -66,9 +66,9 @@
                 font-family: 'Gohu';
                 src:url('{{ Vite::asset('resources/fonts/Gohu.woff') }}') format('woff'),
                     url('{{ Vite::asset('resources/fonts/Gohu.woff2') }}') format('woff2'),
-                    url('{{ Vite::asset('resources/fonts/Gohu.svg#Gohu') }}') format('svg'),
+                    url('{{ Vite::asset('resources/fonts/Gohu.svg') }}') format('svg'),
                     url('{{ Vite::asset('resources/fonts/Gohu.eot') }}'),
-                    url('{{ Vite::asset('resources/fonts/Gohu.eot?#iefix') }}') format('embedded-opentype'),
+                    url('{{ Vite::asset('resources/fonts/Gohu.eot') }}') format('embedded-opentype'),
                     url('{{ Vite::asset('resources/fonts/Gohu.ttf') }}') format('truetype');
 
                 font-weight: normal;
@@ -81,7 +81,7 @@
                 src:url('{{ Vite::asset('resources/fonts/Geist-Regular.woff') }}') format('woff'),
                     url('{{ Vite::asset('resources/fonts/Geist-Regular.woff2') }}') format('woff2'),
                     url('{{ Vite::asset('resources/fonts/Geist-Regular.eot') }}'),
-                    url('{{ Vite::asset('resources/fonts/Geist-Regular.eot?#iefix') }}') format('embedded-opentype'),
+                    url('{{ Vite::asset('resources/fonts/Geist-Regular.eot') }}') format('embedded-opentype'),
                     url('{{ Vite::asset('resources/fonts/Geist-Regular.otf') }}') format('truetype');
 
                 font-weight: normal;

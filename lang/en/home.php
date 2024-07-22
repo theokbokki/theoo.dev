@@ -10,7 +10,7 @@ return [
     ],
     'articles' => [
         'title' => 'Articles',
-        'button' => 'All rticles',
+        'button' => 'All articles',
     ],
     'projects' => [
         'title' => 'Projects',

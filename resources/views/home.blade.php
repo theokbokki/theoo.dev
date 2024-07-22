@@ -1,4 +1,4 @@
-<x-layout>
+<x-page-layout>
     <x-slot name="title">
         @lang('home.title')
     </x-slot>
@@ -31,4 +31,4 @@
         href="{{ LaravelLocalization::localizeUrl(route('articles')) }}"
     >
     </x-list>
-</x-layout>
+</x-page-layout>

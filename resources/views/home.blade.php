@@ -9,6 +9,8 @@
 
     <x-intro />
 
+    <x-player/>
+
     <x-list title="{{ __('home.projects.title') }}"
         button="{{ __('home.projects.button') }}"
         href="{{ LaravelLocalization::localizeUrl(route('projects')) }}"
@@ -30,5 +32,16 @@
         button="{{ __('home.articles.button') }}"
         href="{{ LaravelLocalization::localizeUrl(route('articles')) }}"
     >
+        <x-item
+            title="Bookmarks"
+            href="#"
+            text="The place where I store and sort the stuff I find interesting"
+        />
+
+        <x-item
+            title="Bookmarks"
+            href="#"
+            text="The place where I store and sort the stuff I find interesting"
+        />
     </x-list>
 </x-page-layout>

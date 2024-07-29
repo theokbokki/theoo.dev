@@ -69,14 +69,13 @@ class MakePost extends Command
                 'French' => 'fr',
             };
 
-            $date = date('Y-m-d');
             $slug = str()->slug($form['title']);
-            $filepath = storage_path("posts/{$post}s/{$locale}/{$date}-{$slug}.md");
+            $filepath = storage_path("posts/{$post}s/{$locale}/{$slug}.md");
 
             $template = file_get_contents(storage_path('posts/post-stub.md'));
             $template = str_replace('{{title}}', $form['title'], $template);
             $template = str_replace('{{excerpt}}', $form['excerpt'], $template);
-            $template = str_replace('{{created_at}}', $date, $template);
+            $template = str_replace('{{created_at}}', now(), $template);
 
             file_put_contents($filepath, $template);
         }

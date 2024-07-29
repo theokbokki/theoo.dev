@@ -7,8 +7,11 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.9",
+        "laravel/prompts": "^0.1.24",
         "laravel/tinker": "^2.9",
-        "mcamara/laravel-localization": "^2.0"
+        "mcamara/laravel-localization": "^2.0",
+        "spatie/laravel-markdown": "^2.5",
+        "spatie/yaml-front-matter": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

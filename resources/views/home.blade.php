@@ -15,33 +15,25 @@
         button="{{ __('home.projects.button') }}"
         href="{{ LaravelLocalization::localizeUrl(route('projects')) }}"
     >
-        <x-item
-            title="Bookmarks"
-            href="#"
-            text="The place where I store and sort the stuff I find interesting"
-        />
-
-        <x-item
-            title="Bookmarks"
-            href="#"
-            text="The place where I store and sort the stuff I find interesting"
-        />
+        @foreach ($projects as $project)
+            <x-item
+                title="{{ $project->title }}"
+                href="{{ $project->link }}"
+                text="{{ $project->excerpt }}"
+            />
+        @endforeach
     </x-list>
 
     <x-list title="{{ __('home.articles.title') }}"
         button="{{ __('home.articles.button') }}"
         href="{{ LaravelLocalization::localizeUrl(route('articles')) }}"
     >
-        <x-item
-            title="Bookmarks"
-            href="#"
-            text="The place where I store and sort the stuff I find interesting"
-        />
-
-        <x-item
-            title="Bookmarks"
-            href="#"
-            text="The place where I store and sort the stuff I find interesting"
-        />
+        @foreach ($articles as $article)
+            <x-item
+                title="{{ $article->title }}"
+                href="{{ $article->link }}"
+                text="{{ $article->excerpt }}"
+            />
+        @endforeach
     </x-list>
 </x-page-layout>

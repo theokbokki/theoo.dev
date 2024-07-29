@@ -13,6 +13,14 @@
     .list {
         display: grid;
         row-gap: 2rem;
+
+        @media screen and (min-width: 45rem) {
+            grid-column: 1/-1;
+        }
+
+        @media screen and (min-width: 60rem) {
+            grid-column: unset;
+        }
     }
 
     .list__title {

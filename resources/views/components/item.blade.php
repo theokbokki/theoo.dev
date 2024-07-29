@@ -8,6 +8,15 @@
     .item {
         line-height: 150%;
         position: relative;
+
+        @media screen and (min-width: 45rem) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media screen and (min-width: 60rem) {
+            display: block;
+        }
     }
 
     .item + .item {
@@ -17,6 +26,25 @@
     .item__title {
         margin-bottom: .25rem;
         line-height: 150%;
+        display: flex;
+        align-items: center;
+        flex: 1;
+
+        @media screen and (min-width: 45rem) {
+            &:after {
+                content: "";
+                height: 1px;
+                flex: 1;
+                background: rgb(var(--light-grey));
+                margin: 0 .5rem;
+            }
+        }
+
+        @media screen and (min-width: 60rem) {
+            &:after {
+                content: none;
+            }
+        }
     }
 
     .item__link {
@@ -36,6 +64,14 @@
             right: 0;
             bottom: 0;
             left: 0;
+        }
+
+        @media screen and (min-width: 45rem) {
+            text-decoration-color: transparent;
+        }
+
+        @media screen and (min-width: 60rem) {
+            text-decoration-color: rgba(var(--grey), .3);
         }
     }
 

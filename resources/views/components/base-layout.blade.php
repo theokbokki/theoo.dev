@@ -128,9 +128,13 @@
             }
 
             .app {
-                display: grid;
+                display: flex;
+                justify-content: start;
+                flex-direction: column;
                 row-gap: 5rem;
                 width: 87.2%;
+                min-height: calc(100vh - 4rem);
+                min-height: calc(100dvh - 4rem);
                 margin: 2.5rem auto 1.5rem;
                 max-width: 50rem;
                 font-family: var(--sans);
@@ -139,12 +143,20 @@
                 @media screen and (min-width: 60rem) {
                     margin: 5rem auto 2.5rem;
                     row-gap: 7.5rem;
+                    min-height: calc(100vh - 7.5rem);
+                    min-height: calc(100dvh - 7.5rem);
                 }
             }
 
             .app__content {
                 display: grid;
                 row-gap: 4rem;
+
+                @media screen and (min-width: 51rem) {
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 2.5rem;
+                    row-gap: 5rem;
+                }
             }
         </style>
         @stack('styles')

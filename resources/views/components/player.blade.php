@@ -18,6 +18,9 @@
 <style>
     .player {
         padding: .5rem;
+        width: calc(87.2vw - 1rem);
+        width: calc(87.2dvw - 1rem);
+        max-width: 25rem;
         background: rgb(var(--white));
         box-shadow: 0 0 0 1px rgb(var(--light-grey));
         border-radius: 0.375rem;
@@ -51,6 +54,7 @@
 
     .player__infos {
         line-height: 150%;
+        width: calc(100% - 3.5rem);
     }
 
     .player__cover {
@@ -69,11 +73,19 @@
         font-family: var(--pixel);
         text-transform: uppercase;
         color: rgb(var(--grey));
+        overflow: hidden;
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
     }
 
     .player__artists {
         font-size: .875rem;
         color: rgba(var(--grey), .5);
+        overflow: hidden;
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
     }
 </style>
 @endPushOnce

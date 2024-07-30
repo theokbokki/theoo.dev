@@ -19,6 +19,7 @@
     .button {
         display: flex;
         width: max-content;
+        height: max-content;
         padding: 0.375rem .5rem .25rem;
         font-family: var(--pixel);
         font-size: 1rem;

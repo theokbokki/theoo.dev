@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class ProjectsController extends Controller
+class ProjectsController
 {
     public function __invoke()
     {}

@@ -1,6 +1,8 @@
 <?php
 
 return [
-    'project' => 'projects',
+    'projects' => 'projects',
+    'project' => 'project/{slug}',
     'articles' => 'articles',
+    'article' => 'article/{slug}',
 ];

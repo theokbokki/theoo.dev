@@ -13,9 +13,11 @@ class HomeController
     {
         return view('home', [
             'articles' =>  $this->getPosts('article')
+                ->where('published')
                 ->sortByDesc('created_at')
                 ->take(3),
             'projects' =>  $this->getPosts('project')
+                ->where('published')
                 ->sortByDesc('created_at')
                 ->take(3),
         ]);

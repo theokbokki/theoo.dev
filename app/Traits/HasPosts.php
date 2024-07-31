@@ -3,13 +3,9 @@
 namespace App\Traits;
 
 use App\Entities\Post;
-use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-use Spatie\YamlFrontMatter\Document;
 use SplFileInfo;
-use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 trait HasPosts
 {
@@ -17,7 +13,7 @@ trait HasPosts
     {
         $posts = $this->getPostsFiles($type);
 
-        return $posts->map(fn ($post) => $this->addDataToPosts($post, $type));
+        return $posts->map(fn ($post) => Post::createFromFile($post, $type, app()->getLocale()));
     }
 
     private function getPostsFilePath(string $type): string
@@ -35,22 +31,4 @@ trait HasPosts
         return collect(File::allFiles($filepath));
     }
 
-    private function addDataToPosts(SplFileInfo $post, string $type): Post
-    {
-        $data = YamlFrontMatter::parseFile($post->getPathname());
-        return new Post(
-            $data->title,
-            $data->excerpt,
-            Carbon::parse($data->created_at),
-            $data->link ?? $this->getPostLink($data, $type),
-            $data->body()
-        );
-    }
-
-    private function getPostLink(Document $data, string $type): string
-    {
-        $slug = str()->slug($data->title);
-
-        return LaravelLocalization::localizeUrl(route($type, ['slug' => $slug]));
-    }
 }

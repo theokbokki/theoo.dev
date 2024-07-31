@@ -1,6 +1,15 @@
 <article class="item">
-    <h3 class="item__title"><a href="{{ $href }}" class="item__link">{{ $title }}</a></h3>
-    <p class="item__text">{{ $text }}</p>
+    <h3 class="item__title">
+        <a href="{{ $href }}"
+            class="item__link"
+            @if (str_contains($href, 'https://'))
+                target="_blank"
+            @endif
+        >
+            {!! $title !!}
+        </a>
+    </h3>
+    <p class="item__text">{!! $text !!}</p>
 </article>
 
 @pushOnce('styles')

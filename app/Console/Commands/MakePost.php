@@ -3,7 +3,6 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Storage;
 use function Laravel\Prompts\form;
 use function Laravel\Prompts\multiselect;
 use function Laravel\Prompts\select;
@@ -25,21 +24,40 @@ class MakePost extends Command
      */
     protected $description = 'Create a new article or project post.';
 
-    /**
-     * Execute the console command.
-     */
-    public function handle()
+    private string $type;
+
+    /** Execute the console command. */
+    public function handle(): void
     {
-        $post = select(
+        $this->type = $this->getType();
+
+        foreach ($this->getLanguages() as $language) {
+            info("Creating {$this->type} in {$language}");
+
+            $this->createFile(
+                $this->contentForm(),
+                getLocaleForLanguage($language)
+            );
+        }
+    }
+
+    private function getType(): string
+    {
+        return select(
             label: 'What do you want to create?',
             options: [
                 'article' => 'Article',
                 'project' => 'Project',
-            ]
+            ],
+            required: true,
         );
+    }
 
-        $languages = multiselect(
-            label: "What languages will the {$post} be in?",
+    /** @return array<int, string> */
+    private function getLanguages(): array
+    {
+        return multiselect(
+            label: "What languages will the {$this->type} be in?",
             options: [
                 'English',
                 'French',
@@ -47,37 +65,36 @@ class MakePost extends Command
             default: ['English'],
             required: true
         );
+    }
 
-        foreach ($languages as $language) {
-            info("Creating {$post} in {$language}");
+    /** @return mixed[] */
+    private function contentForm(): array
+    {
+        return form()
+            ->text(
+                "Title:",
+                name: 'title',
+                required: true
+            )
+            ->text(
+                "Excerpt:",
+                name: 'excerpt',
+                required: true
+            )
+            ->submit();
+    }
 
-            $form = form()
-                ->text(
-                    "Title:",
-                    name: 'title',
-                    required: true
-                )
-                ->text(
-                    "Excerpt:",
-                    name: 'excerpt',
-                    required: true
-                )
-                ->submit();
+    /** @param array<int,mixed> $form */
+    private function createFile(array $form, string $locale): void
+    {
+        $slug = str()->slug($form['title']);
+        $filepath = storage_path("posts/{$this->type}s/{$locale}/{$slug}.md");
 
-            $locale = match ($language) {
-                'English' => 'en',
-                'French' => 'fr',
-            };
+        $template = file_get_contents(storage_path('posts/post-stub.md'));
+        $template = str_replace('{{title}}', $form['title'], $template);
+        $template = str_replace('{{excerpt}}', $form['excerpt'], $template);
+        $template = str_replace('{{created_at}}', now(), $template);
 
-            $slug = str()->slug($form['title']);
-            $filepath = storage_path("posts/{$post}s/{$locale}/{$slug}.md");
-
-            $template = file_get_contents(storage_path('posts/post-stub.md'));
-            $template = str_replace('{{title}}', $form['title'], $template);
-            $template = str_replace('{{excerpt}}', $form['excerpt'], $template);
-            $template = str_replace('{{created_at}}', now(), $template);
-
-            file_put_contents($filepath, $template);
-        }
+        file_put_contents($filepath, $template);
     }
 }

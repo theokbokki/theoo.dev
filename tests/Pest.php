@@ -13,10 +13,9 @@ function createPost($type, $lang) {
         ->expectsQuestion('Title:', $title)
         ->expectsQuestion('Excerpt:', fake()->unique()->sentence());
 
-    $locale = match ($lang) {
-        'English' => 'en',
-        'French' => 'fr',
-    };
-
-    return Post::find(str()->slug($title), $type, $locale);
+    return Post::find(
+        str()->slug($title),
+        $type,
+        getLocaleForLanguage($lang)
+    );
 }

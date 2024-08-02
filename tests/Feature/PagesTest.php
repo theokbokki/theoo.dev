@@ -38,11 +38,7 @@ test('the three latest articles are shown on the homepage', function () {
         ->assertSeeText($post4->title)
         ->assertSeeText($post4->excerpt);
 
-    $post1->delete();
-    $post2->delete();
-    $post3->delete();
-    $post3->delete();
-    $post4->delete();
+    deleteTestPosts();
 });
 
 test('only articles in the same language are shown on the homepage', function () {
@@ -64,10 +60,7 @@ test('only articles in the same language are shown on the homepage', function ()
         ->assertDontSeeText($post4->title)
         ->assertDontSeeText($post4->excerpt);
 
-    $post1->delete();
-    $post2->delete();
-    $post3->delete();
-    $post4->delete();
+    deleteTestPosts();
 });
 
 test('only published articles are shown on the homepage', function () {
@@ -83,7 +76,5 @@ test('only published articles are shown on the homepage', function () {
         ->assertDontSeeText($post2->title)
         ->assertDontSeeText($post2->excerpt);
 
-    $post1->delete();
-    $post2->delete();
-
+    deleteTestPosts();
 });

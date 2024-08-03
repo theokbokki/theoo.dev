@@ -22,7 +22,7 @@
         height: max-content;
         padding: 0.375rem .5rem .25rem;
         font-family: var(--pixel);
-        font-size: 1rem;
+        font-size: .875rem;
         text-decoration: none;
         text-transform: uppercase;
         color: rgb(var(--white));

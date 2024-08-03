@@ -87,7 +87,6 @@
                 font-style: normal;
             }
 
-
             :root {
                 --sans: "Geist", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
                 --pixel: "Gohu", var(--sans);
@@ -138,6 +137,7 @@
                 margin: 2.5rem auto 1.5rem;
                 max-width: 50rem;
                 font-family: var(--sans);
+                font-size: .875rem;
                 color: rgb(var(--black));
 
                 @media screen and (min-width: 60rem) {

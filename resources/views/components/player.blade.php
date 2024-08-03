@@ -34,7 +34,7 @@
 
     .player__status {
         font-family: var(--pixel);
-        font-size: .865rem;
+        font-size: .875rem;
         line-height: 150%;
         text-transform: uppercase;
     }

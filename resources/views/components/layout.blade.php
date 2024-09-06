@@ -9,7 +9,6 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="app">
-        <x-nav />
         {{ $slot }}
     </body>
 </html>

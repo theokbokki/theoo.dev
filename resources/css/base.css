@@ -5,6 +5,7 @@
     padding: 2rem;
     margin: 0 auto;
     font-family: var(--sans);
+    line-height: 150%;
     color: rgb(var(--grey-950));
 
     @media screen and (min-width: 57.5rem) {

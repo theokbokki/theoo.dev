@@ -1,0 +1,13 @@
+.intro {
+    margin-top: 5rem;
+}
+
+.intro__title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+}
+
+.intro__text {
+    margin-top: .5rem;
+    color: rgb(var(--grey-700));
+}

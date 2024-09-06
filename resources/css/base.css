@@ -1,0 +1,7 @@
+.app {
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    font-family: var(--sans);
+    color: var(--grey-950);
+}

@@ -1,7 +1,13 @@
 .app {
-    width: 100%;
+    max-width: 50rem;
     height: 100vh;
     height: 100svh;
+    padding: 2rem;
+    margin: 0 auto;
     font-family: var(--sans);
-    color: var(--grey-950);
+    color: rgb(var(--grey-950));
+
+    @media screen and (min-width: 57.5rem) {
+        padding: 5rem;
+    }
 }

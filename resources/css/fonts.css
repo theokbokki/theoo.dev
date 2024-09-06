@@ -19,6 +19,6 @@
 }
 
 :root {
-    --sans: "Geist", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --serif: "Instrument Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --sans: "geist", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --serif: "instrument-serif-italic", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }

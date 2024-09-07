@@ -3,6 +3,6 @@
 return [
     'projects' => 'projets',
     'articles' => 'articles',
-    'project' => 'projets/{project}',
-    'article' => 'articles/{article}',
+    'project' => 'projets/{project:slug}',
+    'article' => 'articles/{article:slug}',
 ];

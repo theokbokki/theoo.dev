@@ -15,36 +15,51 @@ class PostSeeder extends Seeder
     public function run(): void
     {
         if(app()->isLocal()) {
-            Post::factory()->count(5)->create([
-                'type' => PostType::PROJECT,
-            ]);
-
-            Post::factory()->count(5)->create([
-                'type' => PostType::ARTICLE,
-            ]);
+            $this->test();
         }
 
         if(app()->isProduction()) {
-            Post::query()->updateOrCreate(
-                [
-                    'slug' => [
-                        'en' => str()->slug('Neovim config for Laravel development'),
-                        'fr' => str()->slug('Configurer Neovim pour faire du Laravel'),
-                    ],
-                ],
-                [
-                    'title' => [
-                        'en' => 'Neovim for Laravel',
-                        'fr' => 'Neovim pour Laravel',
-                    ],
-                    'excerpt' => [
-                        'en' => 'Turning neovim into a full fledged IDE',
-                        'fr' => 'Transformer neovim en un IDE complet',
-                    ],
-                    'type' => PostType::ARTICLE,
-                    'published_at' => null,
-                ]
-            );
+            $this->articles();
+            $this->projects();
         }
+    }
+
+    private function test(): void
+    {
+        Post::factory()->count(20)->create([
+            'type' => PostType::PROJECT,
+        ]);
+
+        Post::factory()->count(20)->create([
+            'type' => PostType::ARTICLE,
+        ]);
+    }
+
+    private function projects(): void
+    {}
+
+    private function articles(): void
+    {
+        Post::query()->updateOrCreate(
+            [
+                'slug' => [
+                    'en' => str()->slug('Neovim for Laravel'),
+                    'fr' => str()->slug('Neovim pour Laravel'),
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Neovim for Laravel',
+                    'fr' => 'Neovim pour Laravel',
+                ],
+                'excerpt' => [
+                    'en' => 'Turning neovim into a full fledged IDE',
+                    'fr' => 'Transformer neovim en un IDE complet',
+                ],
+                'type' => PostType::ARTICLE,
+                'external' => false,
+                'published_at' => now()->subDays(10),
+            ]
+        );
     }
 }

@@ -19,14 +19,15 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
-        $title = fake()->unique()->sentence(rand(3, 6));
+        $title = fake()->unique()->sentence(rand(3, 5));
 
         return [
             'title' => $title,
             'slug' => str()->slug($title),
-            'excerpt' => fake()->sentence(rand(3, 6)),
+            'excerpt' => fake()->sentence(rand(3, 5)),
             'type' => Arr::random(PostType::values()),
-            'published_at' => Carbon::now()->subDays(rand(0, 365)),
+            'external' => rand(0, 5) ? false : true,
+            'published_at' => rand(0, 1) ? null : Carbon::now()->subDays(rand(0, 365)),
         ];
     }
 }

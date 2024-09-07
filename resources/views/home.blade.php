@@ -7,7 +7,6 @@
             :title="__('home.projects')"
             :button="__('home.projects-button')"
             :posts="$projects"
-            type="projects"
         />
     @endif
     @if(isset($articles) && $articles->count())
@@ -15,7 +14,6 @@
             :title="__('home.articles')"
             :button="__('home.articles-button')"
             :posts="$articles"
-            type="articles"
         />
     @endif
 </x-layout>

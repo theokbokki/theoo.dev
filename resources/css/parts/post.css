@@ -27,6 +27,13 @@
     }
 }
 
+.post__icon {
+    color: rgb(var(--grey-500));
+    margin-left: .25rem;
+    height: .75rem;
+    width: .75rem;
+}
+
 @media screen and (min-width: 57.5rem) {
     .post {
         display: flex;

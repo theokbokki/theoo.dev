@@ -34,4 +34,9 @@ class Post extends Model
     {
         return $query->where('type', PostType::PROJECT);
     }
+
+    public function getLinkAttribute(): string
+    {
+        return route('article', $this);
+    }
 }

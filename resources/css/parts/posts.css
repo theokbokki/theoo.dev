@@ -1,0 +1,14 @@
+.posts {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 5rem;
+}
+
+.posts__title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+}
+
+.posts__button {
+    margin-top: .5rem;
+}

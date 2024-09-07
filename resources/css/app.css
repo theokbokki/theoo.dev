@@ -6,3 +6,6 @@
 
 @import "parts/nav";
 @import "parts/intro";
+@import "parts/posts";
+@import "parts/post";
+@import "parts/button";

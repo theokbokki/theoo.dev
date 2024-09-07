@@ -1,14 +1,16 @@
 .app {
     max-width: 50rem;
-    height: 100vh;
-    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
     padding: 2rem;
     margin: 0 auto;
     font-family: var(--sans);
     line-height: 150%;
     color: rgb(var(--grey-950));
+}
 
-    @media screen and (min-width: 57.5rem) {
+@media screen and (min-width: 57.5rem) {
+    .app {
         padding: 5rem;
     }
 }

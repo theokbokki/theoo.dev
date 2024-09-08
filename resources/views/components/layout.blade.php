@@ -7,6 +7,14 @@
         <title>Théoo @isset($title) - {{ $title }} @endisset</title>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <noscript>
+            <style>
+                .app {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>
     </head>
     <body class="app">
         {{ $slot }}

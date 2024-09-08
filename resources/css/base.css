@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .app {
     max-width: 50rem;
     min-height: 100vh;
@@ -7,6 +11,19 @@
     font-family: var(--sans);
     line-height: 150%;
     color: rgb(var(--grey-950));
+    transition: opacity 200ms ease-out;
+
+    > * {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+.load {
+    opacity: 1;
+    transform: translateY();
+    transition: opacity 300ms  ease-out calc(100ms * var(--index)),
+        transform 300ms  ease-out calc(100ms * var(--index));
 }
 
 @media screen and (min-width: 57.5rem) {

@@ -77,10 +77,7 @@ class PostSeeder extends Seeder
 
         Post::query()->updateOrCreate(
             [
-                'slug' => [
-                    'en' => str()->slug($title['en']),
-                    'fr' => str()->slug($title['fr']),
-                ],
+                'slug->en' => str()->slug($title['en']),
             ],
             [
                 'title' => [

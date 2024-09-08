@@ -10,7 +10,7 @@ class ProjectController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)
+    public function __invoke(Request $request, string $slug)
     {
         $post = Post::query()
             ->where('slug->'.app()->getLocale(), $slug)

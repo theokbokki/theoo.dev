@@ -19,6 +19,11 @@ class Post extends Model
         'excerpt',
     ];
 
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
+
     public function scopePublished(Builder $query): Builder
     {
         return $query->whereNotNull('published_at')

@@ -1,3 +1,5 @@
 <x-layout>
-    <h1 class="sro">@lang('project.title')</h1>
+    <x-nav />
+    <h1 class="post__title">{{ $article->title }}</h1>
+    @include('posts/'.app()->getLocale().'/'.$article->slug)
 </x-layout>

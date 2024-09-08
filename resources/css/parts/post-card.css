@@ -1,0 +1,62 @@
+.post-card {
+    position: relative;
+    padding: .75rem 1rem;
+    margin: 0 -1rem;
+    border-radius: .375rem;
+    transition: 150ms background ease-out;
+
+    &:hover {
+        background: rgb(var(--grey-100));
+    }
+}
+
+.post-card__text {
+    margin-top: .5rem;
+    color: rgb(var(--grey-700));
+}
+
+.post-card__link {
+    color: rgb(var(--grey-950));
+    text-decoration: none;
+
+    &:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        inset: 0;
+    }
+}
+
+.post-card__icon {
+    color: rgb(var(--grey-500));
+    margin-left: .25rem;
+    height: .75rem;
+    width: .75rem;
+}
+
+@media screen and (min-width: 57.5rem) {
+    .post-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .post-card__title {
+        display: flex;
+        align-items: center;
+        flex: 1;
+
+        &:after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            margin: 0 12px;
+            background: rgb(var(--grey-300));
+            border-radius: 9999px;
+        }
+    }
+
+    .post-card__text {
+        margin: 0;
+    }
+}

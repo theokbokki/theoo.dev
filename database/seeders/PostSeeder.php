@@ -26,6 +26,15 @@ class PostSeeder extends Seeder
 
     private function test(): void
     {
+        Post::query()->create([
+            'title' => 'Test',
+            'slug' => 'test',
+            'excerpt' => 'just a test article',
+            'type' => PostType::ARTICLE,
+            'external' => false,
+            'published_at' => now()->subMinute(2),
+        ]);
+
         Post::factory()->count(20)->create([
             'type' => PostType::PROJECT,
         ]);

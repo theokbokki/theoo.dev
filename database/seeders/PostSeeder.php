@@ -57,7 +57,8 @@ class PostSeeder extends Seeder
                 'fr' => 'L\'endroit ou je range et trie ce que je trouve intéressant',
             ],
             PostType::PROJECT,
-            'https://bookmarks.theoo.dev'
+            'https://bookmarks.theoo.dev',
+            now()
         );
     }
 
@@ -65,13 +66,14 @@ class PostSeeder extends Seeder
     {}
 
     private function makePost(
-        object $title,
-        object $excerpt,
+        array $title,
+        array $excerpt,
         PostType $type,
         ?string $external,
         ?DateTime $published_at,
     ): void {
-        $post = Post::where('slug->en', str()->slug($title->en))->first();
+        $post = Post::query()
+            ->where('slug->en', str()->slug($title['en']))->first();
 
         Post::query()->updateOrCreate(
             [
@@ -91,7 +93,7 @@ class PostSeeder extends Seeder
                 ],
                 'type' => $type,
                 'external' => $external,
-                'published_at' => $published_at ?? $post?->published_at ?? now(),
+                'published_at' => is_null($published_at) ? $published_at : $post?->published_at ?? $published_at,
             ]
         );
     }

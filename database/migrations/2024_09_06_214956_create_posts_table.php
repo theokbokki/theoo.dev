@@ -18,7 +18,7 @@ return new class extends Migration
             $table->json('slug');
             $table->json('excerpt');
             $table->enum('type', PostType::values());
-            $table->boolean('external');
+            $table->string('external')->nullable();
             $table->dateTime('published_at')->nullable();
             $table->timestamps();
             $table->softDeletes();

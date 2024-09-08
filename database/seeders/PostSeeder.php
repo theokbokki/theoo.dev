@@ -6,6 +6,7 @@ use App\Enums\PostType;
 use App\Models\Post;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use DateTime;
 
 class PostSeeder extends Seeder
 {
@@ -45,29 +46,52 @@ class PostSeeder extends Seeder
     }
 
     private function projects(): void
-    {}
+    {
+        $this->makePost(
+            [
+                'en' => 'Bookmarks',
+                'fr' => 'Bookmarks',
+            ],
+            [
+                'en' => 'The place where I store and sort the stuff I find interesting',
+                'fr' => 'L\'endroit ou je range et trie ce que je trouve intéressant',
+            ],
+            PostType::PROJECT,
+            'https://bookmarks.theoo.dev'
+        );
+    }
 
     private function articles(): void
-    {
+    {}
+
+    private function makePost(
+        object $title,
+        object $excerpt,
+        PostType $type,
+        ?string $external,
+        ?DateTime $published_at,
+    ): void {
+        $post = Post::where('slug->en', str()->slug($title->en))->first();
+
         Post::query()->updateOrCreate(
             [
                 'slug' => [
-                    'en' => str()->slug('Neovim for Laravel'),
-                    'fr' => str()->slug('Neovim pour Laravel'),
+                    'en' => str()->slug($title['en']),
+                    'fr' => str()->slug($title['fr']),
                 ],
             ],
             [
                 'title' => [
-                    'en' => 'Neovim for Laravel',
-                    'fr' => 'Neovim pour Laravel',
+                    'en' => $title['en'],
+                    'fr' => $title['fr'],
                 ],
                 'excerpt' => [
-                    'en' => 'Turning neovim into a full fledged IDE',
-                    'fr' => 'Transformer neovim en un IDE complet',
+                    'en' => $excerpt['en'],
+                    'fr' => $excerpt['fr'],
                 ],
-                'type' => PostType::ARTICLE,
-                'external' => false,
-                'published_at' => now()->subDays(10),
+                'type' => $type,
+                'external' => $external,
+                'published_at' => $published_at ?? $post?->published_at ?? now(),
             ]
         );
     }

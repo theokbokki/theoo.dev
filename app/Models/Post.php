@@ -42,6 +42,6 @@ class Post extends Model
 
     public function getLinkAttribute(): string
     {
-        return route('article', $this);
+        return $this->external ?? route('article', $this);
     }
 }

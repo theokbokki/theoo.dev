@@ -26,7 +26,7 @@ class PostFactory extends Factory
             'slug' => str()->slug($title),
             'excerpt' => fake()->sentence(rand(3, 5)),
             'type' => Arr::random(PostType::values()),
-            'external' => rand(0, 5) ? false : true,
+            'external' => rand(0, 5) ? null : '',
             'published_at' => rand(0, 1) ? null : Carbon::now()->subDays(rand(0, 365)),
         ];
     }

@@ -15,7 +15,7 @@ class App {
             el.classList.add("load");
         });
 
-        document.querySelectorAll(`a[href*="${location.hostname}"]:not([target="_blank"])`).forEach((el) => {
+        document.querySelectorAll(`a[href*="${location.hostname}"]:not([href*="mailto:"]):not([target="_blank"])`).forEach((el) => {
             el.addEventListener('click', (e) => {
                 e.preventDefault();
 

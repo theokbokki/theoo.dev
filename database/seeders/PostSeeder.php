@@ -32,7 +32,7 @@ class PostSeeder extends Seeder
             'slug' => 'test',
             'excerpt' => 'just a test article',
             'type' => PostType::ARTICLE,
-            'external' => false,
+            'external' => null,
             'published_at' => now()->subMinute(2),
         ]);
 

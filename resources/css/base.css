@@ -3,25 +3,29 @@ html {
 }
 
 .app {
+    display: flex;
+    flex-direction: column;
     max-width: 50rem;
-    min-height: 100vh;
-    min-height: 100svh;
+    min-height: calc(100vh - 4rem);
+    min-height: calc(100svh - 4rem);
     padding: 2rem;
     margin: 0 auto;
     font-family: var(--sans);
     line-height: 150%;
     color: rgb(var(--grey-950));
     transition: opacity 200ms ease-out;
+    transform: translateY(-1rem);
 
     > * {
         opacity: 0;
-        transform: translateY(0);
+        transform: translateY(1rem);
     }
 }
 
 .load {
+    --index: 0;
     opacity: 1;
-    transform: translateY();
+    transform: translateY(0);
     transition: opacity 300ms  ease-out calc(100ms * var(--index)),
         transform 300ms  ease-out calc(100ms * var(--index));
 }
@@ -29,5 +33,7 @@ html {
 @media screen and (min-width: 57.5rem) {
     .app {
         padding: 5rem;
+        min-height: calc(100vh - 10rem);
+        min-height: calc(100svh - 10rem);
     }
 }

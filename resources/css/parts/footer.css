@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: auto;
+    padding-top: 10rem;
+}
+
+.footer__link {
+    display: grid;
+    color: rgb(var(--grey-950));
+    text-decoration: none;
+
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+    }
+
+    &:after {
+        content: "";
+        display: inline-block;
+        height: 0.0588235294rem;
+        width: 0;
+        background: rgb(var(--grey-950));
+        border-radius: 9999px;
+        transition: 150ms width ease-out;
+    }
+}

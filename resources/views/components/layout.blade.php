@@ -18,5 +18,6 @@
     </head>
     <body class="app">
         {{ $slot }}
+        <x-footer />
     </body>
 </html>

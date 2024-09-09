@@ -12,6 +12,7 @@ class App {
         document.querySelectorAll('body > *').forEach((el, index) => {
             el.style = `--index: ${index + 1}`;
 
+            document.body.classList.add("load");
             el.classList.add("load");
         });
 

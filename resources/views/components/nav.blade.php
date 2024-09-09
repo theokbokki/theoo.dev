@@ -5,6 +5,6 @@
         </a>
     </div>
     <div class="nav__contact">
-        <a href="mailto:hello@theoo.dev" class="nav__link">@lang('nav.contact')</a>
+        <a href="mailto:{{ env('MAIL_FROM_ADDRESS') }}" class="nav__link">@lang('nav.contact')</a>
     </div>
 </nav>

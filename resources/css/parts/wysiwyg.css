@@ -9,7 +9,7 @@
         & + ul,
         & + ol,
         & + blockquote,
-        & + div {
+        & + .wysiwyg__code {
             margin: 1.75rem 0 1.25rem;
         }
     }
@@ -148,7 +148,7 @@
         border-radius: .5rem;
         overflow-x: scroll;
         font-family: monospace;
-        border: 1px solid rgb(var(--grey-200));
+        background: rgb(var(--grey-50));
     }
 
     :where(*:not(pre) > code) {
@@ -212,7 +212,7 @@
     border-radius: .375rem;
 
     &:hover {
-        background: #474E6B;
+        background: rgb(var(--grey-200));
     }
 
     &:before,
@@ -221,7 +221,7 @@
         display: block;
         padding: .625rem;
         opacity: .5;
-        filter: invert(92%) sepia(77%) saturate(179%) hue-rotate(329deg) brightness(122%) contrast(96%);
+        filter: brightness(0) saturate(100%) invert(53%) sepia(2%) saturate(1807%) hue-rotate(355deg) brightness(88%) contrast(79%);
         transition: 100ms transform ease-out, 150ms opacity ease-out;
     }
 

@@ -3,7 +3,10 @@ import.meta.glob([
     '../images/**',
     '../fonts/**',
     '../icons/**',
-    '../favicons/**',
+    '../favicons/**.svg',
+    '../favicons/**.png',
+    '../favicons/**.ico',
+    '../favicons/**.webmanifest',
 ]);
 
 window.axios = axios;

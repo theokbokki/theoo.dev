@@ -63,7 +63,21 @@ class PostSeeder extends Seeder
     }
 
     private function articles(): void
-    {}
+    {
+        $this->makePost(
+            [
+                'en' => 'Blade SFC',
+                'fr' => 'Blade SFC',
+            ],
+            [
+                'en' => 'Write Blade like you would Vue or Svelte',
+                'fr' => 'Ecrivez en Blade comme en Vue ou en Svelte',
+            ],
+            PostType::ARTICLE,
+            null,
+            now()
+        );
+    }
 
     private function makePost(
         array $title,
@@ -78,6 +92,7 @@ class PostSeeder extends Seeder
         Post::query()->updateOrCreate(
             [
                 'slug->en' => str()->slug($title['en']),
+                'slug->fr' => str()->slug($title['fr']),
             ],
             [
                 'title' => [

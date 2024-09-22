@@ -17,7 +17,9 @@
         </noscript>
     </head>
     <body class="app">
-        {{ $slot }}
+        <main>
+            {{ $slot }}
+        </main>
         <x-footer />
     </body>
 </html>

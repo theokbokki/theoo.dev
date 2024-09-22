@@ -8,8 +8,9 @@
         & + table,
         & + ul,
         & + ol,
-        & + blockquote {
-            margin: 1.5rem 0;
+        & + blockquote,
+        & + div {
+            margin: 1.75rem 0 1.25rem;
         }
     }
 
@@ -21,6 +22,10 @@
         font-weight: bold;
         color: rgb(var(--grey-950));
         scroll-margin-top: 5rem;
+
+        code {
+            font-size: inherit;
+        }
     }
 
     h1 {
@@ -60,13 +65,35 @@
 
     p,
     li {
+        color: rgb(var(--grey-900));
         font-size: 1rem;
-        line-height: 160%;
+        line-height: 175%;
     }
 
     a {
+        display: inline-grid;
         color: rgb(var(--grey-900));
-        text-underline-offset: .25rem;
+        text-decoration: none;
+        line-height: 120%;
+        transition: 150ms color ease-out;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            width: 101%;
+            height: 0.0588235294rem;
+            background: rgb(var(--grey-900));
+            border-radius: 9999px;
+            transition: 150ms background ease-out;
+        }
+
+        &:hover {
+            color: rgb(var(--grey-700));
+
+            &:after {
+                background: rgb(var(--grey-600));
+            }
+        }
     }
 
     em {
@@ -124,7 +151,7 @@
         border: 1px solid rgb(var(--grey-200));
     }
 
-    *:not(pre) > code {
+    :where(*:not(pre) > code) {
         padding: .2rem .4rem;
         border-radius: .25rem;
         background: rgb(var(--grey-100));
@@ -218,5 +245,11 @@
     &:after,
     &:before {
         transform: translate3d(0, -1.75rem, 0);
+    }
+}
+
+@media screen and (min-width: 50rem) {
+    .wysiwyg {
+        margin: 0 auto;
     }
 }

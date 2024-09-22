@@ -1,5 +1,4 @@
-<x-layout>
-    <x-slot name="title">@lang('projects.page-title')</x-slot>
+<x-layout :title="__('projects.page-title')">
     <h1 class="sro">@lang('projects.title')</h1>
     <x-nav />
     <x-posts

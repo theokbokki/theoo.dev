@@ -1,3 +1,1 @@
-<div class="wysiwyg">
-    @markdown {{ $slot }} @endmarkdown
-</div>
+<div class="wysiwyg">@markdown($slot)</div>

@@ -7,7 +7,7 @@ export default class Wysiwyg {
     }
 
     getElements() {
-        this.blocks = this.el.querySelectorAll("pre.shiki");
+        this.blocks = this.el.querySelectorAll("pre[data-lang]");
     }
 
     addCopyButtons() {

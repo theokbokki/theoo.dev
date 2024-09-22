@@ -12,3 +12,5 @@
 @import "parts/post";
 @import "parts/wysiwyg";
 @import "parts/footer";
+
+@import "../../vendor/tempest/highlight/src/Themes/Css/github-light-default.css";

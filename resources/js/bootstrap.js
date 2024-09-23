@@ -1,6 +1,7 @@
 import axios from 'axios';
 import.meta.glob([
     '../images/**',
+    '../cards/**',
     '../fonts/**',
     '../icons/**',
     '../favicons/**.svg',

@@ -13,7 +13,7 @@ class ArticlesController extends Controller
     public function __invoke(Request $request)
     {
         return view('articles', [
-            'projects' => Post::query()
+            'articles' => Post::query()
                 ->articles()
                 ->published()
                 ->orderByDesc('published_at')

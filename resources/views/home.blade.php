@@ -1,4 +1,15 @@
 <x-layout>
+    <x-slot name="metas">
+        <meta name="description" content="{{ __('home.metas.description') }}" />
+        <meta property="og:url" content="{{ route('home') }}">
+        <meta property="og:title" content="{{ __('home.title') }}">
+        <meta property="og:image" content="{{ Vite::asset('resources/cards/home.png') }}">
+        <meta property="og:description" content="{{ __('home.metas.description') }}">
+        <meta name="twitter:title" content="Théoo.dev">
+        <meta name="twitter:description" content="{{ __('home.metas.description') }}">
+        <meta name="twitter:image:src" content="{{ Vite::asset('resources/cards/home.png') }}">
+    </x-slot>
+
     <h1 class="sro">@lang('home.title')</h1>
     <x-nav />
     <x-intro />

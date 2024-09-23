@@ -14,20 +14,14 @@
 
         <title>Théoo @isset($title) - {{ $title }} @endisset</title>
 
-        <meta name="description" content="Théo Léonet's portfolio. I share projects I made and articles I wrote." />
         <meta name="keywords" content="Web, Design, Laravel, PHP, Developer, Neovim" />
         <meta property="og:type" content="website">
-        <meta property="og:url" content="/">
-        <meta property="og:title" content="Théoo's portfolio">
-        <meta property="og:image" content="">
-        <meta property="og:site_name" content="Théoo">
-        <meta property="og:description" content="">
+        <meta property="og:site_name" content="theoo.dev">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@theokbokki_">
         <meta name="twitter:creator" content="@theokbokki_">
-        <meta name="twitter:title" content="">
-        <meta name="twitter:description" content="">
-        <meta name="twitter:image:src" content="">
+
+        @isset($metas) {{ $metas }} @endisset
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 

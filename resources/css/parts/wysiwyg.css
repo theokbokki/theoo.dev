@@ -71,7 +71,6 @@
     }
 
     a {
-        display: inline-grid;
         color: rgb(var(--grey-900));
         text-underline-offset: .25rem;
         text-decoration-thickness: 0.0625rem;

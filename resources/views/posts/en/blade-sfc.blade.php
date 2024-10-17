@@ -96,35 +96,33 @@ This is alright if you have a pretty small website, but when things start to get
 
 ## Finding a way to compile the styles and scripts
 
-The first thing I tried was modifying the Blade renderer so it would take every `<script>` and `<style>` element, remove them and put their content inside a corresponding JS and CSS file. I made it work and it was good but then I realized that having every script and style tag removed from my code was a really bad idea.
+The first thing I tried was modifying the Blade renderer so it would take every `<script>` and `<style>` element, remove them and put their content inside a corresponding JS and CSS file. I made it work, but then I realized that having every script and style tag removed from my code was a really bad idea.
 
 Here's an example.
-When I make a page load animation, I like to put `opacity: 0;` on all elements to avoid a flicker while the JS loads.
-But this means users with JS disabled can't see my page, so I add this bit of code in my `<head>` to solve the problem.
+
+When I make a page load animation, I put `opacity: 0;` on the body then transition everyting smoothly.
+But this means I need to do it before the content has loaded in order to hide the body without a flicker.
+So I add this bit of code at the top of my body:
 
 ```html
- <noscript>
-    <style>
-        body * {
-            opacity: 1;
-        }
-    </style>
-</noscript>
+<script>
+    document.body.style.opacity = 0;
+</script>
 ```
 
-But if I remove every `<style>` tag, this stops working and that's not cool.
+But if I remove every `<script>` tag, this stops working and that's not cool.
 
 I thought about it for a bit and figured out that maybe a mix of my fist and second idea could work.
 And that's when I started writing the [blade-sfc package](https://github.com/theokbokki/blade-sfc).
 
-The package adds 2 Blade directives, `@js` and `@css` and they work like so:
+The package adds 2 Blade directives, `@javascript` and `@css` and they work like so:
 
 ```blade
-@js()
+@javascript()
 <script>
     console.log('Once there was an ugly barnacle. He was so ugly that everyone died. The end.');
 </script>
-@endjs
+@endjavascript
 
 <div>My component</div>
 
@@ -137,7 +135,9 @@ The package adds 2 Blade directives, `@js` and `@css` and they work like so:
 @endcss
 ```
 
-Under the hood, when the Blade renderer encounters one of the directives, it's going to take everything inside it, strip it down of `<style></style>` and `<script></script>` tags and put the content inside a `generated.js` or `generated.css` file.
+The blade directive works with a command (`php artisan blade-sfc:compile`).
+This command takes all the `@css` and `@javascript` directives and puts them in a temporary blade file.
+Then once the directives are in the file, it renders them all at once, stripping them of `style` and `script` tags and putting the code in `generated.js` and `generated.css` files.
 
 This solves all our problems, styles and scripts get compiled but you can still have `script` and `style` tags in your code when you need them.
 
@@ -146,30 +146,6 @@ This solves all our problems, styles and scripts get compiled but you can still 
 This way of doing things also has some benefits, because since the code is compiled, you are not limited to using CSS or JS, you could use [SCSS](https://sass-lang.com/) or [typescript](https://www.typescriptlang.org/) or anything your mind can dream of!
 
 You just have to tell the directive where you want it to output the code like so `@js('resources/ts/generated.ts')`
-
-Another cool side effect of writing JS and CSS directly in the Blade code is that you can write PHP inside the directives.
-
-So no need to do this anymore:
-
-```blade
-<div style="background-image: {{ $post->thumbnail }}">
-    Ravioli, Ravioli, Give Me the Formuoli.
-</div>
-```
-
-Instead you can do this:
-
-```blade
-@css()
-<div>I'm a Goofy Goober, Yeah! You're a Goofy Goober, Yeah! We're All Goofy Goobers, Yeah! Goofy, Goofy, Goofy, Goofy Goober, Yeah!</div>
-
-<style>
-    div {
-        background-image: {{ $post->thumbnail }};
-    }
-</style>
-@endcss
-```
 
 If you wanna try writing Blade single file components, you can find [the code and documentation of the package on github](https://github.com/theokbokki/blade-sfc).
 @endverbatim

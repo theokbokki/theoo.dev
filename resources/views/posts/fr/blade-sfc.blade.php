@@ -58,7 +58,7 @@ Cela m'a conduit à essayer de recréer l'expérience des templates des framewor
 
 Ma première pensée a été d'utiliser les outils fournis avec Blade, alors j'ai fouillé dans la documentation et trouvé la directive `@pushOnce()`.
 
-Cette directive permet de pousser du contenu une seule fois dans une `@stack` ailleurs dans votre page. Ça fonctionne comme ça :
+Cette directive permet de pousser du contenu une seule fois dans une `@stack` ailleurs dans la page. Ça fonctionne comme ça :
 
 ```blade
 <head>
@@ -99,32 +99,30 @@ C'est acceptable si vous avez un site assez petit, mais quand les choses commenc
 La première chose que j'ai essayée était de modifier le moteur de rendu de Blade afin qu'il prenne chaque élément `<script>` et `<style>`, les retire et place leur contenu dans un fichier JS et CSS correspondant. J'ai réussi à le faire fonctionner, mais je me suis rendu compte qu'enlever chaque balise script et style de mon code était une mauvaise idée.
 
 Voici un exemple.
-Quand je fais une animation de chargement de page, j'aime mettre `opacity: 0;` sur tous les éléments pour éviter un clignotement pendant le chargement du JS.
-Mais cela signifie que les utilisateurs avec JS désactivé ne peuvent pas voir ma page, donc j'ajoute ce bout de code dans mon `<head>` pour résoudre le problème.
+
+Quand je fais une animation de chargement de page, je mets `opacity: 0;` sur le body et ensuite je transitionne tout proprement.
+Mais ça signinfe que je dois le faire avant que mon contenu charge pour pouvoir cacher le body sans que la page clignote.
+Du coup, je rajoute ce bout de code au début de mon body:
 
 ```html
-<noscript>
-    <style>
-        body * {
-            opacity: 1;
-        }
-    </style>
-</noscript>
+<script>
+    document.body.style.opacity = 0;
+</script>
 ```
 
-Mais si je retire toutes les balises `<style>`, cela cesse de fonctionner, et c'est pas cool.
+Mais si je retire toutes les balises `<script>`, cela cesse de fonctionner, et c'est pas cool.
 
 J'y ai réfléchi un peu et j'ai réalisé qu'un mélange de ma première et seconde idée pourrait fonctionner.
 C'est là que j'ai commencé à écrire le package [blade-sfc](https://github.com/theokbokki/blade-sfc).
 
-Ce package ajoute deux directives Blade, `@js` et `@css`, qui fonctionnent comme suit:
+Ce package ajoute deux directives Blade, `@javascript` et `@css`, qui fonctionnent comme suit:
 
 ```blade
-@js()
+@javascript()
 <script>
     console.log('Once there was an ugly barnacle. He was so ugly that everyone died. The end.');
 </script>
-@endjs
+@endjavascript
 
 <div>Mon composant</div>
 
@@ -137,7 +135,9 @@ Ce package ajoute deux directives Blade, `@js` et `@css`, qui fonctionnent comme
 @endcss
 ```
 
-En arrière-plan, lorsque le moteur de rendu de Blade rencontre une des directives, il prend tout le contenu à l'intérieur, retire les balises `<style></style>` et `<script></script>`, et place le contenu dans un fichier `generated.js` ou `generated.css`.
+La directive blade fonctionne avec une commande (`php artisan blade-sfc:compile`).
+Cette commande prend tout les `@css` et `@javascript` et les met dans un fichier blade temporaire.
+Puis, une fois que les directives sont dans le fichier, il execute toute les directives d'un coup, retire les tags `script` et `style` et vient mettre le code dans les fichiers `generated.js` et `generated.css`.
 
 Cela résout tous nos problèmes, les styles et scripts sont compilés, mais vous pouvez toujours avoir des balises `script` et `style` dans votre code quand vous en avez besoin.
 
@@ -146,30 +146,6 @@ Cela résout tous nos problèmes, les styles et scripts sont compilés, mais vou
 Cette manière de faire présente aussi des avantages, car comme le code est compilé, vous n'êtes pas limité à utiliser CSS ou JS, vous pouvez utiliser [SCSS](https://sass-lang.com/) ou [typescript](https://www.typescriptlang.org/) ou tout ce dont vous pouvez rêver!
 
 Il suffit simplement d'indiquer à la directive où vous voulez qu'elle génère le code, comme ceci: `@js('resources/ts/generated.ts')`.
-
-Un autre effet cool du fait d'écrire du JS et du CSS directement dans le code Blade est que vous pouvez écrire du PHP à l'intérieur des directives.
-
-Plus besoin de faire ça :
-
-```blade
-<div style="background-image: {{ $post->thumbnail }}">
-    Ravioli, Ravioli, Give Me the Formuoli.
-</div>
-```
-
-À la place, vous pouvez faire ça :
-
-```blade
-@css()
-<div>I'm a Goofy Goober, Yeah! You're a Goofy Goober, Yeah! We're All Goofy Goobers, Yeah! Goofy, Goofy, Goofy, Goofy Goober, Yeah!</div>
-
-<style>
-    div {
-        background-image: {{ $post->thumbnail }};
-    }
-</style>
-@endcss
-```
 
 Si vous voulez essayer d'écrire des composants à fichier unique Blade, vous pouvez trouver [le code et la documentation du package sur GitHub](https://github.com/theokbokki/blade-sfc).
 @endverbatim

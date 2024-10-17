@@ -73,26 +73,13 @@
     a {
         display: inline-grid;
         color: rgb(var(--grey-900));
-        text-decoration: none;
+        text-underline-offset: .25rem;
+        text-decoration-thickness: 0.0625rem;
         line-height: 120%;
         transition: 150ms color ease-out;
 
-        &:after {
-            content: "";
-            display: inline-block;
-            width: 101%;
-            height: 0.0588235294rem;
-            background: rgb(var(--grey-900));
-            border-radius: 9999px;
-            transition: 150ms background ease-out;
-        }
-
         &:hover {
             color: rgb(var(--grey-700));
-
-            &:after {
-                background: rgb(var(--grey-600));
-            }
         }
     }
 

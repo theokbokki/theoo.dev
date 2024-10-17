@@ -60,6 +60,20 @@ class PostSeeder extends Seeder
             'https://bookmarks.theoo.dev',
             now()
         );
+
+        $this->makePost(
+            [
+                'en' => 'Trinkets',
+                'fr' => 'Trinkets',
+            ],
+            [
+                'en' => 'A collection of real and digital stuff I find pretty',
+                'fr' => 'Une collection de trucs, réels ou digitaux, que je trouve jolis.',
+            ],
+            PostType::PROJECT,
+            'https://trinkets.theoo.dev',
+            now()
+        );
     }
 
     private function articles(): void

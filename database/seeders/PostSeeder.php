@@ -74,6 +74,20 @@ class PostSeeder extends Seeder
             'https://trinkets.theoo.dev',
             now()
         );
+
+        $this->makePost(
+            [
+                'en' => 'Snippets',
+                'fr' => 'Snippets',
+            ],
+            [
+                'en' => 'All my snippets in a powerfully filterable interface',
+                'fr' => 'Tous mes snippets dans une interface aux filtres avancés',
+            ],
+            PostType::PROJECT,
+            'https://snippets.theoo.dev',
+            now()
+        );
     }
 
     private function articles(): void

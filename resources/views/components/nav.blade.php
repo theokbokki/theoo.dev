@@ -1,6 +1,6 @@
 <nav class="nav">
     <div class="nav__logo">
-        <a href="{{ LaravelLocalization::localizeUrl(route('home')) }}">
+        <a href="{{ LaravelLocalization::localizeUrl(route('home')) }}" data-transition="true">
             @icon('logo')
         </a>
     </div>

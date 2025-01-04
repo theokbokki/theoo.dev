@@ -1,8 +1,13 @@
-html {
+:root {
+    --index: 1;
+}
+
+html:not(:has(.hidden)) {
     scroll-behavior: smooth;
 }
 
 .app {
+    position: relative;
     display: flex;
     flex-direction: column;
     max-width: 50rem;
@@ -19,15 +24,14 @@ html {
     > * {
         opacity: 0;
         transform: translateY(1rem);
+        transition: opacity 300ms  ease-out calc(100ms * var(--index)),
+            transform 300ms  ease-out calc(100ms * var(--index));
     }
 }
 
-.load {
-    --index: 0;
+body:not(.hidden) > * {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 300ms  ease-out calc(100ms * var(--index)),
-        transform 300ms  ease-out calc(100ms * var(--index));
 }
 
 @media screen and (min-width: 57.5rem) {

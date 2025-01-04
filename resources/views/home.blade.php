@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout page="home">
     <x-slot name="metas">
         <meta name="description" content="{{ __('home.metas.description') }}" />
         <meta property="og:url" content="{{ route('home') }}">

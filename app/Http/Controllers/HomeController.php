@@ -12,7 +12,7 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('home', [
+        $view = view('home', [
             'projects' => Post::query()
                 ->projects()
                 ->published()
@@ -26,5 +26,11 @@ class HomeController extends Controller
                 ->limit(3)
                 ->get(),
         ]);
+
+        if ($request->ajax()) {
+            return response()->json(['html' => $view->render()]);
+        }
+
+        return $view;
     }
 }

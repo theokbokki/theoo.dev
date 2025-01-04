@@ -11,9 +11,9 @@ export default class Wysiwyg {
     }
 
     addCopyButtons() {
-        this.blocks.forEach(block => {
-            if (! navigator.clipboard) {
-                console.log('clipboard api not supported');
+        this.blocks.forEach((block) => {
+            if (!navigator.clipboard) {
+                console.log("clipboard api not supported");
                 return;
             }
 
@@ -30,19 +30,23 @@ export default class Wysiwyg {
 
             wrapper.appendChild(button);
 
-            button.addEventListener("click", async () => {
-                await this.copyCode(block);
-            });
-        })
+            button.addEventListener(
+                "click",
+                async () => {
+                    await this.copyCode(block);
+                },
+                { signal: window.app.controller.signal },
+            );
+        });
     }
 
     async copyCode(block) {
         let copiedCode = block.cloneNode(true);
         const html = copiedCode.outerHTML.replace(/<[^>]*>?/gm, "");
 
-        block.parentNode.querySelector("button.wysiwyg__copy").classList.add('wysiwyg__copy--copied');
+        block.parentNode.querySelector("button.wysiwyg__copy").classList.add("wysiwyg__copy--copied");
         setTimeout(function () {
-            block.parentNode.querySelector("button.wysiwyg__copy").classList.remove('wysiwyg__copy--copied');
+            block.parentNode.querySelector("button.wysiwyg__copy").classList.remove("wysiwyg__copy--copied");
         }, 750);
 
         const parsedHTML = this.htmlDecode(html);

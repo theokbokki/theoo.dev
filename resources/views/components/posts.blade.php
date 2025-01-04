@@ -8,6 +8,7 @@
         <x-button
             :content="$button"
             :href="LaravelLocalization::localizeUrl(route(str()->plural($posts->first()->type)))"
+            data-transition="true"
         />
     </div>
     @endif

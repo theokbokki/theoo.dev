@@ -1,35 +1,14 @@
-import './bootstrap';
-import Wysiwyg from './parts/wysiwyg';
+import axios from "axios";
+import "./bootstrap";
+import TransitionEngine from "./TransitionEngine";
 
 class App {
     constructor() {
-         document.querySelectorAll('.wysiwyg').forEach(el => new Wysiwyg(el));
-
-        this.loadPage();
-    }
-
-    loadPage() {
-        document.querySelectorAll('body > *').forEach((el, index) => {
-            el.style = `--index: ${index + 1}`;
-
-            document.body.classList.add("load");
-            el.classList.add("load");
-        });
-
-        document.querySelectorAll(`a[href*="${location.hostname}"]:not([href*="mailto:"]):not([target="_blank"])`).forEach((el) => {
-            el.addEventListener('click', (e) => {
-                e.preventDefault();
-
-                document.body.style.opacity = 0;
-
-                const href = e.currentTarget.href;
-
-                setTimeout((href) => {
-                    window.location = href;
-                }, 200, href);
-            });
-        });
+        this.controller = new AbortController();
     }
 }
 
-addEventListener('load', () => new App());
+window.addEventListener("DOMContentLoaded", () => {
+    window.app = new App();
+    new TransitionEngine();
+});

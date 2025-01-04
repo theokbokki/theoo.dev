@@ -132,7 +132,7 @@
     pre {
         padding: 2rem;
         border-radius: .5rem;
-        overflow-x: scroll;
+        overflow: auto;
         font-family: monospace;
         background: rgb(var(--grey-50));
     }
@@ -150,7 +150,7 @@
         max-width: 100%;
         font-size: .875rem;
         text-align: left;
-        overflow: scroll;
+        overflow: auto;
 
         thead {
             font-weight: bold;

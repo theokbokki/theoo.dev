@@ -1,4 +1,4 @@
-<x-layout :title="$article->title">
+<x-layout :title="$article->title" page="article">
     <x-slot name="metas">
         <meta name="description" content="{{ $article->excerpt }}" />
         <meta property="og:url" content="{{ route('article', $article) }}">

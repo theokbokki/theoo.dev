@@ -16,12 +16,18 @@ class ProjectController extends Controller
             ->where('slug->'.app()->getLocale(), $slug)
             ->first();
 
-        if (!$post || !$post->published_at || $post->published_at > now()) {
+        if (! $post || ! $post->published_at || $post->published_at > now()) {
             abort(404);
         }
 
-        return view('project', [
+        $view = view('project', [
             'project' => $post,
         ]);
+
+        if ($request->ajax()) {
+            return response()->json(['html' => $view->render()]);
+        }
+
+        return $view;
     }
 }

@@ -4,7 +4,7 @@
 
 <{{ $tag }}
     class="button"
-    @isset($href) href="{{ $href }}" @endisset
+    {{ $attributes }}
 >
     {{ $content }}
 </{{ $tag }}>

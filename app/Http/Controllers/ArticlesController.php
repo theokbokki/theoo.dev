@@ -12,12 +12,18 @@ class ArticlesController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('articles', [
+        $view = view('articles', [
             'articles' => Post::query()
                 ->articles()
                 ->published()
                 ->orderByDesc('published_at')
                 ->get(),
         ]);
+
+        if ($request->ajax()) {
+            return response()->json(['html' => $view->render()]);
+        }
+
+        return $view;
     }
 }

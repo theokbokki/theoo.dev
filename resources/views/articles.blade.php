@@ -1,4 +1,4 @@
-<x-layout :title="__('articles.page-title')">
+<x-layout :title="__('articles.page-title')" page="articles">
     <x-slot name="metas">
         <meta name="description" content="{{ __('articles.metas.description') }}" />
         <meta property="og:url" content="{{ route('articles') }}">

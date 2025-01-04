@@ -24,16 +24,9 @@
         @isset($metas) {{ $metas }} @endisset
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-        <noscript>
-            <style>
-                .app {
-                    opacity: 1;
-                }
-            </style>
-        </noscript>
     </head>
-    <body class="app">
+    <body class="app" data-page="{{ $page }}">
+        <script>document.body.classList.add('hidden')</script>
         {{ $slot }}
         <x-footer />
     </body>

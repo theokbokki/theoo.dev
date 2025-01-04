@@ -20,8 +20,14 @@ class ArticleController extends Controller
             abort(404);
         }
 
-        return view('article', [
+         $view = view('article', [
             'article' => $post,
         ]);
+
+        if ($request->ajax()) {
+            return response()->json(['html' => $view->render()]);
+        }
+
+        return $view;
     }
 }

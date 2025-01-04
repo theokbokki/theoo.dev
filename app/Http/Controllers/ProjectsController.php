@@ -12,12 +12,18 @@ class ProjectsController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('projects', [
+        $view = view('projects', [
             'projects' => Post::query()
                 ->projects()
                 ->published()
                 ->orderByDesc('published_at')
                 ->get(),
         ]);
+
+        if ($request->ajax()) {
+            return response()->json(['html' => $view->render()]);
+        }
+
+        return $view;
     }
 }

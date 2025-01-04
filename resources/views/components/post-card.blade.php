@@ -2,7 +2,9 @@
     <h3 class="post-card__title">
         <a
             href="{{ $post->link }}"
-            @isset($post->external) target="_blank" @endisset
+            @isset($post->external) target="_blank"
+            @else data-transition="true"
+            @endisset
             class="post-card__link"
         >
             {{ $post->title }}

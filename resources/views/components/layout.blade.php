@@ -9,5 +9,6 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body id="app" {{ $attributes->merge(['class' => '']) }}>
+        <x-nav/>
     </body>
 </html>

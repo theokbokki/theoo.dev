@@ -17,6 +17,11 @@ class NavLink extends Component
         public string $href,
     ) {}
 
+    public function isActive(): bool
+    {
+        return $this->href === url()->current();
+    }
+
     /**
      * Get the view / contents that represent the component.
      */

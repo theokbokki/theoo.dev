@@ -8,7 +8,7 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body id="app" {{ $attributes->merge(['class' => '']) }}>
+    <body id="app" {{ $attributes->merge(['class' => 'md:flex md:h-screen']) }}>
         <x-nav/>
     </body>
 </html>

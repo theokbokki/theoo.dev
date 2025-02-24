@@ -1,5 +1,25 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source "../**/*.blade.php";
 
-@theme {}
+@theme {
+    --spacing: 0.0625rem;
+    --font-instrument: "instrument-serif-italic", var(--font-serif);
+    --font-inter: "inter", var(--font-sans);
+}
+
+@font-face {
+    font-family: "instrument-serif-italic";
+    src:
+        url("../fonts/instrument-serif-italic.woff2") format("woff2"),
+        url("../fonts/instrument-serif-italic.woff") format("woff"),
+        url("../fonts/instrument-serif-italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "inter";
+    src:
+        url("../fonts/Inter-Regular.woff2") format("woff2"),
+        url("../fonts/Inter-Regular.woff") format("woff"),
+        url("../fonts/Inter-Regular.ttf") format("truetype");
+}

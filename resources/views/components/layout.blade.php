@@ -9,6 +9,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body id="app" {{ $attributes->merge(['class' => 'md:flex md:h-screen']) }}>
+        <script>document.body.classList.add('opacity-0')</script>
         <x-nav/>
     </body>
 </html>

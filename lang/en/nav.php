@@ -18,6 +18,6 @@ return [
         'email' => 'Email',
         'github' => 'Github',
         'twitter' => 'Twitter',
-        'instagram' => 'Instgram',
+        'instagram' => 'Instagram',
     ],
 ];

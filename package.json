@@ -2,7 +2,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vite build",
+        "build": "vite build && vite build --ssr",
         "dev": "vite"
     },
     "devDependencies": {
@@ -12,5 +12,11 @@
         "laravel-vite-plugin": "^1.2.0",
         "tailwindcss": "^4.0.0",
         "vite": "^6.0.11"
+    },
+    "dependencies": {
+        "@inertiajs/react": "^2.0.5",
+        "@vitejs/plugin-react": "^4.3.4",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
     }
 }

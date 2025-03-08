@@ -1,4 +1,74 @@
 {
-  "resources/js/Pages/App.jsx": [],
-  "resources/js/ssr.jsx": []
+  "resources/img/anky-sticker.png": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png"
+  ],
+  "resources/img/f1-sticker.png": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png"
+  ],
+  "resources/img/logo-sticker.png": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png"
+  ],
+  "resources/img/matcha-sticker.png": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png"
+  ],
+  "resources/img/miffy-sticker.png": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png"
+  ],
+  "resources/img/tsuki-sticker.png": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png"
+  ],
+  "resources/js/Components/Sticker.jsx": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png"
+  ],
+  "resources/js/Pages/App.jsx": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png"
+  ],
+  "resources/js/ssr.jsx": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png"
+  ]
 }

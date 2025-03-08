@@ -16,6 +16,7 @@
     "dependencies": {
         "@inertiajs/react": "^2.0.5",
         "@vitejs/plugin-react": "^4.3.4",
+        "motion": "^12.4.10",
         "react": "^19.0.0",
         "react-dom": "^19.0.0"
     }

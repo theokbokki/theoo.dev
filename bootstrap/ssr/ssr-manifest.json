@@ -1,11 +1,21 @@
 {
+  "resources/fonts/PicNic-Regular.woff": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
+  ],
   "resources/img/anky-sticker.png": [
     "/build/assets/miffy-sticker-7FT-eDLA.png",
     "/build/assets/f1-sticker-dzcukJ37.png",
     "/build/assets/tsuki-sticker-D9IcgLOi.png",
     "/build/assets/matcha-sticker-EBHShiXi.png",
     "/build/assets/anky-sticker-TfT6ROqz.png",
-    "/build/assets/logo-sticker-BvhPhmij.png"
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
   ],
   "resources/img/f1-sticker.png": [
     "/build/assets/miffy-sticker-7FT-eDLA.png",
@@ -13,7 +23,8 @@
     "/build/assets/tsuki-sticker-D9IcgLOi.png",
     "/build/assets/matcha-sticker-EBHShiXi.png",
     "/build/assets/anky-sticker-TfT6ROqz.png",
-    "/build/assets/logo-sticker-BvhPhmij.png"
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
   ],
   "resources/img/logo-sticker.png": [
     "/build/assets/miffy-sticker-7FT-eDLA.png",
@@ -21,7 +32,8 @@
     "/build/assets/tsuki-sticker-D9IcgLOi.png",
     "/build/assets/matcha-sticker-EBHShiXi.png",
     "/build/assets/anky-sticker-TfT6ROqz.png",
-    "/build/assets/logo-sticker-BvhPhmij.png"
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
   ],
   "resources/img/matcha-sticker.png": [
     "/build/assets/miffy-sticker-7FT-eDLA.png",
@@ -29,7 +41,8 @@
     "/build/assets/tsuki-sticker-D9IcgLOi.png",
     "/build/assets/matcha-sticker-EBHShiXi.png",
     "/build/assets/anky-sticker-TfT6ROqz.png",
-    "/build/assets/logo-sticker-BvhPhmij.png"
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
   ],
   "resources/img/miffy-sticker.png": [
     "/build/assets/miffy-sticker-7FT-eDLA.png",
@@ -37,7 +50,8 @@
     "/build/assets/tsuki-sticker-D9IcgLOi.png",
     "/build/assets/matcha-sticker-EBHShiXi.png",
     "/build/assets/anky-sticker-TfT6ROqz.png",
-    "/build/assets/logo-sticker-BvhPhmij.png"
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
   ],
   "resources/img/tsuki-sticker.png": [
     "/build/assets/miffy-sticker-7FT-eDLA.png",
@@ -45,7 +59,17 @@
     "/build/assets/tsuki-sticker-D9IcgLOi.png",
     "/build/assets/matcha-sticker-EBHShiXi.png",
     "/build/assets/anky-sticker-TfT6ROqz.png",
-    "/build/assets/logo-sticker-BvhPhmij.png"
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
+  ],
+  "resources/js/Components/HeroText.jsx": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
   ],
   "resources/js/Components/Sticker.jsx": [
     "/build/assets/miffy-sticker-7FT-eDLA.png",
@@ -53,7 +77,8 @@
     "/build/assets/tsuki-sticker-D9IcgLOi.png",
     "/build/assets/matcha-sticker-EBHShiXi.png",
     "/build/assets/anky-sticker-TfT6ROqz.png",
-    "/build/assets/logo-sticker-BvhPhmij.png"
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
   ],
   "resources/js/Pages/App.jsx": [
     "/build/assets/miffy-sticker-7FT-eDLA.png",
@@ -61,7 +86,8 @@
     "/build/assets/tsuki-sticker-D9IcgLOi.png",
     "/build/assets/matcha-sticker-EBHShiXi.png",
     "/build/assets/anky-sticker-TfT6ROqz.png",
-    "/build/assets/logo-sticker-BvhPhmij.png"
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
   ],
   "resources/js/ssr.jsx": [
     "/build/assets/miffy-sticker-7FT-eDLA.png",
@@ -69,6 +95,25 @@
     "/build/assets/tsuki-sticker-D9IcgLOi.png",
     "/build/assets/matcha-sticker-EBHShiXi.png",
     "/build/assets/anky-sticker-TfT6ROqz.png",
-    "/build/assets/logo-sticker-BvhPhmij.png"
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
+  ],
+  "resources/shaders/HeroText/hero-text.frag": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
+  ],
+  "resources/shaders/HeroText/hero-text.vert": [
+    "/build/assets/miffy-sticker-7FT-eDLA.png",
+    "/build/assets/f1-sticker-dzcukJ37.png",
+    "/build/assets/tsuki-sticker-D9IcgLOi.png",
+    "/build/assets/matcha-sticker-EBHShiXi.png",
+    "/build/assets/anky-sticker-TfT6ROqz.png",
+    "/build/assets/logo-sticker-BvhPhmij.png",
+    "/build/assets/PicNic-Regular-woBZUxHO.woff"
   ]
 }

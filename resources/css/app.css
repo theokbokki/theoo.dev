@@ -2,6 +2,15 @@
 
 @theme {
     --font-picnic: "PicNic", var(--font-serif);
+    --animate-spin: spin 2s steps(10) infinite;
+    @keyframes spin {
+      0% {
+          background-position-x: 0;
+      }
+      100% {
+          background-position-x: calc(100% - 180px);
+      }
+    }
 }
 
 @font-face {

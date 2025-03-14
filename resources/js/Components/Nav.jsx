@@ -12,7 +12,7 @@ export default function Nav() {
             </figure>
             <div className="flex gap-6">
                 <FishButton>Get in touch</FishButton>
-                <figure className="h-8">
+                <figure className="h-8 sm:hidden">
                     <img src={burger} alt="A jumping burger" className="w-full h-full" />
                 </figure>
             </div>

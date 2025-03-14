@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useDragControls } from "motion/react";
 
-export default function ContextMenu({ title, children }) {
+export default function ContextMenu({ title, x, y, children }) {
     const dragControls = useDragControls();
 
     const childrenWithDrag = React.Children.map(children, (child) =>
@@ -11,6 +11,8 @@ export default function ContextMenu({ title, children }) {
     return (
         <motion.nav
             style={{
+                x: Number(x),
+                y: Number(y),
                 boxShadow: "0 6px 16px 0 rgba(0, 0, 0, 0.2)",
             }}
             whileDrag={{
@@ -18,7 +20,7 @@ export default function ContextMenu({ title, children }) {
                 zIndex: 99,
             }}
             transition={{
-                duration: 0.2
+                duration: 0.2,
             }}
             className="absolute w-30.5 px-1.25 py-1.75 bg-[#EAEAE7] rounded-lg border-[0.5px] border-[#C3C3C3]"
             drag

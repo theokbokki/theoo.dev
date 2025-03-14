@@ -1,11 +1,13 @@
 import { motion } from "motion/react";
 
-export default function App({ src, alt, width = 80 }) {
+export default function App({ src, alt, x, y, width = 80 }) {
     return (
         <>
             <motion.img
                 drag
                 style={{
+                    x: Number(x),
+                    y: Number(y),
                     scale: 0.7,
                 }}
                 whileDrag={{

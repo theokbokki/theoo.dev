@@ -13,6 +13,8 @@ import ContextMenuItem from "@/Components/ContextMenuItem";
 import ContextMenuSeparator from "@/Components/ContextMenuSeparator";
 import Sticker from "@/Components/Sticker";
 import Nav from "@/Components/Nav";
+import ShaderContainer from "@/Components/ShaderContainer";
+import Template from "@/Shaders/Template/Template";
 
 export default function App() {
     return (
@@ -64,9 +66,18 @@ export default function App() {
                             Instagram
                         </ContextMenuItem>
                     </ContextMenu>
-                    <Sticker src={matchaSticker} alt="A sticker of Matcha, my small tabby cat sleeping." x="-96" y="-686"/>
+                    <Sticker
+                        src={matchaSticker}
+                        alt="A sticker of Matcha, my small tabby cat sleeping."
+                        x="-96"
+                        y="-686"
+                    />
                 </div>
             </div>
+
+            <ShaderContainer>
+                <Template />
+            </ShaderContainer>
         </>
     );
 }

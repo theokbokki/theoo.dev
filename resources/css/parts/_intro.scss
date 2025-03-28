@@ -1,0 +1,25 @@
+@use "../utils" as *;
+@use "../colors";
+
+.intro {
+    max-width: rem(400);
+
+    &__text {
+        line-height: 150%;
+        color: colors.$neutral-800;
+        text-wrap: pretty;
+
+        + .intro__text {
+            margin-top: rem(16);
+        }
+    }
+
+    &__link {
+        color: colors.$neutral-500;
+        transition: color 150ms ease-out;
+
+        &:hover {
+            color: colors.$neutral-800;
+        }
+    }
+}

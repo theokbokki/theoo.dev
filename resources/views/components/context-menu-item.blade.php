@@ -1,7 +1,7 @@
 <li class="context-menu__item {{ $disabled }}">
     @if($href)
-        <a href="{{ $href }}">{{ $slot }}</a>
+        <a href="{{ $href }}" class="context-menu__content">{{ $slot }}</a>
     @else
-        <p>{{ $slot }}</p>
+        <p class="context-menu__content">{{ $slot }}</p>
     @endif
 </li>

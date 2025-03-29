@@ -3,6 +3,7 @@
 
 .intro {
     max-width: rem(400);
+    margin-bottom: rem(32);
 
     &__text {
         line-height: 150%;
@@ -21,5 +22,9 @@
         &:hover {
             color: colors.$neutral-800;
         }
+    }
+
+    @media screen and (min-width: rem(800)) {
+        margin-bottom: rem(64);
     }
 }

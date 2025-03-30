@@ -1,0 +1,30 @@
+@use "../utils" as *;
+@use "../colors";
+
+.nav {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: rem(400);
+        gap: rem(8) 0;
+    }
+
+    &__item {
+        display: inline;
+    }
+
+    &__link {
+        display: block;
+        padding: rem(8) rem(16);
+        line-height: 150%;
+        text-decoration: none;
+        color: colors.$neutral-800;
+        border-radius: rem(9999);
+        transition: background 150ms ease-out;
+
+        &:hover,
+        .nav__item--active & {
+            background: colors.$neutral-100;
+        }
+    }
+}

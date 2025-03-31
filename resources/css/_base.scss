@@ -1,10 +1,18 @@
-@use 'utils' as *;
+@use "utils" as *;
+@use "colors";
 
 .app {
     padding: rem(40) rem(16);
-    font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-family:
+        ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
     height: calc(100vh - rem(80));
     height: calc(100dvh - rem(80));
+
+    ::selection {
+        background: colors.$orange-100;
+        color: colors.$orange-600;
+    }
 
     &__header {
         height: 100%;

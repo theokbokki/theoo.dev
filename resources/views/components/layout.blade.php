@@ -11,7 +11,12 @@
     <body class="app">
         <h1 class="sro">Theoo's personal website</h1>
         <header class="app__header">
-            <x-intro/>
+            <x-nav title="Main navigation">
+                <x-nav-item href="#">Links</x-nav-item>
+                <x-nav-item href="#">Notes</x-nav-item>
+                <x-nav-item :href="route('home')">Shaders</x-nav-item>
+                <x-nav-item href="#">Snippets</x-nav-item>
+            </x-nav>
             <x-context-menu title="Socials links navigation">
                 <x-context-menu-item disabled>Socials</x-context-menu-item>
                 <x-context-menu-separator/>
@@ -21,12 +26,7 @@
                 <x-context-menu-item href="https://x.com/theokbokki_">Twitter/X</x-context-menu-item>
                 <x-context-menu-item href="https://instagram.com/theokbokki">Instagram</x-context-menu-item>
             </x-context-menu>
-            <x-nav title="Main navigation">
-                <x-nav-item href="#">Links</x-nav-item>
-                <x-nav-item href="#">Notes</x-nav-item>
-                <x-nav-item :href="route('home')">Shaders</x-nav-item>
-                <x-nav-item href="#">Snippets</x-nav-item>
-            </x-nav>
+            <x-intro/>
         </header>
         <main>
             {{ $slot }}

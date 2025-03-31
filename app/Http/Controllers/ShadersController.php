@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class ShadersController extends Controller
 {
     public function __invoke(Request $request)
     {
-        return redirect(route('shaders'));
+        return view('shaders');
     }
 }

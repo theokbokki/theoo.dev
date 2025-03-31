@@ -14,7 +14,7 @@
             <x-nav title="Main navigation">
                 <x-nav-item href="#">Links</x-nav-item>
                 <x-nav-item href="#">Notes</x-nav-item>
-                <x-nav-item :href="route('home')">Shaders</x-nav-item>
+                <x-nav-item :href="route('shaders')">Shaders</x-nav-item>
                 <x-nav-item href="#">Snippets</x-nav-item>
             </x-nav>
             <x-context-menu title="Socials links navigation">

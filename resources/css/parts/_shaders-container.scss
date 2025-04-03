@@ -1,0 +1,19 @@
+@use "../utils" as *;
+
+.shaders-container {
+    display: flex;
+    gap: rem(24);
+    width: calc(100vw - rem(16));
+    max-height: rem(600);
+    padding: rem(2) 0;
+    aspect-ratio: 1/1;
+    overflow: auto;
+
+    @media screen and (min-width: rem(800)) {
+        width: calc(100vw - rem(320) - rem(80) - rem(40));
+    }
+
+    @media screen and (min-width: rem(1200)) {
+        width: calc(100vw - rem(400) - rem(100) - rem(80));
+    }
+}

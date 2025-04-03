@@ -15,7 +15,7 @@
     }
 
     &__header {
-        height: 100%;
+        height: max-content;
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-end;
@@ -23,9 +23,13 @@
     }
 
     @media screen and (min-width: rem(800)) {
-        padding: rem(40) rem(40);
+        display: flex;
+        gap: rem(80);
+        padding: rem(40);
+        padding-right: 0;
 
         &__header {
+            height: 100%;
             gap: rem(64);
 
             > :first-child {
@@ -35,6 +39,8 @@
     }
 
     @media screen and (min-width: rem(1200)) {
+        gap: rem(100);
         padding: rem(40) rem(80);
+        padding-right: 0;
     }
 }

@@ -28,7 +28,7 @@
             </x-context-menu>
             <x-intro/>
         </header>
-        <main>
+        <main class="app__main">
             {{ $slot }}
         </main>
     </body>

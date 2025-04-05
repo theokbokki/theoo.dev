@@ -1,6 +1,8 @@
 <x-layout>
-    <x-shaders-container title="Purple and black lines">
-        <x-shader id="purple-lines-one"/>
-        <x-shader id="purple-lines-two"/>
-    </x-shaders-container>
+    <section>
+        <h2 class="sro">Shaders</h2>
+        <x-shader id="orange-lines"/>
+        <x-shader id="purple-lines"/>
+        <x-shader id="gradient-colors"/>
+    </section>
 </x-layout>

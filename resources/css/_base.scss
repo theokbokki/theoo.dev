@@ -2,12 +2,12 @@
 @use "colors";
 
 .app {
+    max-width: rem(1200);
+    margin: 0 auto;
     padding: rem(40) rem(16);
     font-family:
         ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
-    height: calc(100vh - rem(80));
-    height: calc(100dvh - rem(80));
 
     ::selection {
         background: colors.$orange-100;
@@ -20,27 +20,41 @@
         flex-direction: column-reverse;
         justify-content: flex-end;
         gap: rem(32);
+        margin-bottom: rem(40);
     }
 
-    @media screen and (min-width: rem(800)) {
+    @media screen and (min-width: rem(640)) {
+        padding: rem(40);
+    }
+
+    @media screen and (min-width: rem(920)) {
         display: flex;
         gap: rem(80);
         padding: rem(40);
-        padding-right: 0;
 
         &__header {
+            position: sticky;
+            top: rem(40);
             height: 100%;
             gap: rem(64);
+            min-width: rem(400);
 
             > :first-child {
                 margin-top: auto;
             }
+        }
+
+        &__main {
+            width: calc(100vw - rem(560));
         }
     }
 
     @media screen and (min-width: rem(1200)) {
         gap: rem(100);
         padding: rem(40) rem(80);
-        padding-right: 0;
+
+        &__main {
+            width: calc(100vw - rem(640));
+        }
     }
 }

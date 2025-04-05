@@ -1,9 +1,15 @@
+@use '../utils' as *;
+
 .shader {
-    height: 100%;
+    width: 100%;
     aspect-ratio: 1/1;
 
     canvas {
         height: 100%;
         aspect-ratio: 1/1;
+    }
+
+    + .shader {
+        margin-top: rem(24);
     }
 }

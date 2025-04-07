@@ -1,0 +1,55 @@
+{
+  "resources/fonts/Inter-Bold.woff2": {
+    "file": "assets/Inter-Bold-CytjP_7U.woff2",
+    "src": "resources/fonts/Inter-Bold.woff2"
+  },
+  "resources/fonts/Inter-Regular.woff2": {
+    "file": "assets/Inter-Regular-B0QUfDW0.woff2",
+    "src": "resources/fonts/Inter-Regular.woff2"
+  },
+  "resources/img/tab-border-first.svg": {
+    "file": "assets/tab-border-first-CN4Rv6zQ.svg",
+    "src": "resources/img/tab-border-first.svg"
+  },
+  "resources/img/tab-border-left.svg": {
+    "file": "assets/tab-border-left-D3X4K0EM.svg",
+    "src": "resources/img/tab-border-left.svg"
+  },
+  "resources/img/tab-border-right.svg": {
+    "file": "assets/tab-border-right-Bjj_Z0Ut.svg",
+    "src": "resources/img/tab-border-right.svg"
+  },
+  "resources/img/table-line-bg.png": {
+    "file": "assets/table-line-bg-CIqviM06.png",
+    "src": "resources/img/table-line-bg.png"
+  },
+  "resources/js/Hiker.js": {
+    "file": "assets/Hiker-D9xsUIC9.js",
+    "name": "Hiker",
+    "src": "resources/js/Hiker.js",
+    "isEntry": true,
+    "css": [
+      "assets/Hiker-Bc5LP2HS.css"
+    ]
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-DNTBMUvS.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
+  },
+  "resources/sass/themes/default.scss": {
+    "file": "assets/default-B7HAQKdk.css",
+    "src": "resources/sass/themes/default.scss",
+    "isEntry": true
+  },
+  "resources/sass/themes/orange.scss": {
+    "file": "assets/orange-BpyzZEB_.css",
+    "src": "resources/sass/themes/orange.scss",
+    "isEntry": true
+  },
+  "resources/sass/themes/softblue.scss": {
+    "file": "assets/softblue-DnyPP49U.css",
+    "src": "resources/sass/themes/softblue.scss",
+    "isEntry": true
+  }
+}

@@ -1,0 +1,1 @@
+.wysiwyg-field__editor p.is-editor-empty:first-child:before{content:attr(data-empty-text);float:left;color:#aaa;pointer-events:none;height:0}

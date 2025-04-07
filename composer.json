@@ -10,6 +10,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "hiker-dev/hiker": "^1.0@alpha",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1"
     },
@@ -70,6 +71,12 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "minimum-stability": "alpha",
+    "prefer-stable": true,
+    "repositories": {
+        "hiker": {
+            "type": "composer",
+            "url": "https://repo.hiker.dev"
+        }
+    }
 }

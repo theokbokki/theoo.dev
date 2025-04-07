@@ -36,7 +36,7 @@ class SingleView extends ResourceTemplate
                         Btn::make()
                             ->title('Delete')
                             ->icon('trash')
-                            ->flow($this->resource, 'remove'),
+                            ->flow($this->resource, 'delete'),
 
                         Btn::make()
                             ->label('Edit')

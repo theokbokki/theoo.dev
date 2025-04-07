@@ -2,6 +2,9 @@
 
 namespace App\Hiker\Chrome;
 
+use App\Hiker\Resources\Links\Link as LinkResource;
+use Hiker\Components\Navigation\Group;
+use Hiker\Components\Navigation\Link;
 use Hiker\Components\Navigation\NavigationConstructor;
 
 class Navigation extends NavigationConstructor
@@ -14,6 +17,9 @@ class Navigation extends NavigationConstructor
         return [
             $this->dashboard(),
             $this->search(),
+            Group::make()->links([
+                Link::make()->resource(LinkResource::class),
+            ]),
         ];
     }
 
@@ -26,5 +32,4 @@ class Navigation extends NavigationConstructor
             //
         ];
     }
-
 }

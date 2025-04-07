@@ -2,7 +2,6 @@
 
 namespace App\Hiker\Resources\Links;
 
-use Hiker\Http\Requests\ResourceRequest;
 use Hiker\Tracks\FlowsRepository;
 use Hiker\Tracks\Roadmap;
 
@@ -16,8 +15,7 @@ class LinkFlows extends FlowsRepository
     public function draft(): Roadmap
     {
         return roadmap()
-            ->setTransitory()
-            //
+            ->show(Forms\LinkForm::class)
             ->chain('create');
     }
 
@@ -29,7 +27,7 @@ class LinkFlows extends FlowsRepository
     public function create(): Roadmap
     {
         return roadmap()
-            //
+            ->save(Nodes\SaveLink::class)
             ->chain('read');
     }
 
@@ -41,8 +39,7 @@ class LinkFlows extends FlowsRepository
     public function edit(): Roadmap
     {
         return roadmap()
-            ->setTransitory()
-            //
+            ->show(Forms\LinkForm::class)
             ->chain('update');
     }
 
@@ -54,7 +51,7 @@ class LinkFlows extends FlowsRepository
     public function update(): Roadmap
     {
         return roadmap()
-            //
+            ->save(Nodes\SaveLink::class)
             ->chain('read');
     }
 
@@ -65,8 +62,7 @@ class LinkFlows extends FlowsRepository
      */
     public function read(): Roadmap
     {
-        return roadmap()
-            ->setTransitory();
+        return roadmap();
     }
 
     /**
@@ -77,7 +73,7 @@ class LinkFlows extends FlowsRepository
     public function remove(): Roadmap
     {
         return roadmap()
-            ->setTransitory()
+
             //
             ->chain('delete');
     }

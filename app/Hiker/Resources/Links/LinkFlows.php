@@ -62,7 +62,8 @@ class LinkFlows extends FlowsRepository
      */
     public function read(): Roadmap
     {
-        return roadmap();
+        return roadmap()
+            ->show(Views\SingleView::class);
     }
 
     /**

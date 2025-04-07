@@ -6,6 +6,7 @@ use Hiker\Components\Editor\Step;
 use Hiker\Components\Fields\Text\Text;
 use Hiker\Nodes\Form;
 use Hiker\Tracks\Baggage;
+use Illuminate\Validation\Rule;
 
 class LinkForm extends Form
 {
@@ -38,7 +39,11 @@ class LinkForm extends Form
 
                     Text::make('Url', 'url')
                         ->icon('link')
-                        ->rules(['required', 'url', 'unique:links']),
+                        ->rules([
+                            'required',
+                            'url',
+                            Rule::unique('links')->ignore($this->trip->resource()->model()),
+                        ]),
                 ]),
         ];
     }

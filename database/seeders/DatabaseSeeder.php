@@ -18,5 +18,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'hello@theoo.dev',
             'password' => bcrypt('change_this'),
         ]);
+
+        $this->call([
+            LinkSeeder::class,
+        ]);
     }
 }

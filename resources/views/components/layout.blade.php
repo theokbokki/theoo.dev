@@ -12,7 +12,7 @@
         <h1 class="sro">Theoo's personal website</h1>
         <header class="app__header">
             <x-nav title="Main navigation">
-                <x-nav-item href="#">Links</x-nav-item>
+                <x-nav-item :href="route('links')">Links</x-nav-item>
                 <x-nav-item href="#">Notes</x-nav-item>
                 <x-nav-item :href="route('shaders')">Shaders</x-nav-item>
                 <x-nav-item href="#">Snippets</x-nav-item>

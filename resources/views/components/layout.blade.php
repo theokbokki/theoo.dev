@@ -17,17 +17,9 @@
                 <x-nav-item :href="route('shaders')">Shaders</x-nav-item>
                 <x-nav-item href="#">Snippets</x-nav-item>
             </x-nav>
-            <x-context-menu title="Socials links navigation">
-                <x-context-menu-item disabled>Socials</x-context-menu-item>
-                <x-context-menu-separator/>
-                <x-context-menu-item href="mailto:hello@theoo.dev">Email</x-context-menu-item>
-                <x-context-menu-item href="https://github.com/theokbokki">Github</x-context-menu-item>
-                <x-context-menu-item href="https://bsky.app/profile/theokbokki.bsky.social">Bluesky</x-context-menu-item>
-                <x-context-menu-item href="https://x.com/theokbokki_">Twitter/X</x-context-menu-item>
-                <x-context-menu-item href="https://instagram.com/theokbokki">Instagram</x-context-menu-item>
-            </x-context-menu>
             <x-intro/>
         </header>
+        <hr>
         <main class="app__main">
             {{ $slot }}
         </main>

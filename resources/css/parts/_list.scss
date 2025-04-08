@@ -1,0 +1,12 @@
+@use '../utils' as *;
+
+.list {
+    &__item {
+        position: relative;
+        padding-bottom: rem(8);
+
+        + .list__item {
+            padding-top: rem(8);
+        }
+    }
+}

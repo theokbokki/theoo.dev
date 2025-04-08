@@ -1,26 +1,62 @@
 @use "utils" as *;
 @use "colors";
 
-.app {
-    max-width: rem(1200);
-    margin: 0 auto;
-    padding: rem(40) rem(16);
-    font-family:
+:root {
+    --sans:
         ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
+    --serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+a {
+    text-decoration: none;
+    background-image: linear-gradient(colors.$neutral-600, colors.$neutral-600), linear-gradient(#ffffff, #ffffff);
+    background-size:
+        100% 0,
+        100% 0;
+    background-position:
+        100% 100%,
+        100% 100%;
+    background-repeat: no-repeat, no-repeat;
+    transition:
+        opacity 100ms ease-out,
+        background-size 150ms ease-out;
+
+    &:hover {
+        opacity: 70%;
+        background-size:
+            100% 1px,
+            100% 1px;
+    }
+}
+
+hr {
+    display: block;
+    border: none;
+    margin: rem(64) auto;
+
+    &:before {
+        content: "✽  ✽  ✽";
+        display: block;
+        color: colors.$neutral-600;
+        opacity: 25%;
+        font-size: rem(16);
+        text-align: center;
+        white-space: pre;
+    }
+}
+
+.app {
+    max-width: rem(600);
+    margin: 0 auto;
+    padding: 0 rem(20);
 
     ::selection {
         background: colors.$orange-100;
-        color: colors.$orange-600;
     }
 
-    &__header {
-        height: max-content;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-        gap: rem(32);
-        margin-bottom: rem(40);
+    &__main {
+        margin-top: rem(64);
     }
 
     @media screen and (min-width: rem(640)) {
@@ -28,33 +64,6 @@
     }
 
     @media screen and (min-width: rem(920)) {
-        display: flex;
         gap: rem(80);
-
-        &__header {
-            position: sticky;
-            top: rem(40);
-            gap: rem(64);
-            min-width: rem(400);
-            height: calc(100vh - rem(80));
-            margin-bottom: rem(0);
-
-            > :first-child {
-                margin-top: auto;
-            }
-        }
-
-        &__main {
-            width: calc(100vw - rem(560));
-        }
-    }
-
-    @media screen and (min-width: rem(1200)) {
-        gap: rem(100);
-        padding: rem(40) rem(80);
-
-        &__main {
-            width: calc(100vw - rem(640));
-        }
     }
 }

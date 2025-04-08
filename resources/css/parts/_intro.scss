@@ -2,12 +2,14 @@
 @use "../colors";
 
 .intro {
-    max-width: rem(400);
+    max-width: rem(600);
+    margin-top: rem(40);
 
     &__text {
+        font-size: rem(16);
         line-height: 150%;
-        color: colors.$neutral-800;
         text-wrap: pretty;
+        color: colors.$neutral-600;
 
         + .intro__text {
             margin-top: rem(16);
@@ -15,11 +17,17 @@
     }
 
     &__link {
-        color: colors.$neutral-500;
-        transition: color 150ms ease-out;
+        color: colors.$neutral-600;
+        background-size:
+            100% 1px,
+            100% 1px;
+    }
 
-        &:hover {
-            color: colors.$neutral-800;
-        }
+    @media screen and (min-width: rem(640)) {
+        margin-top: rem(80);
+    }
+
+    @media screen and (min-width: rem(920)) {
+        margin-top: rem(120);
     }
 }

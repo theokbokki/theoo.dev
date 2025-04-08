@@ -1,8 +1,12 @@
 <x-layout>
-    <section>
+    <section class="">
         <h2 class="sro">Links</h2>
-        @foreach($links as $link)
-            <x-link :$link/>
-        @endforeach
+        <ul class="list">
+            @foreach($links as $link)
+                <li class="list__item">
+                    <x-link :$link/>
+                </li>
+            @endforeach
+        </ul>
     <section>
 </x-layout>

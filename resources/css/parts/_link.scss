@@ -1,0 +1,17 @@
+@use '../utils' as *;
+@use "../colors";
+
+.link {
+    line-height: 150%;
+    font-size: rem(16);
+    color: colors.$neutral-600;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}

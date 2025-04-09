@@ -49,7 +49,7 @@ hr {
 .app {
     max-width: rem(600);
     margin: 0 auto;
-    padding: 0 rem(20);
+    padding: 0 rem(20) rem(40);
 
     ::selection {
         background: colors.$orange-100;

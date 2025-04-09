@@ -13,7 +13,7 @@
         <header class="app__header">
             <x-nav title="Main navigation">
                 <x-nav-item :href="route('links')">Links</x-nav-item>
-                <x-nav-item href="#">Notes</x-nav-item>
+                <x-nav-item :href="route('notes')">Notes</x-nav-item>
                 <x-nav-item :href="route('shaders')">Shaders</x-nav-item>
                 <x-nav-item href="#">Snippets</x-nav-item>
             </x-nav>

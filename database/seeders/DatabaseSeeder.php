@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             LinkSeeder::class,
+            NoteSeeder::class,
         ]);
     }
 }

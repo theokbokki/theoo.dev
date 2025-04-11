@@ -2,7 +2,6 @@
 
 namespace App\Hiker\Resources\Notes;
 
-use Hiker\Http\Requests\ResourceRequest;
 use Hiker\Tracks\FlowsRepository;
 use Hiker\Tracks\Roadmap;
 
@@ -16,8 +15,7 @@ class NoteFlows extends FlowsRepository
     public function draft(): Roadmap
     {
         return roadmap()
-            ->setTransitory()
-            //
+            ->show(Forms\NoteForm::class)
             ->chain('create');
     }
 
@@ -29,7 +27,7 @@ class NoteFlows extends FlowsRepository
     public function create(): Roadmap
     {
         return roadmap()
-            //
+            ->save(Nodes\SaveNote::class)
             ->chain('read');
     }
 
@@ -41,8 +39,7 @@ class NoteFlows extends FlowsRepository
     public function edit(): Roadmap
     {
         return roadmap()
-            ->setTransitory()
-            //
+            ->show(Forms\NoteForm::class)
             ->chain('update');
     }
 
@@ -54,7 +51,7 @@ class NoteFlows extends FlowsRepository
     public function update(): Roadmap
     {
         return roadmap()
-            //
+            ->save(Nodes\SaveNote::class)
             ->chain('read');
     }
 

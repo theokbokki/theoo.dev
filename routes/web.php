@@ -15,4 +15,4 @@ Route::get('/links', LinksController::class)->name('links');
 
 Route::get('/notes', NotesController::class)->name('notes');
 
-Route::get('/notes/{note:slug}', NoteController::class)->name('note.single');
+Route::get('/notes/{slug}', NoteController::class)->name('note');

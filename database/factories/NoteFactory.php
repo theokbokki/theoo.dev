@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Note>
@@ -16,8 +17,10 @@ class NoteFactory extends Factory
      */
     public function definition(): array
     {
+        $title = fake()->unique()->sentence();
         return [
-            'title' => fake()->sentence(),
+            'title' => $title,
+            'slug' => Str::slug($title),
             'published' => true,
         ];
     }

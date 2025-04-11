@@ -2,6 +2,7 @@
 
 namespace App\Hiker\Resources\Notes\Forms;
 
+use App\Rules\UniqueSlugAcrossNotes;
 use Hiker\Components\Editor\Step;
 use Hiker\Components\Fields\Checkbox\Checkbox;
 use Hiker\Components\Fields\Text\Text;
@@ -35,7 +36,7 @@ class NoteForm extends Form
             Step::make($this->subject(), 'general')
                 ->fields([
                     Text::make('Title', 'title')
-                        ->rules(['required']),
+                        ->rules(['required', new UniqueSlugAcrossNotes($this->trip->resource()?->id)]),
 
                     Checkbox::make('Published', 'published'),
                 ]),

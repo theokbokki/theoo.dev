@@ -2,19 +2,17 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Builder;
-use Spatie\Sluggable\HasSlug;
-use Spatie\Sluggable\SlugOptions;
 
 class Note extends Model
 {
     /** @use HasFactory<\Database\Factories\NoteFactory> */
     use HasFactory;
 
-    use HasSlug;
     use SoftDeletes;
 
     protected $fillable = [
@@ -23,11 +21,9 @@ class Note extends Model
         'published',
     ];
 
-    public function getSlugOptions(): SlugOptions
+    public function slugHistories(): HasMany
     {
-        return SlugOptions::create()
-            ->generateSlugsFrom('title')
-            ->saveSlugsTo('slug');
+        return $this->hasMany(NoteSlugHistory::class);
     }
 
     public function scopePublished(Builder $query): Builder

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Hiker\Resources\Links\Attributes;
+namespace App\Hiker\Resources\Notes\Attributes;
 
 use Hiker\Components\Text\Text;
 use Hiker\Structures\Archive\Attribute;

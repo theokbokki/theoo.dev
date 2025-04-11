@@ -67,19 +67,6 @@ class NoteFlows extends FlowsRepository
     }
 
     /**
-     * Returns the "remove" roadmap definition.
-     * Edit is only used by graphical UI clients and is used to prepare
-     * a flow's delete flow.
-     */
-    public function remove(): Roadmap
-    {
-        return roadmap()
-            ->setTransitory()
-            //
-            ->chain('delete');
-    }
-
-    /**
      * Returns the "delete" roadmap definition.
      * Delete is used by all clients (API included) for destroying
      * a flow and its related contents.
@@ -87,7 +74,7 @@ class NoteFlows extends FlowsRepository
     public function delete(): Roadmap
     {
         return roadmap()
-            //
+            ->delete(Nodes\DeleteNote::class)
             ->chain('index');
     }
 }

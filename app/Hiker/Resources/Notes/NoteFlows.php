@@ -66,7 +66,7 @@ class NoteFlows extends FlowsRepository
     public function read(): Roadmap
     {
         return roadmap()
-            ->setTransitory();
+            ->show(Views\SingleView::class);
     }
 
     /**

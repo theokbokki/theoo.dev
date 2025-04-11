@@ -26,7 +26,7 @@ class Published extends Attribute
         }
 
         return Badge::make()
-            ->label('Published')
+            ->label('Not published')
             ->color(BadgeColor::Red)
             ->style(BadgeStyle::Small);
     }

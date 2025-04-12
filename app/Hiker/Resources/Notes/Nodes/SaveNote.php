@@ -5,6 +5,7 @@ namespace App\Hiker\Resources\Notes\Nodes;
 use Hiker\Tracks\Node;
 use Hiker\Tracks\Nodes\Saveable;
 use Hiker\Tracks\Trips\Trip;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class SaveNote extends Node implements Saveable
@@ -31,6 +32,7 @@ class SaveNote extends Node implements Saveable
         $this->model->published = $bag->published;
 
         $this->handleSlugHistory();
+        $this->handleMarkdownFile();
 
         $this->model->save();
     }
@@ -51,6 +53,30 @@ class SaveNote extends Node implements Saveable
         $this->model->slugHistories()->create([
             'slug' => $this->model->getOriginal('slug'),
         ]);
+    }
+
+    private function handleMarkdownFile()
+    {
+        $disk = Storage::disk('local');
+        $notesPath = 'notes';
+
+        $newFilePath = $notesPath.'/'.$this->model->slug.'.md';
+
+        $slugChanged = $this->model->isDirty('slug');
+        $oldSlug = $this->model->getOriginal('slug');
+        $oldFilePath = $notesPath.'/'.$oldSlug.'.md';
+
+        if ($slugChanged && $oldSlug && $disk->exists($oldFilePath)) {
+            $disk->move($oldFilePath, $newFilePath);
+
+            return;
+        }
+
+        $fileExists = $disk->exists($newFilePath);
+
+        if (! $fileExists) {
+            $disk->put($newFilePath, '');
+        }
     }
 
     /**

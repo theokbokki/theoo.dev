@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Note;
 use App\Models\NoteSlugHistory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class NoteController extends Controller
 {
@@ -18,7 +19,10 @@ class NoteController extends Controller
         if ($note) {
             abort_unless($note->published, 404);
 
-            return view('note');
+            return view('note', [
+                'note' => $note,
+                'content' => $this->getContent($note),
+            ]);
         }
 
         $history = NoteSlugHistory::query()
@@ -31,5 +35,16 @@ class NoteController extends Controller
         }
 
         abort(404);
+    }
+
+    private function getContent(Note $note): string
+    {
+        $filePath = 'notes/'.$note->slug.'.md';
+
+        if (! Storage::disk('local')->exists($filePath)) {
+            return '';
+        }
+
+        return  Storage::disk('local')->get($filePath);
     }
 }

@@ -30,7 +30,7 @@ class Link extends Component
         }
 
         if (get_class($item) === Note::class) {
-            $this->url = route('note', ['note' => $item]);
+            $this->url = route('note', ['slug' => $item->slug]);
             $this->content = $item->title;
         }
     }

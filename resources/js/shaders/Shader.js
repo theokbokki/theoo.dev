@@ -1,12 +1,8 @@
 import * as THREE from "three";
 
 export default class Shader {
-    constructor(canvasId) {
-        this.canvas = document.getElementById(canvasId);
-
-        if (!this.canvas) {
-            return;
-        }
+    constructor(canvas) {
+        this.canvas = canvas;
 
         this.width = this.canvas.clientWidth;
         this.height = this.canvas.clientHeight;

@@ -8,14 +8,14 @@ use Illuminate\View\Component;
 
 class Layout extends Component
 {
-    public bool $showHeader;
+    public bool $showIntro;
 
     /**
      * Create a new component instance.
      */
-    public function __construct(bool $showHeader = false)
+    public function __construct(bool $showIntro = false)
     {
-        $this->showHeader = $showHeader;
+        $this->showIntro = $showIntro;
     }
 
     /**

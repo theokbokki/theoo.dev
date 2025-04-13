@@ -1,6 +1,6 @@
-<x-layout :showHeader="true">
+<x-layout :showIntro="true">
     <section>
-        <h2 class="sro">Links</h2>
+        <h2 class="sro">A list of all things I wrote</h2>
         <ul class="list">
             @foreach($notes as $item)
                 <li class="list__item">

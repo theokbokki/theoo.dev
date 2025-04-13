@@ -23,6 +23,7 @@ class NoteController extends Controller
             return view('note', [
                 'note' => $note,
                 'content' => $this->getContent($note),
+                'notes' => Note::query()->published()->get(),
             ]);
         }
 

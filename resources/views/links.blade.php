@@ -1,4 +1,4 @@
-<x-layout :showHeader="true">
+<x-layout :showIntro="true">
     <section>
         <h2 class="sro">Links</h2>
         <ul class="list">

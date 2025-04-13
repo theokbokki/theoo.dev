@@ -2,26 +2,7 @@
 @use "../colors";
 
 .intro {
-    max-width: rem(600);
     margin-top: rem(40);
-
-    &__text {
-        font-size: rem(16);
-        line-height: 150%;
-        text-wrap: pretty;
-        color: colors.$neutral-600;
-
-        + .intro__text {
-            margin-top: rem(16);
-        }
-    }
-
-    &__link {
-        color: colors.$neutral-600;
-        background-size:
-            100% 1px,
-            100% 1px;
-    }
 
     @media screen and (min-width: rem(640)) {
         margin-top: rem(80);

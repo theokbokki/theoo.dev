@@ -2,11 +2,13 @@
 @use "../colors";
 
 .nav {
-    margin-top: rem(40);
+    margin-top: rem(80);
+    margin-bottom: rem(120);
 
     &__items {
         display: flex;
-        gap: rem(8);
+        gap: rem(16);
+        flex-wrap: wrap;
     }
 
     &__link {

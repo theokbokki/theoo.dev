@@ -51,7 +51,6 @@ hr {
     margin: 0 auto;
     padding: 0 rem(20) rem(40);
     font-family: var(--serif);
-    background: colors.$neutral-50;
     color: colors.$neutral-600;
 
     ::selection {
@@ -60,13 +59,5 @@ hr {
 
     &__main {
         margin-top: rem(64);
-    }
-
-    @media screen and (min-width: rem(640)) {
-        padding: rem(40);
-    }
-
-    @media screen and (min-width: rem(920)) {
-        gap: rem(80);
     }
 }

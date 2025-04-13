@@ -1,13 +1,3 @@
-Hey there, I'm Théoo
-
-Welcome to my place on the internet — it's where I keep images, shaders, notes, recipes, links and everything else I want to remember or see.  
-During the day I build websites at Whitecube, a small but mighty company in Liège, Belgium. And when I come home, I try to learn the art of shader-making — I'm a big fan of pretty pixels moving on my screen.  
-You can email me at hello@theoo.dev if you want to talk :))
-
----
-
-# When a side project finds you
-
 I didn’t plan to start working on a new side project and yet, here we are.  
 Back in the summer of 2023 when I had the idea for People and Blogs and I purchased the peopleandblogs.com domain name I said to myself “This is the last domain I’m gonna buy for a side project”.
 

@@ -6,6 +6,7 @@ use App\Models\Note;
 use App\Models\NoteSlugHistory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Phiki\CommonMark\PhikiExtension;
 
 class NoteController extends Controller
 {
@@ -45,6 +46,16 @@ class NoteController extends Controller
             return '';
         }
 
-        return  Storage::disk('local')->get($filePath);
+        $content = Storage::disk('local')->get($filePath);
+
+        $html = str()->markdown($content, extensions: [
+            new PhikiExtension('min-light'),
+        ]);
+
+        return preg_replace(
+            '/<p>::no-indent<\/p>\s*<p>(.*?)<\/p>/s',
+            '<p class="no-indent">$1</p>',
+            $html
+        );
     }
 }

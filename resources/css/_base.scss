@@ -5,7 +5,8 @@
     --sans:
         ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
-    --serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --serif: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 a {
@@ -36,10 +37,9 @@ hr {
     margin: rem(64) auto;
 
     &:before {
-        content: "✽  ✽  ✽";
+        content: "✽";
         display: block;
-        color: colors.$neutral-600;
-        opacity: 25%;
+        color: colors.$neutral-300;
         font-size: rem(16);
         text-align: center;
         white-space: pre;
@@ -47,9 +47,12 @@ hr {
 }
 
 .app {
-    max-width: rem(600);
+    max-width: 65ch;
     margin: 0 auto;
     padding: 0 rem(20) rem(40);
+    font-family: var(--serif);
+    background: colors.$neutral-50;
+    color: colors.$neutral-600;
 
     ::selection {
         background: colors.$orange-100;

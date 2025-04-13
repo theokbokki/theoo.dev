@@ -1,3 +1,3 @@
-<a class="link" href="{{ $url }}" target="_blank">
+<a class="link" href="{{ $url }}" {{ $external }}>
     {{ $content }}
 </a>

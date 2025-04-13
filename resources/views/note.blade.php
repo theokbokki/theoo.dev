@@ -1,3 +1,5 @@
 <x-layout>
-    {!! $content !!}
+    <div class="note">
+        {!! $content !!}
+    </div>
 </x-layout>

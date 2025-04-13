@@ -5,7 +5,7 @@ export default class Shader {
         this.canvas = document.getElementById(canvasId);
 
         if (!this.canvas) {
-            throw new Error(`Canvas with id "${canvasId}" not found.`);
+            return;
         }
 
         this.width = this.canvas.clientWidth;

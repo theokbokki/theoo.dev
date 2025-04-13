@@ -17,10 +17,12 @@ class Link extends Component
 
     public string $content;
 
+    public ?string $external = null;
+
     /**
      * Create a new component instance.
      */
-    public function __construct(Model $item)
+    public function __construct(Model $item, ?bool $external = false)
     {
         $this->item = $item;
 
@@ -32,6 +34,10 @@ class Link extends Component
         if (get_class($item) === Note::class) {
             $this->url = route('note', ['slug' => $item->slug]);
             $this->content = $item->title;
+        }
+
+        if ($external) {
+            $this->external = 'target="_blank"';
         }
     }
 

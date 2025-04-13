@@ -1,0 +1,208 @@
+@use "../utils" as *;
+@use "../colors";
+
+.note {
+    p,
+    li {
+        font-size: rem(16);
+        line-height: 175%;
+        text-wrap: pretty;
+        color: colors.$neutral-600;
+    }
+
+    p + p,
+    ul + p,
+    ol + p,
+    img + p,
+    blockquote + p {
+        text-indent: 2ch;
+    }
+
+    p.no-indent {
+        text-indent: 0;
+    }
+
+    p:not(:first-child) {
+        margin-top: rem(32);
+        margin-bottom: rem(16);
+    }
+
+    a {
+        color: colors.$neutral-600;
+        background-size:
+            100% 1px,
+            100% 1px;
+    }
+
+    h1 {
+        font-size: rem(24);
+        line-height: 120%;
+        color: colors.$neutral-600;
+
+        &:not(:first-child) {
+            margin-top: rem(48);
+            margin-bottom: rem(24);
+        }
+    }
+
+    h2 {
+        font-size: rem(20);
+        line-height: 140%;
+        color: colors.$neutral-600;
+
+        &:not(:first-child) {
+            margin-top: rem(40);
+            margin-bottom: rem(20);
+        }
+    }
+
+    h3 {
+        font-size: rem(18);
+        line-height: 140%;
+        color: colors.$neutral-600;
+
+        &:not(:first-child) {
+            margin-top: rem(36);
+            margin-bottom: rem(18);
+        }
+    }
+
+    h4 {
+        font-size: rem(16);
+        line-height: 150%;
+        color: colors.$neutral-600;
+
+        &:not(:first-child) {
+            margin-top: rem(32);
+            margin-bottom: rem(16);
+        }
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    blockquote {
+        padding: rem(16) rem(24);
+        background: rgba(colors.$neutral-200, 0.33);
+        font-style: italic;
+
+        &:not(:first-child) {
+            margin-top: rem(32);
+            margin-bottom: rem(16);
+        }
+    }
+
+    ul {
+        &:not(:first-child) {
+            margin-top: rem(16);
+        }
+
+        li {
+            list-style-type: circle;
+            list-style-position: inside;
+        }
+    }
+
+    ol {
+        &:not(:first-child) {
+            margin-top: rem(16);
+        }
+
+        li {
+            list-style-type: decimal;
+            list-style-position: inside;
+
+            p,
+            a {
+                display: inline;
+            }
+        }
+    }
+
+    code {
+        font-family: var(--mono);
+        font-size: rem(13);
+        line-height: 160%;
+    }
+
+    pre {
+        padding: rem(16) rem(16) rem(16) 0;
+        background: rgba(colors.$neutral-200, .33) !important;
+        counter-reset: lines;
+        overflow: auto;
+
+        &:not(:first-child) {
+            margin-top: rem(32);
+            margin-bottom: rem(16);
+        }
+
+        code .line::before {
+            position: sticky;
+            left: 0;
+            display: inline-block;
+            counter-increment: lines;
+            content: counter(lines);
+            padding-right: rem(16);
+            width: rem(32);
+            color: colors.$neutral-400;
+            background: #F4F3F2;
+            text-align: right;
+        }
+    }
+
+    table {
+        display: inline-block;
+        max-width: 100%;
+        margin-top: rem(16);
+        font-size: rem(16);
+        text-align: left;
+        overflow: auto;
+
+        tr {
+            border-bottom: 1px solid colors.$neutral-200;
+            line-height: 160%;
+        }
+
+        td {
+            padding: rem(8) 0;
+
+            &:not(:first-child) {
+                padding-left: 1rem;
+            }
+        }
+
+        th {
+            padding-bottom: rem(8);
+
+            &:not(:first-child) {
+                padding-left: rem(16);
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+
+        &:not(:first-child) {
+            margin-top: rem(32);
+            margin-bottom: rem(16);
+        }
+    }
+
+    @media screen and (min-width: rem(920)) {
+        ol li,
+        ul li {
+            list-style-position: outside;
+        }
+
+        img, pre {
+            width: 150%;
+            margin-left: -25%;
+        }
+    }
+}

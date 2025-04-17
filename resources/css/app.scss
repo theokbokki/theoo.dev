@@ -1,10 +1,11 @@
-@use 'reset';
-@use 'utils';
-@use 'base';
+@use "reset";
+@use "utils";
+@use "base";
 
-@use 'parts/intro';
-@use 'parts/nav';
-@use 'parts/shader';
-@use 'parts/link';
-@use 'parts/list';
-@use 'parts/note';
+@use "parts/intro";
+@use "parts/nav";
+@use "parts/shader";
+@use "parts/link";
+@use "parts/list";
+@use "parts/note";
+@use "parts/home";

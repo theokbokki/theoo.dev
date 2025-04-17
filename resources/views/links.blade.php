@@ -1,4 +1,4 @@
-<x-layout :showIntro="true">
+<x-layout>
     <section>
         <h2 class="sro">Links</h2>
         <ul class="list">
@@ -8,5 +8,5 @@
                 </li>
             @endforeach
         </ul>
-    <section>
+    </section>
 </x-layout>

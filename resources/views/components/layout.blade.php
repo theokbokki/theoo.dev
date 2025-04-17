@@ -11,15 +11,12 @@
     <body class="app">
         <h1 class="sro">Theoo's personal website</h1>
         <x-nav title="Main navigation">
+            <x-nav-item :href="route('home')">Home</x-nav-item>
             <x-nav-item :href="route('links')">Links</x-nav-item>
             <x-nav-item :href="route('notes')">Notes</x-nav-item>
             <x-nav-item :href="route('shaders')">Shaders</x-nav-item>
             <x-nav-item href="#">Snippets</x-nav-item>
         </x-nav>
-        @if($showIntro)
-            <x-intro/>
-            <hr>
-        @endif
         <main class="app__main">
             {{ $slot }}
         </main>

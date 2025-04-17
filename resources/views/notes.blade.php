@@ -1,4 +1,4 @@
-<x-layout :showIntro="true">
+<x-layout>
     <section>
         <h2 class="sro">A list of all things I wrote</h2>
         <ul class="list">

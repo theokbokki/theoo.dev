@@ -1,0 +1,8 @@
+@use "../utils" as *;
+
+.home {
+    &__subtitle {
+        font-size: rem(16);
+        margin-bottom: rem(24);
+    }
+}

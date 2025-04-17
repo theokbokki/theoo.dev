@@ -1,4 +1,4 @@
-<x-layout :showIntro="true">
+<x-layout>
     <section>
         <h2 class="sro">Shaders</h2>
         <x-shader id="orange-lines"/>

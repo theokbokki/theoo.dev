@@ -69,6 +69,16 @@ class SingleView extends ResourceTemplate
                 ->color(BadgeColor::Red)
                 ->style(BadgeStyle::Small);
 
+        $extras[] = $this->resource->is_snippet
+              ? Badge::make()
+                  ->label('Snippet')
+                  ->color(BadgeColor::Purple)
+                  ->style(BadgeStyle::Small)
+              : Badge::make()
+                  ->label('Note')
+                  ->color(BadgeColor::Yellow)
+                  ->style(BadgeStyle::Small);
+
         return $extras;
     }
 }

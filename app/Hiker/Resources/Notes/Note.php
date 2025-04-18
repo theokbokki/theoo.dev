@@ -46,6 +46,7 @@ class Note extends Resource
     {
         return [
             Attributes\Published::class,
+            Attributes\IsSnippet::class,
             Attributes\Title::class,
             Attributes\CreatedAt::class,
             Attributes\UpdatedAt::class,
@@ -61,6 +62,7 @@ class Note extends Resource
     {
         return [
             'published',
+            'is_snippet',
             'title',
             'created_at',
             'updated_at',

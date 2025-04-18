@@ -30,6 +30,7 @@ class SaveNote extends Node implements Saveable
         $this->model->title = $bag->title;
         $this->model->slug = Str::slug($bag->title);
         $this->model->published = $bag->published;
+        $this->model->is_snippet = $bag->is_snippet;
 
         $this->handleSlugHistory();
         $this->handleMarkdownFile();

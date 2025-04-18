@@ -15,7 +15,7 @@
             <x-nav-item :href="route('links')">Links</x-nav-item>
             <x-nav-item :href="route('notes')">Notes</x-nav-item>
             <x-nav-item :href="route('shaders')">Shaders</x-nav-item>
-            <x-nav-item href="#">Snippets</x-nav-item>
+            <x-nav-item :href="route('snippets')">Snippets</x-nav-item>
         </x-nav>
         <main class="app__main">
             {{ $slot }}

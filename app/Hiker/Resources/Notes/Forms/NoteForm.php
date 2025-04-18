@@ -39,6 +39,8 @@ class NoteForm extends Form
                         ->rules(['required', new UniqueSlugAcrossNotes($this->trip->resource()?->id)]),
 
                     Checkbox::make('Published', 'published'),
+
+                    Checkbox::make('Is snippet', 'is_snippet'),
                 ]),
         ];
     }

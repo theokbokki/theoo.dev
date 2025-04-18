@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Note;
 use App\Models\NoteSlugHistory;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Phiki\CommonMark\PhikiExtension;
 
 class NoteController extends Controller
 {
@@ -22,8 +20,7 @@ class NoteController extends Controller
 
             return view('note', [
                 'note' => $note,
-                'content' => $this->getContent($note),
-                'notes' => Note::query()->published()->get(),
+                'sroTitle' => $this->sroTitle($note),
             ]);
         }
 
@@ -39,24 +36,10 @@ class NoteController extends Controller
         abort(404);
     }
 
-    private function getContent(Note $note): string
+    public function sroTitle(Note $note): string
     {
-        $filePath = 'notes/'.$note->slug.'.md';
-
-        if (! Storage::disk('local')->exists($filePath)) {
-            return '';
-        }
-
-        $content = Storage::disk('local')->get($filePath);
-
-        $html = str()->markdown($content, extensions: [
-            new PhikiExtension('min-light'),
-        ]);
-
-        return preg_replace(
-            '/<p>::no-indent<\/p>\s*<p>(.*?)<\/p>/s',
-            '<p class="no-indent">$1</p>',
-            $html
-        );
+        return $note->is_snippet
+            ? 'All my other snippets'
+            : 'All my other notes';
     }
 }

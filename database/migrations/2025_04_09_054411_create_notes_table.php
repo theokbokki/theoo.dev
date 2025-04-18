@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug')->unique();
-            $table->boolean('published')->default('false');
+            $table->boolean('is_snippet')->default(false);
+            $table->boolean('published')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

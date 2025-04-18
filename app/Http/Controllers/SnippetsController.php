@@ -3,18 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Note;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
-class NotesController extends Controller
+class SnippetsController extends Controller
 {
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request): View
+    public function __invoke(Request $request)
     {
         return view('notes', [
-            'notes' => Note::query()->publishedNotes()->get(),
+            'notes' => Note::query()->publishedSnippets()->get(),
         ]);
     }
 }

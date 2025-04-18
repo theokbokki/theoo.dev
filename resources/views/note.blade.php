@@ -1,13 +1,13 @@
 <x-layout>
     <section class="note">
         <h2>{{ $note->title }}</h2>
-        {!! $content !!}
+        {!! $note->getContent() !!}
     </section>
     <hr>
     <section>
-        <h2 class="sro">A list of all things I wrote</h2>
+        <h2 class="sro">{{ $sroTitle }}</h2>
         <ul class="list">
-            @foreach($notes as $item)
+            @foreach($note->relatedNotes() as $item)
                 <li class="list__item">
                     <x-link :$item/>
                 </li>

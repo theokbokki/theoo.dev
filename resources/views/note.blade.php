@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="$note->title">
     <section class="note">
         <h2>{{ $note->title }}</h2>
         {!! $note->getContent() !!}

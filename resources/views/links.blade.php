@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Links">
     <section>
         <h2 class="sro">Links</h2>
         <ul class="list">

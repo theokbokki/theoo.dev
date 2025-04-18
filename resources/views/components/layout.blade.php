@@ -4,12 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>theoo.dev</title>
+        <title>{{ $title }}</title>
 
-        @vite(['resources/css/app.scss', 'resources/js/app.js'])
+        @vite('resources/css/app.scss')
+
+        @if($needsJs)
+            @vite('resources/js/app.js')
+        @endif
     </head>
     <body class="app">
-        <h1 class="sro">Theoo's personal website</h1>
+        <h1 class="sro">{{ $title }}</h1>
         <x-nav title="Main navigation">
             <x-nav-item :href="route('home')">Home</x-nav-item>
             <x-nav-item :href="route('links')">Links</x-nav-item>

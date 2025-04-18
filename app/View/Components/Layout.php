@@ -8,11 +8,22 @@ use Illuminate\View\Component;
 
 class Layout extends Component
 {
+    public ?string $title;
+
+    public ?bool $needsJs;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(?string $title, ?bool $needsJs = false)
     {
+        $this->title = 'Theoo';
+
+        if ($title) {
+            $this->title .= ' • '.$title;
+        }
+
+        $this->needsJs = $needsJs;
     }
 
     /**

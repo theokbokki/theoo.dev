@@ -12,8 +12,8 @@ class SnippetsController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('notes', [
-            'notes' => Note::query()->publishedSnippets()->get(),
+        return view('snippets', [
+            'snippets' => Note::query()->publishedSnippets()->get(),
         ]);
     }
 }

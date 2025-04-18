@@ -1,8 +1,8 @@
-<x-layout>
+<x-layout title="Snippets">
     <section>
-        <h2 class="sro">A list of all things I wrote</h2>
+        <h2 class="sro">A list of all my snippets</h2>
         <ul class="list">
-            @foreach($notes as $item)
+            @foreach($snippets as $item)
                 <li class="list__item">
                     <x-link :$item/>
                 </li>

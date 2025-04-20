@@ -1,11 +1,15 @@
-import OrangeLines from './shaders/OrangeLines/OrangeLines';
-import PurpleLines from './shaders/PurpleLines/PurpleLines';
 import GradientColors from './shaders/GradientColors/GradientColors';
+
+import.meta.glob([
+    '../fonts/**',
+    '../favicons/**.svg',
+    '../favicons/**.png',
+    '../favicons/**.ico',
+    '../favicons/**.webmanifest',
+]);
 
 class App {
     constructor() {
-        this.setupShader("orange-lines", OrangeLines);
-        this.setupShader("purple-lines", PurpleLines);
         this.setupShader("gradient-colors", GradientColors);
     }
 

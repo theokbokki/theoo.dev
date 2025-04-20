@@ -16,8 +16,12 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Théo',
             'email' => 'hello@theoo.dev',
-            'password' => bcrypt('change_this'),
+            'password' => env('DEFAULT_USER_PASSWORD'),
         ]);
+
+        if (app()->isProduction()) {
+            return;
+        }
 
         $this->call([
             LinkSeeder::class,

@@ -1,16 +1,18 @@
-import GradientColors from './shaders/GradientColors/GradientColors';
+import GradientColors from "./shaders/GradientColors/GradientColors";
+import YellowPinkCircle from "./shaders/YellowPinkCircle/YellowPinkCircle";
 
 import.meta.glob([
-    '../fonts/**',
-    '../favicons/**.svg',
-    '../favicons/**.png',
-    '../favicons/**.ico',
-    '../favicons/**.webmanifest',
+    "../fonts/**",
+    "../favicons/**.svg",
+    "../favicons/**.png",
+    "../favicons/**.ico",
+    "../favicons/**.webmanifest",
 ]);
 
 class App {
     constructor() {
         this.setupShader("gradient-colors", GradientColors);
+        this.setupShader("yellow-pink-circle", YellowPinkCircle);
     }
 
     setupPart(selector, className) {

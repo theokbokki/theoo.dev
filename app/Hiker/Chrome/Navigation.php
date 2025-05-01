@@ -4,6 +4,7 @@ namespace App\Hiker\Chrome;
 
 use App\Hiker\Resources\Links\Link as LinkResource;
 use App\Hiker\Resources\Notes\Note;
+use App\Hiker\Resources\Trinkets\Trinket;
 use Hiker\Components\Navigation\Group;
 use Hiker\Components\Navigation\Link;
 use Hiker\Components\Navigation\NavigationConstructor;
@@ -21,6 +22,7 @@ class Navigation extends NavigationConstructor
             Group::make()->links([
                 Link::make()->resource(LinkResource::class),
                 Link::make()->resource(Note::class),
+                Link::make()->resource(Trinket::class),
             ]),
         ];
     }

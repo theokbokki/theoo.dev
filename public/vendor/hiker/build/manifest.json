@@ -7,6 +7,10 @@
     "file": "assets/Inter-Regular-B0QUfDW0.woff2",
     "src": "resources/fonts/Inter-Regular.woff2"
   },
+  "resources/img/img-placeholder.svg": {
+    "file": "assets/img-placeholder-DPPKDZ-g.svg",
+    "src": "resources/img/img-placeholder.svg"
+  },
   "resources/img/tab-border-first.svg": {
     "file": "assets/tab-border-first-CN4Rv6zQ.svg",
     "src": "resources/img/tab-border-first.svg"
@@ -24,31 +28,34 @@
     "src": "resources/img/table-line-bg.png"
   },
   "resources/js/Hiker.js": {
-    "file": "assets/Hiker-D9xsUIC9.js",
+    "file": "assets/Hiker-9cVnV9_3.js",
     "name": "Hiker",
     "src": "resources/js/Hiker.js",
     "isEntry": true,
     "css": [
       "assets/Hiker-Bc5LP2HS.css"
+    ],
+    "assets": [
+      "assets/img-placeholder-DPPKDZ-g.svg"
     ]
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-DNTBMUvS.css",
+    "file": "assets/app-BoOppc8d.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   },
   "resources/sass/themes/default.scss": {
-    "file": "assets/default-B7HAQKdk.css",
+    "file": "assets/default-CoK7XqQZ.css",
     "src": "resources/sass/themes/default.scss",
     "isEntry": true
   },
   "resources/sass/themes/orange.scss": {
-    "file": "assets/orange-BpyzZEB_.css",
+    "file": "assets/orange-kiTjhMkI.css",
     "src": "resources/sass/themes/orange.scss",
     "isEntry": true
   },
   "resources/sass/themes/softblue.scss": {
-    "file": "assets/softblue-DnyPP49U.css",
+    "file": "assets/softblue-DAOviJXe.css",
     "src": "resources/sass/themes/softblue.scss",
     "isEntry": true
   }

@@ -5,6 +5,7 @@ namespace App\Providers;
 use Hiker\Hiker;
 use Hiker\HikerApplicationServiceProvider;
 use \Hiker\Components\Auth;
+use Illuminate\Support\Facades\Vite;
 
 class HikerServiceProvider extends HikerApplicationServiceProvider
 {
@@ -18,6 +19,10 @@ class HikerServiceProvider extends HikerApplicationServiceProvider
         $this->loadCliForRoutes([
             'POST' => [],
         ]);
+
+        if (app()->environment('local')) {
+            Vite::useHotFile(public_path('vendor/hiker/hot'));
+        }
     }
 
     /**

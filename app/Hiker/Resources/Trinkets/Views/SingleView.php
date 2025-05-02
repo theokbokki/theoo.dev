@@ -62,7 +62,7 @@ class SingleView extends ResourceTemplate
     {
         return [
             Badge::make()
-                ->label(TrinketType::tryFrom($this->resource->type)->label())
+                ->label($this->resource->type->label())
                 ->style(BadgeStyle::Small),
         ];
     }

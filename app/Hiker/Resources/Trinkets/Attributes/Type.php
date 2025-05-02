@@ -16,7 +16,7 @@ class Type extends Attribute
 
     public function component($resource)
     {
-        return Badge::make()->label($resource->type);
+        return Badge::make()->label($resource->type->label());
     }
 
     public function orderQuery($query, $direction)

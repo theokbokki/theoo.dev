@@ -41,10 +41,12 @@ class TrinketForm extends Form
                         ->disk('public')
                         ->path('trinkets')
                         ->rules('required')
-                        ->intervention(function ($image) use ($bag) {
+                        ->intervention(function ($image) {
                             $image->backup();
 
                             Storage::disk('public')->makeDirectory('trinkets');
+
+                            $image->fit(1040, 1040, fn ($c) => $c->upsize());
 
                             $encoded = (string) $image->encode('webp', 75);
 

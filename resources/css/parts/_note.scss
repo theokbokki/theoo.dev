@@ -3,7 +3,8 @@
 
 .note {
     p,
-    li {
+    li,
+    .as-text {
         font-size: rem(16);
         line-height: 175%;
         text-wrap: pretty;
@@ -200,7 +201,8 @@
             list-style-position: outside;
         }
 
-        img, pre {
+        img:not(.small),
+        pre {
             width: 150%;
             margin-left: -25%;
         }

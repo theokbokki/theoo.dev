@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('src');
             $table->string('alt');
-            $table->enum('type', TrinketType::values());
+            $table->string('type');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -23,7 +23,7 @@
             @vite('resources/js/app.js')
         @endif
     </head>
-    <body class="app">
+    <body class="app" style="--bg: {{ $bg }}; --fg: {{ $fg }};">
         <h1 class="sro">{{ $title }}</h1>
         <x-nav title="Main navigation">
             <x-nav-item :href="route('home')">Home</x-nav-item>

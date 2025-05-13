@@ -1,5 +1,4 @@
 @use "../utils" as *;
-@use "../colors";
 
 .note {
     p,
@@ -8,7 +7,7 @@
         font-size: rem(16);
         line-height: 175%;
         text-wrap: pretty;
-        color: colors.$neutral-600;
+        color: rgb(var(--fg));
     }
 
     p + p,
@@ -29,16 +28,13 @@
     }
 
     a {
-        color: colors.$neutral-600;
-        background-size:
-            100% 1px,
-            100% 1px;
+        text-decoration: underline;
     }
 
     h1 {
         font-size: rem(24);
         line-height: 120%;
-        color: colors.$neutral-600;
+        color: rgb(var(--fg));
 
         &:not(:first-child) {
             margin-top: rem(48);
@@ -49,7 +45,7 @@
     h2 {
         font-size: rem(20);
         line-height: 140%;
-        color: colors.$neutral-600;
+        color: rgb(var(--fg));
 
         &:not(:first-child) {
             margin-top: rem(40);
@@ -60,7 +56,7 @@
     h3 {
         font-size: rem(18);
         line-height: 140%;
-        color: colors.$neutral-600;
+        color: rgb(var(--fg));
 
         &:not(:first-child) {
             margin-top: rem(36);
@@ -71,7 +67,7 @@
     h4 {
         font-size: rem(16);
         line-height: 150%;
-        color: colors.$neutral-600;
+        color: rgb(var(--fg));
 
         &:not(:first-child) {
             margin-top: rem(32);
@@ -89,7 +85,7 @@
 
     blockquote {
         padding: rem(16) rem(24);
-        background: colors.$neutral-50;
+        background: rgb(var(--fg), 10%);
         font-style: italic;
 
         &:not(:first-child) {
@@ -132,27 +128,14 @@
     }
 
     pre {
-        padding: rem(16) rem(16) rem(16) 0;
-        background: colors.$neutral-50 !important;
+        padding: rem(16);
+        background: rgb(var(--fg), 10%) !important;
         counter-reset: lines;
         overflow: auto;
 
         &:not(:first-child) {
             margin-top: rem(32);
             margin-bottom: rem(16);
-        }
-
-        code .line::before {
-            position: sticky;
-            left: 0;
-            display: inline-block;
-            counter-increment: lines;
-            content: counter(lines);
-            padding-right: rem(16);
-            width: rem(32);
-            color: colors.$neutral-400;
-            background: colors.$neutral-50;
-            text-align: right;
         }
     }
 
@@ -165,7 +148,7 @@
         overflow: auto;
 
         tr {
-            border-bottom: 1px solid colors.$neutral-200;
+            border-bottom: 1px solid rgb(var(--fg), 25%);
             line-height: 160%;
         }
 

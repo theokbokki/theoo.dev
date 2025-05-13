@@ -55,9 +55,7 @@ class Note extends Model
 
         $content = Storage::disk('local')->get($filePath);
 
-        $html = str()->markdown($content, extensions: [
-            new PhikiExtension('min-light'),
-        ]);
+        $html = str()->markdown($content);
 
         return preg_replace(
             '/<p>::no-indent<\/p>\s*<p>(.*?)<\/p>/s',

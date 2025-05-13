@@ -1,5 +1,4 @@
 @use "../utils" as *;
-@use "../colors";
 
 .nav {
     margin-top: rem(80);
@@ -14,14 +13,9 @@
     &__link {
         display: inline-block;
         font-size: rem(16);
-        color: colors.$neutral-600;
-        text-decoration: none;
 
-        .nav__item--active &,
-        &:hover {
-            background-size:
-                100% 1px,
-                100% 1px;
+        .nav__item--active {
+            text-decoration: underline;
         }
     }
 }

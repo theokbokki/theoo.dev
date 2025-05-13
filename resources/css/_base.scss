@@ -1,5 +1,4 @@
 @use "utils" as *;
-@use "colors";
 
 :root {
     --sans:
@@ -10,24 +9,12 @@
 }
 
 a {
+    color: rgb(var(--fg));
     text-decoration: none;
-    background-image: linear-gradient(colors.$neutral-600, colors.$neutral-600), linear-gradient(#ffffff, #ffffff);
-    background-size:
-        100% 0,
-        100% 0;
-    background-position:
-        100% 100%,
-        100% 100%;
-    background-repeat: no-repeat, no-repeat;
-    transition:
-        opacity 100ms ease-out,
-        background-size 150ms ease-out;
 
     &:hover {
-        opacity: 70%;
-        background-size:
-            100% 1px,
-            100% 1px;
+        text-decoration: underline;
+        opacity: 50%;
     }
 }
 
@@ -39,10 +26,11 @@ hr {
     &:before {
         content: "✽";
         display: block;
-        color: colors.$neutral-300;
         font-size: rem(16);
         text-align: center;
         white-space: pre;
+        color: rgb(var(--fg));
+        opacity: 25%;
     }
 }
 
@@ -51,10 +39,11 @@ hr {
     margin: 0 auto;
     padding: 0 rem(20) rem(40);
     font-family: var(--serif);
-    color: colors.$neutral-600;
+    color: rgb(var(--fg));
+    background: rgb(var(--bg));
 
     ::selection {
-        background: colors.$orange-100;
+        background: rgb(var(--fg), 25%);
     }
 
     &__main {

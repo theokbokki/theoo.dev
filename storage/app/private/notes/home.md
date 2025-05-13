@@ -5,7 +5,7 @@ During the day I build websites at <a href="https://whitecube.be" target="_blank
 
 ::no-indent
 
-You can <a href="mailto:hello@theoo.dev">email me at hello@theoo.dev</a> if you want to talk :))
+You can email me at hello@theoo.dev if you want to talk :))
 
 ---
 
@@ -20,10 +20,8 @@ Stylistically, I've decided to use titles sparingly, replacing them by dinkuses 
 I've kept the font size of the text at 16px because I think it worked well with the font. Plus a benefit of keeping the site simple is that you can always zoom in or out to adapt it to your needs without running into layout issues.  
 The line height is set at a comfortable 150% of the font size, with spacing between the paragraphs set at 200%. This is more than what you would typically see in a book, but I feel that writing for the screen asks for more spacing in order to keep things breathable.
 
-For the colorscheme, I opted to keep things pretty simple.
-All the colors come from tailwindcss' color palettes, I tend to always use them in my websites because they work well and are easy to use.
-The text is dark grey (#57534D) rather than plain black as to keep it comfortable for the reader but still contrasting enough to be easily readable and accessible.  
-Apart from that, a light orange (#FFEDD4) is used as the selection color to replace the default blue of which I'm no fan. And a light grey (#D6D3D1) is used for the dinkuses so that they don't distract from the text.
+The colorschemes of the pages were inspired by a series of cooking books called "dix façons de préparer" made by "<a href="https://www.epure-editions.com/" target="_blank">Les Éditions de l' Epure</a>". All of their books are printed in two colors, one for the text and one for the background and I thought it looked insanely beautiful and tried to emulate some of that on my website. Their colorschemes are much more diverse though and I'm considering adding more colors to this site over time.  
+Accessibility wise, all colors pass the WCAG AA contrast level so I should be good on that front.
 
 ---
 

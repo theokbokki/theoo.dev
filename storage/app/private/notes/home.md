@@ -9,8 +9,7 @@ You can email me at hello@theoo.dev if you want to talk :))
 
 ---
 
-This website's goal is to share the things I like with the world.  
-As such, I decided to keep things pretty simple. It's only some black text on a white background at the end of the day.  
+This website's goal is to share the things I like with the world. As such, I decided to keep things pretty simple.   
 The advantage of this approach is that it allows the content to be the main character, not the website itself. This is important to me as I view this place as a way to showcase my work—be it writing, designs, code, shaders, what have you—in a way where visitors can fully enjoy it without being distracted by nice but unnecessary flourishes that are there only to look good.
 
 That said, I've still put real effort in the choice of the font, font-sizes, colors and spacing, trying to give a pleasant reading experience to my visitors.  

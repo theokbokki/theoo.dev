@@ -3,10 +3,14 @@ import YellowPinkCircle from "./shaders/YellowPinkCircle/YellowPinkCircle";
 
 import.meta.glob([
     "../fonts/**",
-    "../favicons/**.svg",
-    "../favicons/**.png",
-    "../favicons/**.ico",
-    "../favicons/**.webmanifest",
+    "../favicons/matcha/**.svg",
+    "../favicons/matcha/**.png",
+    "../favicons/matcha/**.ico",
+    "../favicons/matcha/**.webmanifest",
+    "../favicons/tsuki/**.svg",
+    "../favicons/tsuki/**.png",
+    "../favicons/tsuki/**.ico",
+    "../favicons/tsuki/**.webmanifest",
 ]);
 
 class App {

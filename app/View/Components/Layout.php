@@ -17,6 +17,8 @@ class Layout extends Component
 
     public string $fg;
 
+    public string $cat;
+
     /**
      * Create a new component instance.
      */
@@ -31,6 +33,8 @@ class Layout extends Component
         $this->needsJs = $needsJs;
 
         [$this->bg, $this->fg] = Colors::getRandom();
+
+        $this->cat = ['tsuki', 'matcha'][rand(0, 1)];
     }
 
     /**

@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ Vite::asset('resources/favicons/apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ Vite::asset('resources/favicons/favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ Vite::asset('resources/favicons/favicon-16x16.png') }}">
-        <link rel="manifest" href="{{ Vite::asset('resources/favicons/site.webmanifest') }}">
-        <link rel="mask-icon" href="{{ Vite::asset('resources/favicons/safari-pinned-tab.svg') }}" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ Vite::asset('resources/favicons/'.$cat.'/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ Vite::asset('resources/favicons/'.$cat.'/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192" href="{{ Vite::asset('resources/favicons/'.$cat.'/web-app-manifest-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="512x512" href="{{ Vite::asset('resources/favicons/'.$cat.'/web-app-manifest-512x512.png') }}">
+        <link rel="manifest" href="{{ Vite::asset('resources/favicons/'.$cat.'/site.webmanifest') }}">
         <meta name="msapplication-TileColor" content="#00a300">
         <meta name="theme-color" content="#ffffff">
         <meta name="keywords" content="Web, Design, Laravel, PHP, Developer, Digital Garden, Shaders" />

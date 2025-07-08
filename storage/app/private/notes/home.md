@@ -48,3 +48,4 @@ Here's a list of the things that inspired me when building this website:
 - <a href="https://stackingthebricks.com/how-blogs-broke-the-web/" target="_blank">This article</a> by Amy Hoy
 - <a href="https://ambedg.ar" target="_blank">Edgar Ambartsoumian's website</a>
 - <a href="https://paco.me" target="_blank">Paco Coursey's website</a>
+- <a href="https://www.mmmx.cloud/" target="_blank">Nim's Memex</a>

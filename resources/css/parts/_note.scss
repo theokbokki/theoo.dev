@@ -125,17 +125,22 @@
         font-family: var(--mono);
         font-size: rem(13);
         line-height: 160%;
+        background: rgb(var(--fg), 10%);
     }
 
     pre {
         padding: rem(16);
-        background: rgb(var(--fg), 10%) !important;
+        background: rgb(var(--fg), 10%);
         counter-reset: lines;
         overflow: auto;
 
         &:not(:first-child) {
             margin-top: rem(32);
             margin-bottom: rem(16);
+        }
+
+        code {
+            background: none;
         }
     }
 

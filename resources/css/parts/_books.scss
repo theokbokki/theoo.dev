@@ -1,0 +1,15 @@
+@use "../utils" as *;
+
+.books {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+
+    &__book {
+        width: rem(120);
+    }
+
+    &__img {
+        width: 100%;
+    }
+}

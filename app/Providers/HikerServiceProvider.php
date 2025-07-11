@@ -19,10 +19,6 @@ class HikerServiceProvider extends HikerApplicationServiceProvider
         $this->loadCliForRoutes([
             'POST' => [],
         ]);
-
-        if (app()->environment('local')) {
-            Vite::useHotFile(public_path('vendor/hiker/hot'));
-        }
     }
 
     /**

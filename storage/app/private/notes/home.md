@@ -28,7 +28,7 @@ On the technical side, this website runs on <a href="https://laravel.com" target
 I chose Laravel because this is the tool I'm most familiar with as I use it every day at work and also because the tooling and the ecosystem they offer is vast, rich and full of great people.  
 Also, deploying it to the world is really easy.
 
-Most pages (like this one) are simple markdown files that I render using Laravel's built-in markdown parser. The syntax highlighting is using <a href="https://github.com/phikiphp/phiki" target="_blank">Phiki</a> under the hood.  
+Most pages (like this one) are simple markdown files that I render using Laravel's built-in markdown parser. 
 As for the collection pages you can find in the navigation, they are regular <a href="https://laravel.com/docs/12.x/blade#main-content" target="_blank">Blade templates</a>.  
 For styling the pages, I decided to use <a href="https://sass-lang.com/" target="_blank">Sass</a> because it allows me to use features that are now in modern day CSS (like nesting) without being afraid of support. I tried my best to use css properties that are widely supported, or at least ones that degrade gracefully.  
 If you see something that is broken in your browser, please tell me about it so I can fix it :))  

@@ -10,7 +10,7 @@ Don't hesitate to [send me an email](mailto:hello@theoo.dev) if you have books t
 
 Book(s) I'm reading:
 - Atomic habits — James Clear
-- The passengers on the Hankyu line — Hiro Arikawa 
+- The Hidden Life of Trees — Peter Wohlleben
 
 ::no-indent
 
@@ -19,6 +19,7 @@ Books I read:
 ::no-indent
 
 2025
+- The passengers on the Hankyu line — Hiro Arikawa 
 - I am a cat — Natsume Sôseki
 - Extinction: a radical history — Ashley Dawson
 - _Comment habiter le monde?_ — Aurelien Barrau

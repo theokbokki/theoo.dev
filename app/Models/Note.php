@@ -58,8 +58,8 @@ class Note extends Model
         $html = str()->markdown($content);
 
         return preg_replace(
-            '/<p>::no-indent<\/p>\s*<p>(.*?)<\/p>/s',
-            '<p class="no-indent">$1</p>',
+            '/<p>::(.+?)<\/p>\s*<p>(.*?)<\/p>/s',
+            '<p class="$1">$2</p>',
             $html
         );
     }

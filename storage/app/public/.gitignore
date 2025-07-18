@@ -1,2 +1,5 @@
 *
 !.gitignore
+!notes-assets/
+!notes-assets/*
+.DS_Store

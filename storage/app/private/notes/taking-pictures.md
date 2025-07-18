@@ -10,3 +10,10 @@ I would like to turn it into it's own page some day with a grid like structure, 
 ::no-indent
 
 17 July 2025 — Coming back from work.
+
+--- 
+<img class="small" src="/storage/notes-assets/18-07-25-21-58.webp" alt="The top half of the picture is a grey building, in the center is the cobblestone pavement with a small asphalt road under it. On the left, we can see a slightly blurry person on a black scooter. The bottom half there is a patch of vivid green grass"/>
+
+::no-indent
+
+18 July 2025 — Taking the tram to bring back the dinner faster while it's still hot.

@@ -1,0 +1,12 @@
+{
+  "name": "theoo.dev",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.25.8",
+    "sass": "^1.89.2"
+  }
+}

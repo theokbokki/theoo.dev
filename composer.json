@@ -1,0 +1,22 @@
+{
+    "name": "theokbokki/theoo.dev",
+    "description": "My personal website",
+    "type": "website",
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Theoo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "théoo",
+            "email": "90846584+theokbokki@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

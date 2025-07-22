@@ -1,0 +1,8 @@
+@use 'utils' as *;
+
+.app {
+    max-width: rem(390);
+    margin: rem(80) auto;
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-size: rem(14);
+}

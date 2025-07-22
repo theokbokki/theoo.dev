@@ -2,6 +2,10 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
+use Theoo\Components\Header;
+
+$title = 'Home';
+
 ?>
 
 <!DOCTYPE html>
@@ -16,10 +20,12 @@ require __DIR__.'/../vendor/autoload.php';
         <link rel="apple-touch-icon" sizes="180x180" href="<?= asset('apple-touch-icon.png') ?>" />
         <link rel="manifest" href="<?= asset('site.webmanifest') ?>" />
 
-        <title>Théoo</title>
+        <title>Théoo • <?= $title ?></title>
         <meta name="description" content="" />
 
         <link rel="stylesheet" href="<?= asset('app.css') ?>">
     </head>
-    <body class="app"></body>
+    <body class="app">
+        <?= Header::make($title)->render() ?> 
+    </body>
 </html>

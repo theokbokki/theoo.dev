@@ -1,6 +1,6 @@
 <?php
 
-namespace Theokbokki\Owns\Components;
+namespace Theoo\Components;
 
 Trait IsComponent
 {

@@ -56,5 +56,18 @@ $theme = $themes[array_rand($themes)];
                 <img class="header__img" src="<?= $headerImg->src ?>" alt="<?= $headerImg->alt ?>">
             </a>
         </header>
+
+        <main>
+            <nav class="toc">
+                <h2 class="toc__title">Table of contents</h2>
+                <a href="/links.php" class="toc__link">Links</a>
+                <a href="/notes.php" class="toc__link">Notes</a>
+                <a href="/inventory.php" class="toc__link">Inventory</a>
+                <a href="/shaders.php" class="toc__link">Shaders</a>
+                <a href="/photos.php" class="toc__link">Photos</a>
+                <a href="/snippets.php" class="toc__link">Snippets</a>
+                <a href="/designs.php" class="toc__link">Designs</a>
+            </nav>
+        </main>
     </body>
 </html>

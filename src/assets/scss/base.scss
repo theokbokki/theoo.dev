@@ -5,4 +5,41 @@
     margin: rem(80) auto;
     font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
     font-size: rem(14);
+    background-color: var(--bg);
+    color: var(--fg);
+
+    &--red {
+        --bg: #F8DFEA;
+        --fg: #B40000;
+    }
+
+    &--orange {
+        --bg: #FFF7F2;
+        --fg: #C84600;
+    }
+
+    &--yellow {
+        --bg: #FFFCDE;
+        --fg: #7D7500;
+    }
+
+    &--green {
+        --bg: #DFF8E2;
+        --fg: #00660E;
+    }
+
+    &--blue {
+        --bg: #DFEFF8;
+        --fg: #006664;
+    }
+
+    &--purple {
+        --bg: #E7DAFB;
+        --fg: #3F0073;
+    }
+
+    &--pink {
+        --bg: #FFE7FD;
+        --fg: #D0007D;
+    }
 }

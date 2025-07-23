@@ -2,9 +2,32 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use Theoo\Components\Header;
-
 $title = 'Home';
+
+$headerImgs = [
+    [
+        'src' => asset('matcha.webp'),
+        'alt' => 'The head of Matcha, my tabby cat, yawning big time.',
+    ],
+    [
+        'src' => asset('tsuki.webp'),
+        'alt' => 'The head of Tsuki, my tuxedo cat, roaring at me angrily.',
+    ],
+];
+
+$headerImg = (object) $headerImgs[array_rand($headerImgs)];
+
+$themes = [
+    'red',
+    'orange',
+    'yellow',
+    'green',
+    'blue',
+    'purple',
+    'pink',
+];
+
+$theme = $themes[array_rand($themes)];
 
 ?>
 
@@ -25,7 +48,13 @@ $title = 'Home';
 
         <link rel="stylesheet" href="<?= asset('app.css') ?>">
     </head>
-    <body class="app">
-        <?= Header::make($title)->render() ?> 
+    <body class="app app--<?= $theme ?>">
+        <header class="header">
+            <h1 class="header__title"><?= $title ?></h1>
+            <a href="/" class="header__link">
+                <span class="sro">Home</span>
+                <img class="header__img" src="<?= $headerImg->src ?>" alt="<?= $headerImg->alt ?>">
+            </a>
+        </header>
     </body>
 </html>

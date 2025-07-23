@@ -3,10 +3,11 @@
 .app {
     max-width: rem(390);
     margin: rem(80) auto;
-    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
-    font-size: rem(14);
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 200%;
     background-color: var(--bg);
     color: var(--fg);
+    text-wrap: pretty;
 
     &--red {
         --bg: #F8DFEA;

@@ -18,5 +18,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "league/commonmark": "^2.8@dev"
+    }
 }

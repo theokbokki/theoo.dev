@@ -4,7 +4,7 @@ SASS = npx sass
 ESBUILD = npx esbuild
 SRC = src/assets
 DEST = public/assets
-MANIFEST = public/manifest.json
+MANIFEST = public/assets/manifest.json
 
 all: clean build-assets build-scss build-js manifest
 

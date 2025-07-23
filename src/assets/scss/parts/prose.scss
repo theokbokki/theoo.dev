@@ -6,7 +6,7 @@
     }
 
     a {
-        color: var(--fg);
+        color: rgb(var(--fg));
 
         &:hover {
             text-decoration: wavy underline;
@@ -14,7 +14,7 @@
         }
     }
 
-    ul,li {
+    ul, ol {
         margin: rem(16) 0;
         list-style-type: circle;
     }
@@ -27,8 +27,28 @@
         &:before {
             content: "***";
             font-size: rem(10);
-            color: var(--fg);
+            color: rgb(var(--fg));
             opacity: 50%;
         }
+    }
+
+    pre, blockquote {
+        width: rem(480);
+        padding: rem(16);
+        margin: 0 rem(-30);
+        background: rgb(var(--fg), .05);
+    }
+
+    pre {
+        overflow-x: scroll;
+    }
+
+    code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        font-size: rem(12);
+    }
+
+    blockquote {
+        font-style: italic;
     }
 }

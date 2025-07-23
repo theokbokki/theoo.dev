@@ -8,6 +8,7 @@
     margin-bottom: rem(80);
 
     &__link {
+        height: rem(24);
         transition: transform 250ms ease-out;
 
         &:hover {

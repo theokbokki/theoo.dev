@@ -7,7 +7,7 @@ function asset(string $name): string
     static $manifest = null;
 
     if ($manifest === null) {
-        $content = file_get_contents(__DIR__.'/../public/manifest.json');
+        $content = file_get_contents(__DIR__.'/../public/assets/manifest.json');
         $manifest = json_decode($content, true);
     }
 
@@ -49,10 +49,16 @@ function getTheme(): string
     return $themes[array_rand($themes)];
 }
 
-function parseMd(string $name): string
+function parseMd(string $name): ?string
 {
+    $path = __DIR__.'/../public/'.asset($name);
+
+    if (! file_exists($path)) {
+        return null;
+    }
+
     $converter = new CommonMarkConverter();
-    $content = file_get_contents(__DIR__.'/../public/'.asset($name));
+    $content = file_get_contents($path);
 
     return $converter->convert($content);
 }

@@ -1,46 +1,46 @@
 @use 'utils' as *;
 
 .app {
-    max-width: rem(390);
+    max-width: rem(420);
     margin: rem(80) auto;
     font-family: 'Times New Roman', Times, serif;
     line-height: 200%;
-    background-color: var(--bg);
-    color: var(--fg);
+    background-color: rgb(var(--bg));
+    color: rgb(var(--fg));
     text-wrap: pretty;
 
     &--red {
-        --bg: #F8DFEA;
-        --fg: #B40000;
+      --bg: 248, 223, 234;
+      --fg: 180, 0, 0;
     }
 
     &--orange {
-        --bg: #FFF7F2;
-        --fg: #C84600;
+      --bg: 255, 247, 242;
+      --fg: 200, 70, 0;
     }
 
     &--yellow {
-        --bg: #FFFCDE;
-        --fg: #7D7500;
+      --bg: 255, 252, 222;
+      --fg: 125, 117, 0;
     }
 
     &--green {
-        --bg: #DFF8E2;
-        --fg: #00660E;
+      --bg: 223, 248, 226;
+      --fg: 0, 102, 14;
     }
 
     &--blue {
-        --bg: #DFEFF8;
-        --fg: #006664;
+      --bg: 223, 239, 248;
+      --fg: 0, 102, 100;
     }
 
     &--purple {
-        --bg: #E7DAFB;
-        --fg: #3F0073;
+      --bg: 231, 218, 251;
+      --fg: 63, 0, 115;
     }
 
     &--pink {
-        --bg: #FFE7FD;
-        --fg: #D0007D;
+      --bg: 255, 231, 253;
+      --fg: 208, 0, 125;
     }
 }

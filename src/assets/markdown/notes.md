@@ -1,0 +1,5 @@
+- [Teeth brushing](/notes.php?name=teeth-brushing.md)
+- [Books I read](/notes.php?name=books-i-read.md)
+- [Making a simple website with plain PHP](/notes.php?name=making-a-simple-website-with-plain-php.md)
+- [Exploring the small web](/notes.php?name=exploring-the-small-web.md)
+- [Simple PHP build system](/notes.php?name=simple-php-build-system.md)

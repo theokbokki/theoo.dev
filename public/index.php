@@ -41,7 +41,7 @@ $headerImg = getHeaderImage();
                 <a href="/notes.php" class="toc__link">Notes</a>
                 <a href="/inventory.php" class="toc__link">Inventory</a>
                 <a href="/shaders.php" class="toc__link">Shaders</a>
-                <a href="/photos.php" class="toc__link">Photos</a>
+                <a href="/pictures.php" class="toc__link">Pictures</a>
                 <a href="/snippets.php" class="toc__link">Snippets</a>
                 <a href="/designs.php" class="toc__link">Designs</a>
             </nav>

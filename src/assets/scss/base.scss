@@ -1,5 +1,9 @@
 @use 'utils' as *;
 
+:root {
+    margin: 0 rem(20);
+}
+
 .app {
     max-width: rem(420);
     margin: rem(80) auto;
@@ -42,5 +46,13 @@
     &--pink {
       --bg: 255, 231, 253;
       --fg: 208, 0, 125;
+    }
+}
+
+a {
+    &:focus {
+        outline: rem(1) solid rgb(var(--fg), .5);
+        outline-offset: rem(2);
+        background: rgb(var(--fg), .1);
     }
 }

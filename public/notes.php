@@ -9,7 +9,7 @@ $headerImg = getHeaderImage();
 $name = $_GET['name'] ?? null;
 
 if (isset($name) && preg_match('/[a-zA-Z0-9._-]/', $name)) {
-    $note = parseMd($_GET['name']);
+    $note = parseMd($name);
 }
 
 if (isset($note)) {

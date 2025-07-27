@@ -2,21 +2,28 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use Theoo\Content\Pictures;
+use Theoo\Content\Inventory;
 
-$title = 'Pictures';
+$title = 'Inventory';
 
 $headerImg = getHeaderImage();
 
-$pictures = Pictures::get();
+$inventory = Inventory::get();
 
 $name = $_GET['name'] ?? null;
 
 if (isset($name) && preg_match('/[a-zA-Z0-9._-]/', $name)) {
-    $src = $name;
-    $alt = $pictures->$name ?? null;
-    $title = $title.' • '.$name;
+    $item = array_filter($inventory, function($item) use ($name) {
+        return isset($item->src) && $item->src === $name;
+    });
+    
+    $item = reset($item);
+
+    if ($item) {
+        $title = $title.' • '.$item->name;
+    }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -46,27 +53,27 @@ if (isset($name) && preg_match('/[a-zA-Z0-9._-]/', $name)) {
         </header>
 
         <main class="app__main">
-            <?php if(isset($src) && isset($alt)): ?>
+            <?php if(isset($item) && $item): ?>
                 <div class="overlay">
                     <figure class="overlay__fig">
-                        <img src="<?= asset($src.'-2.webp') ?>" alt="<?= $alt ?>" class="overlay__img"/>
-                        <figcaption class="overlay__caption"><?= $src ?>.webp</figcaption>
+                        <img src="<?= asset($item->src.'-2.webp') ?>" alt="<?= $item->alt ?>" class="overlay__img"/>
+                        <figcaption class="overlay__caption"><?= $item->name ?></figcaption>
                     </figure>
-                    <a href="/pictures.php#<?= $src ?>" class="overlay__link">Click anywhere to close</a>
+                    <a href="/inventory.php#<?= $item->src ?>" class="overlay__link">Click anywhere to close</a>
                 </div>
             <?php else: ?>
                 <div class="prose">
-                    <p>I don't take a lot of pictures and I don't really know why. I used to take pictures of just about everything and I enjoyed it very much—so I think I should do it again.<br>I have some trouble remembering my life especially what happened in recent years and taking pictures again will be an attempt at overcoming this.</p>
+                    <p>The place where I put pictures of stuff that I own and that I like. It's a bit like a digital inventory for my real life self.<br>Some of the stuff is consumable, so I might not have it anymore.</p>
                     <hr>
                 </div>
                 <div class="grid">
-                    <?php foreach($pictures as $src => $alt): ?>
-                        <div class="picture grid__item" id="<?= $src ?>">
+                    <?php foreach($inventory as $item): ?>
+                        <div class="picture grid__item" id="<?= $item->src ?>">
                             <figure class="picture__fig">
-                                <img src="<?= asset($src.'-1.webp') ?>" alt="<?= $alt ?>" class="picture__img"/>
-                                <figcaption class="picture__caption"><?= $src ?>.webp</figcaption>
+                                <img src="<?= asset($item->src.'-1.webp') ?>" alt="<?= $item->alt ?>" class="picture__img"/>
+                                <figcaption class="picture__caption"><?= $item->name ?></figcaption>
                             </figure>
-                            <a href="/pictures.php?name=<?= $src ?>" class="picture__link">
+                            <a href="/inventory.php?name=<?= $item->src ?>" class="picture__link">
                                 <span class="sro">View picture in large version</span>
                             </a>
                         </div>

@@ -51,7 +51,7 @@ function getTheme(): string
 
 function parseMd(string $name): ?string
 {
-    $path = __DIR__.'/../public/'.asset($name);
+    $path = __DIR__.'/../public'.asset($name.'.md');
 
     if (! file_exists($path)) {
         return null;

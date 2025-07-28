@@ -2,18 +2,27 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
+use Theoo\Content\Notes;
+
 $title = 'Notes';
 
 $headerImg = getHeaderImage();
 
+$notes = Notes::get();
+
 $name = $_GET['name'] ?? null;
 
 if (isset($name) && preg_match('/[a-zA-Z0-9._-]/', $name)) {
-    $note = parseMd($name);
-}
+    $item = array_filter($notes, function($item) use ($name) {
+        return isset($item->src) && $item->src === $name;
+    });
+    
+    $item = reset($item);
 
-if (isset($note)) {
-    $title = ucfirst(str_replace('-', ' ', basename($name, '.md')));
+    if ($item) {
+        $title = $item->name;
+        $note = parseMd($item->src);
+    }
 }
 
 ?>
@@ -51,7 +60,15 @@ if (isset($note)) {
             <?php else: ?>
                 <p>This is the place where I write about anything that goes on through my mind, you might find some useful or intersting things in there, but mostly talking to myself.</p>
             <?php endif; ?> 
-            <?= parseMd('notes.md') ?>
+            <ul>
+                <?php foreach($notes as $note): ?>
+                    <li>
+                        <a href="/notes.php?name=<?= $note->src ?>">
+                            <?= $note->name ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
         </main>
     </body>
 </html>

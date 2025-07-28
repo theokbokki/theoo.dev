@@ -35,7 +35,7 @@ $headerImg = getHeaderImage();
         </header>
 
         <main class="app__main prose">
-            <?= parseMd('links.md') ?>
+            <?= parseMd('links') ?>
         </main>
     </body>
 </html>

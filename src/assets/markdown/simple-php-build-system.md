@@ -1,4 +1,4 @@
-In <a href="/notes/making-a-simple-website-with-plain-php">a previous note</a>, I tried to make a website using only plain PHP and CSS. As a result, I came to the conclusion that it was very nice but it would be better to have a way to build the assets.  
+In <a href="/notes.php?name=making-a-simple-website-with-plain-php">a previous note</a>, I tried to make a website using only plain PHP and CSS. As a result, I came to the conclusion that it was very nice but it would be better to have a way to build the assets.  
 So I thought about it for a while and explored different possibilities, In the end I went with a simple system consisting of 1 npm package, a Makefile and a tiny PHP function.
 
 The one npm package we need is <a href="https://esbuild.github.io" target="_blank">esbuild</a>, we are going to use it to bundle our CSS. The rest is all going to be made using basic unix tools, this isn't really windows friendly, but I'm mainly making this website for myself and I don't own a computer running windows.

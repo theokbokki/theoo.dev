@@ -39,11 +39,10 @@ $headerImg = getHeaderImage();
                 <h2 class="toc__title">Table of contents</h2>
                 <a href="/links.php" class="toc__link">Links</a>
                 <a href="/notes.php" class="toc__link">Notes</a>
-                <a href="/inventory.php" class="toc__link">Inventory</a>
-                <a href="/shaders.php" class="toc__link">Shaders</a>
                 <a href="/pictures.php" class="toc__link">Pictures</a>
                 <a href="/snippets.php" class="toc__link">Snippets</a>
-                <a href="/designs.php" class="toc__link">Designs</a>
+                <a href="/inventory.php" class="toc__link">Inventory</a>
+                <a href="mailto:hello@theoo.dev" class="toc__link">Contact</a>
             </nav>
         </main>
     </body>

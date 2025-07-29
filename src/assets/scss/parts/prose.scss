@@ -41,11 +41,17 @@
 
     pre {
         overflow-x: scroll;
+
+        & code {
+            background: transparent;
+        }
     }
 
     code {
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
         font-size: rem(12);
+        background: rgb(var(--fg), .15);
+        padding: rem(2) rem(4)
     }
 
     blockquote {

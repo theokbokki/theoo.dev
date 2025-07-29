@@ -135,8 +135,6 @@ function asset(string $path): string
 
 Last thing that's left to do is to publish the site, and this is incredibly easy. I simply have to create a new subdomain on my <a href="https://www.infomaniak.com/en" target="_blank">Infomaniak</a> dashboard, clone the repo on the server and make the subdomain point to the `public` directory. DONE!
 
-<a href="https://owns.theoo.dev" target="_blank">You can visit it right here → owns.theoo.dev</a>
-
 This experiment was a blast, and it made me reflect on the current state of web development. We are in a weird moment where we have great tools that can do a ton of things and have great resources for learning them, therefore we feel entitled to use them for everything, and I'm guilty of this myself.  
 But I think that a step back before building a project might be worth it sometimes. Do I really need a whole Laravel app with an admin panel to make my simple personal webpage? Do I really need to use _Insert name of JS tool_ for building this functionality? Maybe not.
 Plus, I think that doing things this way has taught me way more about PHP and server stuff than a lot of time spent building Laravel websites. I now know about why we use a public directory, what `.htaccess` is, how to do simple cache busting, how Composer autoloading works, how my server views my app, and many other things I didn't talk about because they are out of the scope of this article.
@@ -150,6 +148,8 @@ If you have ideas or opinions you'd like to share, feel free to <a href="mailto:
 
 --- 
 
-Update:
+Update:  
 I spent some time learning Makefiles (Though I think I've only scratched the surface), and I've come up with a very simple build system for basic PHP websites.
-You can read more about it in <a href="/notes/simple-php-build-system">Simple PHP build system</a>, I've also made <a href="/snippets/useful-makefile-rules" target="_blank">a snippet grouping some Makefile rules</a> for different use cases.
+You can read more about it in <a href="/notes.php?name=simple-php-build-system">Simple PHP build system</a>, I've also made <a href="/snippets.php?name=useful-makefile-rules" target="_blank">a snippet grouping some Makefile rules</a> for different use cases.
+
+Since then, as you may have noticed, I moved my whole main website to this approach of using only PHP and no frameworks. It has been great so far, I hope it continues to be!

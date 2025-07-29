@@ -2,18 +2,18 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-use Theoo\Content\Notes;
+use Theoo\Content\Snippets;
 
 $title = 'Notes';
 
 $headerImg = getHeaderImage();
 
-$notes = Notes::get();
+$snippets = Snippets::get();
 
 $name = $_GET['name'] ?? null;
 
 if (isset($name) && preg_match('/[a-zA-Z0-9._-]/', $name)) {
-    $item = array_filter($notes, function($item) use ($name) {
+    $item = array_filter($snippets, function($item) use ($name) {
         return isset($item->src) && $item->src === $name;
     });
     
@@ -21,7 +21,7 @@ if (isset($name) && preg_match('/[a-zA-Z0-9._-]/', $name)) {
 
     if ($item) {
         $title = $item->name;
-        $note = parseMd($item->src);
+        $snippet = parseMd($item->src);
     }
 }
 
@@ -54,17 +54,17 @@ if (isset($name) && preg_match('/[a-zA-Z0-9._-]/', $name)) {
         </header>
 
         <main class="app__main prose">
-            <?php if(isset($note)): ?>
-                <?= $note ?>
+            <?php if(isset($snippet)): ?>
+                <?= $snippet ?>
             <?php else: ?>
-                <p>This is the place where I write about anything that goes on through my mind, you might find some useful or intersting things in there, but mostly talking to myself.</p>
+                <p>Here are some code snippets that are useful to me. Maybe some will be useful to you as well :))</p>
             <?php endif; ?> 
             <hr>
             <ul>
-                <?php foreach($notes as $note): ?>
+                <?php foreach($snippets as $snippet): ?>
                     <li>
-                        <a href="/notes.php?name=<?= $note->src ?>">
-                            <?= $note->name ?>
+                        <a href="/snippets.php?name=<?= $snippet->src ?>">
+                            <?= $snippet->name ?>
                         </a>
                     </li>
                 <?php endforeach; ?>

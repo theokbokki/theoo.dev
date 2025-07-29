@@ -96,4 +96,4 @@ Some I find beautiful, some I find useful, some I find interesting, I hope you w
 - [Internet Phone book](https://internetphonebook.net/)
 - [Making Software — A very very nicely made online book](https://www.makingsoftware.com/)
 - [Walk notes](https://walknotes.com/)
-- [https://guillaumevg.substack.com/](https://guillaumevg.substack.com/)
+- [Guillaume Cooks Vegan](https://guillaumevg.substack.com/)

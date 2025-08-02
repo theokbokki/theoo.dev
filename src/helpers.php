@@ -18,20 +18,27 @@ function asset(string $name): string
     return '/assets/'.$name;
 }
 
-function getHeaderImage(): object
+function getCat(): string
+{
+    $cats = ['matcha', 'tsuki'];
+
+    return $cats[array_rand($cats)];
+}
+
+function getHeaderImage(string $cat): object
 {
     $headerImgs = [
-        [
+        'matcha' => [
             'src' => asset('matcha.webp'),
             'alt' => 'The head of Matcha, my tabby cat, yawning big time.',
         ],
-        [
+        'tsuki' => [
             'src' => asset('tsuki.webp'),
             'alt' => 'The head of Tsuki, my tuxedo cat, roaring at me angrily.',
         ],
     ];
 
-    return (object) $headerImgs[array_rand($headerImgs)];
+    return (object) $headerImgs[$cat];
 }
 
 function getTheme(): string

@@ -27,6 +27,10 @@ class Notes
                 'Simple PHP build system',
                 'simple-php-build-system',
             ),
+            static::addItem(
+                'Seeing life through whimsical glasses',
+                'seeing-life-through-whimsical-glasses',
+            ),
         ];
     }
 

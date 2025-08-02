@@ -97,3 +97,5 @@ Some I find beautiful, some I find useful, some I find interesting, I hope you w
 - [Making Software — A very very nicely made online book](https://www.makingsoftware.com/)
 - [Walk notes](https://walknotes.com/)
 - [Guillaume Cooks Vegan](https://guillaumevg.substack.com/)
+- [Spencer's place](https://spencer.place/)
+- [John Provencher's website](https://johnprovencher.com/)

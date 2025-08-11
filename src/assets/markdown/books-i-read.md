@@ -4,13 +4,17 @@ I purposefuly don't include ratings or opinions, this is just a simple list.
 
 Don't hesitate to [send me an email](mailto:hello@theoo.dev) if you have books to recommend :))
 
+
 Book(s) I'm reading:
-- Atomic habits — James Clear
-- The Hidden Life of Trees — Peter Wohlleben
+
+- Matcha Cofe on Monday — Michiko Aoyama
 
 Books I read:  
 
 2025
+- _Petit manuel de résistance contemporaine_ — Cyril Dion
+- _Vers la sobriété heureuse_ — Pierre Rabhi
+- The Hidden Life of Trees — Peter Wohlleben
 - The passengers on the Hankyu line — Hiro Arikawa 
 - I am a cat — Natsume Sôseki
 - Extinction: a radical history — Ashley Dawson

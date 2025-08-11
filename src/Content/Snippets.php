@@ -27,6 +27,10 @@ class Snippets
                 'Useful Makefile rules',
                 'useful-makefile-rules',
             ),
+            static::addItem(
+                'Tinker password change one liner',
+                'tinker-password-change-one-liner',
+            ),
         ];
     }
 

@@ -67,6 +67,11 @@ class Pictures
                 '23-07-25-2',
                 'The bottom third of the picture is a crosswalk with a red light. On the other side of the crosswalk is a park with many flowers and trees. The sky is blue but cloudy.'
             ),
+            static::addItem(
+                '06.08.25',
+                '06-08-25-1',
+                'A picture of a blue porta potty with "Si t\'es pas antifa, t\'es quoi?" written on it. (This translates to "If you aren\'t anti-facist, what are you?',
+            ),
         ];
     }
 

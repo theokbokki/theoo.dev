@@ -14,7 +14,7 @@ function asset(string $name): string
     if (isset($manifest[$name])) {
         return '/'.$manifest[$name];
     }
-
+    
     return '/assets/'.$name;
 }
 

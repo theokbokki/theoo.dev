@@ -31,6 +31,10 @@ class Notes
                 'Seeing life through whimsical glasses',
                 'seeing-life-through-whimsical-glasses',
             ),
+            static::addItem(
+                'My coding setup',
+                'my-coding-setup',
+            ),
         ];
     }
 

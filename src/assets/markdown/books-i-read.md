@@ -7,11 +7,12 @@ Don't hesitate to [send me an email](mailto:hello@theoo.dev) if you have books t
 
 Book(s) I'm reading:
 
-- Matcha Cofe on Monday — Michiko Aoyama
+- _La vie (presque) sans pétrole_ — Jérôme Bonaldi
 
 Books I read:  
 
 2025
+- Matcha Cofe on Monday — Michiko Aoyama
 - _Petit manuel de résistance contemporaine_ — Cyril Dion
 - _Vers la sobriété heureuse_ — Pierre Rabhi
 - The Hidden Life of Trees — Peter Wohlleben

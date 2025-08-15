@@ -31,6 +31,10 @@ class Snippets
                 'Tinker password change one liner',
                 'tinker-password-change-one-liner',
             ),
+            static::addItem(
+                'Link to a specific place in a .txt file',
+                'link-to-a-specific-place-in-a-txt-file',
+            ),
         ];
     }
 

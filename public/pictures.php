@@ -19,10 +19,6 @@ if (isset($name) && preg_match('/[a-zA-Z0-9._-]/', $name)) {
     });
     
     $item = reset($item);
-
-    if ($item) {
-        $title = $title.' • '.$item->name;
-    }
 }
 ?>
 
@@ -57,7 +53,6 @@ if (isset($name) && preg_match('/[a-zA-Z0-9._-]/', $name)) {
                 <div class="overlay">
                     <figure class="overlay__fig">
                         <img src="<?= asset($item->src.'-2.webp') ?>" alt="<?= $item->alt ?>" class="overlay__img"/>
-                        <figcaption class="overlay__caption"><?= $item->name ?>.webp</figcaption>
                     </figure>
                     <a href="/pictures.php#<?= $item->src ?>" class="overlay__link">Click anywhere to close</a>
                 </div>
@@ -71,7 +66,6 @@ if (isset($name) && preg_match('/[a-zA-Z0-9._-]/', $name)) {
                         <div class="picture grid__item" id="<?= $item->src ?>">
                             <figure class="picture__fig">
                                 <img src="<?= asset($item->src.'-1.webp') ?>" alt="<?= $item->alt ?>" class="picture__img"/>
-                                <figcaption class="picture__caption"><?= $item->name ?></figcaption>
                             </figure>
                             <a href="/pictures.php?name=<?= $item->src ?>" class="picture__link">
                                 <span class="sro">View picture in large version</span>

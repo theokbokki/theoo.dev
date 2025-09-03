@@ -2,26 +2,16 @@
 
 .header {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: rem(80);
+    flex-direction: column;
+    text-align: center; 
 
-    &__link {
-        height: rem(24);
-        transition: transform 250ms ease-out;
-
-        &:hover {
-            transform: scale(1.15);
-        }
-
-        &:active {
-            transform: scale(.95);
-        }
+    &__canvas {
+        order: -1;
     }
 
-    &__img {
-        width: rem(24);
-        height: rem(24);
+    &--home .header {
+        &__title {
+            margin: rem(40) 0;
+        }
     }
 }

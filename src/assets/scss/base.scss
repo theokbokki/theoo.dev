@@ -7,8 +7,9 @@
 .app {
     max-width: rem(420);
     margin: rem(80) auto;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 200%;
+    font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    font-size: rem(16);
+    line-height: 175%;
     background-color: rgb(var(--bg));
     color: rgb(var(--fg));
     text-wrap: pretty;
@@ -49,10 +50,12 @@
     }
 }
 
-a {
-    &:focus {
-        outline: rem(1) solid rgb(var(--fg), .5);
-        outline-offset: rem(2);
-        background: rgb(var(--fg), .1);
-    }
+hr {
+    width: 100%;
+    height: rem(1);
+    margin: rem(24) 0;
+    border: none;
+    background: 
+        linear-gradient(to right, transparent 50%, rgb(var(--fg)) 50%);
+    background-size: rem(8) rem(2);
 }

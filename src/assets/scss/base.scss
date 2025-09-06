@@ -50,12 +50,22 @@
     }
 }
 
+a {
+    color: rgb(var(--fg));
+    text-decoration: none;
+    box-shadow: 0 rem(1) 0 0 rgb(var(--fg));
+
+    &:hover {
+        background: rgb(var(--fg));
+        color: rgb(var(--bg));
+    }
+}
+
 hr {
     width: 100%;
     height: rem(1);
     margin: rem(24) 0;
     border: none;
-    background: 
-        linear-gradient(to right, transparent 50%, rgb(var(--fg)) 50%);
+    background: linear-gradient(to right, transparent 50%, rgb(var(--fg)) 50%);
     background-size: rem(8) rem(2);
 }

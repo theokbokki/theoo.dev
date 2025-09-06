@@ -8,5 +8,8 @@
   "devDependencies": {
     "esbuild": "^0.25.8",
     "sass": "^1.89.2"
+  },
+  "dependencies": {
+    "three": "^0.180.0"
   }
 }

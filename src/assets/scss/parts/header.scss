@@ -6,7 +6,9 @@
     text-align: center; 
 
     &__canvas {
+        margin: 0 auto;
         order: -1;
+        image-rendering: pixelated;
     }
 
     &--home .header {

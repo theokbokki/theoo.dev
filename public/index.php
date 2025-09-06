@@ -25,6 +25,7 @@ $headerImg = getHeaderImage($cat);
         <meta name="description" content="" />
 
         <link rel="stylesheet" href="<?= asset('app.css') ?>">
+        <script type="module" src="<?= asset('app.js') ?>"></script>
     </head>
     <body class="app app--<?= getTheme() ?>">
         <header class="header header--home">

@@ -15,7 +15,7 @@ clean:
 
 # Copy and hash all assets
 build-assets:
-	find $(SRC)/img $(SRC)/favicon $(SRC)/markdown -type f | while read file; do \
+	find $(SRC)/img $(SRC)/favicon $(SRC)/markdown $(SRC)/shaders -type f | while read file; do \
 		name=$$(basename $$file); \
 		ext=$${name##*.}; \
 		base=$${name%.*}; \

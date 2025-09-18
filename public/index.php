@@ -5,7 +5,21 @@ require __DIR__.'/../vendor/autoload.php';
 $title = 'Home';
 
 $cat = getCat();
-$headerImg = getHeaderImage($cat);
+
+$notes = [];
+$leave_files = [
+    'content-sync.md',
+    'content.bak.md',
+    'old',
+];
+
+foreach (glob(__DIR__.'/../src/assets/notes/*') as $file) {
+    if (in_array(basename($file), $leave_files)) {
+        continue;
+    }
+    
+    $notes[] = basename($file, '.md');
+}
 
 ?>
 
@@ -41,6 +55,12 @@ $headerImg = getHeaderImage($cat);
             <hr>
             <section>
                 <h2>NOTES</h2>
+                <ul>
+                <?php foreach($notes as $note): ?>
+                    <li>
+                        <a href="<?= '/notes.php?name='.$note ?>"><?= $note ?></a>
+                    </li>
+                <?php endforeach; ?>
             </section>
         </main>
     </body>

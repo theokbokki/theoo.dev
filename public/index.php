@@ -37,5 +37,11 @@ $headerImg = getHeaderImage($cat);
             <hr>
             <p class="header__contact">You can contact me at <a href="mailto:hello@theoo.dev">hello@theoo.dev</a></p>
         </header>
+        <main>
+            <hr>
+            <section>
+                <h2>NOTES</h2>
+            </section>
+        </main>
     </body>
 </html>

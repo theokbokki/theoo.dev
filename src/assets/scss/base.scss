@@ -63,9 +63,11 @@ a {
 
 hr {
     width: 100%;
-    height: rem(1);
-    margin: rem(24) 0;
+    height: rem(2);
+    margin: rem(40) 0;
     border: none;
-    background: linear-gradient(to right, transparent 50%, rgb(var(--fg)) 50%);
+    background: linear-gradient(to right, transparent 50%, rgb(var(--fg), .5) 50%);
     background-size: rem(8) rem(2);
 }
+
+

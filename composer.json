@@ -5,7 +5,6 @@
     "license": "MIT",
     "autoload": {
         "files": [
-            "src/helpers.php"
         ],
         "psr-4": {
             "Theoo\\": "src/"
@@ -19,6 +18,5 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "league/commonmark": "^2.8@dev"
     }
 }

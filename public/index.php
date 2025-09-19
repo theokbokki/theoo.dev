@@ -1,50 +1,19 @@
-<?php
-
-require __DIR__.'/../vendor/autoload.php';
-
-$title = 'Home';
-
-$cat = getCat();
-$headerImg = getHeaderImage($cat);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" type="image/png" href="<?= asset($cat.'_favicon-96x96.png') ?>" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="<?= asset($cat.'_favicon.svg') ?>" />
-        <link rel="shortcut icon" href="<?= asset($cat.'_favicon.ico') ?>" />
-        <link rel="apple-touch-icon" sizes="180x180" href="<?= asset($cat.'_apple-touch-icon.png') ?>" />
-        <link rel="manifest" href="<?= asset($cat.'_site.webmanifest') ?>" />
+        <link rel="icon" type="image/png" href="" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="" />
+        <link rel="shortcut icon" href="" />
+        <link rel="apple-touch-icon" sizes="180x180" href="" />
+        <link rel="manifest" href="" />
 
-        <title>Théoo • <?= $title ?></title>
+        <title>Home</title>
         <meta name="description" content="" />
 
-        <link rel="stylesheet" href="<?= asset('app.css') ?>">
+        <link rel="stylesheet" href="/assets/css/app.css">
     </head>
-    <body class="app app--<?= getTheme() ?>">
-        <header class="header">
-            <h1 class="header__title"><?= $title ?></h1>
-            <a href="/" class="header__link">
-                <span class="sro"><?= $title ?></span>
-                <img class="header__img" src="<?= $headerImg->src ?>" alt="<?= $headerImg->alt ?>">
-            </a>
-        </header>
-
-        <main>
-            <nav class="toc">
-                <h2 class="toc__title">Table of contents</h2>
-                <a href="/links.php" class="toc__link">Links</a>
-                <a href="/notes.php" class="toc__link">Notes</a>
-                <a href="/pictures.php" class="toc__link">Pictures</a>
-                <a href="/snippets.php" class="toc__link">Snippets</a>
-                <a href="/inventory.php" class="toc__link">Inventory</a>
-                <a href="mailto:hello@theoo.dev" class="toc__link">Contact</a>
-            </nav>
-        </main>
-    </body>
+    <body class="app"></body>
 </html>

@@ -20,20 +20,20 @@ require_once __DIR__.'../../src/Helpers.php';
         <meta name="description" content="" />
 
         <link rel="stylesheet" href="/assets/css/app.css">
+        <script type="module" src="/assets/js/app.js"></script>
     </head>
     <body class="app app--<?= getTheme() ?>">
-        <div class="prose">
-            <h1 class="center">Theoo</h1>
-            <p class="center">Welcome on my place on the internet! I mostly write stuff, but also like design, shaders and coding in general.</p>
-            <hr>
-            <p class="center">You can contact me at <a href="mailto:hello@theoo.dev">hello@theoo.dev</a></p>
-            <hr>
-            <h2>Notes</h2>
-            <ul>
-                <li>
-                    <a href="/notes/books-i-read.php"/>Books I read</a>
-                </li>
-            </ul>
-        </div>
+        <canvas id="pets-canvas" aria-hidden="true"></canvas>
+        <h1 class="center">Theoo</h1>
+        <p class="center">Welcome on my place on the internet! I mostly write stuff, but also like design, shaders and coding in general.</p>
+        <hr>
+        <p class="center">You can contact me at <a href="mailto:hello@theoo.dev">hello@theoo.dev</a></p>
+        <hr>
+        <h2>Notes</h2>
+        <ul>
+            <li>
+                <a href="/notes/books-i-read.php"/>Books I read</a>
+            </li>
+        </ul>
     </body>
 </html>

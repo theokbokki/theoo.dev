@@ -23,9 +23,11 @@ NOTE);
         <meta name="description" content="" />
 
         <link rel="stylesheet" href="/assets/css/app.css">
+        <script type="module" src="/assets/js/app.js"></script>
     </head>
     <body class="app app--<?= getTheme() ?>">
         <header>
+            <canvas id="pets-canvas" class="center" aria-hidden="true"></canvas>
             <h1 class="center">Note title</h1>
             <hr>
             <a href="/" class="center">← Back to Homepage</a>

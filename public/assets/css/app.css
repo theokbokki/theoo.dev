@@ -59,7 +59,7 @@ table {
     padding: 0 1rem; /* 0 16px */
     font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     font-size: 0.875rem;
-    line-height: 160%;
+    line-height: 200%;
     background: rgb(var(--bg));
     color: rgb(var(--fg));
 }

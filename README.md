@@ -2,6 +2,11 @@
 
 My personal website.
 
+## Creating pages
+1. Copy the file `src/stub/base-page.php`
+2. Change the metas (title and description)
+3. Change the content in the body
+
 ## Creating notes
 1. Copy the file `src/stub/base-note.php`
 2. Change the metas (title and description)

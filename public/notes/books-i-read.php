@@ -56,8 +56,9 @@ NOTE);
     </head>
     <body class="app app--<?= getTheme() ?>">
         <header>
-            <h1>Books I Read</h1>
-            <a href="/">← Back to Homepage</a>
+            <h1 class="center">Books I read</h1>
+            <hr>
+            <a href="/" class="center">← Back to Homepage</a>
         </header>
         <hr>
         <div class="prose">
@@ -65,7 +66,7 @@ NOTE);
         </div>
         <hr>
         <footer>
-            <a href="#">↑ Back to top</a> 
+            <a href="#" class="center">↑ Back to top</a> 
         </footer>
     </body>
 </html>

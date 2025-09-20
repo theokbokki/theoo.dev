@@ -26,8 +26,9 @@ NOTE);
     </head>
     <body class="app app--<?= getTheme() ?>">
         <header>
-            <h1>Note title</h1>
-            <a href="/">← Back to Homepage</a>
+            <h1 class="center">Note title</h1>
+            <hr>
+            <a href="/" class="center">← Back to Homepage</a>
         </header>
         <hr>
         <div class="prose">

@@ -23,12 +23,12 @@ require_once __DIR__.'../../src/Helpers.php';
     </head>
     <body class="app app--<?= getTheme() ?>">
         <div class="prose">
-            <h1>Theoo</h1>
-            <p>Welcome on my place on the internet! I mostly write stuff, but also like design, shaders and coding in general.</p>
+            <h1 class="center">Theoo</h1>
+            <p class="center">Welcome on my place on the internet! I mostly write stuff, but also like design, shaders and coding in general.</p>
             <hr>
-            <p>You can contact me at <a href="mailto:hello@theoo.dev">hello@theoo.dev</a></p>
+            <p class="center">You can contact me at <a href="mailto:hello@theoo.dev">hello@theoo.dev</a></p>
             <hr>
-            <h2>Links</h2>
+            <h2>Notes</h2>
             <ul>
                 <li>
                     <a href="/notes/books-i-read.php"/>Books I read</a>

@@ -23,9 +23,9 @@ require_once __DIR__.'../../src/Helpers.php';
         <script type="module" src="/assets/js/app.js"></script>
     </head>
     <body class="app app--<?= getTheme() ?>">
-        <canvas id="pets-canvas" aria-hidden="true"></canvas>
+        <canvas id="pets-canvas" class="center" aria-hidden="true"></canvas>
         <h1 class="center">Theoo</h1>
-        <p class="center">Welcome on my place on the internet! I mostly write stuff, but also like design, shaders and coding in general.</p>
+        <p class="center">Welcome to my place on the internet! I mostly write stuff, but also like design, shaders and coding in general.</p>
         <hr>
         <p class="center">You can contact me at <a href="mailto:hello@theoo.dev">hello@theoo.dev</a></p>
         <hr>

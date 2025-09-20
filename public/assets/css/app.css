@@ -164,3 +164,8 @@ li {
     margin-inline: auto;
     text-align: center;
 }
+
+#pets-canvas {
+    image-rendering: pixelated;
+    margin-bottom: 2.5rem; /* 40px */
+}

@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__.'../../../src/Parsedown.php';
+require_once __DIR__.'../../../src/Helpers.php';
 
 $content = (new Parsedown())->text(<<<NOTE
 This page is a list of books I've read, and those I'm currently reading.  
@@ -53,7 +54,7 @@ NOTE);
 
         <link rel="stylesheet" href="/assets/css/app.css">
     </head>
-    <body class="app">
+    <body class="app app--<?= getTheme() ?>">
         <header>
             <h1>Books I Read</h1>
             <a href="/">← Back to Homepage</a>

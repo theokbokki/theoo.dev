@@ -24,7 +24,7 @@ NOTE);
 
         <link rel="stylesheet" href="/assets/css/app.css">
     </head>
-    <body class="app">
+    <body class="app app--<?= getTheme() ?>">
         <header>
             <h1>Note title</h1>
             <a href="/">← Back to Homepage</a>

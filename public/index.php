@@ -1,3 +1,9 @@
+<?php
+
+require_once __DIR__.'../../src/Helpers.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,7 +21,7 @@
 
         <link rel="stylesheet" href="/assets/css/app.css">
     </head>
-    <body class="app">
+    <body class="app app--<?= getTheme() ?>">
         <div class="prose">
             <h1>Theoo</h1>
             <p>Welcome on my place on the internet! I mostly write stuff, but also like design, shaders and coding in general.</p>

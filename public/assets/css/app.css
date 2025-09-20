@@ -1,7 +1,9 @@
+/* START RESET */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+v2.0 | 20110126
+License: none (public domain)
+ */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -16,33 +18,140 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* END RESET */
+
+/* START STYLES */
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 26.25rem; /* 420px */
+    margin: 5rem auto; /* 80px auto */
+    font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    font-size: 0.875rem;
+    line-height: 160%;
+}
+
+.app--red {
+    --bg: 248, 223, 234;
+    --fg: 180, 0, 0;
+}
+
+.app--orange {
+    --bg: 255, 247, 242;
+    --fg: 200, 70, 0;
+}
+
+.app--yellow {
+    --bg: 255, 252, 222;
+    --fg: 125, 117, 0;
+}
+
+.app--green {
+    --bg: 223, 248, 226; 
+    --fg: 0, 102, 14;
+}
+
+.app--blue {
+    --bg: 223, 239, 248;
+    --fg: 0, 102, 100;
+}
+
+.app--purple {
+    --bg: 231, 218, 251;
+    --fg: 63, 0, 115;
+}
+
+.app--pink {
+    --bg: 255, 231, 253;
+    --fg: 208, 0, 125;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    margin: 1.5rem 0; /* 24px 0 */
+}
+
+p {
+    margin: 1rem 0; /* 16px 0 */
+}
+
+hr {
+    width: 100%;
+    height: 0.09375rem; /* 1.5px */
+    margin: 1.5rem 0; /* 24px */
+    background: repeating-linear-gradient(
+        to right,
+        black 0px,
+        black 9px,
+        white 9px,
+        white 12px
+    );
+    border: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    box-shadow: 0 0.0625rem 0 0 black;
+
+    &:hover {
+        background: black;
+        color: white;
+    }
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+ol {
+    list-style-type: numeric;
+}
+
+li {
+    margin: 1rem 0; /* 16px */
+}
+
+.prose :first-child {
+    margin-top: 0;
 }

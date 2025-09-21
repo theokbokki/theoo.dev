@@ -126,6 +126,7 @@ a {
     color: rgb(var(--fg));
     text-decoration: none;
     box-shadow: 0 0.0625rem 0 0 rgb(var(--fg));
+    line-height: 120%;
 
     &:hover {
         background: rgb(var(--fg));

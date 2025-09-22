@@ -154,6 +154,18 @@ li {
     margin: 1rem 0; /* 16px */
 }
 
+pre {
+    padding: 1rem; /* 16px */
+    background: rgb(var(--fg), .15);
+    overflow-x: scroll;
+    margin: 0 -1rem; /* 16px */
+}
+
+code:not(pre > code) {
+    padding: 0.125rem 0.25rem; /* 2px 4px */
+    background: rgb(var(--fg), .15);
+}
+
 .prose :first-child {
     margin-top: 0;
 }

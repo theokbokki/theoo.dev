@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__.'../../../src/Parsedown.php';
+require_once __DIR__.'../../../src/Helpers.php';
 
 $content = (new Parsedown())->text(<<<NOTE
 NOTE);

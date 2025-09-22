@@ -1,6 +1,28 @@
 <?php
 
-require_once __DIR__.'../../src/Helpers.php';
+require_once __DIR__.'../../../src/Parsedown.php';
+require_once __DIR__.'../../../src/Helpers.php';
+
+$content = (new Parsedown())->text(<<<NOTE
+[Pluton](https://github.com/whitecube/pluton/tree/vite) is a JavaScript library built at [Whitecube](https://whitecube.be) that allows you to link JS classes to CSS classes.
+
+```js
+export default class Example {
+    static selector = ".example";
+
+    constructor(el) {
+        this.el = el;
+
+        this.getElements();
+        this.setEvents();
+    }
+
+    getElements() {}
+
+    setEvents() {}
+}
+```
+NOTE);
 
 ?>
 
@@ -27,31 +49,26 @@ require_once __DIR__.'../../src/Helpers.php';
         <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-        <title>Home</title>
-        <meta name="description" content="" />
+        <title>Default Pluton class</title>
+        <meta name="description" content="Snippet for the default JS class of Pluton." />
 
         <link rel="stylesheet" href="/assets/css/app.css">
         <script type="module" src="/assets/js/app.js"></script>
     </head>
     <body class="app app--<?= getTheme() ?>">
-        <canvas id="pets-canvas" class="center" aria-hidden="true"></canvas>
-        <h1 class="center">Theoo</h1>
-        <p class="center">Welcome to my place on the internet! I mostly write stuff, but also like design, shaders and coding in general.</p>
+        <header>
+            <canvas id="pets-canvas" class="center" aria-hidden="true"></canvas>
+            <h1 class="center">Default Pluton class</h1>
+            <hr>
+            <a href="/" class="center">← Back to Homepage</a>
+        </header>
         <hr>
-        <p class="center">You can contact me at <a href="mailto:hello@theoo.dev">hello@theoo.dev</a></p>
+        <div class="prose">
+            <?= $content ?>
+        </div>
         <hr>
-        <h2>Notes</h2>
-        <ul>
-            <li>
-                <a href="/notes/books-i-read.php">Books I read</a>
-            </li>
-        </ul>
-        <hr>
-        <h2>Snippets</h2>
-        <ul>
-            <li>
-                <a href="/snippets/default-pluton-class.php">Default Pluton class</a>
-            </li>
-        </ul>
+        <footer>
+            <a href="#">↑ Back to top</a> 
+        </footer>
     </body>
 </html>

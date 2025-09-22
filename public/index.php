@@ -54,6 +54,16 @@ require_once __DIR__.'../../src/Helpers.php';
             </li>
         </ul>
         <hr>
+        <h2>My other projects</h2>
+        <ul>
+            <li>
+                <a href="https://feed.theoo.dev">My feed website — Basically a micro-blog</a>
+            </li>
+            <li>
+                <a href="https://nuggets.theoo.dev">Nuggets — A place for me to experiment with nice but unpractical UIs</a>
+            </li>
+        </ul>
+        <hr>
         <h2>Links</h2>
         <ul>
             <li><a href="https://manuelmoreale.com/">The personal website of Manuel Moreale</a></li>

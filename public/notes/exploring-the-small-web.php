@@ -1,0 +1,73 @@
+<?php
+
+require_once __DIR__.'../../../src/Parsedown.php';
+require_once __DIR__.'../../../src/Helpers.php';
+
+$content = (new Parsedown())->text(<<<NOTE
+Yesterday I discovered the _Internet phone book_, and I was really excited to buy one because this project resonates with me.  
+Unfortunately, it is sold out pretty much everywhere and I'm not going to the USA or Greece to get one (though I wish I could).
+
+EDIT: Since then, they restoked! And I was able to get my hands on one 🙌
+
+Despite this, I still had a thorough look at [the website](https://internetphonebook.net), and I discovered that they have a [phone](https://internetphonebook.net/#dial-a-site) you can use to _call_ the sites from the book!  
+So what I do now, when I want to take a break but don't want to mindlessly browse Twitter, is dial a random number and visit the site. It almost always leads to a deep rabbit hole and I discover many new cool places on the internet.
+
+One other project I know about that works on a similar principle is [_the forest_](https://theforest.link). You have a button and it teleports you to a random site somewhere!  
+
+If you know of other places like these ones that can be used to explore the [small web](https://ar.al/2020/08/07/what-is-the-small-web), I'd be pleased if you can [let me know](mailto:hello@theoo.dev) and I will be sure to add them to the list on this page :))
+
+--- 
+
+Websites that help you discover other small web websites:
+- [Internet Phone Book](https://internetphonebook.net)
+- [The Forest](https://theforest.link)
+NOTE);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Exploring the small web</title>
+        <meta name="description" content="An article about finding places to explore the small web." />
+
+        <link rel="stylesheet" href="/assets/css/app.css">
+        <script type="module" src="/assets/js/app.js"></script>
+    </head>
+    <body class="app app--<?= getTheme() ?>">
+        <header>
+            <canvas id="pets-canvas" class="center" aria-hidden="true"></canvas>
+            <h1 class="center">Exploring the small web</h1>
+            <hr>
+            <a href="/" class="center">← Back to Homepage</a>
+        </header>
+        <hr>
+        <div class="prose">
+            <?= $content ?>
+        </div>
+        <hr>
+        <footer>
+            <a href="#">↑ Back to top</a> 
+        </footer>
+    </body>
+</html>

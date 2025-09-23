@@ -151,7 +151,7 @@ ol {
 }
 
 li {
-    margin: 1rem 0; /* 16px */
+    margin: 1rem 0 0 3rem; /* 16px 0 0 48px */
 }
 
 pre {

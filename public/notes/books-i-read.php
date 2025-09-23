@@ -61,7 +61,7 @@ NOTE);
         <meta name="theme-color" content="#ffffff">
 
         <title>Books I Read</title>
-        <meta name="description" content="" />
+        <meta name="description" content="A list of all the books I read and the ones I'm reading" />
 
         <link rel="stylesheet" href="/assets/css/app.css">
         <script type="module" src="/assets/js/app.js"></script>

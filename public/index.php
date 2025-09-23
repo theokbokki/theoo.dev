@@ -28,7 +28,7 @@ require_once __DIR__.'../../src/Helpers.php';
         <meta name="theme-color" content="#ffffff">
 
         <title>Home</title>
-        <meta name="description" content="" />
+        <meta name="description" content="Homepage of Theoo's website. It is the place for me to share everything I like." />
 
         <link rel="stylesheet" href="/assets/css/app.css">
         <script type="module" src="/assets/js/app.js"></script>

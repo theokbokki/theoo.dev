@@ -4,8 +4,13 @@ class App {
     }
 
     async init() {
-        this.color = window.getComputedStyle(document.body)
+        this.fg = window.getComputedStyle(document.body)
             .getPropertyValue('--fg')
+            .split(', ')
+            .map((n) => parseFloat(n / 255));
+
+        this.bg = window.getComputedStyle(document.body)
+            .getPropertyValue('--bg')
             .split(', ')
             .map((n) => parseFloat(n / 255));
 
@@ -81,7 +86,8 @@ class App {
 
         // uniforms
         const uResolution = gl.getUniformLocation(program, 'u_resolution');
-        const uColor = gl.getUniformLocation(program, 'u_color');
+        const uFg = gl.getUniformLocation(program, 'u_fg');
+        const uBg = gl.getUniformLocation(program, 'u_bg');
         const uTexture = gl.getUniformLocation(program, 'u_texture');
 
         // texture
@@ -106,7 +112,8 @@ class App {
 
             gl.useProgram(program);
             gl.uniform2f(uResolution, this.size.x, this.size.y);
-            gl.uniform3fv(uColor, this.color);
+            gl.uniform3fv(uFg, this.fg);
+            gl.uniform3fv(uBg, this.bg);
             gl.uniform1i(uTexture, 0);
 
             gl.bindVertexArray(vao);

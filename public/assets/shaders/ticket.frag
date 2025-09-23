@@ -3,7 +3,8 @@ precision mediump float;
 
 uniform sampler2D u_texture;
 uniform vec2 u_resolution;
-uniform vec3 u_color;
+uniform vec3 u_bg;
+uniform vec3 u_fg;
 
 out vec4 fragColor;
 
@@ -29,9 +30,9 @@ void main() {
         cellUV.y < height &&
         color.a > 0.0
     ) {
-        color = vec4(u_color, 1.0);
+        color = vec4(u_fg, 1.0);
     } else {
-        color = vec4(vec3(1.0), 0.0);
+        color = vec4(u_bg, 1.0);
     }
 
     fragColor = color;

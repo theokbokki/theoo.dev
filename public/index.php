@@ -163,6 +163,5 @@ require_once __DIR__.'../../src/Helpers.php';
             <li><a href="https://spencer.place/">Spencer's place</a></li>
             <li><a href="https://johnprovencher.com/">John Provencher's website</a></li>
         </ul>
-        <p class="banner">This website is in transition. I haven't yet migrated all my articles/snippets but they will be there soon.</p>
     </body>
 </html>

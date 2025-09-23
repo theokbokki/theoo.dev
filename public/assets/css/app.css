@@ -178,19 +178,6 @@ code:not(pre > code) {
     text-align: center;
 }
 
-.banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    padding: 0rem 1rem;
-    margin: 0;
-    text-align: center;
-    color: rgb(var(--bg));
-    background: rgb(var(--fg));
-}
-
 #pets-canvas {
     image-rendering: pixelated;
     margin-bottom: 2.5rem; /* 40px */

@@ -171,6 +171,9 @@ require_once __DIR__.'../../src/Helpers.php';
             <li><a href="https://guillaumevg.substack.com/">Guillaume Cooks Vegan</a></li>
             <li><a href="https://spencer.place/">Spencer's place</a></li>
             <li><a href="https://johnprovencher.com/">John Provencher's website</a></li>
+            <li><a href="https://lmnt.me/">LMNT — The personal website of Louie Mantia</a></li>
+            <li><a href="https://pjonori.blog/">The blog of Pj Onori</a></li>
+            <li><a href="https://oliverobscure.xyz/">Oliver Obscure's place on the internet</a></li>
         </ul>
     </body>
 </html>

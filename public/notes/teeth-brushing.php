@@ -1,0 +1,71 @@
+<?php
+
+require_once __DIR__.'../../../src/Parsedown.php';
+require_once __DIR__.'../../../src/ParsedownExtra.php';
+require_once __DIR__.'../../../src/Helpers.php';
+
+$content = (new ParsedownExtra())->text(<<<NOTE
+I love brushing my teeth. 
+
+The feeling of the hairs of the brush scraping on each tooth removing bits of food and undesirable stuff. The frothing of the toothpaste filling up your mouth more and more as you brush. The clean and minty taste that tingles your tongue, nose and eyes.
+
+For me, it's a moment to reflect, a moment spent with myself in front of the bathroom mirror.
+A moment to prepare myself for the day ahead, to think about what I'm going to do, who I'm going to spend it with, what the weather will be like. It's generally the last moment before the day starts, 3 to 5 minutes after which I'm going to get engulfed in the movements of daily life.  
+Then, it's also a moment to wind down in a way. When after a long day, I'm once again faced with myself. It means "you are soon going to bed", it's a time to think about the day that passed, how it went, who I met, how did I feel, how do I feel?
+
+Teeth brushing is a moment where no one will interrupt you. Because you are not going to walk around creating white sticky stains everywhere, because you are not going to talk and spit all over the other person's face, they wouldn't understand any of your gurgly sounds anyway.
+
+I wonder why I used to hate brushing my teeth. 
+
+As a kid, I would do anything to avoid it. The toothpaste was stingy, it took precious time I could have used to play, it meant going to school, or going to bed, two activities my kid self despised heavily.  
+Maybe as a kid, I was simply more in the present moment rather than thinking about what was and what will be. These 2 minutes tops I would spend roughly scratching my teeth were a moment not spent having fun, and what can a moment spent not having fun be worth?
+NOTE);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Teeth brushing</title>
+        <meta name="description" content="Reflexions on brushing my teeth, the passing of time and the meaning of life." />
+
+        <link rel="stylesheet" href="/assets/css/app.css">
+        <script type="module" src="/assets/js/app.js"></script>
+    </head>
+    <body class="app app--<?= getTheme() ?>">
+        <header>
+            <canvas id="pets-canvas" class="center" aria-hidden="true"></canvas>
+            <h1 class="center">Teeth brushing</h1>
+            <hr>
+            <a href="/" class="center">← Back to Homepage</a>
+        </header>
+        <hr>
+        <div class="prose">
+            <?= $content ?>
+        </div>
+        <hr>
+        <footer>
+            <a href="#">↑ Back to top</a> 
+        </footer>
+    </body>
+</html>

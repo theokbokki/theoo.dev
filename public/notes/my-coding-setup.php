@@ -24,7 +24,7 @@ Outside of my editor, I use [tmux](https://github.com/tmux/tmux/wiki), a termina
 
 That's it for my coding setup, it might[^6] change in the future, at which point I can write an updated blog post. But for now, I think that this pretty bare bones setup is good for me. It forces me to actually learn the programming languages I use and understand the codebases I work on, the more I code and the more I get a feeling for how code should be written, how to refactor better,... . If I had one change to really recommend from all the above, it would be to disable your autocomplete. I know that in today's coding landscape this is a weird advice with tools like Claude Code or Cursor where AI writes the code for us, but I swear that you will see improvements in your understanding of the code in very little time.
 
-If you have questions, or want to share your coding setup, please feel free to [send me an email](mailto:hello@theoo.dev), I would be please to read what you have to say ^^.
+If you have questions, or want to share your coding setup, please feel free to [send me an email](mailto:hello@theoo.dev), I would be pleased to read what you have to say ^^.
 
 [^1]: A modern version of vim, scripted in lua and with a really active community.
 [^2]: Talking about PHP here, a namespace is this for example `Theoo\App\Components`. It allows your code to differenciate between two classes with the same name but under different namespaces.

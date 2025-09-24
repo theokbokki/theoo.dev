@@ -1,0 +1,75 @@
+<?php
+
+require_once __DIR__.'../../../src/Parsedown.php';
+require_once __DIR__.'../../../src/ParsedownExtra.php';
+require_once __DIR__.'../../../src/Helpers.php';
+
+$content = (new ParsedownExtra())->text(<<<NOTE
+Rose colored sunglasses on my nose, I walk in the rain waving to the dogs I cross path with that reply by looking back happily with their tongue sticking out and their tails wagging.  
+I see a puddle, jump over it, almost fall in it then celebrate this new long jump world record.  
+The rain has stopped and I keep looking at the sky hoping for a rainbow to appear, don't see the red light and almost get run over, this felt like playing crossy roads.
+
+Hear me out, life is the funniest thing ever, you just have to make it fun. The world around us is full of things that were designed for one purpose, but have so many more hidden ones.  
+See a small fence? Jump over it.  
+Follow pigeons around, yes they are slow, but they might take you to a random fun place.  
+A bus stop pole can quickly become a fireman's pole or just a bar to spin around like you are in some sort of musical.  
+Cartwheels are surprisingly has much fun as an adult as they were as a child. Don't believe me? Try it.  
+Raindrops on the windows are like dozens of races happening at the same time, which one will get to the bottom first?  
+Try to remember graffiti signatures and you'll find them in many different places, sometimes even in different countries.  
+Wear clothes just because you want to, even though it looks awful and even you agree.
+
+The hard part is overcoming people looking at you weirdly, but that's ok, they are just not having as much fun as you are. And from my experience, none of them ever dares to confront you about it anyways, they must just think you are some sort of eccentric.  
+A thing that helped me with this is to think about who I remember I saw today when walking outside. And the answer is pretty much no one, we just don't care about the people we cross path with. We might remember them for 10 minutes but then they go to the empty abyss of useless brain stuff.
+
+So please, next time you go out, put on your coolest pair of shades (yes even if it's not sunny) and have some fun. Just make sure you don't break or make anything dirty cause that's uncool.  
+I would love to hear about how you are making your life fun, so don't hesitate to [tell me about it](mailto:hello@theoo.dev) and have a great day!
+NOTE);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Seeing life through whimsical glasses</title>
+        <meta name="description" content="An article about having fun in everyday life and not caring about how people look at you." />
+
+        <link rel="stylesheet" href="/assets/css/app.css">
+        <script type="module" src="/assets/js/app.js"></script>
+    </head>
+    <body class="app app--<?= getTheme() ?>">
+        <header>
+            <canvas id="pets-canvas" class="center" aria-hidden="true"></canvas>
+            <h1 class="center">Seeing life through whimsical glasses</h1>
+            <hr>
+            <a href="/" class="center">← Back to Homepage</a>
+        </header>
+        <hr>
+        <div class="prose">
+            <?= $content ?>
+        </div>
+        <hr>
+        <footer>
+            <a href="#">↑ Back to top</a> 
+        </footer>
+    </body>
+</html>

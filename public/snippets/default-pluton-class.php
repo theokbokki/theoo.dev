@@ -1,9 +1,10 @@
 <?php
 
 require_once __DIR__.'../../../src/Parsedown.php';
+require_once __DIR__.'../../../src/ParsedownExtra.php';
 require_once __DIR__.'../../../src/Helpers.php';
 
-$content = (new Parsedown())->text(<<<NOTE
+$content = (new ParsedownExtra())->text(<<<NOTE
 [Pluton](https://github.com/whitecube/pluton/tree/vite) is a JavaScript library built at [Whitecube](https://whitecube.be) that allows you to link JS classes to CSS classes.
 
 ```js

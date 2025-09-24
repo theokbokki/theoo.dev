@@ -1,9 +1,10 @@
 <?php
 
 require_once __DIR__.'../../../src/Parsedown.php';
+require_once __DIR__.'../../../src/ParsedownExtra.php';
 require_once __DIR__.'../../../src/Helpers.php';
 
-$content = (new Parsedown())->text(<<<NOTE
+$content = (new ParsedownExtra())->text(<<<NOTE
 This page is a list of books I've read, and those I'm currently reading.  
 Most books I read are in French and may not have been translated in English (or I couldn't find a translated edition) hence the French titles.  
 I purposefuly don't include ratings or opinions, this is just a simple list.

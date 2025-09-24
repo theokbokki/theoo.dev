@@ -1,9 +1,10 @@
 <?php
 
 require_once __DIR__.'../../../src/Parsedown.php';
+require_once __DIR__.'../../../src/ParsedownExtra.php';
 require_once __DIR__.'../../../src/Helpers.php';
 
-$content = (new Parsedown())->text(<<<NOTE
+$content = (new ParsedownExtra())->text(<<<NOTE
 Yesterday I discovered the _Internet phone book_, and I was really excited to buy one because this project resonates with me.  
 Unfortunately, it is sold out pretty much everywhere and I'm not going to the USA or Greece to get one (though I wish I could).
 

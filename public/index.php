@@ -48,6 +48,9 @@ require_once __DIR__.'../../src/Helpers.php';
             <li>
                 <a href="/notes/exploring-the-small-web.php">Exploring the small web</a>
             </li>
+            <li>
+                <a href="/notes/my-coding-setup.php">My coding setup</a>
+            </li>
         </ul>
         <hr>
         <h2>Snippets</h2>

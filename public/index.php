@@ -43,6 +43,9 @@ require_once __DIR__.'../../src/Helpers.php';
         <h2>Notes</h2>
         <ul>
             <li>
+                <a href="/notes/the-city-is-a-noisy-place.php">The city is a noisy place</a>
+            </li>
+            <li>
                 <a href="/notes/writing-on-the-phone.php">Writing on the phone</a>
             </li>
             <li>

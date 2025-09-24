@@ -57,6 +57,9 @@ require_once __DIR__.'../../src/Helpers.php';
             <li>
                 <a href="/notes/teeth-brushing.php">Teeth brushing</a>
             </li>
+            <li>
+                <a href="/notes/browsers.php">Browsers</a>
+            </li>
         </ul>
         <hr>
         <h2>Snippets</h2>

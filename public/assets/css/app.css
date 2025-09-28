@@ -99,7 +99,7 @@ table {
     --fg: 208, 0, 125;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     text-transform: uppercase;
     margin: 1.5rem 0; /* 24px 0 */
 }
@@ -169,10 +169,6 @@ code:not(pre > code) {
 .footnote-ref {
     vertical-align: top;
     font-size: 12px;
-}
-
-.prose :first-child {
-    margin-top: 0;
 }
 
 .center {

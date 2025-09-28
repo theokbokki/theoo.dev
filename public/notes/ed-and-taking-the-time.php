@@ -62,7 +62,7 @@ NOTE);
             <a href="/" class="center">← Back to Homepage</a>
         </header>
         <hr>
-        <div class="prose">
+        <div>
             <?= $content ?>
         </div>
         <hr>

@@ -5,14 +5,14 @@ require_once __DIR__.'../../../src/ParsedownExtra.php';
 require_once __DIR__.'../../../src/Helpers.php';
 
 $content = (new ParsedownExtra())->text(<<<NOTE
-I went to the hairdresser today, I always go to a random one. I found that it's often faster to go around until you find one that can take you right away rather than wait at one where there is a queue. She did a great job, my hair is now short and dries up in seconds when I'm out of the shower. But while there, I couldn't help but think that, if she decided, she could slit my throat at any moment, and I couldn't do shit.[^1]
-When you really think about it, the only reason we are alive is because other humans act according to rules.
+I would love to have a bike, to be precise, a cargo-bike. I live in a flat city and having a fast and easy way to do my groceries and move around would be nice.
 
-Same goes for things like crossing the road when the light is green. The only reason you don't get run over is because the other person agrees to say that red means stop.
+But here's the thing, I live in a flat, on the fourth floor of a somewhat old building that doesn't have an elevator. The corridor is already taken by neighbours' bikes or stuff from the restaurant at the bottom floor and I don't have access to a basement.
 
-Here's a list of things that I think are reckless but since everybody agrees on the rules, it's mostly fine: boxing, gun/bow ranges, going in any means of transport, roller coasters, anything involving electricity or fire/heat, eating food prepared by other humans,... 
+Because of that, I do everything by foot. And that is slow. Well to be fair I walk fast, but a bike would be much faster. And I think that's also what's good about walking. Since it is slow, you have the time to enjoy your surroundings. I'm often stopping to watch dogs play, or bees going from flower to flower. Sometimes people stop you to ask their way around or so you can take a picture of them and their SO. It allows for situations you hadn't planned, like grabbing a coffee on your way because your favourite coffee shop is open late today, or finding a random street and ending up exploring a neighbourhood you didn't know about.  
+I also often get ideas of stuff to write or sites to code when walking. Unlike on a bike, you don't have to pay as much attention at where you are going and your mind can wander more freely.
 
-[^1]: Note that there was nothing weird about the lady cutting my hair. She was nice and even offered some fizzy water.
+Now that I think about it, even if I had a bike, I might not use it. I like walking too much, I'm too used to it. I would find excuses, exactly like I do currently with the tram, "ah 2 minutes to wait, might as well walk there" or "mhh there will be too many people at this time of the day, it's sunny outside". So maybe I don't want a bike after all.
 NOTE);
 
 ?>
@@ -40,8 +40,8 @@ NOTE);
         <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-        <title>Getting your hair cut, crossing the road and many other reckless things</title>
-        <meta name="description" content="Talking about the reckless things we do in life that seem perfectly ok." />
+        <title>Having a bike or rather, the lack of one</title>
+        <meta name="description" content="Talking about my desire to get a bike and the fact that I probably wouldn't use is." />
 
         <link rel="stylesheet" href="/assets/css/app.css">
         <script type="module" src="/assets/js/app.js"></script>
@@ -49,7 +49,7 @@ NOTE);
     <body class="app app--<?= getTheme() ?>">
         <header>
             <canvas id="pets-canvas" class="center" aria-hidden="true"></canvas>
-            <h1 class="center">Getting your hair cut, crossing the road and many other reckless things</h1>
+            <h1 class="center">Having a bike or rather, the lack of one</h1>
             <hr>
             <a href="/" class="center">← Back to Homepage</a>
         </header>

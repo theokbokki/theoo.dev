@@ -127,6 +127,7 @@ a {
     text-decoration: none;
     box-shadow: 0 0.0625rem 0 0 rgb(var(--fg));
     line-height: 120%;
+    word-break: break-all;
 
     &:hover {
         background: rgb(var(--fg));

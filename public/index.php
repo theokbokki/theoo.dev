@@ -201,6 +201,9 @@ require_once __DIR__.'../../src/Helpers.php';
             <li><a href="https://lmnt.me/">LMNT — The personal website of Louie Mantia</a></li>
             <li><a href="https://pjonori.blog/">The blog of Pj Onori</a></li>
             <li><a href="https://oliverobscure.xyz/">Oliver Obscure's place on the internet</a></li>
+            <li><a href="https://departure.blog">A parenthetical departure</a></li>
+            <li><a href="https://messenger.abeto.co/">Messenger — An impressive web 3D game</a></li>
+            <li><a href="https://tarneo.fr/">The personal website of Tarneo</a></li>
         </ul>
     </body>
 </html>

@@ -127,11 +127,16 @@ a {
     text-decoration: none;
     box-shadow: 0 0.0625rem 0 0 rgb(var(--fg));
     line-height: 120%;
-    word-break: break-all;
+    overflow-wrap: break-word;
 
     &:hover {
         background: rgb(var(--fg));
         color: rgb(var(--bg));
+    }
+    
+    &:focus {
+        animation: 1000ms steps(1, end) infinite blink;
+        outline: none;
     }
 }
 
@@ -183,4 +188,21 @@ code:not(pre > code) {
 #pets-canvas {
     image-rendering: pixelated;
     margin-bottom: 2.5rem; /* 40px */
+}
+
+@keyframes blink {
+    0% {
+        color: rgb(var(--bg));
+        background: rgb(var(--fg));
+    }
+
+    50% {
+        color: rgb(var(--fg));
+        background: rgb(var(--bg));
+    }
+    
+    100% {
+        color: rgb(var(--bg));
+        background: rgb(var(--f g));
+    }
 }

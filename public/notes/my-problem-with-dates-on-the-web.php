@@ -46,7 +46,7 @@ NOTE);
         <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-        <title>My problem with dates on the webp</title>
+        <title>My problem with dates on the web</title>
         <meta name="description" content="A short article about how my brain works around dates on the web and why there are none on this website." />
 
         <link rel="stylesheet" href="/assets/css/app.css">
@@ -55,7 +55,7 @@ NOTE);
     <body class="app app--<?= getTheme() ?>">
         <header>
             <canvas id="pets-canvas" class="center" aria-hidden="true"></canvas>
-            <h1 class="center">My problem with dates on the webp</h1>
+            <h1 class="center">My problem with dates on the web</h1>
             <hr>
             <a href="/" class="center">← Back to Homepage</a>
         </header>

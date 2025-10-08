@@ -206,8 +206,7 @@ code:not(pre > code) {
 
 @media screen and (min-width: 720px) {
     .app {
-        margin-left: 10rem; /* 160px */
-        
+        margin-left: 10rem; /* 160px */ 
     }
 
     .app > *:not(hr, h2) {
@@ -232,6 +231,16 @@ code:not(pre > code) {
         margin-left: -10rem; /* 160px */
         margin-top: 0;
         max-width: 6rem; /* 96px */
+    }
+    
+    .app__back {
+        position: sticky;
+        top: 2rem; /* 32px */
+        float: left;
+        margin-left: -10rem; /* 160px */
+        margin-top: 2rem; /* 32px */
+        box-shadow: none;
+        line-height: 175%;
     }
 }
 

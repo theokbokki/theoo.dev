@@ -1,19 +1,3 @@
-<?php
-
-require_once __DIR__.'../../../src/Parsedown.php';
-require_once __DIR__.'../../../src/ParsedownExtra.php';
-require_once __DIR__.'../../../src/Helpers.php';
-
-$content = (new ParsedownExtra())->text(<<<NOTE
-I am presently waiting in a sandwich shop, radio going in the background, noises of knives against cutting boards, the whooshing of the coffee machine, someone on the phone and cars roaring outside the window. The city is a noisy place, and for a long time, I hadn't noticed. This is because I've always lived either in or near a city, so my soundscape has always been filled with noise. And since city noise isn't the most enjoyable, I've compensated by adding more noise to cover it up. It may have been songs, videos, podcasts and even white noise, I always had something playing in my ears. But recently, that changed. [Manuel Moreale](https://manuelmoreale.com) was doing a challenge back in June where he was trying to consume less digital stuff, this meant cutting off a lot of time on the phone. And after reading his weekly updates, I decided to tag along.
-
-For me the biggest time sink was Youtube, so I cut that off entierly, but I pushed the concept a tiny bit further and drastically reduced my usage of Spotify for music and podcasts. The hard part about this to me was walking outside with nothing in my ears, being forced to listen to cars vroom by, to people shouting at each other, to kids screaming, dogs barking and my own footsteps. I was scared of going outside and having this overwhelming feeling of city noises, but I had to do it anyway. And it went fine, I quickly got used to it, the sounds weren't nice, but I could deal with them. Eventually, a weird thing started to happen, I would try to put music on when walking and it would feel weird. A bit like if I was less aware of what was going on since I couldn't hear much anymore. Scared that people would ask me something and I'd ignore them. My brain had done a 180. I found that it is actually quite nice actually walking outside and earing the sounds of nature, ear the birds chirp, the trees move in the wind, the ducks honking, and my own footsteps, the problem is that a city doesn't have much of that.
-
-By cutting off from my phone, I realised that the city, this environment I was so accustomed to, that I had liked and worshiped for my whole life, was actually crap. That I didn't want to live there anymore. I don't want to wake up to the sounds of motorbikes going by, or people coming back from a night of partying, I want to hear the crickets, the rustling of the grass, the cows from the nearby farmer mooing. I don't want to breathe car exhaust gases, I want to breathe fresh air. I realized that by modifying the soundscape, I was actually protecting myself from an environement I didn't feel comfortable in. These next years might be weird, because I know that I'm not moving out the city any time soon, I'm way too comfortable here. But at the same time, there is this thing in me that only wants to go away. Maybe I'll get used to it again, maybe I'll even start enjoying the true sounds of the city, who knows. I'll try to make an update on this in a while. 
-NOTE);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>

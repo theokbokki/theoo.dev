@@ -1,24 +1,3 @@
-<?php
-
-require_once __DIR__.'../../../src/Parsedown.php';
-require_once __DIR__.'../../../src/ParsedownExtra.php';
-require_once __DIR__.'../../../src/Helpers.php';
-
-$content = (new ParsedownExtra())->text(<<<NOTE
-Lately, I've been trying to write more, and it has been going alright. At first, it was really hard, I was second guessing myself a lot and it all felt very messy.  
-But slowly, my brain started to change. Now, as I go about my day, I have ideas that pop up into my mind, a sentence that fits very well with what I want to 
-say or an example to explain some concept.  
-In the beginning, I was trying to remember stuff, then I started writing it down in my notes app, but I feel like it's time I go one step further and start writing posts on my phone.
-
-So I went on a little bit of a hunt to find a perfect setup. What I do is I sync the markdown files in iCloud Drive, and edit it in an app called [Subtext](https://apps.apple.com/app/subtext/id1606625287)[^1]. This way I have the same content on my phone and on my computer and I can write from anywhere!
-
-If you also write things, I would be pleased to [chat with you](mailto:hello@theoo.dev) about methods for writing :))
-
-[^1]: It's a free app that allows you to open and edit .txt files from any folder on your phone. It is really similar to textedit.
-NOTE);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>

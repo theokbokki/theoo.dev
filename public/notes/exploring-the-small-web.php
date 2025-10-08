@@ -1,31 +1,3 @@
-<?php
-
-require_once __DIR__.'../../../src/Parsedown.php';
-require_once __DIR__.'../../../src/ParsedownExtra.php';
-require_once __DIR__.'../../../src/Helpers.php';
-
-$content = (new ParsedownExtra())->text(<<<NOTE
-Yesterday I discovered the _Internet phone book_, and I was really excited to buy one because this project resonates with me.  
-Unfortunately, it is sold out pretty much everywhere and I'm not going to the USA or Greece to get one (though I wish I could).
-
-EDIT: Since then, they restoked! And I was able to get my hands on one 🙌
-
-Despite this, I still had a thorough look at [the website](https://internetphonebook.net), and I discovered that they have a [phone](https://internetphonebook.net/#dial-a-site) you can use to _call_ the sites from the book!  
-So what I do now, when I want to take a break but don't want to mindlessly browse Twitter, is dial a random number and visit the site. It almost always leads to a deep rabbit hole and I discover many new cool places on the internet.
-
-One other project I know about that works on a similar principle is [_the forest_](https://theforest.link). You have a button and it teleports you to a random site somewhere!  
-
-If you know of other places like these ones that can be used to explore the [small web](https://ar.al/2020/08/07/what-is-the-small-web), I'd be pleased if you can [let me know](mailto:hello@theoo.dev) and I will be sure to add them to the list on this page :))
-
---- 
-
-Websites that help you discover other small web websites:
-- [Internet Phone Book](https://internetphonebook.net)
-- [The Forest](https://theforest.link)
-NOTE);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>

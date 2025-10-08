@@ -1,22 +1,3 @@
-<?php
-
-require_once __DIR__.'../../../src/Parsedown.php';
-require_once __DIR__.'../../../src/ParsedownExtra.php';
-require_once __DIR__.'../../../src/Helpers.php';
-
-$content = (new ParsedownExtra())->text(<<<NOTE
-I went to the hairdresser today, I always go to a random one. I found that it's often faster to go around until you find one that can take you right away rather than wait at one where there is a queue. She did a great job, my hair is now short and dries up in seconds when I'm out of the shower. But while there, I couldn't help but think that, if she decided, she could slit my throat at any moment, and I couldn't do shit.[^1]
-When you really think about it, the only reason we are alive is because other humans act according to rules.
-
-Same goes for things like crossing the road when the light is green. The only reason you don't get run over is because the other person agrees to say that red means stop.
-
-Here's a list of things that I think are reckless but since everybody agrees on the rules, it's mostly fine: boxing, gun/bow ranges, going in any means of transport, roller coasters, anything involving electricity or fire/heat, eating food prepared by other humans,... 
-
-[^1]: Note that there was nothing weird about the lady cutting my hair. She was nice and even offered some fizzy water.
-NOTE);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>

@@ -1,30 +1,3 @@
-<?php
-
-require_once __DIR__.'../../../src/Parsedown.php';
-require_once __DIR__.'../../../src/ParsedownExtra.php';
-require_once __DIR__.'../../../src/Helpers.php';
-
-$content = (new ParsedownExtra())->text(<<<NOTE
-My favourite code editor is ed. For those who don't know, ed is one of the first editors to have been made, it's part of a class of editors called "line editors", which means that you are only editing complete lines of text. You can append after a line, insert before it or change a specific part using regexes, but you cannot put your cusor on a word and edit there. Ed doesn't even have a cursor.
-
-Ed is naturally limiting, it can only do one thing, edit a file. No file searching, no scrolling, no infinite undo/redo, no diagnostics or code actions. If you want things like these, you have to do them in your terminal[^1]. If you make a typo while typing a line of code? You can't go back with your arrow keys to fix it, you need to validate the line with the typo and then correct it using a regex. (Or you could rewrite the whole line if that's what you fancy). And these limitations happen because ed assumes you know what you are doing. You don't need to search for files if you know what you want to edit, you don't need ed to tell you you've misspelled a variable name, because you haven't misspelled it. And if you really aren't confident with yourself, you can use external programs to check after you, ed doesn't kow better than you, it can only edit text.
-
-And for many reasons, I love these limitations. For one, ed is fast, it doesn't have a graphical interface, so of course it is quick to load a file. Also I love that ed forces me to be very sure of what I'm about to do, this forces me to think before I act and often produces cleaner code that I don't have to refactor later. Often using external cli programs to do things is faster than whatever implementation my regular editor would have. A great example is for finding a file, instead of using my editor's fuzzy finder, I can simply do a little `ed $(fzf)`, instead of waiting for diagnostics to refresh, I can run `php -l my-file.php` and find out exactly where that goddamn missing dollar sign is.  
-Ed forces you to learn your basic unix tools, and eventually you figure out how powerful they are, you become pro at man pages and old stack overflow threads. It also makes you learn a ton about regexes, which in my opinion are one of the most essential and the funniest parts of software development. And ed's regex engine isn't even featurefull, it lacks a ton of modern features like using `\U` to uppercase a group, but it forces you to get creative with your regexes. Which remember, you can't fail at writing, or you will have to rewrite them fully again and can only undo once.
-
-But despite my love for this mighty editor, I can't really use it, at least not in my day to day work. Because for all it's beautiful quirks and complex simplicity, ed can never beat the speed of modern editors. Because, obviously it is faster to use a search input to find a function name project wide rather than manually use grep, obviously it is faster to fix a typo by clicking next to it and erasing it rather than writing a regex to fix it, obviously it's faster to use a code action to rename something rather than grep for all the places where it's used and manualy navigate to each one[^2]. And in our world, speed is the second thing that matters the most after money. I think that this is pretty sad, I wish our priorities weren't set on economic growth all the time but rather on human happiness growth. I wish it would be alright for me to go slower and use ed, that I wouldn't have to think about rentability and only think about doing good work that is also fun. I'm afraid that us all as humans are heading in the wrong general direction, and none of us seem to know how to stop it. A lot of us don't want to stop what we are doing at all, it gave them a better life than most other humans, and many other people are just not aware or their life is too complex to take the time to think about these things.  
-Time is our most valuable asset, and we are giving it away without the slightest thought. Giving it away to a job that allows us to eat and have a roof[^3], to social medias, television and other fun but unfulfilling activities, to going places in highly inneficient modes of public transport or in polluting and isolating cars. We should stop doing this[^4], try to live a more sensible life, a life where time and money aren't the two dominating forces.
-
-[^1]: Which you can call inside of ed using the `!` operator.
-[^2]: To be fair to ed there, if the occurences are in the same file, you can 
-edit them all at once.
-[^3]: It is crazy to me that things like these which are in the UDHR aren't 
-being enforced on governments somehow. 
-[^4]: Though I admittedly don't have any clue how.
-NOTE);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>

@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="/assets/css/app.css">
         <script type="module" src="/assets/js/app.js"></script>
     </head>
-    <body class="app app--<?= getTheme() ?>">
+    <body class="app">
         <header>
             <canvas id="pets-canvas" class="center" aria-hidden="true"></canvas>
             <h1 class="center">Having a bike or rather, the lack of one</h1>
@@ -36,7 +36,6 @@
         </header>
         <hr>
         <div>
-            <?= $content ?>
         </div>
         <hr>
         <footer>

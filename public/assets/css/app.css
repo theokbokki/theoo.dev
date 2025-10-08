@@ -227,7 +227,7 @@ code:not(pre > code) {
         background-repeat: no-repeat;
     }
     
-    h2 {
+    .app > div > h2 {
         float: left;
         margin-left: -10rem; /* 160px */
         margin-top: 0;

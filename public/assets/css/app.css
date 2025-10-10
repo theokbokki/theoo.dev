@@ -121,10 +121,8 @@ h2, h3 {
 }
 
 hr {
-    width: 200vw;
     height: 0.0625rem; /* 1px */
-    margin: 1.5rem 0 2rem; /* 24px 0 32px*/
-    margin-left: -100vw;
+    margin: 1.5rem -1.25rem 2rem; /* 24px -20px 32px*/
     background: repeating-linear-gradient(
         to right,
         rgb(var(--fg)) 0px,
@@ -210,6 +208,10 @@ img {
 }
 
 @media screen and (min-width: 720px) {
+    hr {
+        margin-left: -12rem; /* 192px */
+    }
+
     .app {
         margin-left: 10rem; /* 160px */ 
     }

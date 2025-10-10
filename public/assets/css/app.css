@@ -199,6 +199,11 @@ code:not(pre > code) {
     background: rgb(var(--fg), .15);
 }
 
+img {
+    width: 100%;
+    margin: 1rem 0;
+}
+
 .footnote-ref {
     vertical-align: top;
     font-size: 12px;
@@ -209,7 +214,7 @@ code:not(pre > code) {
         margin-left: 10rem; /* 160px */ 
     }
 
-    .app > *:not(hr, h2) {
+    .app > div > *:not(hr, h2) {
         max-width: 65ch;
     }
     

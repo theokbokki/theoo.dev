@@ -56,12 +56,33 @@ table {
 :root {
     --bg: 255, 255, 255;
     --fg: 0, 0, 0;
+
+    --bg-red: 248, 223, 234;
+    --fg-red: 180, 0, 0;
+
+    --bg-orange: 255, 247, 242;
+    --fg-orange: 200, 70, 0;
+
+    --bg-yellow: 255, 252, 222;
+    --fg-yellow: 125, 117, 0;
+
+    --bg-green: 223, 248, 226;
+    --fg-green: 0, 102, 14;
+
+    --bg-blue: 223, 239, 248;
+    --fg-blue: 0, 102, 100;
+
+    --bg-purple: 231, 218, 251;
+    --fg-purple: 63, 0, 115;
+
+    --bg-pink: 255, 231, 253;
+    --fg-pink: 208, 0, 125;
 }
 
 .app {
     overflow-x: hidden;
     font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-    font-size: 0.875rem;
+    font-size: 0.875rem; /* 14px */
     line-height: 175%;
     background: rgb(var(--bg));
     color: rgb(var(--fg));
@@ -72,38 +93,38 @@ table {
 }
 
 .app--red {
-    --bg: 248, 223, 234;
-    --fg: 180, 0, 0;
+    --bg: var(--bg-red);
+    --fg: var(--fg-red);
 }
 
 .app--orange {
-    --bg: 255, 247, 242;
-    --fg: 200, 70, 0;
+    --bg: var(--bg-orange);
+    --fg: var(--fg-orange);
 }
 
 .app--yellow {
-    --bg: 255, 252, 222;
-    --fg: 125, 117, 0;
+    --bg: var(--bg-yellow);
+    --fg: var(--fg-yellow);
 }
 
 .app--green {
-    --bg: 223, 248, 226; 
-    --fg: 0, 102, 14;
+    --bg: var(--bg-green);
+    --fg: var(--fg-green);
 }
 
 .app--blue {
-    --bg: 223, 239, 248;
-    --fg: 0, 102, 100;
+    --bg: var(--bg-blue);
+    --fg: var(--fg-blue);
 }
 
 .app--purple {
-    --bg: 231, 218, 251;
-    --fg: 63, 0, 115;
+    --bg: var(--bg-purple);
+    --fg: var(--fg-purple);
 }
 
 .app--pink {
-    --bg: 255, 231, 253;
-    --fg: 208, 0, 125;
+    --bg: var(--bg-pink);
+    --fg: var(--fg-pink);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -117,7 +138,7 @@ h1 {
 }
 
 h2, h3 {
-    margin: 1rem 0;
+    margin: 1rem 0; /* 16px */
 }
 
 hr {
@@ -199,7 +220,74 @@ code:not(pre > code) {
 
 img {
     width: 100%;
-    margin: 1rem 0;
+    margin: 1rem 0; /* 16px */
+}
+
+.app__theme {
+    display: flex;
+    align-items: center;
+    gap: .5rem; /* 8px */
+    margin: 1rem 0; /* 16px */
+}
+
+.app__checkbox {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem; /* 16px */
+    height: 1rem; /* 16px */
+    margin: 0;
+    font: inherit;
+    border-radius: 0;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.app__checkbox--red {
+    border-color: rgb(var(--fg-red));
+    color: rgb(var(--fg-red));
+    background: rgb(var(--bg-red));
+}
+
+.app__checkbox--orange {
+    border-color: rgb(var(--fg-orange));
+    color: rgb(var(--fg-orange));
+    background: rgb(var(--bg-orange));
+}
+
+.app__checkbox--yellow {
+    border-color: rgb(var(--fg-yellow));
+    color: rgb(var(--fg-yellow));
+    background: rgb(var(--bg-yellow));
+}
+
+.app__checkbox--green {
+    border-color: rgb(var(--fg-green));
+    color: rgb(var(--fg-green));
+    background: rgb(var(--bg-green));
+}
+
+.app__checkbox--blue {
+    border-color: rgb(var(--fg-blue));
+    color: rgb(var(--fg-blue));
+    background: rgb(var(--bg-blue));
+}
+
+.app__checkbox--purple {
+    border-color: rgb(var(--fg-purple));
+    color: rgb(var(--fg-purple));
+    background: rgb(var(--bg-purple));
+}
+
+.app__checkbox--pink {
+    border-color: rgb(var(--fg-pink));
+    color: rgb(var(--fg-pink));
+    background: rgb(var(--bg-pink));
+}
+
+.app__checkbox:checked:after {
+    content: '✔︎';
 }
 
 .footnote-ref {
@@ -212,11 +300,15 @@ img {
         margin-left: -12rem; /* 192px */
     }
 
+    h1 {
+        max-width: 48ch;
+    }
+
     .app {
         margin-left: 10rem; /* 160px */ 
     }
 
-    .app > div > *:not(hr, h2) {
+    .app > div > *:not(hr, h2, h1) {
         max-width: 65ch;
     }
     

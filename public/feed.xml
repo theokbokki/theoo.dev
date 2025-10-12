@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>theoo.dev</title>
+    <link>https://theoo.dev</link>
+    <description>Notes and thoughts from The OO.</description>
+    <language>en-us</language>
+    <atom:link href="https://theoo.dev/feed.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>Adult skills</title>
+      <link>https://theoo.dev/notes/adult-skills.html</link>
+      <guid>https://theoo.dev/notes/adult-skills.html</guid>
+      <description><![CDATA[A note about growing up and my feelings on being isolated due to technology and nowadays mindset.]]></description>
+    </item>
+    <item>
+      <title>Books I Read</title>
+      <link>https://theoo.dev/notes/books-i-read.html</link>
+      <guid>https://theoo.dev/notes/books-i-read.html</guid>
+      <description><![CDATA[A list of all the books I read and the ones I]]></description>
+    </item>
+    <item>
+      <title>Browsers</title>
+      <link>https://theoo.dev/notes/browsers.html</link>
+      <guid>https://theoo.dev/notes/browsers.html</guid>
+      <description><![CDATA[My story about browser hopping, from being a kid to now and a reflection on accepting things that work even if they are imperfect.]]></description>
+    </item>
+    <item>
+      <title>Ed and taking the time</title>
+      <link>https://theoo.dev/notes/ed-and-taking-the-time.html</link>
+      <guid>https://theoo.dev/notes/ed-and-taking-the-time.html</guid>
+      <description><![CDATA[An explanation of why I love ed so much and reflexions on society valuing time and money too much.]]></description>
+    </item>
+    <item>
+      <title>Exploring the small web</title>
+      <link>https://theoo.dev/notes/exploring-the-small-web.html</link>
+      <guid>https://theoo.dev/notes/exploring-the-small-web.html</guid>
+      <description><![CDATA[An article about finding places to explore the small web.]]></description>
+    </item>
+    <item>
+      <title>Getting your hair cut, crossing the road and many other reckless things</title>
+      <link>https://theoo.dev/notes/getting-your-hair-cut-crossing-the-road-and-many-other-reckless-things.html</link>
+      <guid>https://theoo.dev/notes/getting-your-hair-cut-crossing-the-road-and-many-other-reckless-things.html</guid>
+      <description><![CDATA[Talking about the reckless things we do in life that seem perfectly ok.]]></description>
+    </item>
+    <item>
+      <title>Having a bike or rather, the lack of one</title>
+      <link>https://theoo.dev/notes/having-a-bike-or-rather-the-lack-of-one.html</link>
+      <guid>https://theoo.dev/notes/having-a-bike-or-rather-the-lack-of-one.html</guid>
+      <description><![CDATA[Talking about my desire to get a bike and the fact that I probably wouldn]]></description>
+    </item>
+    <item>
+      <title>Living life like a video game</title>
+      <link>https://theoo.dev/notes/living-life-like-a-video-game.html</link>
+      <guid>https://theoo.dev/notes/living-life-like-a-video-game.html</guid>
+      <description><![CDATA[A post about going on adventures like if your life was some sort of cool open world game.]]></description>
+    </item>
+    <item>
+      <title>Note title</title>
+      <link>https://theoo.dev/notes/my-coding-setup.html</link>
+      <guid>https://theoo.dev/notes/my-coding-setup.html</guid>
+      <description><![CDATA[]]></description>
+    </item>
+    <item>
+      <title>My problem with dates on the web</title>
+      <link>https://theoo.dev/notes/my-problem-with-dates-on-the-web.html</link>
+      <guid>https://theoo.dev/notes/my-problem-with-dates-on-the-web.html</guid>
+      <description><![CDATA[A short article about how my brain works around dates on the web and why there are none on this website.]]></description>
+    </item>
+    <item>
+      <title>Seeing life through whimsical glasses</title>
+      <link>https://theoo.dev/notes/seeing-life-through-whimsical-glasses.html</link>
+      <guid>https://theoo.dev/notes/seeing-life-through-whimsical-glasses.html</guid>
+      <description><![CDATA[An article about having fun in everyday life and not caring about how people look at you.]]></description>
+    </item>
+    <item>
+      <title>Teeth brushing</title>
+      <link>https://theoo.dev/notes/teeth-brushing.html</link>
+      <guid>https://theoo.dev/notes/teeth-brushing.html</guid>
+      <description><![CDATA[Reflexions on brushing my teeth, the passing of time and the meaning of life.]]></description>
+    </item>
+    <item>
+      <title>The city is a noisy place</title>
+      <link>https://theoo.dev/notes/the-city-is-a-noisy-place.html</link>
+      <guid>https://theoo.dev/notes/the-city-is-a-noisy-place.html</guid>
+      <description><![CDATA[A note about removing distractions from my life and realizing the city is a noisy place.]]></description>
+    </item>
+    <item>
+      <title>Weeknotes 1</title>
+      <link>https://theoo.dev/notes/weeknotes-1.html</link>
+      <guid>https://theoo.dev/notes/weeknotes-1.html</guid>
+      <description><![CDATA[What happened in my life this week]]></description>
+    </item>
+    <item>
+      <title>Weeknotes 2</title>
+      <link>https://theoo.dev/notes/weeknotes-2.html</link>
+      <guid>https://theoo.dev/notes/weeknotes-2.html</guid>
+      <description><![CDATA[What happened in my life this week]]></description>
+    </item>
+    <item>
+      <title>Writing on the phone</title>
+      <link>https://theoo.dev/notes/writing-on-the-phone.html</link>
+      <guid>https://theoo.dev/notes/writing-on-the-phone.html</guid>
+      <description><![CDATA[A note about my phone writing setup.]]></description>
+    </item>
+  </channel>
+</rss>

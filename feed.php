@@ -1,5 +1,4 @@
 <?php
-
 header('Content-Type: application/rss+xml; charset=utf-8');
 
 // --- CONFIG ---
@@ -7,10 +6,11 @@ $baseUrl = 'https://theoo.dev';
 $notesDir = __DIR__.'/public/notes';
 $feedUrl = $baseUrl.'/feed.xml';
 
-// --- START XML ---
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
 ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>theoo.dev</title>
     <link><?= htmlspecialchars($baseUrl) ?></link>
@@ -19,41 +19,41 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
     <atom:link href="<?= htmlspecialchars($feedUrl) ?>" rel="self" type="application/rss+xml" />
 
 <?php
-// --- LOOP THROUGH HTML FILES ---
 $files = glob($notesDir . '/*.html');
-sort($files); // optional: alphabetical order
+usort($files, fn($a, $b) => filemtime($b) <=> filemtime($a)); // newest first
 
 foreach ($files as $file) {
     $html = file_get_contents($file);
 
-    // Extract <title>
-    if (preg_match('/<title>(.*?)<\/title>/si', $html, $m)) {
-        $title = trim($m[1]);
+    // Extract title
+    preg_match('/<title>(.*?)<\/title>/si', $html, $m);
+    $title = isset($m[1]) ? trim($m[1]) : basename($file);
+
+    // Extract meta description
+    preg_match('/<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']/si', $html, $m);
+    $summary = $m[1] ?? '';
+
+    // Extract content between comment markers
+    if (preg_match('/<!--\s*START OF CONTENT\s*-->(.*?)<!--\s*END OF CONTENT\s*-->/si', $html, $m)) {
+        $content = trim($m[1]);
     } else {
-        $title = basename($file);
+        $content = '<p><em>No content found between comments.</em></p>';
     }
 
-    // Extract <meta name="description" content="...">
-    if (preg_match('/<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']/si', $html, $m)) {
-        $description = trim($m[1]);
-    } else {
-        $description = '';
-    }
-
-    // Build URL
     $filename = basename($file);
     $url = "$baseUrl/notes/$filename";
-
-    // Use URL as a stable GUID
     $guid = $url;
 
-    // --- OUTPUT ITEM ---
-    ?>
+    // Add a footer link for people who view it in readers
+    $footer = '<p><a href="' . htmlspecialchars($url) . '">Read on theoo.dev →</a></p>';
+    $content .= "\n" . $footer;
+?>
     <item>
       <title><?= htmlspecialchars($title) ?></title>
       <link><?= htmlspecialchars($url) ?></link>
       <guid><?= htmlspecialchars($guid) ?></guid>
-      <description><![CDATA[<?= $description ?>]]></description>
+      <description><?= $summary ?></description>
+      <content:encoded><![CDATA[<?= $content ?>]]></content:encoded>
     </item>
 <?php
 }

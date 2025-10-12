@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>theoo.dev</title>
     <link>https://theoo.dev</link>
@@ -8,100 +10,499 @@
     <atom:link href="https://theoo.dev/feed.xml" rel="self" type="application/rss+xml" />
 
     <item>
-      <title>Adult skills</title>
-      <link>https://theoo.dev/notes/adult-skills.html</link>
-      <guid>https://theoo.dev/notes/adult-skills.html</guid>
-      <description><![CDATA[A note about growing up and my feelings on being isolated due to technology and nowadays mindset.]]></description>
+      <title>My problem with dates on the web</title>
+      <link>https://theoo.dev/notes/my-problem-with-dates-on-the-web.html</link>
+      <guid>https://theoo.dev/notes/my-problem-with-dates-on-the-web.html</guid>
+      <description>A short article about how my brain works around dates on the web and why there are none on this website.</description>
+      <content:encoded><![CDATA[<div>
+<p>You might have noticed that there are absolutely no dates on this website. And that is because I have a real problem with them.  </p>
+<p>I think this started with Youtube, I've always felt that since there is so much content constantly appearing, I shouldn't look at older videos. And this might be a valid point, because if I had to catch up with every video of every channel I like, I would never find time to watch the newer ones.
+But the problem is that I set my expiration date really early. Once a video is like a month old, it becomes pretty much unwatchable to me (Unless it's something I REALLY want to watch). And this attitude has grown to most of my internet usage.</p>
+<p>I don't think it's a good thing. Stuff shouldn't feel expired (to me) just because it isn't the newest. So a while back, when I was still watching a lot of content on Youtube, (I've been pretty much using no social media for a couple months now, but more about it in another post), I added an addon that removed all dates from the interface. And all a sudden, I was watching older videos with no problem at all, simply because I didn't know they were old.</p>
+<p>And this is the same for everywhere on the web, I have a hard time reading old blog posts sometimes. Even if the content is super interesting, a part of me feels like <em>Yeah but this was written in 2005, you ain't got time for this, it's too old</em>. But I try to force myself anyway and I'm getting better at it :))</p>
+<p>The thing about dates is that I only feel this way about them on the web, I do read old books or watch old movies/series with no problem.<br />
+It's just that there is so much content on the web and we are always being bombarded with so much of it at the same time that my brain has had to find a way to cut through the noise. Maybe if the web was a calmer place, more organized and caring, I'd have a easier time strolling through old stuff<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref">1</a></sup>.</p>
+<p>So this is why there are not dates on my website, because I can't cope with dates and I would feel like my content would be worthless after a couple weeks. If the dates aren't there, they can't rot, or at least, there is nothing reminding me of it.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Though you do get the web you choose to see. It's been way less stressful since cutting down on Youtube, Twitter and the likes and replacing them by reading blogs of people I like and decide to go on by myself, not by an algorithm.&#160;<a href="#fnref1:1" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+</ol>
+</div>
+            </div>
+<p><a href="https://theoo.dev/notes/my-problem-with-dates-on-the-web.html">Read on theoo.dev →</a></p>]]></content:encoded>
     </item>
     <item>
-      <title>Books I Read</title>
-      <link>https://theoo.dev/notes/books-i-read.html</link>
-      <guid>https://theoo.dev/notes/books-i-read.html</guid>
-      <description><![CDATA[A list of all the books I read and the ones I]]></description>
-    </item>
-    <item>
-      <title>Browsers</title>
-      <link>https://theoo.dev/notes/browsers.html</link>
-      <guid>https://theoo.dev/notes/browsers.html</guid>
-      <description><![CDATA[My story about browser hopping, from being a kid to now and a reflection on accepting things that work even if they are imperfect.]]></description>
-    </item>
-    <item>
-      <title>Ed and taking the time</title>
-      <link>https://theoo.dev/notes/ed-and-taking-the-time.html</link>
-      <guid>https://theoo.dev/notes/ed-and-taking-the-time.html</guid>
-      <description><![CDATA[An explanation of why I love ed so much and reflexions on society valuing time and money too much.]]></description>
-    </item>
-    <item>
-      <title>Exploring the small web</title>
-      <link>https://theoo.dev/notes/exploring-the-small-web.html</link>
-      <guid>https://theoo.dev/notes/exploring-the-small-web.html</guid>
-      <description><![CDATA[An article about finding places to explore the small web.]]></description>
-    </item>
-    <item>
-      <title>Getting your hair cut, crossing the road and many other reckless things</title>
-      <link>https://theoo.dev/notes/getting-your-hair-cut-crossing-the-road-and-many-other-reckless-things.html</link>
-      <guid>https://theoo.dev/notes/getting-your-hair-cut-crossing-the-road-and-many-other-reckless-things.html</guid>
-      <description><![CDATA[Talking about the reckless things we do in life that seem perfectly ok.]]></description>
-    </item>
-    <item>
-      <title>Having a bike or rather, the lack of one</title>
-      <link>https://theoo.dev/notes/having-a-bike-or-rather-the-lack-of-one.html</link>
-      <guid>https://theoo.dev/notes/having-a-bike-or-rather-the-lack-of-one.html</guid>
-      <description><![CDATA[Talking about my desire to get a bike and the fact that I probably wouldn]]></description>
+      <title>My coding setup</title>
+      <link>https://theoo.dev/notes/my-coding-setup.html</link>
+      <guid>https://theoo.dev/notes/my-coding-setup.html</guid>
+      <description>The way I like to code explained in great details.</description>
+      <content:encoded><![CDATA[<div>
+<p>I have been coding for a few years now, and in that time, I have done nothing but remove complexity from my coding setup and I feel like I've reached a point where I'm happy with it.
+My favourite editor is <a href="https://www.gnu.org/fun/jokes/ed-msg.html">ed</a>, but <a href="/notes/ed-and-taking-the-time.html">I can't really use it much</a>, therefore, I've settled on <a href="https://neovim.io">Neovim</a><sup id="fnref1:1"><a href="#fn:1" class="footnote-ref">1</a></sup>. I like the keyboard centric editing it offers, and it's actually really fun to use once you've mastered the Vim language.
+Neovim is a very capable editor, offering all you could imagine from <em>modern</em> IDEs (LSP, Autocomplete, Fuzzy finding, Plugins, Diagnostics,...), but I try to stray away from all these, keeping a very minimal approach to code editing.</p>
+<p>The number one thing I don't have is a colorscheme. My code is black on white with a tiny bit of grey for comments, you might be thinking that this makes it hard to parse code and find what you want, but that's exactly the point. Since my eyes have few visual cues to grab onto, I've been forced to read the code to know what is happening, and that has in turned made me so much better at understanding and reading other people's code quickly. It also feels (to me at least) like my eyes are less strained after a day of working in black and white.</p>
+<p>Another thing I don't use is autocomplete, neither the box that appears as you type or inline AI stuff like copilot. I've found that by removing these helpers, I actually had to learn the language I was writing my code in. Learn the order of arguments, the names of functions you only use ever so often, the names of the variables scattered throughout a project, and even namespaces<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref">2</a></sup> of the packages installed on the project.
+Having the completion popup appear all the time was taking me out of my focus to read whatever it had to say and then validate it. Now I just write, without stopping, without breaking the flow. And it is often faster to do it this way rather than parse a list in a popup and select the right one.</p>
+<p>I've also stopped using LSPs. This one was a hard choice, because LSPs provide 3 features that I heavily relied on: renaming, go to definition and file outlines. My solution to get rid of those is that I've started using grep or simply, my file finder. For sure it takes more time looking through a package's files to find out where a function is defined, but using ripgrep often makes it much quicker<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref">3</a></sup> and I've found that searching manually through code allows you to learn the structure of the packages and over time, you get much better at using them.
+Another side effect of disabling LSP, is that I don't get squiggly lines when I make a mistake anymore. At first I thought it was gonna be a mess, that I would make so many typos or forget semi-colons and search for them for hours. But my brain quickly adapted, I started making less typos, and always keeping my eye on the back of my cursor to make sure I caught myself writing shit right away. I started double checking my code a lot more, to make sure there was no mistake, which often results in me finding ways to improve the code despite it being correct in the first place. You also become much quicker at finding the typos, your brain knows what common errors you make and searches for these in priority. And finally for the odd times where you can't find it, your language probabbly has some sort of linter you can run on the file that will tell you the problem.</p>
+<p>So the only thing I've really kept aside from the ability to write text is a fuzzy finder that can search both file names and file contents<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref">4</a></sup>. This is one of the most powerful features of my workflow, because since I don't have LSP to go to definition or other things like that, I use my fuzzy finder to navigate pretty much everywhere. But lately, I've slowly started replacing it with actual <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a> and <a href="https://github.com/junegunn/fzf">fzf</a> in the terminal. When I do that, I also often use <a href="https://github.com/sharkdp/bat">bat</a> to preview the files and only jump in nvim when I know exactly what I'm going to modify.
+Another thing I use is <a href="https://github.com/stevearc/oil.nvim">Oil.nvim</a>, it's a file explorer that works like a buffer, meaning you can edit the contents of directories, the names of files etc like if you were writing code. I don't have much to say about this, I just like it and have found it works better than NETRW<sup id="fnref1:5"><a href="#fn:5" class="footnote-ref">5</a></sup> for moving files around. </p>
+<p>Outside of my editor, I use <a href="https://github.com/tmux/tmux/wiki">tmux</a>, a terminal multiplexer which allows me to create many sessions for all the different projects. The terminal I use is <a href="https://ghostty.org/">Ghostty</a>, it is fast, looks good and that's all I really need from a terminal. For git stuff, I'm a big fan of <a href="https://github.com/apps/desktop">GitHub Desktop</a>, because its GitHub integrations are on point and it simplifies many hard to remember git commands. My browser of choice is <a href="https://zen-browser.app/">Zen</a> but as I discussed in <a href="/notes/browsers.html">my blog post about browsers</a>, I'm never really sold or satisfied with the browser I use.</p>
+<p>That's it for my coding setup, it might<sup id="fnref1:6"><a href="#fn:6" class="footnote-ref">6</a></sup> change in the future, at which point I can write an updated blog post. But for now, I think that this pretty bare bones setup is good for me. It forces me to actually learn the programming languages I use and understand the codebases I work on, the more I code and the more I get a feeling for how code should be written, how to refactor better,... . If I had one change to really recommend from all the above, it would be to disable your autocomplete. I know that in today's coding landscape this is a weird advice with tools like Claude Code or Cursor where AI writes the code for us, but I swear that you will see improvements in your understanding of the code in very little time.</p>
+<p>If you have questions, or want to share your coding setup, please feel free to <a href="mailto:hello@theoo.dev">send me an email</a>, I would be pleased to read what you have to say ^^.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+<p>A modern version of vim, scripted in lua and with a really active community.&#160;<a href="#fnref1:1" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Talking about PHP here, a namespace is this for example <code>Theoo\App\Components</code>. It allows your code to differenciate between two classes with the same name but under different namespaces.&#160;<a href="#fnref1:2" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p><code>--no-ignore-vcs</code> my beloved ❤️&#160;<a href="#fnref1:3" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>I'm using <a href="https://github.com/nvim-telescope/telescope.nvim">Telescope</a>.&#160;<a href="#fnref1:4" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Vim's default file explorer.&#160;<a href="#fnref1:5" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p><em>Will for sure</em>&#160;<a href="#fnref1:6" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+</ol>
+</div>
+            </div>
+<p><a href="https://theoo.dev/notes/my-coding-setup.html">Read on theoo.dev →</a></p>]]></content:encoded>
     </item>
     <item>
       <title>Living life like a video game</title>
       <link>https://theoo.dev/notes/living-life-like-a-video-game.html</link>
       <guid>https://theoo.dev/notes/living-life-like-a-video-game.html</guid>
-      <description><![CDATA[A post about going on adventures like if your life was some sort of cool open world game.]]></description>
+      <description>A post about going on adventures like if your life was some sort of cool open world game.</description>
+      <content:encoded><![CDATA[<div>
+<p>A couple weeks ago, I went on an adventure. I used to do go on adventures all the time as a teenager, but I don't get around to doing it as much these days, work and responsibilities got in the way. (Though getting a dog will maybe get me to do more).</p>
+<p>What I call an adventure, is basically living your life like you're in some fun open world video game. You get out of your house with your stuff in your backpack and you start walking in whatever direction. Eventually, you spot something in the distance, or a street you've never gone through or a building entrance you feel like could become a shortcut if it turns out there is also a door on the other side and you go for it. Then on the way, you will most likely spot something else interesting, and that's where things get fun for real. Because you can either bookmark this thing in a corner of your head (or a note on your phone or whatever) or you can switch directions and go for that new thing instead.</p>
+<p>Generally, as you go from point of interest to point of interest, you end up in some random place, late and it's time to get home. On your way, you've probably spoken to a bunch of random people, had some type of sugary treat in a shop you didn't know about, picked up a cool rock or seen some nice birds.</p>
+<p>I think this is a great way to experience life and to discover more things about the area that you live in. This is especially fun to do in a city (even better if it's one you don't know much) or in the woods. Here are some of my tips for a great adventure:</p>
+<ul>
+<li>PRIVATE often doesn't mean that much private. A lot of people are cool with you passing by when you explain what you are doing, and those who aren't ok will generally tell you off once they've checked you didn't steal anything.</li>
+<li>Give yourself an hour by which you should be back home and only walk for half of that time. The other half is used to come back! Trust me, you don't want to be trekking in some random woods 10km away from your home at night with no phone battery and your girlfriend waiting home. That doesn't end well.</li>
+<li>Be prepared for dead ends and going back on your steps a bunch. Not all roads lead to where you want and sometimes you take a wrong turn that leads nowhere and you have to walk half an hour back. That's just how it goes.</li>
+<li>Embrace opportunities and expect people to be nice. Especially in more remote places, people will be wondering what you are doing there and ask you about it. Explain your adventure and sometimes they might give you more stuff or they might even tell you about a new point of interest you should check out. Life is surprisingly like a video game when you live it like one.</li>
+<li>Bring ample amounts of water. It sucks to walk in the sun with nothing to drink and sometimes there is nowhere you can ask to refill your bottle.</li>
+<li>Treat yourself. If you see something you'd like to do or eat/drink and you can afford it, don't hesitate! Go for it and enjoy a nice moment in your adventure. Don't worry about the time, it's ok to have to go back home before you got to where you wanted.</li>
+<li>Everything is a path, you don't have to follow roads, cutting through woods or weird parking lots is fun and rarely that dangerous.</li>
+<li>Any means of transport is fine. If you feel like you live in a city you know like the back of your hand, well first, you don't, and second, you can take a train or a bus or your car to go somewhere else and start your adventure there instead! The adventure might even be getting back home from where the train/bus dropped you using your legs. Buses are also a real cheat code to be able to walk further since they make the &quot;getting home&quot; part much faster and can be found pretty much anywhere.</li>
+</ul>
+<p>I hope this text could inspire you to try to go on an adventure as well, it doesn't have to be long, walking for an hour can already take you quite far!</p>
+<p>If you do try (or maybe you already do this on a regular basis), I would be pleased to hear about fun stuff that happened during your adventures! You can email me at <a href="mailto:hello@theoo.dev">hello@theoo.dev</a>.</p>
+            </div>
+<p><a href="https://theoo.dev/notes/living-life-like-a-video-game.html">Read on theoo.dev →</a></p>]]></content:encoded>
     </item>
     <item>
-      <title>Note title</title>
-      <link>https://theoo.dev/notes/my-coding-setup.html</link>
-      <guid>https://theoo.dev/notes/my-coding-setup.html</guid>
-      <description><![CDATA[]]></description>
+      <title>Having a bike or rather, the lack of one</title>
+      <link>https://theoo.dev/notes/having-a-bike-or-rather-the-lack-of-one.html</link>
+      <guid>https://theoo.dev/notes/having-a-bike-or-rather-the-lack-of-one.html</guid>
+      <description>Talking about my desire to get a bike and the fact that I probably wouldn</description>
+      <content:encoded><![CDATA[<div>
+<p>I would love to have a bike, to be precise, a cargo-bike. I live in a flat city and having a fast and easy way to do my groceries and move around would be nice.</p>
+<p>But here's the thing, I live in a flat, on the fourth floor of a somewhat old building that doesn't have an elevator. The corridor is already taken by neighbours' bikes or stuff from the restaurant at the bottom floor and I don't have access to a basement.</p>
+<p>Because of that, I do everything by foot. And that is slow. Well to be fair I walk fast, but a bike would be much faster. And I think that's also what's good about walking. Since it is slow, you have the time to enjoy your surroundings. I'm often stopping to watch dogs play, or bees going from flower to flower. Sometimes people stop you to ask their way around or so you can take a picture of them and their SO. It allows for situations you hadn't planned, like grabbing a coffee on your way because your favourite coffee shop is open late today, or finding a random street and ending up exploring a neighbourhood you didn't know about.<br />
+I also often get ideas of stuff to write or sites to code when walking. Unlike on a bike, you don't have to pay as much attention at where you are going and your mind can wander more freely.</p>
+<p>Now that I think about it, even if I had a bike, I might not use it. I like walking too much, I'm too used to it. I would find excuses, exactly like I do currently with the tram, &quot;ah 2 minutes to wait, might as well walk there&quot; or &quot;mhh there will be too many people at this time of the day, it's sunny outside&quot;. So maybe I don't want a bike after all.</p>
+            </div>
+<p><a href="https://theoo.dev/notes/having-a-bike-or-rather-the-lack-of-one.html">Read on theoo.dev →</a></p>]]></content:encoded>
     </item>
     <item>
-      <title>My problem with dates on the web</title>
-      <link>https://theoo.dev/notes/my-problem-with-dates-on-the-web.html</link>
-      <guid>https://theoo.dev/notes/my-problem-with-dates-on-the-web.html</guid>
-      <description><![CDATA[A short article about how my brain works around dates on the web and why there are none on this website.]]></description>
+      <title>Getting your hair cut, crossing the road and many other reckless things</title>
+      <link>https://theoo.dev/notes/getting-your-hair-cut-crossing-the-road-and-many-other-reckless-things.html</link>
+      <guid>https://theoo.dev/notes/getting-your-hair-cut-crossing-the-road-and-many-other-reckless-things.html</guid>
+      <description>Talking about the reckless things we do in life that seem perfectly ok.</description>
+      <content:encoded><![CDATA[<div>
+<p>I went to the hairdresser today, I always go to a random one. I found that it's often faster to go around until you find one that can take you right away rather than wait at one where there is a queue. She did a great job, my hair is now short and dries up in seconds when I'm out of the shower. But while there, I couldn't help but think that, if she decided, she could slit my throat at any moment, and I couldn't do shit.<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref">1</a></sup>
+When you really think about it, the only reason we are alive is because other humans act according to rules.</p>
+<p>Same goes for things like crossing the road when the light is green. The only reason you don't get run over is because the other person agrees to say that red means stop.</p>
+<p>Here's a list of things that I think are reckless but since everybody agrees on the rules, it's mostly fine: boxing, gun/bow ranges, going in any means of transport, roller coasters, anything involving electricity or fire/heat, eating food prepared by other humans,... </p>
+<div class="footnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Note that there was nothing weird about the lady cutting my hair. She was nice and even offered some fizzy water. <a href="#fnref1:1" rev="footnote" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</div>
+            </div>
+<p><a href="https://theoo.dev/notes/getting-your-hair-cut-crossing-the-road-and-many-other-reckless-things.html">Read on theoo.dev →</a></p>]]></content:encoded>
     </item>
     <item>
-      <title>Seeing life through whimsical glasses</title>
-      <link>https://theoo.dev/notes/seeing-life-through-whimsical-glasses.html</link>
-      <guid>https://theoo.dev/notes/seeing-life-through-whimsical-glasses.html</guid>
-      <description><![CDATA[An article about having fun in everyday life and not caring about how people look at you.]]></description>
+      <title>Exploring the small web</title>
+      <link>https://theoo.dev/notes/exploring-the-small-web.html</link>
+      <guid>https://theoo.dev/notes/exploring-the-small-web.html</guid>
+      <description>An article about finding places to explore the small web.</description>
+      <content:encoded><![CDATA[<div>
+<p>Yesterday I discovered the <em>Internet phone book</em>, and I was really excited to buy one because this project resonates with me.<br />
+Unfortunately, it is sold out pretty much everywhere and I'm not going to the USA or Greece to get one (though I wish I could).</p>
+<p>EDIT: Since then, they restoked! And I was able to get my hands on one 🙌</p>
+<p>Despite this, I still had a thorough look at <a href="https://internetphonebook.net">the website</a>, and I discovered that they have a <a href="https://internetphonebook.net/#dial-a-site">phone</a> you can use to <em>call</em> the sites from the book!<br />
+So what I do now, when I want to take a break but don't want to mindlessly browse Twitter, is dial a random number and visit the site. It almost always leads to a deep rabbit hole and I discover many new cool places on the internet.</p>
+<p>One other project I know about that works on a similar principle is <a href="https://theforest.link"><em>the forest</em></a>. You have a button and it teleports you to a random site somewhere!  </p>
+<p>If you know of other places like these ones that can be used to explore the <a href="https://ar.al/2020/08/07/what-is-the-small-web">small web</a>, I'd be pleased if you can <a href="mailto:hello@theoo.dev">let me know</a> and I will be sure to add them to the list on this page :))</p>
+<hr />
+<p>Websites that help you discover other small web websites:</p>
+<ul>
+<li><a href="https://internetphonebook.net">Internet Phone Book</a></li>
+<li><a href="https://theforest.link">The Forest</a></li>
+</ul>
+            </div>
+<p><a href="https://theoo.dev/notes/exploring-the-small-web.html">Read on theoo.dev →</a></p>]]></content:encoded>
     </item>
     <item>
-      <title>Teeth brushing</title>
-      <link>https://theoo.dev/notes/teeth-brushing.html</link>
-      <guid>https://theoo.dev/notes/teeth-brushing.html</guid>
-      <description><![CDATA[Reflexions on brushing my teeth, the passing of time and the meaning of life.]]></description>
+      <title>Ed and taking the time</title>
+      <link>https://theoo.dev/notes/ed-and-taking-the-time.html</link>
+      <guid>https://theoo.dev/notes/ed-and-taking-the-time.html</guid>
+      <description>An explanation of why I love ed so much and reflexions on society valuing time and money too much.</description>
+      <content:encoded><![CDATA[<div>
+<p>My favourite code editor is ed. For those who don't know, ed is one of the first editors to have been made, it's part of a class of editors called &quot;line editors&quot;, which means that you are only editing complete lines of text. You can append after a line, insert before it or change a specific part using regexes, but you cannot put your cusor on a word and edit there. Ed doesn't even have a cursor.</p>
+<p>Ed is naturally limiting, it can only do one thing, edit a file. No file searching, no scrolling, no infinite undo/redo, no diagnostics or code actions. If you want things like these, you have to do them in your terminal<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref">1</a></sup>. If you make a typo while typing a line of code? You can't go back with your arrow keys to fix it, you need to validate the line with the typo and then correct it using a regex. (Or you could rewrite the whole line if that's what you fancy). And these limitations happen because ed assumes you know what you are doing. You don't need to search for files if you know what you want to edit, you don't need ed to tell you you've misspelled a variable name, because you haven't misspelled it. And if you really aren't confident with yourself, you can use external programs to check after you, ed doesn't kow better than you, it can only edit text.</p>
+<p>And for many reasons, I love these limitations. For one, ed is fast, it doesn't have a graphical interface, so of course it is quick to load a file. Also I love that ed forces me to be very sure of what I'm about to do, this forces me to think before I act and often produces cleaner code that I don't have to refactor later. Often using external cli programs to do things is faster than whatever implementation my regular editor would have. A great example is for finding a file, instead of using my editor's fuzzy finder, I can simply do a little <code>ed $(fzf)</code>, instead of waiting for diagnostics to refresh, I can run <code>php -l my-file.php</code> and find out exactly where that goddamn missing dollar sign is.<br />
+Ed forces you to learn your basic unix tools, and eventually you figure out how powerful they are, you become pro at man pages and old stack overflow threads. It also makes you learn a ton about regexes, which in my opinion are one of the most essential and the funniest parts of software development. And ed's regex engine isn't even featurefull, it lacks a ton of modern features like using <code>\U</code> to uppercase a group, but it forces you to get creative with your regexes. Which remember, you can't fail at writing, or you will have to rewrite them fully again and can only undo once.</p>
+<p>But despite my love for this mighty editor, I can't really use it, at least not in my day to day work. Because for all it's beautiful quirks and complex simplicity, ed can never beat the speed of modern editors. Because, obviously it is faster to use a search input to find a function name project wide rather than manually use grep, obviously it is faster to fix a typo by clicking next to it and erasing it rather than writing a regex to fix it, obviously it's faster to use a code action to rename something rather than grep for all the places where it's used and manualy navigate to each one<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref">2</a></sup>. And in our world, speed is the second thing that matters the most after money. I think that this is pretty sad, I wish our priorities weren't set on economic growth all the time but rather on human happiness growth. I wish it would be alright for me to go slower and use ed, that I wouldn't have to think about rentability and only think about doing good work that is also fun. I'm afraid that us all as humans are heading in the wrong general direction, and none of us seem to know how to stop it. A lot of us don't want to stop what we are doing at all, it gave them a better life than most other humans, and many other people are just not aware or their life is too complex to take the time to think about these things.<br />
+Time is our most valuable asset, and we are giving it away without the slightest thought. Giving it away to a job that allows us to eat and have a roof<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref">3</a></sup>, to social medias, television and other fun but unfulfilling activities, to going places in highly inneficient modes of public transport or in polluting and isolating cars. We should stop doing this<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref">4</a></sup>, try to live a more sensible life, a life where time and money aren't the two dominating forces.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Which you can call inside of ed using the <code>!</code> operator.&#160;<a href="#fnref1:1" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>To be fair to ed there, if the occurences are in the same file, you can
+edit them all at once.&#160;<a href="#fnref1:2" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>It is crazy to me that things like these which are in the UDHR aren't
+being enforced on governments somehow. &#160;<a href="#fnref1:3" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Though I admittedly don't have any clue how.&#160;<a href="#fnref1:4" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+</ol>
+</div>
+            </div>
+<p><a href="https://theoo.dev/notes/ed-and-taking-the-time.html">Read on theoo.dev →</a></p>]]></content:encoded>
     </item>
     <item>
-      <title>The city is a noisy place</title>
-      <link>https://theoo.dev/notes/the-city-is-a-noisy-place.html</link>
-      <guid>https://theoo.dev/notes/the-city-is-a-noisy-place.html</guid>
-      <description><![CDATA[A note about removing distractions from my life and realizing the city is a noisy place.]]></description>
+      <title>Browsers</title>
+      <link>https://theoo.dev/notes/browsers.html</link>
+      <guid>https://theoo.dev/notes/browsers.html</guid>
+      <description>My story about browser hopping, from being a kid to now and a reflection on accepting things that work even if they are imperfect.</description>
+      <content:encoded><![CDATA[<div>
+<p>Since I was born in the early 2000s, I've been around browsers most of my life. The first one was Firefox, it was the one installed on the family computer and I didn't even know there were other browsers at the time. To be fair, there was no difference between the browser, the search engine and internet in my mind.<br />
+Then I discovered Internet Explorer while trying to kill the time at my grandparents'. I would play random flash games and watch let's plays of Mario Kart Wii on Youtube. At some point, Chrome replaced Firefox on the home computer which had since become a laptop, and would even replace my grandparents' trusty IE. For many years after that, all that existed was Chrome, maybe Safari for the odd times where I used a Mac at school or at some Aunt's place, but I knew no better.</p>
+<p>Somehow along the path of my life, I ended up studying web development, and that's when the problems started. Because you see, before that, a browser was just a box with tabs that allowed me to access the internet, nothing more, nothing less. But then it became a tool, and a very important one as well, I wanted it to look good since I would spend most of my days there, but also to be fast and support many features. So at first I downloaded the three main browsers, to be able to test my websites properly, Firefox, Chrome and Safari, and I started to have preferences.<br />
+Safari was the sleek good looking one<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref">1</a></sup>, but so many websites would break when they encountered it and the dev tools sucked. Chrome was the web development beast, it didn't look too bad, its dev-tools were fantastic and it supported every feature under the sun, but it was run by Google... yuck. Firefox, was the ugly one, I hate how base Firefox looks, but at least Mozilla foundation felt less bad than Google or Apple and it supported most features with good enough dev-tools.<br />
+I was torn, constantly switching between the three for different tasks, never feeling at home anywhere and I wanted it to stop. So I started looking online for alternatives, and there were many.</p>
+<p>That's when my browser frenzy got started, at some point I had 22 different browsers installed on my computer. There were the minimal ones like Min, the featureful ones like Vivaldi, Opera or Orion, the plethora of privacy focused forks, LibreWolf, Mullvad Browser, Waterfox, Ungoogled chromium, Brave, Throium,... a bunch of Vim inspired ones like Vieb or Qutebrowser. I even tried to use terminal based browsers like Lynx or w3m<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref">2</a></sup> but quickly gave up on these. I was never satisfied, always looking for a good balance between privacy, my love for the keyboard and good looks. And that's when a new name started to rise discreetly, Arc.</p>
+<p>See, Arc definitely didn't tick the privacy nor the keyboard centric box, but it had such good looks<sup id="fnref1:3"><a href="#fn:3" class="footnote-ref">3</a></sup> that I couldn't keep looking away. I had it laying on my computer for about a year, using it on an off, never feeling quite at ease, but then it grew on me. At some point I had accepted that what mattered most to me was the way my browser looked<sup id="fnref1:4"><a href="#fn:4" class="footnote-ref">4</a></sup> and the ease with which I could use it to develop websites over the privacy aspect. And so I became a happy Arc user, there was little to complain about, after so many attempts and years of searching, I finally had found a browser that I would stick with in the long run. </p>
+<p>But then &quot;The Browser Company&quot; decided to stop working on Arc, and that sucked and this Arc breakup re-ignited my frenetic browser search. The novelty of Arc, with it's thursday updates had been able to keep my mind quiet, always having something new to try, but then I didn't have this safeguard anymore. So I went back to previous browsers I had really liked, Orion, LibreWolf and even Chrome... But the Arc way had poisoned my mind, not being able to open something in glance? No folders? No nice catchy animations absolutely everywhere? These had all become necessary things in my way of interacting with the internet.<br />
+Fortunately, great folks decided to create <a href="https://zen-browser.app/">Zen</a>. This browser ticks most of these boxes <em>and</em> it is also open source and more private. So I've been using it as my day to day browser for a while, but at the same time I'm still looking around for alternatives.<br />
+The thing is, now that I'm not blinded by Arc anymore, I realize that I actually don't fancy the sidebar that much. It's alright, but I love the look of top tabs and the usability of them. And of course, Zen team has already said that they don't plan to support top tabs, ever. &quot;The Browser Company&quot;'s new browser, Dia, could have been a great replacement, but even if it ever reaches feature parity with Arc, I still don't trust &quot;The Browser Company&quot; anymore and I hate the AI and the monetary aspect of it.</p>
+<p>So here I am, stuck in this browser landscape, with so many choices but none that perfectly fits me. Maybe it's time I accept that nothing will ever be perfect, and to be at peace with using a browser that is more than good enough. To stop losing time switching and setting up different apps over and over again. I think that's a lesson for my life in general, stop wanting to always change things up, and be satisfied by whatever I have as long as it works.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Sadly, apple killed that statement with their liquid glass update 🫠&#160;<a href="#fnref1:1" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>On which this webpage works really well btw.&#160;<a href="#fnref1:2" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Debatable opinion, but as much as I dislike &quot;The Browser Company&quot;, their
+designers do a pretty dang good job.&#160;<a href="#fnref1:3" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Again, very debatable, I don't always feel comfortable with this opinion.&#160;<a href="#fnref1:4" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+</ol>
+</div>
+            </div>
+<p><a href="https://theoo.dev/notes/browsers.html">Read on theoo.dev →</a></p>]]></content:encoded>
     </item>
     <item>
-      <title>Weeknotes 1</title>
-      <link>https://theoo.dev/notes/weeknotes-1.html</link>
-      <guid>https://theoo.dev/notes/weeknotes-1.html</guid>
-      <description><![CDATA[What happened in my life this week]]></description>
+      <title>Books I Read</title>
+      <link>https://theoo.dev/notes/books-i-read.html</link>
+      <guid>https://theoo.dev/notes/books-i-read.html</guid>
+      <description>A list of all the books I read and the ones I</description>
+      <content:encoded><![CDATA[<div>
+<p>This page is a list of books I've read, and those I'm currently reading.<br />
+Most books I read are in French and may not have been translated in English (or I couldn't find a translated edition) hence the French titles.<br />
+I purposefuly don't include ratings or opinions, this is just a simple list.</p>
+<p>Don't hesitate to <a href="mailto:hello@theoo.dev">send me an email</a> if you have books to recommend :))</p>
+<hr />
+<p>Book(s) I'm reading:</p>
+<ul>
+<li>The travelling cat chronicles — Hiro Arikawa</li>
+</ul>
+<hr />
+<p>Books I read:  </p>
+<p>2025</p>
+<ul>
+<li>Matcha Cofe on Monday — Michiko Aoyama</li>
+<li><em>Petit manuel de résistance contemporaine</em> — Cyril Dion</li>
+<li><em>Vers la sobriété heureuse</em> — Pierre Rabhi</li>
+<li>The Hidden Life of Trees — Peter Wohlleben</li>
+<li>The passengers on the Hankyu line — Hiro Arikawa </li>
+<li>I am a cat — Natsume Sôseki</li>
+<li>Extinction: a radical history — Ashley Dawson</li>
+<li><em>Comment habiter le monde?</em> — Aurelien Barrau</li>
+<li>Before the coffee gets cold — Toshikazu Kawaguchi</li>
+<li>Tales from the cafe — Toshikazu Kawaguchi</li>
+<li>The little book of Ikigai — Ken Mogi</li>
+<li><em>Je suis un chat d'Asie</em> — Isabelle Genlis</li>
+</ul>
+            </div>
+<p><a href="https://theoo.dev/notes/books-i-read.html">Read on theoo.dev →</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Adult skills</title>
+      <link>https://theoo.dev/notes/adult-skills.html</link>
+      <guid>https://theoo.dev/notes/adult-skills.html</guid>
+      <description>A note about growing up and my feelings on being isolated due to technology and nowadays mindset.</description>
+      <content:encoded><![CDATA[<div>
+<p>I have been considered an adult for a few years now, that's to say I've had my own place away from my mother's for a while. And I've noticed something, there is a certain amount of things you aren't taught in pre-adult life, well maybe you were but I wasn't and I know many other people who weren't. Then at some point you become an adult to the world, and you eventually have to face these things. Generally, they aren't hard things, it's stuff like cleaning the shower drain, fixing a tripped circuit breaker, how long you can store food in the fridge, how to pay your taxes, should you drill in this wall or will you hit an electrical cable, how to get rid of stuff that doesn't fit in the trash,...<br />
+And for some reason, you have to figure these out on your own. Sure, you can maybe call your family or a friend, you have access to the internet and these days, you can even ask AI. But still, why was I never taught these things? Why aren't we taught, be it by our parents (at least mine) or by school, the stuff that will be useful in our actual life? And I can't even say it's only something about nowadays society, when talking about it to older people, the general concensus is that they also had to figure it out on their own.</p>
+<p>Maybe it's something inherently human, we have always relied on other humans for help, therefore there was never really a need to teach such things, you could always ask someone. Which would also explain why the stuff we are taught in school isn't the useful one but the rest. I couldn't have asked my mom or my neighbour to explain some weird Chemistry concept, they probably wouldn't have had a clue or just a rough idea. Because I don't really need a teacher to tell me how to clean my toilets in the correct way. Yet I can't help but shake the feeling that in a more and more isolated world<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref">1</a></sup> we might not be able to rely on other people as much. Having to ask a neighbour for something is a hell of an effort, because I hardly know them, only from crossing in the hallways. Calling my family for help feels like a reach when I haven't seen them in months or barely for a couple hours <sup id="fnref1:2"><a href="#fn:2" class="footnote-ref">2</a></sup>. And sure there is internet and AI, and they have gotten me out of many situations before, but as useful as these tools are, it seems to me that they also are the primary cause of the lessening of human interactions.</p>
+<p>So what should we do as humans? Should we teach useful life things in school instead of the more work-life/make money stuff we are taught? Should we try to rebuild links with our family, friends and neighbourhood? Maybe live together for longer like they used to do? Take care of one another more?<br />
+I'm not sure of any of these though I have a pretty positive opinion on most of them. Maybe I'm wrong as well, and figuring these things out by yourself is not as much of a big deal as I make it out to be. After all, none of these things has ever taken me more than a couple hours to figure out.<br />
+I don't know what I really think of all of this, and there are many topics addressed in this text that I would like to revisit later, but I think that for now I'm gonna try to have a more sociable life and talk more to other humans and less to the computer.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+<p>At least that's how I feel in my life. More isolated than the people before me, partially by my own fault.&#160;<a href="#fnref1:1" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Mostly a me problem this one, but I feel that modern life leaves you with little time to spare for yourself, therefore even less for family. I guess this depends on your values and priorities though.&#160;<a href="#fnref1:2" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+</ol>
+</div>
+            </div>
+<p><a href="https://theoo.dev/notes/adult-skills.html">Read on theoo.dev →</a></p>]]></content:encoded>
     </item>
     <item>
       <title>Weeknotes 2</title>
       <link>https://theoo.dev/notes/weeknotes-2.html</link>
       <guid>https://theoo.dev/notes/weeknotes-2.html</guid>
-      <description><![CDATA[What happened in my life this week]]></description>
+      <description>What happened in my life this week</description>
+      <content:encoded><![CDATA[<div>
+<h2>WHAT HAPPENED THIS WEEK</h2>
+<ul>
+<li>Neko update 🐕 Things are going great, we keep slowly figuring things out and get more bounded every day that passes.<br />
+We've had a bit of problems with sleep patterns (Waking up at 3AM is never fun) but it seems to have gotten back on track.</li>
+<li>The menu bar app I was working on last week is finished! It works super well and converts files as intended. I've also been working on a simple other one which is basically a global shortcut that uses <a href="https://github.com/erusev/parsedown-extra">ParsedownExtra</a> to convert markdown to html but more about this in an other post!</li>
+<li>The <em>Foire</em> has officially started and I'm already tired of it. Living 100m away from roller coasters is not the funniest thing in the world ://</li>
+<li>I've been in the process of re-writing this website AGAIN! But this time, there is no way I can simplify it further without compromising accessibility I think.</li>
+</ul>
+<h2>LINKS OF THE WEEK</h2>
+<ul>
+<li><a href="https://birming.com/2025/09/21/publish-dont-polish/">https://birming.com/2025/09/21/publish-dont-polish/</a><br />
+Hard agree and this is the way I run my own website. I always publish stuff when I feel like it and we'll see about improvements later.</li>
+<li><a href="https://rscottjones.com/getting-the-most-out-of-a-bad-situation/">https://rscottjones.com/getting-the-most-out-of-a-bad-situation/</a><br />
+An interesting perspective about life that I had never really thought about but am gonna try to implement.</li>
+<li><a href="https://tonsky.me/blog/lockfiles/">https://tonsky.me/blog/lockfiles/</a><br />
+Had never though about lockfiles this way, to me they seemed ubiquitous, but this totally changed my opinion! I'm glad this website runs on super simple tech that doesn't need no packages.</li>
+<li><a href="https://www.holovaty.com/writing/chatgpt-fake-feature/">https://www.holovaty.com/writing/chatgpt-fake-feature/</a><br />
+This is weird, I don't like that we bow to AI... But at the same time, it must be driving new customers to their app, which is a good this I guess. I don't know what I think about this.</li>
+<li><a href="https://tonsky.me/blog/centering/">https://tonsky.me/blog/centering/</a><br />
+A useful, funny and instructive article about centering things on the web and in apps. I had never realized this was such an issue and I learned a lot reading this article.</li>
+</ul>
+<h2>WHAT I WATCHED THIS WEEK</h2>
+<ul>
+<li>Gilmore Girls<br />
+This is our first time watching this series and I must say that it has probably become my favourite series ever! The cast, the story, the puns, the emotions, the 2000s vibe, everything is perfect and I'm loving every second of it!<br />
+I wish they still used old cameras to film current stuff, this gives it such a cozy vibe...</li>
+</ul>
+<h2>WHAT I LISTENED TO THIS WEEK</h2>
+<h3>MUSIC</h3>
+<ul>
+<li>JeanJass — <em>Goldman</em> &amp; <em>Tous ces ongles rongés</em>
+Two phenomenal rap albums, both no skips. Goldman has been on repeat for the whole week.</li>
+<li>Aupinard<br />
+He's a staple of my listening and I could almost put him in the list every week. I discovered Bossa Nova because of him and I just love is way of blending genres.<br />
+I'm gonna see him in concert in March next year :))</li>
+<li>Caballero – <em>Dose Héroïque</em><br />
+An album I weirdly enjoy listening to while I work, I don't know why. Some of the punchlines are absolutely delightful, the prods are great.</li>
+<li>Hologram Lo' &amp; Jungle Jack — <em>CREAMLAND</em><br />
+Hologram Lo' has cooked soooooo hard on the prods for this album. </li>
+<li>Salut C'est Cool — Sur le thème des grands découvertes
+I was low on sugar and had to bring back groceries. This never disappoints and is quite trippy.</li>
+</ul>
+<h2>WHAT I DESIGNED THIS WEEK</h2>
+<p>I made a text editor in the style of Arc, Dia, Zen,... because I love the look of these! I wish it could exist but I don't have the skills to do a code editor ://</p>
+<p><img src="/assets/img/code-editor-light.webp" alt="The light mode version of my code editor" />
+<img src="/assets/img/code-editor-dark.webp" alt="The dark mode version of my code editor" /></p>
+            </div>
+<p><a href="https://theoo.dev/notes/weeknotes-2.html">Read on theoo.dev →</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Seeing life through whimsical glasses</title>
+      <link>https://theoo.dev/notes/seeing-life-through-whimsical-glasses.html</link>
+      <guid>https://theoo.dev/notes/seeing-life-through-whimsical-glasses.html</guid>
+      <description>An article about having fun in everyday life and not caring about how people look at you.</description>
+      <content:encoded><![CDATA[<div>
+<p>Rose colored sunglasses on my nose, I walk in the rain waving to the dogs I cross path with that reply by looking back happily with their tongue sticking out and their tails wagging.<br />
+I see a puddle, jump over it, almost fall in it then celebrate this new long jump world record.<br />
+The rain has stopped and I keep looking at the sky hoping for a rainbow to appear, don't see the red light and almost get run over, this felt like playing crossy roads.</p>
+<p>Hear me out, life is the funniest thing ever, you just have to make it fun. The world around us is full of things that were designed for one purpose, but have so many more hidden ones.<br />
+See a small fence? Jump over it.<br />
+Follow pigeons around, yes they are slow, but they might take you to a random fun place.<br />
+A bus stop pole can quickly become a fireman's pole or just a bar to spin around like you are in some sort of musical.<br />
+Cartwheels are surprisingly has much fun as an adult as they were as a child. Don't believe me? Try it.<br />
+Raindrops on the windows are like dozens of races happening at the same time, which one will get to the bottom first?<br />
+Try to remember graffiti signatures and you'll find them in many different places, sometimes even in different countries.<br />
+Wear clothes just because you want to, even though it looks awful and even you agree.</p>
+<p>The hard part is overcoming people looking at you weirdly, but that's ok, they are just not having as much fun as you are. And from my experience, none of them ever dares to confront you about it anyways, they must just think you are some sort of eccentric.<br />
+A thing that helped me with this is to think about who I remember I saw today when walking outside. And the answer is pretty much no one, we just don't care about the people we cross path with. We might remember them for 10 minutes but then they go to the empty abyss of useless brain stuff.</p>
+<p>So please, next time you go out, put on your coolest pair of shades (yes even if it's not sunny) and have some fun. Just make sure you don't break or make anything dirty cause that's uncool.<br />
+I would love to hear about how you are making your life fun, so don't hesitate to <a href="mailto:hello@theoo.dev">tell me about it</a> and have a great day!</p>
+            </div>
+<p><a href="https://theoo.dev/notes/seeing-life-through-whimsical-glasses.html">Read on theoo.dev →</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Teeth brushing</title>
+      <link>https://theoo.dev/notes/teeth-brushing.html</link>
+      <guid>https://theoo.dev/notes/teeth-brushing.html</guid>
+      <description>Reflexions on brushing my teeth, the passing of time and the meaning of life.</description>
+      <content:encoded><![CDATA[<div>
+<p>I love brushing my teeth. </p>
+<p>The feeling of the hairs of the brush scraping on each tooth removing bits of food and undesirable stuff. The frothing of the toothpaste filling up your mouth more and more as you brush. The clean and minty taste that tingles your tongue, nose and eyes.</p>
+<p>For me, it's a moment to reflect, a moment spent with myself in front of the bathroom mirror.
+A moment to prepare myself for the day ahead, to think about what I'm going to do, who I'm going to spend it with, what the weather will be like. It's generally the last moment before the day starts, 3 to 5 minutes after which I'm going to get engulfed in the movements of daily life.<br />
+Then, it's also a moment to wind down in a way. When after a long day, I'm once again faced with myself. It means &quot;you are soon going to bed&quot;, it's a time to think about the day that passed, how it went, who I met, how did I feel, how do I feel?</p>
+<p>Teeth brushing is a moment where no one will interrupt you. Because you are not going to walk around creating white sticky stains everywhere, because you are not going to talk and spit all over the other person's face, they wouldn't understand any of your gurgly sounds anyway.</p>
+<p>I wonder why I used to hate brushing my teeth. </p>
+<p>As a kid, I would do anything to avoid it. The toothpaste was stingy, it took precious time I could have used to play, it meant going to school, or going to bed, two activities my kid self despised heavily.<br />
+Maybe as a kid, I was simply more in the present moment rather than thinking about what was and what will be. These 2 minutes tops I would spend roughly scratching my teeth were a moment not spent having fun, and what can a moment spent not having fun be worth?</p>
+            </div>
+<p><a href="https://theoo.dev/notes/teeth-brushing.html">Read on theoo.dev →</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>The city is a noisy place</title>
+      <link>https://theoo.dev/notes/the-city-is-a-noisy-place.html</link>
+      <guid>https://theoo.dev/notes/the-city-is-a-noisy-place.html</guid>
+      <description>A note about removing distractions from my life and realizing the city is a noisy place.</description>
+      <content:encoded><![CDATA[<div>
+<p>I am presently waiting in a sandwich shop, radio going in the background, noises of knives against cutting boards, the whooshing of the coffee machine, someone on the phone and cars roaring outside the window. The city is a noisy place, and for a long time, I hadn't noticed. This is because I've always lived either in or near a city, so my soundscape has always been filled with noise. And since city noise isn't the most enjoyable, I've compensated by adding more noise to cover it up. It may have been songs, videos, podcasts and even white noise, I always had something playing in my ears. But recently, that changed. <a href="https://manuelmoreale.com">Manuel Moreale</a> was doing a challenge back in June where he was trying to consume less digital stuff, this meant cutting off a lot of time on the phone. And after reading his weekly updates, I decided to tag along.</p>
+<p>For me the biggest time sink was Youtube, so I cut that off entierly, but I pushed the concept a tiny bit further and drastically reduced my usage of Spotify for music and podcasts. The hard part about this to me was walking outside with nothing in my ears, being forced to listen to cars vroom by, to people shouting at each other, to kids screaming, dogs barking and my own footsteps. I was scared of going outside and having this overwhelming feeling of city noises, but I had to do it anyway. And it went fine, I quickly got used to it, the sounds weren't nice, but I could deal with them. Eventually, a weird thing started to happen, I would try to put music on when walking and it would feel weird. A bit like if I was less aware of what was going on since I couldn't hear much anymore. Scared that people would ask me something and I'd ignore them. My brain had done a 180. I found that it is actually quite nice actually walking outside and earing the sounds of nature, ear the birds chirp, the trees move in the wind, the ducks honking, and my own footsteps, the problem is that a city doesn't have much of that.</p>
+<p>By cutting off from my phone, I realised that the city, this environment I was so accustomed to, that I had liked and worshiped for my whole life, was actually crap. That I didn't want to live there anymore. I don't want to wake up to the sounds of motorbikes going by, or people coming back from a night of partying, I want to hear the crickets, the rustling of the grass, the cows from the nearby farmer mooing. I don't want to breathe car exhaust gases, I want to breathe fresh air. I realized that by modifying the soundscape, I was actually protecting myself from an environement I didn't feel comfortable in. These next years might be weird, because I know that I'm not moving out the city any time soon, I'm way too comfortable here. But at the same time, there is this thing in me that only wants to go away. Maybe I'll get used to it again, maybe I'll even start enjoying the true sounds of the city, who knows. I'll try to make an update on this in a while. </p>
+            </div>
+<p><a href="https://theoo.dev/notes/the-city-is-a-noisy-place.html">Read on theoo.dev →</a></p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Weeknotes 1</title>
+      <link>https://theoo.dev/notes/weeknotes-1.html</link>
+      <guid>https://theoo.dev/notes/weeknotes-1.html</guid>
+      <description>What happened in my life this week</description>
+      <content:encoded><![CDATA[<div>
+<p>This is my first weeknotes note 🎉
+I don't really know what's usual about these things. I've read a bunch of Weeknotes on my phone and it seems everyone does as they please, so I'm gonna do the same.</p>
+<h2>WHAT HAPPENED THIS WEEK</h2>
+<ul>
+<li>I got more used to having Neko (My dog) and it feels like a huge win! I'm no longer extra tired and we've been able to settle in a sorta routine that works well.<br />
+She still pees inside but less so which is encouraging.</li>
+<li>I started working on a <em>weekend project</em>. A simple menu bar app to convert files (at first only to WebP but I plan on adding more file types). I really wanted to try PHPNative and I needed an app to convert files so I thought this would be a great occasion ^^.  I will write more about it soon.<br />
+If you're curious, here's a link to the <a href="https://github.com/theokbokki/to-webp">github repo</a>.</li>
+<li>I worked on a few fun things at worked and had to do my first price estimation for a project 😬 That was hella scary and I never want to do it again but I will definitely have to... Hopefully I wasn't too off the mark.</li>
+<li>The <a href="https://en.wikipedia.org/wiki/Foire_de_Li%C3%A8ge"><em>Foire de Liège</em></a><sup id="fnref1:1"><a href="#fn:1" class="footnote-ref">1</a></sup> is soon starting and the ferris wheel is right in front of my home. It's always impressive to see them build such a big thing in a matter of a few days. I'm a bit scared for the <em>Foire</em> to start this year cause idk how Neko is going to react. She's really scared of people.</li>
+<li>It's officially Spooky Season! We bought a new XXL blanket to enjoy warm drinks in front of halloween movies with my SO. It's really our favourite season and I can't wait to enjoy it all. The colors are just so nice!!!</li>
+</ul>
+<h2>LINKS OF THE WEEK</h2>
+<ul>
+<li><a href="https://chotrin.org/philosophy/unreachable.html">https://chotrin.org/philosophy/unreachable.html</a><br />
+An article about being unreachable in the 21st century. I think the perspective and the website are both really interesting.</li>
+<li><a href="https://cursor.com/">https://cursor.com/</a><br />
+I hate AI, but dang it did the Cursor team do a great website! The interactable windows in the hero section are a masterclass. I also like that they didn't go for the ✨sparky✨, neon AI vibe that we see everywhere. It's simple minimal and well executed.</li>
+<li><a href="https://kedara.eu/organising-feeds-permaculture">https://kedara.eu/organising-feeds-permaculture</a><br />
+An article about organising RSS feeds based on permaculture principles. This is a super interesting perspective and a system that I think would work great for me in many areas.</li>
+<li><a href="https://mtwb.blog/posts/2025/blaugust2025/not-every-blog-post-needs-to-be-epic/">https://mtwb.blog/posts/2025/blaugust2025/not-every-blog-post-needs-to-be-epic/</a><br />
+I really agree with this post. I like to publish stuff that feels <em>half baked</em> and I don't care about perfection. The point is to throw stuff in the void and sometimes it replies back.</li>
+<li><a href="https://pjonori.blog/posts/i-dont-want-your-email/">https://pjonori.blog/posts/i-dont-want-your-email/</a><br />
+A lot of great reasons not to have a newsletter. You can still send me an email if you want though ^^.</li>
+<li><a href="https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/">https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/</a><br />
+Don't agree with everything here, but this gave me the idea to do the same! So this website will receive a theme picker soon and it's (partly) thanks to this article.</li>
+<li><a href="https://tink.uk/perceived-affordances-and-the-functionality-mismatch/">https://tink.uk/perceived-affordances-and-the-functionality-mismatch/</a><br />
+Such a great principle of accessibility. Use the stuff that's made for doing the stuff you want to do. Need radio buttons? Use radio buttons. If they don't match your design, the design is to be rethought, not the HTML element.</li>
+<li><a href="https://theoatmeal.com/comics/unhappy">https://theoatmeal.com/comics/unhappy</a><br />
+A fun, comic about the meaningless nature of happiness and how other feelings are much better to express your emotions.</li>
+<li><a href="https://messenger.abeto.co/">https://messenger.abeto.co/</a><br />
+I don't know how they did this, but Abeto cooked so so hard on this website. It's a 3D game in a very <em>Ghibliesque</em> style that is RESPONSIVE (how tf do you make a responsive 3D game) where you deliver mail to residents of a tiny and super detailed planet.</li>
+<li><a href="https://tarneo.fr/posts/minimal_web/">https://tarneo.fr/posts/minimal_web/</a><br />
+I love the propositions of this article for a <em>minimal web search engine</em>. The way it's describe and the logic behind it seem great to me and if anyone with the skills to do that passes by, please do it!</li>
+</ul>
+<h2>WHAT I WATCHED THIS WEEK</h2>
+<ul>
+<li>Alice in Borderland (the series)<br />
+I liked season one and two (especially season two) but was really disappointed by season three. The games were less fun and the ending is mighty frustrating. It feels like another <em>Netflix likes money</em> series.</li>
+<li>We Have a Ghost<br />
+What even is that? To be fair, we didn't finish the movie, but it sucked so so hard. It's one of these movies where they push the <em>Netflix woke</em> (Gosh I hate that word) to the max and it just feels forced.</li>
+</ul>
+<h2>WHAT I LISTENED TO THIS WEEK</h2>
+<h3>MUSIC</h3>
+<ul>
+<li>Twenty One Pilots — <em>Breach</em><br />
+IMO their best album. I hadn't said that since <em>Blurryface</em>. Every song feels TOP.</li>
+<li>Mac DeMarco<br />
+I love all his music. The dude is just too good. His latest album <em>Guitar</em> is so chill and works so well with the season's vibe.</li>
+<li>My Chemical Romance — The Black Parade<br />
+Probably in my top ten albums all time. It never gets old.</li>
+<li>Masayoshi Takanaka<br />
+The dude knows how to play guitar... I'm always impressed and in a good mood when I listen to him.</li>
+</ul>
+<h3>PODCASTS</h3>
+<ul>
+<li><a href="https://smartlink.ausha.co/lglc"><em>Les Goûts Les Couleurs</em></a><br />
+This podcast is so much fun. I listen to it when doing my groceries (and only then, I wait till I have to do my groceries for listening) and always end up laughing to myself in the shop.</li>
+<li><a href="https://www.youtube.com/@ThroughTheGriffinDoor/videos"><em>Through the Griffin Door</em></a><br />
+A podcast that deep dives on each Harry Potter chapter. To be honest I don't know all that much about the series. I have seen every movie once and the 4 first ones a bunch more and have never read the books. It's a weird way to discover something than to have two really knowledgeable people do a deep dive on something you don't know all that much about.</li>
+</ul>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Here's <a href="https://fr.wikipedia.org/wiki/Foire_de_Li%C3%A8ge">the French wikipedia page</a> with more infos for those interested and who can read French.&#160;<a href="#fnref1:1" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+</ol>
+</div>
+            </div>
+<p><a href="https://theoo.dev/notes/weeknotes-1.html">Read on theoo.dev →</a></p>]]></content:encoded>
     </item>
     <item>
       <title>Writing on the phone</title>
       <link>https://theoo.dev/notes/writing-on-the-phone.html</link>
       <guid>https://theoo.dev/notes/writing-on-the-phone.html</guid>
-      <description><![CDATA[A note about my phone writing setup.]]></description>
+      <description>A note about my phone writing setup.</description>
+      <content:encoded><![CDATA[<div>
+<p>Lately, I've been trying to write more, and it has been going alright. At first, it was really hard, I was second guessing myself a lot and it all felt very messy.<br />
+But slowly, my brain started to change. Now, as I go about my day, I have ideas that pop up into my mind, a sentence that fits very well with what I want to
+say or an example to explain some concept.<br />
+In the beginning, I was trying to remember stuff, then I started writing it down in my notes app, but I feel like it's time I go one step further and start writing posts on my phone.</p>
+<p>So I went on a little bit of a hunt to find a perfect setup. What I do is I sync the markdown files in iCloud Drive, and edit it in an app called <a href="https://apps.apple.com/app/subtext/id1606625287">Subtext</a><sup id="fnref1:1"><a href="#fn:1" class="footnote-ref">1</a></sup>. This way I have the same content on my phone and on my computer and I can write from anywhere!</p>
+<p>If you also write things, I would be pleased to <a href="mailto:hello@theoo.dev">chat with you</a> about methods for writing :))</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+<p>It's a free app that allows you to open and edit .txt files from any folder on your phone. It is really similar to textedit.&#160;<a href="#fnref1:1" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+</ol>
+</div>
+            </div>
+<p><a href="https://theoo.dev/notes/writing-on-the-phone.html">Read on theoo.dev →</a></p>]]></content:encoded>
     </item>
   </channel>
 </rss>

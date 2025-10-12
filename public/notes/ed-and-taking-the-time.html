@@ -41,8 +41,8 @@
             </form>
             <a href="/" class="app__back">← Back home</a>
             <hr>
-            <div>
             <!-- START OF CONTENT -->
+            <div>
 <p>My favourite code editor is ed. For those who don't know, ed is one of the first editors to have been made, it's part of a class of editors called &quot;line editors&quot;, which means that you are only editing complete lines of text. You can append after a line, insert before it or change a specific part using regexes, but you cannot put your cusor on a word and edit there. Ed doesn't even have a cursor.</p>
 <p>Ed is naturally limiting, it can only do one thing, edit a file. No file searching, no scrolling, no infinite undo/redo, no diagnostics or code actions. If you want things like these, you have to do them in your terminal<sup id="fnref1:1"><a href="#fn:1" class="footnote-ref">1</a></sup>. If you make a typo while typing a line of code? You can't go back with your arrow keys to fix it, you need to validate the line with the typo and then correct it using a regex. (Or you could rewrite the whole line if that's what you fancy). And these limitations happen because ed assumes you know what you are doing. You don't need to search for files if you know what you want to edit, you don't need ed to tell you you've misspelled a variable name, because you haven't misspelled it. And if you really aren't confident with yourself, you can use external programs to check after you, ed doesn't kow better than you, it can only edit text.</p>
 <p>And for many reasons, I love these limitations. For one, ed is fast, it doesn't have a graphical interface, so of course it is quick to load a file. Also I love that ed forces me to be very sure of what I'm about to do, this forces me to think before I act and often produces cleaner code that I don't have to refactor later. Often using external cli programs to do things is faster than whatever implementation my regular editor would have. A great example is for finding a file, instead of using my editor's fuzzy finder, I can simply do a little <code>ed $(fzf)</code>, instead of waiting for diagnostics to refresh, I can run <code>php -l my-file.php</code> and find out exactly where that goddamn missing dollar sign is.<br />
@@ -68,8 +68,8 @@ being enforced on governments somehow. &#160;<a href="#fnref1:3" rev="footnote" 
 </li>
 </ol>
 </div>
-            <!-- END OF CONTENT -->
             </div>
+            <!-- END OF CONTENT -->
             <hr>
             <a href="#">↑ Back to top</a> 
         </div>

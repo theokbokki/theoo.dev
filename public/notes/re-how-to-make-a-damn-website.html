@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="alternate" type="application/rss+xml" title="Theoo.dev" href="https://theoo.dev/feed.xml" />
+
+        <title>Re: Making a damn website</title>
+        <meta name="description" content="My reply to Louie Mantia's great article on how to make a damn website." />
+
+        <link rel="stylesheet" href="/assets/css/app.css">
+        <script type="module" src="/assets/js/app.js"></script>
+    </head>
+    <body class="app">
+        <div>
+            <h1>Re: Making a damn website</h1>
+            <form class="app__theme">
+                <input type="checkbox" name="colors[]" value="red" class=" app__checkbox app__checkbox--red"/>
+                <input type="checkbox" name="colors[]" value="orange" class="app__checkbox app__checkbox--orange"/>
+                <input type="checkbox" name="colors[]" value="yellow" class="app__checkbox app__checkbox--yellow"/>
+                <input type="checkbox" name="colors[]" value="green" class="app__checkbox app__checkbox--green"/>
+                <input type="checkbox" name="colors[]" value="blue" class="app__checkbox app__checkbox--blue"/>
+                <input type="checkbox" name="colors[]" value="purple" class="app__checkbox app__checkbox--purple"/>
+                <input type="checkbox" name="colors[]" value="pink" class="app__checkbox app__checkbox--pink"/>
+            </form>
+            <a href="/" class="app__back">← Back home</a>
+            <hr>
+            <!-- START OF CONTENT -->
+            <div>
+<p><em>This post is a reply to <a href="https://lmnt.me/blog/how-to-make-a-damn-website.html">this article</a> by <a href="https://lmnt.me/">Louie Mantia</a>, go check his website out, it's really cool!</em></p>
+<blockquote>
+<p>This is my first reply post! 🎉 How exciting!!</p>
+</blockquote>
+<p>TLDR; for those that don't want to go read it:<br />
+To make a damn website, you write <code>html</code>, <code>css</code>, and your <code>rss</code> feed manually. Repeat stuff on different pages. All manual.</p>
+<p>So that's what I did! This website is now fully static and only using <code>html</code> files.<br />
+I would just like to add my opinion after trying this approach to nuance Louie's article a bit.</p>
+<p>First of all, I think that making a website with <code>html</code> is a great idea, especially for a personal website. It's super easy to ship and to change stuff, you don't spend any time configuring things or stuck in dependency hell 🔥.<br />
+I feel like I've finally gotten close again to the publishing power I had with my <code>.txt</code> only website but with the added bonus of accessibility!</p>
+<p>This approach brings one problem though, writing <code>html</code> sucks ass. When I'm writing a post, I don't want to have to think about tags and semantics. I want to write words and be able to scan them quickly without tags and attributes getting in the way.<br />
+Also, it's absolute hell on mobile (though you might be aided by a tool like James' <a href="https://jamesg.blog/2025/08/17/designing-a-mobile-first-html-editor">mobile first html editor</a>). I don't want to have to go in the keyboard behind the keyboard and type all the symbols necessary for a <code>html</code> tag. And I write a LOT on my phone because I don't always have my computer on me when I have the time to write.</p>
+<p>So the solution I've found to this problem is to write my files in <code>markdown</code><sup id="fnref1:1"><a href="#fn:1" class="footnote-ref">1</a></sup> (using <a href="https://obsidian.md/">Obsidian</a>) and simply parse them using a tool like this <a href="https://michelf.ca/projects/php-markdown/dingus/">PHP Markdown Dingus</a><sup id="fnref1:2"><a href="#fn:2" class="footnote-ref">2</a></sup> and then copy them inside my <code>html</code> files.<br />
+This way I can write both on my phone and my computer without being distracted by having to think about correct <code>html</code>.</p>
+<p>Apart from that tiny caveat, I encourage everyone to start building their own website, it's so much fun and actually really easy once you've gone through the deployment phase.<br />
+If you have a personal website, feel free to <a href="mailto:hello@theoo.dev">share it with me</a>! I'd be more than pleased to have a look :))</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:1">
+<p>But it could also be <code>txt</code> or whatever you want that doesn't have a terse syntax.&#160;<a href="#fnref1:1" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>I've personally built a tiny app (with PHPNative) that adds a global shortcut that uses <a href="https://github.com/erusev/parsedown-extra">ParsedownExtra</a> to convert my markdown.&#160;<a href="#fnref1:2" rev="footnote" class="footnote-backref">&#8617;</a></p>
+</li>
+</ol>
+</div>
+            </div>
+            <!-- END OF CONTENT -->
+            <hr>
+            <a href="#">↑ Back to top</a> 
+        </div>
+    </body>
+</html>

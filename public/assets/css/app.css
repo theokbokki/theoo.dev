@@ -223,6 +223,13 @@ img {
     margin: 1rem 0; /* 16px */
 }
 
+blockquote {
+    border-left: 0.125rem solid rgb(var(--fg)); /* 2px */
+    background: rgb(var(--fg), .05);
+    font-style: italic;
+    padding: .001rem 1rem; /* whatver and 16px */
+}
+
 .app__theme {
     display: flex;
     align-items: center;

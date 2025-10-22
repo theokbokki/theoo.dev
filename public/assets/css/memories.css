@@ -45,15 +45,37 @@
 }
 
 .memories__title {
-    font-size: 1.25rem; /* 20px */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 .memories__subtitle {
-    margin-top: .5rem; /* 8px */
-    color: #a8a29e;
+    width: max-content;
+    background: white;
+    padding: .125rem 1rem .125rem .5rem;
+    border-radius: 999rem;
+    display: flex;
+    align-items: center;
+    color: #78716c;
+    box-shadow: 
+        0 0 0 0.0625rem #e7e5e4, /* 1px */
+        0 4px 8px -2px #e7e5e4; /* 1px */
+}
+
+.memories__subtitle > span:first-child {
+    height: 2rem;
+    margin-right: -.25rem;
 }
 
 .memories__btn {
+    z-index: 10;
     position: fixed;
     bottom: 2rem; /* 32px */
     right: 2rem; /* 32px */
@@ -85,4 +107,6 @@
 
 .memories__img {
     position: absolute;
+    height: auto;
+    box-shadow: 0 8px 16px -8px #57534e;
 }

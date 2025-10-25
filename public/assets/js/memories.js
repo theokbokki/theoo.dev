@@ -8,7 +8,8 @@ class Memories {
             window.location.hash = '#intro';
             location.reload();
         };
-
+        
+        scrollTo(window.innerWidth * 4.5, window.innerHeight * 4.5);
         document.documentElement.style.overflow = 'hidden';
 
         this.getElements();

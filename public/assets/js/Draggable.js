@@ -28,58 +28,51 @@ export default class Draggable {
     }
 
     setEvents() {
-        this.el.addEventListener("mouseenter", this.onMouseEnter.bind(this));
-        this.el.addEventListener("mouseout", this.onMouseOut.bind(this));
-        this.el.addEventListener("mousedown", this.onMouseDown.bind(this));
-        this.el.addEventListener("mouseup", this.onMouseUp.bind(this));
-        this.el.addEventListener("mousemove", this.onMouseMove.bind(this));
-
-        this.el.addEventListener("touchstart", this.onMouseDown.bind(this), false);
-        this.el.addEventListener("touchend", this.onMouseUp.bind(this), false);
-        this.el.addEventListener("touchmove", this.onMouseMove.bind(this), false);
+        this.el.addEventListener("pointerenter", this.onPointerEnter.bind(this));
+        this.el.addEventListener("pointerleave", this.onPointerLeave.bind(this));
+        this.el.addEventListener("pointerdown", this.onPointerDown.bind(this));
+        this.el.addEventListener("pointerup", this.onPointerUp.bind(this));
+        this.el.addEventListener("pointermove", this.onPointerMove.bind(this));
     }
 
-    onMouseEnter() {
+    onPointerEnter() {
         if (this.dragging || this.onlyDrag) return;
-
         this.setHoverEffect();
     }
 
-    onMouseOut() {
+    onPointerLeave() {
         if (this.dragging || this.onlyDrag) return;
         this.resetEffect();
     }
 
-    onMouseDown(e) {
+    onPointerDown(e) {
         if (e.target !== this.el) return;
-        
-        if (! e.touches) {
-            this.el.setPointerCapture(e.pointerId);
-        }
+
+        e.preventDefault();
+
+        this.el.setPointerCapture(e.pointerId);
 
         this.dragging = true;
         this.style.cursor = "grabbing";
 
-        const point = e.touches ? e.touches[0] : e;
-        this.initialX = point.clientX - this.x;
-        this.initialY = point.clientY - this.y;
+        this.initialX = e.clientX - this.x;
+        this.initialY = e.clientY - this.y;
 
         if (!this.onlyDrag) this.setPressedEffect();
     }
 
-    onMouseMove(e) {
+    onPointerMove(e) {
         if (!this.dragging) return;
 
         e.preventDefault();
-
-        const point = e.touches ? e.touches[0] : e;
-        this.x = point.clientX - this.initialX;
-        this.y = point.clientY - this.initialY;
+        this.x = e.clientX - this.initialX;
+        this.y = e.clientY - this.initialY;
     }
 
-    onMouseUp(e) {
-        if (! e.touches) {
+    onPointerUp(e) {
+        try {
             this.el.releasePointerCapture(e.pointerId);
+        } catch (_) {
         }
 
         this.dragging = false;
@@ -142,5 +135,24 @@ export default class Draggable {
             x: parseFloat(values[4]),
             y: parseFloat(values[5]),
         };
+    }
+
+    resetPosition(animated = true) {
+        this.x = 0;
+        this.y = 0;
+
+        if (animated) {
+            this.style.transition = "transform 0.6s ease";
+            const transform = this.onlyDrag
+                ? `translate3d(0, 0, 0)`
+                : `translate3d(0, 0, 0) rotate(${this.rotation}deg) scale(${this.scale})`;
+            this.style.transform = transform;
+            setTimeout(() => (this.style.transition = ""), 600);
+        } else {
+            const transform = this.onlyDrag
+                ? `translate3d(0, 0, 0)`
+                : `translate3d(0, 0, 0) rotate(${this.rotation}deg) scale(${this.scale})`;
+            this.style.transform = transform;
+        }
     }
 }

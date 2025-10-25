@@ -21,8 +21,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1000vw;
-    height: 1000vh;
+    width: 100vw;
+    height: 100vh;
     overflow-x: scroll;
     overflow-y: scroll;
 }
@@ -31,8 +31,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1000vw;
-    height: 1000vh;
+    min-width: 10000px;
+    min-height: 10000px;
     background-image: radial-gradient(#e7e5e4 10%, transparent 10%);
     background-position: 10px 10px;
     background-size: 20px 20px;

@@ -9,6 +9,12 @@
     overflow-x: scroll;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .memories {
@@ -57,13 +63,13 @@
 }
 
 .memories__subtitle {
-    width: max-content;
-    background: white;
-    padding: .125rem 1rem .125rem .5rem;
-    border-radius: 999rem;
     display: flex;
     align-items: center;
+    width: max-content;
+    padding: .125rem 1rem .125rem .5rem;
+    background: white;
     color: #78716c;
+    border-radius: 999rem;
     box-shadow: 
         0 0 0 0.0625rem #e7e5e4, /* 1px */
         0 4px 8px -2px #e7e5e4; /* 1px */
@@ -108,5 +114,6 @@
 .memories__img {
     position: absolute;
     height: auto;
-    box-shadow: 0 8px 16px -8px #57534e;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 50%);
+    transform-origin: center;
 }

@@ -52,8 +52,10 @@ export default class Draggable {
 
     onMouseDown(e) {
         if (e.target !== this.el) return;
-
-        this.el.setPointerCapture(e.pointerId);
+        
+        if (! e.touches) {
+            this.el.setPointerCapture(e.pointerId);
+        }
 
         this.dragging = true;
         this.style.cursor = "grabbing";
@@ -76,7 +78,9 @@ export default class Draggable {
     }
 
     onMouseUp(e) {
-        this.el.releasePointerCapture(e.pointerId);
+        if (! e.touches) {
+            this.el.releasePointerCapture(e.pointerId);
+        }
 
         this.dragging = false;
         this.style.cursor = "grab";

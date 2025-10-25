@@ -4,6 +4,13 @@ class Memories {
     constructor(el) {
         this.el = el;
 
+        if (window.location.hash !== '#intro') {
+            window.location.hash = '#intro';
+            location.reload();
+        };
+
+        document.documentElement.style.overflow = 'hidden';
+
         this.getElements();
 
         new Draggable(this.canvas, true);

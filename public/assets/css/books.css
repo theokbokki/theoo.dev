@@ -1,10 +1,15 @@
 @import 'reset.css';
 
-:root {}
+:root {
+    font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    line-height: 150%;
+    color: #57534e;
+}
 
 .books {
     background-image: url('../img/books-background.jpg');
     background-size: 41.875rem 31.5625rem; /* 670px 505px */
+    text-align: center;
 }
 
 .books__shelf {
@@ -89,6 +94,7 @@
     content: "";
 }
 
+.books__title,
 .book__title {
     position: absolute;
     width: 0.0625rem;

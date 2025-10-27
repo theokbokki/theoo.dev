@@ -39,6 +39,7 @@
 
 .app > div {
     padding: 2rem 1.25rem 5rem; /* 32px 20px 80px */
+    min-height: calc(100vh - 7rem);
 }
 
 .app--red {

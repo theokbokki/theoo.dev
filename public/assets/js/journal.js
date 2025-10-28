@@ -140,52 +140,101 @@ void main(){
 
     updateWrapAndRedraw() {
         this.wrapWidth = this.textCanvas.width - this.xpad * 2;
+
+        if (window.innerWidth < 520) {
+            this.ypad = this.indicatorTopPad + this.uiButtonHeight * 2 + this.dividerPad * devicePixelRatio;
+        } else {
+            this.ypad = this.indicatorTopPad + this.uiButtonHeight + this.dividerPad * devicePixelRatio;
+        }
+
         this.wrappedLines = this.wrapTextToLines(4);
         this.visibleLineCount = Math.floor((this.textCanvas.height - this.ypad) / this.lineHeight);
         this.needsRedraw = true;
     }
 
     drawCanvasUI() {
+        const isMobile = window.innerWidth < 520;
+
         this.tctx.font = `${this.uiFontSizePx}px monospace`;
         this.tctx.textBaseline = 'top';
         this.tctx.shadowColor = this.crtThemes[this.currentTheme].color;
         this.tctx.shadowBlur = 6 * devicePixelRatio;
         this.tctx.fillStyle = this.crtThemes[this.currentTheme].color;
-        this.tctx.fillText(this.legendText, this.xpad, this.uiTopMargin);
 
-        this.tctx.font = `bold ${this.uiFontSizePx}px monospace`;
-        let baseX = this.textCanvas.width - this.uiRightPadding - (this.uiButtonWidth + this.uiButtonMargin) * this.themeOrder.length;
-        let y = this.indicatorTopPad;
+        if(isMobile) {
+            this.tctx.fillText(this.legendText, this.uiRightPadding, this.uiTopMargin);
 
-        this.themeOrder.forEach((theme, i) => {
-            const cx = baseX + i * (this.uiButtonWidth + this.uiButtonMargin);
+            this.tctx.font = `bold ${this.uiFontSizePx}px monospace`;
+            const totalWidth = (this.uiButtonWidth + this.uiButtonMargin) * this.themeOrder.length - this.uiButtonMargin;
+            const y = this.uiTopMargin + this.uiFontSizePx + this.uiButtonMargin + 32;
 
-            if (theme === this.currentTheme) {
-                this.tctx.fillStyle = this.crtThemes[theme].color;
-                this.tctx.shadowBlur = 12 * devicePixelRatio;
-                this.tctx.fillRect(cx, y, this.uiButtonWidth, this.uiButtonHeight);
-                this.tctx.shadowBlur = 0;
-            }
+            this.themeOrder.forEach((theme, i) => {
+                const cx = this.uiRightPadding + i * (this.uiButtonWidth + this.uiButtonMargin);
 
-            this.tctx.fillStyle = theme === this.currentTheme ? '#111' : this.crtThemes[theme].color;
-            this.tctx.fillText(theme.toUpperCase(), cx + 14, y + 9);
+                if (theme === this.currentTheme) {
+                    this.tctx.fillStyle = this.crtThemes[theme].color;
+                    this.tctx.shadowBlur = 12 * devicePixelRatio;
+                    this.tctx.fillRect(cx, y, this.uiButtonWidth, this.uiButtonHeight);
+                    this.tctx.shadowBlur = 0;
+                }
 
-            if (theme !== this.currentTheme) {
-                this.tctx.strokeStyle = this.crtThemes[theme].color;
-                this.tctx.lineWidth = 1;
-                this.tctx.strokeRect(cx, y, this.uiButtonWidth, this.uiButtonHeight);
-            }
-        });
+                this.tctx.fillStyle = theme === this.currentTheme ? '#111' : this.crtThemes[theme].color;
+                this.tctx.fillText(theme.toUpperCase(), cx + 14, y + 9);
 
-        this.tctx.shadowBlur = 0;
-        this.tctx.globalAlpha = 0.26;
-        this.tctx.strokeStyle = this.crtThemes[this.currentTheme].color;
-        this.tctx.beginPath();
-        this.tctx.moveTo(this.xpad, this.indicatorTopPad + this.uiButtonHeight + this.dividerPad / 2);
-        this.tctx.lineTo(this.textCanvas.width - this.xpad, this.indicatorTopPad + this.uiButtonHeight + this.dividerPad / 2);
-        this.tctx.lineWidth = 2.5 * devicePixelRatio;
-        this.tctx.stroke();
-        this.tctx.globalAlpha = 1.0;
+                if (theme !== this.currentTheme) {
+                    this.tctx.strokeStyle = this.crtThemes[theme].color;
+                    this.tctx.lineWidth = 1;
+                    this.tctx.strokeRect(cx, y, this.uiButtonWidth, this.uiButtonHeight);
+                }
+            });
+
+            this.tctx.shadowBlur = 0;
+            this.tctx.globalAlpha = 0.26;
+            this.tctx.strokeStyle = this.crtThemes[this.currentTheme].color;
+            this.tctx.beginPath();
+            const yDiv = y + this.uiButtonHeight + this.uiButtonMargin + 24;
+            this.tctx.moveTo(this.xpad, yDiv);
+            this.tctx.lineTo(this.textCanvas.width - this.xpad, yDiv);
+            this.tctx.lineWidth = 2.5 * devicePixelRatio;
+            this.tctx.stroke();
+            this.tctx.globalAlpha = 1.0;
+        } else {
+            this.tctx.fillText(this.legendText, this.xpad, this.uiTopMargin);
+
+            this.tctx.font = `bold ${this.uiFontSizePx}px monospace`;
+            let baseX = this.textCanvas.width - this.uiRightPadding - (this.uiButtonWidth + this.uiButtonMargin) * this.themeOrder.length;
+            let y = this.indicatorTopPad;
+
+            this.themeOrder.forEach((theme, i) => {
+                const cx = baseX + i * (this.uiButtonWidth + this.uiButtonMargin);
+
+                if (theme === this.currentTheme) {
+                    this.tctx.fillStyle = this.crtThemes[theme].color;
+                    this.tctx.shadowBlur = 12 * devicePixelRatio;
+                    this.tctx.fillRect(cx, y, this.uiButtonWidth, this.uiButtonHeight);
+                    this.tctx.shadowBlur = 0;
+                }
+
+                this.tctx.fillStyle = theme === this.currentTheme ? '#111' : this.crtThemes[theme].color;
+                this.tctx.fillText(theme.toUpperCase(), cx + 14, y + 9);
+
+                if (theme !== this.currentTheme) {
+                    this.tctx.strokeStyle = this.crtThemes[theme].color;
+                    this.tctx.lineWidth = 1;
+                    this.tctx.strokeRect(cx, y, this.uiButtonWidth, this.uiButtonHeight);
+                }
+            });
+
+            this.tctx.shadowBlur = 0;
+            this.tctx.globalAlpha = 0.26;
+            this.tctx.strokeStyle = this.crtThemes[this.currentTheme].color;
+            this.tctx.beginPath();
+            this.tctx.moveTo(this.xpad, this.indicatorTopPad + this.uiButtonHeight + this.dividerPad / 2);
+            this.tctx.lineTo(this.textCanvas.width - this.xpad, this.indicatorTopPad + this.uiButtonHeight + this.dividerPad / 2);
+            this.tctx.lineWidth = 2.5 * devicePixelRatio;
+            this.tctx.stroke();
+            this.tctx.globalAlpha = 1.0;
+        }
     }
 
     render() {
@@ -292,6 +341,86 @@ void main(){
                 this.wheelAccumulator = 0;
             }
         });
+
+        this.attachTouchEvents();
+    }
+
+    attachTouchEvents() {
+        let touchStartX = null;
+        let touchStartY = null;
+        let lastTouchY = null;
+        let verticalAccum = 0;
+
+        this.canvas.addEventListener('touchstart', e => {
+            if (e.touches.length === 1) {
+                const touch = e.touches[0];
+
+                touchStartX = touch.clientX;
+                touchStartY = touch.clientY;
+                lastTouchY = touch.clientY;
+                verticalAccum = 0;
+            }
+        }, { passive: true });
+
+        this.canvas.addEventListener('touchmove', e => {
+            if (e.touches.length !== 1 || lastTouchY === null) return;
+
+            e.preventDefault();
+
+            const currentY = e.touches[0].clientY;
+            const deltaY = lastTouchY - currentY;
+            const scrollSensitivity = 0.02; 
+
+            verticalAccum += deltaY * scrollSensitivity;
+
+            const linesToScroll = Math.trunc(verticalAccum);
+
+            if (linesToScroll !== 0) {
+                verticalAccum -= linesToScroll;
+
+                this.scrollLine = this.clampScroll(this.scrollLine + linesToScroll);
+                this.needsRedraw = true;
+            }
+
+            lastTouchY = currentY;
+        }, { passive: false });
+
+        this.canvas.addEventListener('touchend', e => {
+            if (touchStartX === null || touchStartY === null) return;
+
+            const touch = e.changedTouches[0];
+            const dx = touch.clientX - touchStartX;
+            const dy = touch.clientY - touchStartY;
+            const absDx = Math.abs(dx);
+            const absDy = Math.abs(dy);
+            const swipeThreshold = 40;
+
+            if (absDx > absDy && absDx > swipeThreshold) {
+                if(dx > 0){
+                    let idx = this.themeOrder.indexOf(this.currentTheme);
+
+                    this.currentTheme = this.themeOrder[(idx + this.themeOrder.length - 1) % this.themeOrder.length];
+                    this.needsRedraw = true;
+                } else {
+                    let idx = this.themeOrder.indexOf(this.currentTheme);
+
+                    this.currentTheme = this.themeOrder[(idx + 1) % this.themeOrder.length];
+                    this.needsRedraw = true;
+                }
+            }
+
+            touchStartX = null;
+            touchStartY = null;
+            lastTouchY = null;
+            verticalAccum = 0;
+        }, { passive: true });
+
+        this.canvas.addEventListener('touchcancel', e => {
+            touchStartX = null;
+            touchStartY = null;
+            lastTouchY = null;
+            verticalAccum = 0;
+        }, { passive: true });
     }
 
     setupWebGL() {

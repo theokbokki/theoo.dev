@@ -142,8 +142,10 @@ void main(){
         this.wrapWidth = this.textCanvas.width - this.xpad * 2;
 
         if (window.innerWidth < 520) {
+            this.xpad = 8 * devicePixelRatio;
             this.ypad = this.indicatorTopPad + this.uiButtonHeight * 2 + this.dividerPad * devicePixelRatio;
         } else {
+            this.xpad = 24 * devicePixelRatio;
             this.ypad = this.indicatorTopPad + this.uiButtonHeight + this.dividerPad * devicePixelRatio;
         }
 
@@ -161,15 +163,15 @@ void main(){
         this.tctx.shadowBlur = 6 * devicePixelRatio;
         this.tctx.fillStyle = this.crtThemes[this.currentTheme].color;
 
-        if(isMobile) {
-            this.tctx.fillText(this.legendText, this.uiRightPadding, this.uiTopMargin);
+        if (isMobile) {
+            this.tctx.fillText(this.legendText, 8, this.uiTopMargin);
 
             this.tctx.font = `bold ${this.uiFontSizePx}px monospace`;
             const totalWidth = (this.uiButtonWidth + this.uiButtonMargin) * this.themeOrder.length - this.uiButtonMargin;
             const y = this.uiTopMargin + this.uiFontSizePx + this.uiButtonMargin + 32;
 
             this.themeOrder.forEach((theme, i) => {
-                const cx = this.uiRightPadding + i * (this.uiButtonWidth + this.uiButtonMargin);
+                const cx = 8 + i * (this.uiButtonWidth + this.uiButtonMargin);
 
                 if (theme === this.currentTheme) {
                     this.tctx.fillStyle = this.crtThemes[theme].color;

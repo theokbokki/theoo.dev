@@ -1,0 +1,33 @@
+@import 'reset.css';
+
+.app {
+    font-
+}
+
+.text {
+    font-family: monospace;
+    padding: 2rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 150%;
+}
+
+#glCanvas {
+    display:block;
+    width:100vw;
+    height:100vh;
+    outline: none;
+    user-select: none;
+}
+
+.sro {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    padding: 0;
+    margin: -0.0625rem;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="alternate" type="application/rss+xml" title="Theoo.dev" href="https://theoo.dev/feed.xml" />
+
+        <title>Trait to generate gradients php</title>
+        <meta name="description" content="A php trait to generate small svg gradients to use as default profile pictures" />
+
+        <link rel="stylesheet" href="/assets/css/app.css">
+        <script type="module" src="/assets/js/app.js"></script>
+    </head>
+    <body class="app">
+        <div>
+            <h1>Trait to generate gradients php</h1>
+            <form class="app__theme">
+                <input type="checkbox" name="colors[]" value="red" class=" app__checkbox app__checkbox--red"/>
+                <input type="checkbox" name="colors[]" value="orange" class="app__checkbox app__checkbox--orange"/>
+                <input type="checkbox" name="colors[]" value="yellow" class="app__checkbox app__checkbox--yellow"/>
+                <input type="checkbox" name="colors[]" value="green" class="app__checkbox app__checkbox--green"/>
+                <input type="checkbox" name="colors[]" value="blue" class="app__checkbox app__checkbox--blue"/>
+                <input type="checkbox" name="colors[]" value="purple" class="app__checkbox app__checkbox--purple"/>
+                <input type="checkbox" name="colors[]" value="pink" class="app__checkbox app__checkbox--pink"/>
+            </form>
+            <a href="/" class="app__back">← Back home</a>
+            <hr>
+            <!-- START OF CONTENT -->
+            <div>
+<p>I needed a way to generate small 32x32 default profile pictures for my users and did not want to rely on external APIs. So I built this small class which generates a SVG with some filters to create a nice gradient.<br />
+It works very well for small square images, but when I've tried to generate large wallpapers with it, it did not work quite so well. I might update the code in the future if I need to.<br />
+I should try to explore some of the methods mentioned in <a href="https://justinjay.wang/methods-for-random-gradients/" target="_blank">this article</a> to make it better.</p>
+
+<pre><code class="php">&lt;?php
+
+namespace App\Concerns;
+
+trait GeneratesGradient
+{
+    protected int $width;
+
+    protected int $height;
+
+    protected int $buffer = 5;
+
+    protected bool $isHorizontal;
+
+    protected float $splitThreshold;
+
+    public function generateGradient(int $width = 32, int $height = 32): string
+    {
+        $this-&gt;width = $width;
+        $this-&gt;height = $height;
+        $this-&gt;isHorizontal = $width &gt; $height;
+        $this-&gt;splitThreshold = $this-&gt;isHorizontal ? $width / 2 : $height / 2;
+
+        $colorCount = random_int(3, 5);
+        $colorStops = $this-&gt;generateColorStops($colorCount);
+        $circlePositions = $this-&gt;generateCirclePositions($colorCount);
+
+        return $this-&gt;buildSvg($colorStops, $circlePositions);
+    }
+
+    private function generateColorStops(int $count): array
+    {
+        return array_map(
+            fn () =&gt; $this-&gt;generateVibrantColor(),
+            array_fill(0, $count, null)
+        );
+    }
+
+    private function generateVibrantColor(): string
+    {
+        return $this-&gt;convertHslToHex(
+            random_int(0, 360),    // hue
+            random_int(70, 100),   // saturation
+            random_int(40, 60)     // lightness
+        );
+    }
+
+    private function convertHslToHex(float $hue, float $saturation, float $lightness): string
+    {
+        $hue /= 360;
+        $saturation /= 100;
+        $lightness /= 100;
+
+        $chroma = $lightness &lt; 0.5
+            ? $lightness * (1 + $saturation)
+            : $lightness + $saturation - $lightness * $saturation;
+
+        $base = 2 * $lightness - $chroma;
+
+        return $this-&gt;convertRgbToHex(
+            $this-&gt;calculateRgbComponent($base, $chroma, $hue + 1 / 3),
+            $this-&gt;calculateRgbComponent($base, $chroma, $hue),
+            $this-&gt;calculateRgbComponent($base, $chroma, $hue - 1 / 3)
+        );
+    }
+
+    private function calculateRgbComponent(float $base, float $chroma, float $hue): float
+    {
+        $hue = $this-&gt;normalizeHue($hue);
+
+        if ($hue &lt; 1 / 6) {
+            return $base + ($chroma - $base) * 6 * $hue;
+        }
+
+        if ($hue &lt; 1 / 2) {
+            return $chroma;
+        }
+
+        if ($hue &lt; 2 / 3) {
+            return $base + ($chroma - $base) * (2 / 3 - $hue) * 6;
+        }
+
+        return $base;
+    }
+
+    private function normalizeHue(float $hue): float
+    {
+        return match (true) {
+            $hue &lt; 0 =&gt; $hue + 1,
+            $hue &gt; 1 =&gt; $hue - 1,
+            default =&gt; $hue
+        };
+    }
+
+    private function convertRgbToHex(float $red, float $green, float $blue): string
+    {
+        return sprintf('#%02X%02X%02X',
+            round($red * 255),
+            round($green * 255),
+            round($blue * 255)
+        );
+    }
+
+    private function generateCirclePositions(int $count): array
+    {
+        $positions = [];
+
+        for ($i = 0; $i &lt; $count; $i++) {
+            $positions[] = match ($i) {
+                0 =&gt; $this-&gt;generateFirstAnchorPoint(),
+                1 =&gt; $this-&gt;generateSecondAnchorPoint(),
+                default =&gt; $this-&gt;generateRandomPosition()
+            };
+        }
+
+        return $positions;
+    }
+
+    private function generateFirstAnchorPoint(): array
+    {
+        if ($this-&gt;isHorizontal) {
+            return $this-&gt;createPosition(
+                random_int($this-&gt;buffer, $this-&gt;splitThreshold - $this-&gt;buffer),
+                random_int($this-&gt;buffer, $this-&gt;height - $this-&gt;buffer)
+            );
+        }
+
+        return $this-&gt;createPosition(
+            random_int($this-&gt;buffer, $this-&gt;width - $this-&gt;buffer),
+            random_int($this-&gt;buffer, $this-&gt;splitThreshold - $this-&gt;buffer)
+        );
+    }
+
+    private function generateSecondAnchorPoint(): array
+    {
+        if ($this-&gt;isHorizontal) {
+            return $this-&gt;createPosition(
+                random_int($this-&gt;splitThreshold + $this-&gt;buffer, $this-&gt;width - $this-&gt;buffer),
+                random_int($this-&gt;buffer, $this-&gt;height - $this-&gt;buffer)
+            );
+        }
+
+        return $this-&gt;createPosition(
+            random_int($this-&gt;buffer, $this-&gt;width - $this-&gt;buffer),
+            random_int($this-&gt;splitThreshold + $this-&gt;buffer, $this-&gt;height - $this-&gt;buffer)
+        );
+    }
+
+    private function generateRandomPosition(): array
+    {
+        return $this-&gt;createPosition(
+            random_int($this-&gt;buffer, $this-&gt;width - $this-&gt;buffer),
+            random_int($this-&gt;buffer, $this-&gt;height - $this-&gt;buffer)
+        );
+    }
+
+    private function createPosition(int $x, int $y): array
+    {
+        return [
+            'x' =&gt; $x,
+            'y' =&gt; $y,
+            'radius' =&gt; $this-&gt;width / random_int(2, 4),
+        ];
+    }
+
+    private function buildSvg(array $colorStops, array $circlePositions): string
+    {
+       $blurRadius = $this-&gt;width / 4;
+
+        return &lt;&lt;&lt;SVG
+        &lt;svg xmlns="http://www.w3.org/2000/svg"
+             width="{$this-&gt;width}" height="{$this-&gt;height}" viewBox="0 0 {$this-&gt;width} {$this-&gt;height}"&gt;
+            &lt;defs&gt;
+                &lt;filter id="blur" x="-50%" y="-50%" width="200%" height="200%"&gt;
+                    &lt;feGaussianBlur stdDeviation="{$blurRadius}"/&gt;
+                &lt;/filter&gt;
+            &lt;/defs&gt;
+            &lt;rect width="100%" height="100%" fill="{$colorStops[0]}" opacity="0.15"/&gt;
+            &lt;g filter="url(#blur)" opacity="0.85"&gt;
+                {$this-&gt;generateCircleElements($circlePositions, $colorStops)}
+            &lt;/g&gt;
+        &lt;/svg&gt;
+        SVG;
+    }
+
+    private function generateCircleElements(array $positions, array $colors): string
+    {
+        return implode('', array_map(
+            fn ($pos, $color) =&gt; sprintf(
+                '&lt;circle cx="%d" cy="%d" r="%s" fill="%s"/&gt;',
+                $pos['x'],
+                $pos['y'],
+                $pos['radius'],
+                $color
+            ),
+            $positions,
+            $colors
+        ));
+    }
+}
+</code></pre>
+</div>
+            <!-- END OF CONTENT -->
+            <hr>
+            <a href="#">↑ Back to top</a> 
+        </div>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="alternate" type="application/rss+xml" title="Theoo.dev" href="https://theoo.dev/feed.xml" />
+
+        <title>Link to a specific text</title>
+        <meta name="description" content="How it works to link someone to a specific part of text on a webpage" />
+
+        <link rel="stylesheet" href="/assets/css/app.css">
+        <script type="module" src="/assets/js/app.js"></script>
+    </head>
+    <body class="app">
+        <div>
+            <h1>Link to a specific text</h1>
+            <form class="app__theme">
+                <input type="checkbox" name="colors[]" value="red" class=" app__checkbox app__checkbox--red"/>
+                <input type="checkbox" name="colors[]" value="orange" class="app__checkbox app__checkbox--orange"/>
+                <input type="checkbox" name="colors[]" value="yellow" class="app__checkbox app__checkbox--yellow"/>
+                <input type="checkbox" name="colors[]" value="green" class="app__checkbox app__checkbox--green"/>
+                <input type="checkbox" name="colors[]" value="blue" class="app__checkbox app__checkbox--blue"/>
+                <input type="checkbox" name="colors[]" value="purple" class="app__checkbox app__checkbox--purple"/>
+                <input type="checkbox" name="colors[]" value="pink" class="app__checkbox app__checkbox--pink"/>
+            </form>
+            <a href="/" class="app__back">← Back home</a>
+            <hr>
+            <!-- START OF CONTENT -->
+            <div>
+<p>On the web, you can link people to specific parts of pages using the text contained in them, and it's actually pretty simple! Here's <a href="https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Fragment/Text_fragments">the doc about it</a>.</p>
+
+<p>You can link to a very specific text like so:</p>
+
+<pre><code>#:~:text=very specific text
+</code></pre>
+
+<p>Or if you want to highlight a whole paragraph, you can add a end string and the browser will highlight everything between the start and end strings.</p>
+
+<pre><code>#:~:text=very specific text,the start and end strings
+</code></pre>
+
+<p>You can also highlight multiple things on a page like so:</p>
+
+<pre><code>#:~:text=very specific text&amp;text=multiple things
+</code></pre>
+            </div>
+            <!-- END OF CONTENT -->
+            <hr>
+            <a href="#">↑ Back to top</a> 
+        </div>
+    </body>
+</html>

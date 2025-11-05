@@ -159,14 +159,14 @@ li {
 
 pre {
     padding: 1rem; /* 16px */
-    background: rgb(var(--fg), .15);
+    background: rgb(var(--fg), .05);
     overflow-x: scroll;
     margin: 0 -1rem; /* 16px */
 }
 
 code:not(pre > code) {
     padding: 0.125rem 0.25rem; /* 2px 4px */
-    background: rgb(var(--fg), .15);
+    background: rgb(var(--fg), .05);
 }
 
 img {
@@ -251,7 +251,7 @@ blockquote {
 .footnotes {
     padding: .5rem 1rem; /* 8px 16px */
     margin: 1rem 0;
-    background: rgba(var(--fg), .1);
+    background: rgb(var(--fg), .05);
 }
 
 .footnotes hr {
@@ -296,9 +296,17 @@ blockquote {
         max-width: 6rem; /* 96px */
     }
 
-    .app > div > div {
+    .app > div > div:not(.snippet) {
         column-count: 2;
         column-gap: 1.5rem; /* 24px */
+    }
+
+    .app > div > .snippet > *:not(pre) {
+        max-width: 65ch;
+    }
+
+    .app > div > .snippet > pre {
+        width: 99%
     }
 
     .app > div > div > :first-child {
@@ -317,7 +325,7 @@ blockquote {
 }
 
 @media screen and (min-width: 1120px) {
-    .app > div > div {
+    .app > div > div:not(.snippet) {
         column-count: 3;
     }
 }

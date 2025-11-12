@@ -1,0 +1,84 @@
+@import './reset.css';
+
+.sro {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    padding: 0;
+    margin: -0.0625rem;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.app {
+    font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-size: 0.8125rem; /* 14 */
+}
+
+.table {
+    display: grid;
+    margin: 2.333333336rem 0;
+}
+
+.table__row {
+    position: relative;
+    display: grid;
+    gap: .25rem;
+    padding: 1rem;
+    line-height: 150%;
+    opacity: .65;
+    transition: opacity 100ms ease-out;
+}
+
+.table__row:nth-of-type(even) {
+    background: #F5F5F5;
+}
+
+.table__row:hover {
+    opacity: 1;
+    z-index: 999;
+}
+
+.table__item {
+    color: #333;
+    transition: color 100ms ease-out;
+}
+
+.table__row:hover .table__item--link {
+    color: blue;
+}
+
+.table__item--lnk:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.table__item--img {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 15rem;
+    opacity: 0;
+    z-index: 1;
+}
+
+.table__row:hover .table__item--img {
+    opacity: 1;
+}
+
+@media screen and (min-width: 720px) {
+    .table__row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: .5rem 4rem;
+    }
+}

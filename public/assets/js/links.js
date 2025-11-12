@@ -20,7 +20,7 @@ class Links {
             img.style.top = 0;
             img.style.left = 0;
             img.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
-            img.style.transition = 'transform  750ms cubic-bezier(0.27, 0.5, 0.17, 1.33)';
+            img.style.transition = 'transform  750ms cubic-bezier(0.175, 0.885, 0.32, 1.275)';
         });
     }
 }

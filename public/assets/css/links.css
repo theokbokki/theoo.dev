@@ -50,7 +50,7 @@
     color: blue;
 }
 
-.table__item--lnk:before {
+.table__item--link:before {
     content: "";
     position: absolute;
     top: 0;

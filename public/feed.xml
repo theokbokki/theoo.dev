@@ -7,6 +7,68 @@
         <language>en</language>
         <atom:link href="https://theoo.dev/feed.xml" rel="self" type="application/rss+xml" />
         <item>
+            <title>An ode to plaintext</title>
+            <link>https://theoo.dev/notes/an-ode-to-plaintext.html</link>
+            <guid>9500baec-85c7-465f-a7fe-730dee9294ce</guid>
+            <description>Sharing my love of plaintext while aknowledging it's limitations and proposing a solution to circumvent them.</description>
+            <content:encoded><![CDATA[<div>
+<p>I consider myself a simple boring guy, I like ed, I enjoy eating plain pasta, I wear only a few clothes in rotation, and my favourite way of writing and reading text is plaintext.</p>
+
+<p>There is something appealing about <code>.txt</code> files for me, it's only characters that all look mostly the same, none are bold, none are bigger, none have a background.<br />
+Plaintext works everywhere, every computer can render it, it's fast, it's quiet, it's most likely futureproof, it's portable, I love it.</p>
+
+<p>If I could, I would have everything written in plaintext. It's limitations make it predictable. It doesn't have links or blockquotes, it doesn't render code with fancy colors nor does it bolden or italicize text.<br />
+I might make an exception for images, but other than that, plaintext is all I want.</p>
+
+<p>But despite it's seemingly perfect simpleness, plaintext has one big flaw for me, it doesn't work quite well on the web.<br />
+I mean, sure your browser can most likely natively render it (in a superb way may I had), and most users will be able to read it with not problems. But that's not how accessibility works, you can't accept 'most users'.</p>
+
+<p>Web pages rely on semantics to convey meaning. Users with assistive technology can jump to headings and links, are warned when entering a list and know how many items are in it, etc.<br />
+So if you serve them some plaintext, they will only hear a big blob of text being read, with no way to differentiate between different parts of the text.</p>
+
+<p>And for that people have invented markdown. It's still kinda plaintext, but with some light syntax added so that you can transform it into HTML.<br />
+This way, your users get all the benefits of HTML and you only had to write some slightly more verbose plaintext.<br />
+But generally, markdown doesn't look like plaintext once rendered, titles are bigger, blockquotes are well... quoted, code is rendered in fancy code blocks, lists have a dot in front of them etc.</p>
+
+<p>And that's why I've written <a href="https://github.com/theokbokki/txt-css">a small CSS file</a> that takes nice semantic HTML and makes it look like 'enhanced' plaintext!
+You still get your links, your quotes and your images, but the overall vibe is plaintext.</p>
+
+<p>It was deliberately inspired by the default style browsers apply to plaintext as well as the ways man files format their text to look legible. (I'm a huge fan of man files, but that's a story for another time).</p>
+
+<p>If you decide to use it for something, don't hesitate to send me <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;:&#x68;&#x65;&#x6c;&#108;&#111;&#64;t&#x68;&#x65;&#x6f;&#111;&#46;&#100;e&#x76;">a little email</a> ^^ I'll be super pleased to look at what you wrote with it.</p>
+</div>]]></content:encoded>
+        </item>
+        <item>
+            <title>A sort of changelog?</title>
+            <link>https://theoo.dev/notes/a-sort-of-changelog.html</link>
+            <guid>36e9759f-7d29-4451-b35e-fd76d558f0bb</guid>
+            <description>Updates on what happened recently on my website.</description>
+            <content:encoded><![CDATA[<div>
+<p>Since my last post, I still haven't written anything, but I've been thinking a lot and working on other bits of this website. In this post, I would like to address some of the things that have changed, evolved or disappeared on this website lately.</p>
+
+<p>All these changes were sparked by my realization that Weeknotes were (almost) the only things I was posting and I wanted to write other stuff. So at first I decided to try adding a journal page were I would add a summary of my day every day, but it quickly turned into a chore and didn't fix the problem of finding the time to write other stuff. I dropped the idea, but the page is still there and I'm still thinking on what to do with it. Maybe I'll try my hand at some fictional writing? Who knows.</p>
+
+<p>Then I took a step back and realized that what I liked about Weeknotes was mostly reading them on other people's websites, but not really write my own. And the enjoyable part mostly came from sharing links at the end of each week.</p>
+
+<p>So I decided to build a <a href="/links.html">links page</a>. It has a pretty simple design and is a bit laborious to keep up (Since I've decided to add an image for each link) but I like it quite a lot!
+I'll had links there from time to time, probably in batches when I find the courage to go through my backlog.</p>
+
+<p>Another thing I've been trying to have on this website for a while is images. I like the idea of sharing your life through images like on Instagram. But I hate Instagram, Meta sucks, social medias suck.<br />
+So instead I built my own <a href="/memories.html">memories page</a>. It's an infinite canvas where I can upload images and play around with them. I hope I'm able to keep it up this time, because I love the end result but I hate tending to it, it's a bit of a weird relationship I have with images.</p>
+
+<p>The 'Books I read' note I used to have is now gone in favor of an actual bookshelf! You can find it on the <a href="/books.html">books page</a></p>
+
+<p>So here's a recap of how my website is structured as of now:</p>
+
+<ul>
+<li><a href="https://theoo.dev">/</a> — The homepage, used as an index for notes, snippets and other pages</li>
+<li><a href="https://theoo.dev/links.html">/links</a> — The index for all the links I want to share. It can be anything from cool websites to articles to recipes.</li>
+<li><a href="https://theoo.dev/memories.html">/memories</a> — The page where I store my images, so I can look at them later.</li>
+<li><a href="https://theoo.dev/books.html">/books</a> — My personal library of books I've read, I really like the way it looks</li>
+</ul>
+</div>]]></content:encoded>
+        </item>
+        <item>
             <title>TOO MANY THINGS, TOO LITTLE TIME</title>
             <link>https://theoo.dev/notes/too-many-things-too-little-time.html</link>
             <guid>5dace41f-c466-452d-96c9-24fe7310994c</guid>

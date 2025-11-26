@@ -94,6 +94,7 @@ p {
 a {
     color: #737373;
     text-underline-offset: 2px;
+    word-break: break-all;
 }
 
 a:hover {

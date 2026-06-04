@@ -9,6 +9,6 @@
         @vite(['resources/css/app.scss', 'resources/js/app.js'])
     </head>
     <body class="app">
-        <h1>Hello world</h1>
+        {{ $slot }}
     </body>
 </html>

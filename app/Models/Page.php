@@ -41,8 +41,11 @@ class Page extends Model
 
     public function getRouteKey(): mixed
     {
-        $key = $this->slug === '' ? $this->getKey() : $this->slug.'-'.$this->getKey();
+        if ($this->slug === '') {
+            return '';
+        }
 
+        $key = $this->slug.'-'.$this->getKey();
         $path = $this->parentPath();
 
         return $path === '' ? $key : $path.'/'.$key;

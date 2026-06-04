@@ -31,7 +31,7 @@ class PageSeeder extends Seeder
 
         $home->updateQuietly(['slug' => '']);
 
-        Page::query()->create([
+        $notes = Page::query()->create([
             'parent_id' => $home->id,
             'title' => 'Notes',
             'content' => <<<HEREDOC
@@ -40,6 +40,17 @@ class PageSeeder extends Seeder
             You might find something interesting, who knows!
             HEREDOC,
             'pinned' => true,
+            'draft' => false,
+            'private' => false,
+        ]);
+
+        Page::query()->create([
+            'parent_id' => $notes->id,
+            'title' => 'An ode to plaintext',
+            'content' => <<<HEREDOC
+            An ode to plaintext
+            HEREDOC,
+            'pinned' => false,
             'draft' => false,
             'private' => false,
         ]);

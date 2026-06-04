@@ -14,6 +14,8 @@ class PageController extends Controller
     {
         $page ??= Page::findBySlug('');
 
-        dd($page);
+        return view('page', [
+            'page' => $page,
+        ]);
     }
 }

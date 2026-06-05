@@ -5,25 +5,25 @@
     @else
         <div>{!! str()->markdown($page->content) !!}</div>
     @endauth
-    <div>
+    <div class="pages">
         @foreach($page->children as $child)
-            <div>
-                <a href="{{ route('page', ['page' => $child]) }}">{{ $child->title }}</a>
+            <div class="pages__page">
+                <a href="{{ route('page', ['page' => $child]) }}" class="pages__title">{{ $child->title }}</a>
                 @auth
-                    <div>
-                        <button type="button">
+                    <div class="pages__buttons">
+                        <button type="button" class="pages__button">
                             <x-icon icon="{{ $child->pinned ? 'unpin' : 'pin' }}"/>
                             <span class="sro">
                                 @if($child->pinned) Unpin @else Pin @endif
                             </span>
                         </button>
-                        <button type="button">
+                        <button type="button" class="pages__button">
                             <x-icon icon="{{ $child->draft ? 'undraft' : 'draft' }}"/>
                             <span class="sro">
                                 @if($child->draft) Undraft @else Draft @endif
                             </span>
                         </button>
-                        <button type="button">
+                        <button type="button" class="pages__button">
                             <x-icon icon="{{ $child->private ? 'public' : 'private' }}"/>
                             <span class="sro">
                                 @if($child->private) Public @else Private @endif

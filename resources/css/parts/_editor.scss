@@ -7,7 +7,8 @@
     resize: none;
     font-family: menlo;
     line-height: 150%;
-    font-size: rem(14);
+    field-sizing: content;
+    font-size: rem(13);
     background: transparent;
     animation: day-progress-front 86400s steps(1, end) infinite;
     animation-delay: var(--offset);

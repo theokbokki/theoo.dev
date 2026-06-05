@@ -6,6 +6,8 @@
     justify-content: flex-end;
 
     &__crumb {
+        text-decoration: none;
+
         + .crumbs__crumb {
             &:after {
                 content: "/";

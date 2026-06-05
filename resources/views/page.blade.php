@@ -12,16 +12,19 @@
                 @auth
                     <div>
                         <button type="button">
+                            <x-icon icon="{{ $child->pinned ? 'unpin' : 'pin' }}"/>
                             <span class="sro">
-                                @if($child->pinned) Pin @else Unpin @endif
+                                @if($child->pinned) Unpin @else Pin @endif
                             </span>
                         </button>
                         <button type="button">
+                            <x-icon icon="{{ $child->draft ? 'undraft' : 'draft' }}"/>
                             <span class="sro">
                                 @if($child->draft) Undraft @else Draft @endif
                             </span>
                         </button>
                         <button type="button">
+                            <x-icon icon="{{ $child->private ? 'public' : 'private' }}"/>
                             <span class="sro">
                                 @if($child->private) Public @else Private @endif
                             </span>

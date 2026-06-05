@@ -1,6 +1,4 @@
-::selection {
-    background: yellow;
-}
+@use "utils" as *;
 
 html {
     animation: day-progress-back 86400s linear infinite;
@@ -21,4 +19,11 @@ html {
         z-index: 99;
         pointer-events: none;
     }
+}
+
+body {
+    max-width: rem(390);
+    margin: rem(80) auto;
+    font-family: var(--font-sans);
+    font-size: rem(14);
 }

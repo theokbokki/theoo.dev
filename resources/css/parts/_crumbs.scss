@@ -17,4 +17,13 @@
             }
         }
     }
+
+    &__text {
+        text-decoration: underline;
+        transition: opacity 100ms ease-out;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
 }

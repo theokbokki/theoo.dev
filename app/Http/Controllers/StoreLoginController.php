@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class StoreLoginController extends Controller
+final class StoreLoginController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -13,20 +13,19 @@ class StoreLoginController extends Controller
     public function __invoke(Request $request)
     {
         $credentials = $request->validate([
-            "email" => ["required", "email"],
-            "password" => ["required"],
+            'email' => ['required', 'email'],
+            'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials, $request->boolean("remember"))) {
+        if (Auth::attempt($credentials, $request->boolean('remember'))) {
             $request->session()->regenerate();
 
-            return redirect()->intended("/");
+            return redirect()->intended('/');
         }
 
-        return back()
-            ->withErrors([
-                "email" => "The provided credentials do not match our records.",
-            ])
-            ->onlyInput("email");
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])
+            ->onlyInput('email');
     }
 }

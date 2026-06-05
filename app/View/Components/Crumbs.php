@@ -16,7 +16,7 @@ class Crumbs extends Component
     public function __construct(
         public Page $page,
         public Collection $crumbs,
-    ){}
+    ) {}
 
     public function crumbs(): Collection
     {

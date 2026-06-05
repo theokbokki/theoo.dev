@@ -13,8 +13,8 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory()->create([
-            "email" => "hello@theoo.dev",
-            "password" => env("PASSWORD"),
+            'email' => 'hello@theoo.dev',
+            'password' => env('PASSWORD'),
         ]);
 
         $this->call([PageSeeder::class]);

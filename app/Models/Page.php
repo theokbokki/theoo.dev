@@ -53,13 +53,13 @@ class Page extends Model
 
     public function resolveRouteBinding($value, $field = null): ?Model
     {
-        if (!$value) {
+        if (! $value) {
             return null;
         }
 
         $model = str($value)->afterLast('-') |> static::with('ancestors')->find(...);
 
-        if (!$model) {
+        if (! $model) {
             return null;
         }
 
@@ -75,9 +75,11 @@ class Page extends Model
         $segments = [];
 
         for ($current = $this->parent; $current; $current = $current->parent) {
-            if ($current->slug !== '') {
-                array_unshift($segments, $current->slug);
+            if ($current->slug === '') {
+                continue;
             }
+
+            array_unshift($segments, $current->slug);
         }
 
         return implode('/', $segments);

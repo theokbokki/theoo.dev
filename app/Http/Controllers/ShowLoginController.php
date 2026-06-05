@@ -11,6 +11,6 @@ class ShowLoginController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view("login");
+        return view('login');
     }
 }

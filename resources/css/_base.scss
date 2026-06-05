@@ -26,4 +26,9 @@ body {
     margin: rem(80) auto;
     font-family: var(--font-sans);
     font-size: rem(14);
+
+    * {
+        animation: day-progress-front 86400s steps(1, end) infinite;
+        animation-delay: var(--offset);
+    }
 }

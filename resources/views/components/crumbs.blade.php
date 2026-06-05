@@ -1,7 +1,7 @@
-<nav>
-    <h1>{{ $page->title }}</h1>
+<nav class="crumbs">
+    <h1 class="crumbs__crumb">{{ $page->title }}</h1>
 
     @foreach($crumbs as $page)
-        <a href="{{ route('page', ['page' => $page]) }}">{{ $page->title }}</a>
+        <a href="{{ route('page', ['page' => $page]) }}" class="crumbs__crumb crumbs__crumb--link">{{ $page->title }}</a>
     @endforeach
 </nav>

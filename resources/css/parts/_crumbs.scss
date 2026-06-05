@@ -1,0 +1,16 @@
+@use "../utils" as *;
+
+.crumbs {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    &__crumb {
+        + .crumbs__crumb {
+            &:after {
+                content: "/";
+                margin: 0 rem(4);
+            }
+        }
+    }
+}

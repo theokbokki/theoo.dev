@@ -1,7 +1,7 @@
 <x-base>
     <x-crumbs :$page/>
     @auth()
-        <textarea name="editor" id="editor">{!! $page->content !!}</textarea>
+        <textarea name="editor" id="editor" class="editor">{!! $page->content !!}</textarea>
     @else
         <div>{!! str()->markdown($page->content) !!}</div>
     @endauth

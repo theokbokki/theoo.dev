@@ -1,0 +1,18 @@
+@use "../utils" as *;
+
+.editor {
+    width: 100%;
+    margin-top: rem(64);
+    border: none;
+    resize: none;
+    font-family: menlo;
+    line-height: 150%;
+    font-size: rem(14);
+    background: transparent;
+    animation: day-progress-front 86400s steps(1, end) infinite;
+    animation-delay: var(--offset);
+
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,6 +1,9 @@
 <x-base>
     <x-crumbs :$page/>
     @auth()
+        <div class="actions">
+            <a href="{{ route('page.create', ['parentId' => $page->id]) }}" class="action">New page</a>
+        </div>
         <textarea name="editor" id="editor" class="editor">{!! $page->content !!}</textarea>
     @else
         <div class="content">{!! str()->markdown($page->content) !!}</div>
@@ -8,7 +11,7 @@
     <div class="pages">
         @foreach($page->children as $child)
             <div class="pages__page">
-                <a href="{{ route('page', ['page' => $child]) }}" class="pages__title">{{ $child->title }}</a>
+                <a href="{{ route('page.show', ['page' => $child]) }}" class="pages__title">{{ $child->title }}</a>
                 @auth
                     <div class="pages__buttons">
                         <button type="button" class="pages__button">

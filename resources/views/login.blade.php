@@ -1,9 +1,10 @@
 <x-base>
     <h1>Login</h1>
     <form action="{{ route('login.store') }}" method="POST">
+        @csrf
         <div>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email"/>
+            <input type="email" name="email" id="email" value="{{ old('email') }}"/>
             @error('email') <p>{{ $message }}</p> @enderror
         </div>
         <div>
@@ -13,7 +14,7 @@
         </div>
         <div>
             <label for="remember">Remember me</label>
-            <input type="checkbox" name="remember" id="remember"/>
+            <input type="checkbox" name="remember" id="remember" @checked(old('remember', false))/>
         </div>
         <button type="submit">Login</button>
     </form>

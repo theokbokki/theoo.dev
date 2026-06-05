@@ -1,17 +1,30 @@
 <?php
 
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\CreatePageController;
 use App\Http\Controllers\ShowLoginController;
+use App\Http\Controllers\ShowPageController;
 use App\Http\Controllers\StoreLoginController;
+use App\Http\Controllers\StorePageController;
 use Illuminate\Support\Facades\Route;
 
+// Auth
 Route::get('/login', ShowLoginController::class)
     ->middleware('guest')
-    ->name('login.show');
+    ->name('login');
+
 Route::post('/login', StoreLoginController::class)
     ->middleware('guest')
     ->name('login.store');
 
-Route::get('/{page?}', PageController::class)
+// Page
+Route::get('/page/create/{parentId}', CreatePageController::class)
+    ->middleware('auth')
+    ->name('page.create');
+
+Route::post('/page/store', StorePageController::class)
+    ->middleware('auth')
+    ->name('page.store');
+
+Route::get('/{page?}', ShowPageController::class)
     ->where('page', '.*')
-    ->name('page');
+    ->name('page.show');

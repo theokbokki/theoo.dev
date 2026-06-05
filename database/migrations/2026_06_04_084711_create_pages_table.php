@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -17,11 +16,11 @@ return new class extends Migration
                 ->nullable()
                 ->constrained(
                     table: 'pages',
-                    indexName: 'pages_parent_id'
+                    indexName: 'pages_parent_id',
                 );
             $table->string('title')->unique();
             $table->string('slug')->unique();
-            $table->text('content');
+            $table->text('content')->nullable();
             $table->boolean('pinned')->default(false);
             $table->boolean('draft')->default(true);
             $table->boolean('private')->default(true);

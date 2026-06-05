@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Page;
 use Illuminate\Http\Request;
 
-class PageController extends Controller
+class ShowPageController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -14,7 +14,7 @@ class PageController extends Controller
     {
         $page ??= Page::findBySlug('');
 
-        return view('page', [
+        return view('page.show', [
             'page' => $page,
         ]);
     }

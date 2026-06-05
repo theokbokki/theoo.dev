@@ -3,7 +3,7 @@
     @auth()
         <textarea name="editor" id="editor" class="editor">{!! $page->content !!}</textarea>
     @else
-        <div>{!! str()->markdown($page->content) !!}</div>
+        <div class="content">{!! str()->markdown($page->content) !!}</div>
     @endauth
     <div class="pages">
         @foreach($page->children as $child)

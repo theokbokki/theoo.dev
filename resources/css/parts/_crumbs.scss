@@ -2,11 +2,13 @@
 
 .crumbs {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
 
     &__crumb {
         text-decoration: none;
+
+        &:first-child {
+            order: 9999;
+        }
 
         + .crumbs__crumb {
             &:after {

@@ -1,0 +1,24 @@
+::selection {
+    background: yellow;
+}
+
+html {
+    animation: day-progress-back 86400s linear infinite;
+    animation-delay: var(--offset);
+    background-image: url("../images/noise.png");
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: 15%;
+
+    &:after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url("../images/noise.webp");
+        background-size: 15%;
+        opacity: 0.075;
+        mix-blend-mode: multiply;
+        z-index: 99;
+        pointer-events: none;
+    }
+}

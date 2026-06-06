@@ -38,3 +38,11 @@ textarea {
     animation: day-progress-front 86400s steps(1, end) infinite;
     animation-delay: var(--offset);
 }
+
+a {
+    &:focus-visible {
+        outline: 2px solid color-mix(in hsl, currentColor 20%, currentColor 20%);
+        outline-offset: 4px;
+        border-radius: 2px;
+    }
+}

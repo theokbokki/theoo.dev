@@ -41,6 +41,9 @@
         animation: day-progress-front 86400s steps(1, end) infinite;
         animation-delay: var(--offset);
         outline: none;
+        transition:
+            border 100ms ease-out,
+            box-shadow 100ms ease-out;
 
         &:focus-visible {
             border: 1px solid

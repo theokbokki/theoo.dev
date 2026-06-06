@@ -13,7 +13,8 @@
         padding: rem(12) rem(16);
         margin: 0 rem(-16);
 
-        &:hover {
+        &:hover,
+        &:focus-within {
             &:before {
                 opacity: 1;
             }
@@ -65,6 +66,13 @@
         background: none;
         border: none;
         cursor: pointer;
+
+        &:focus-visible {
+            outline: 2px solid
+                color-mix(in hsl, currentColor 20%, currentColor 20%);
+            outline-offset: 4px;
+            border-radius: 2px;
+        }
 
         .icon {
             width: rem(16);

@@ -16,6 +16,17 @@
                 margin: 0 rem(4);
             }
         }
+
+        &:focus-visible {
+            outline: none;
+
+            & .crumbs__text {
+                outline: 2px solid
+                    color-mix(in hsl, currentColor 20%, currentColor 20%);
+                outline-offset: 4px;
+                border-radius: 2px;
+            }
+        }
     }
 
     &__text {

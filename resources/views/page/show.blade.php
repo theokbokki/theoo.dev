@@ -2,7 +2,7 @@
     <x-crumbs :$page/>
     @auth()
         <div class="actions">
-            <a href="{{ route('page.create', ['parentId' => $page->id]) }}" class="action">New page</a>
+            <a href="{{ route('page.create', ['parentId' => $page->id]) }}" class="actions__action">New page</a>
         </div>
         <textarea name="editor" id="editor" class="editor">{!! $page->content !!}</textarea>
     @else

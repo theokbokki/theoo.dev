@@ -1,0 +1,37 @@
+@use "../utils" as *;
+
+.actions {
+    display: flex;
+    gap: rem(8);
+    margin-top: rem(16);
+
+    &__action {
+        display: inline-block;
+        padding: rem(6) rem(12);
+        line-height: 100%;
+        background: color-mix(in hsl, currentColor 5%, currentColor 5%);
+        border: none;
+        cursor: pointer;
+        border-radius: rem(6);
+        text-decoration: none;
+        transition:
+            background 100ms ease-out,
+            transform 100ms ease-out;
+
+        &:hover {
+            background: color-mix(in hsl, currentColor 10%, currentColor 10%);
+        }
+
+        &:focus {
+            transform: scale(0.95);
+        }
+
+        &:focus-visible {
+            outline: none;
+            border-radius: rem(6);
+            transform: scale(1);
+            box-shadow: 0 0 0 2px
+                color-mix(in hsl, currentColor 20%, currentColor 20%);
+        }
+    }
+}

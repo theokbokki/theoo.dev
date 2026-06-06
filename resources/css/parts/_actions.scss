@@ -13,6 +13,7 @@
         border: none;
         cursor: pointer;
         border-radius: rem(6);
+        font-size: rem(14);
         text-decoration: none;
         transition:
             background 100ms ease-out,
@@ -22,7 +23,7 @@
             background: color-mix(in hsl, currentColor 10%, currentColor 10%);
         }
 
-        &:focus {
+        &:active {
             transform: scale(0.95);
         }
 

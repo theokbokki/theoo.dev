@@ -3,6 +3,7 @@
 .editor {
     width: 100%;
     margin-top: rem(64);
+    padding: 0;
     border: none;
     resize: none;
     font-family: menlo;
@@ -12,6 +13,7 @@
     background: transparent;
     animation: day-progress-front 86400s steps(1, end) infinite;
     animation-delay: var(--offset);
+    display: none;
 
     &:focus {
         outline: none;

@@ -1,14 +1,14 @@
 <x-base>
-    <h1>Create page</h1>
-    <form action="{{ route('page.store') }}" method="POST">
+    <h1 class="form__title">Create page</h1>
+    <form action="{{ route('page.store') }}" method="POST" class="form">
         @csrf
         <input type="hidden" value="{{ $parentId }}" name="parent_id" id="parent_id" />
-        <div>
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" value="{{ old('title') }}">
-            @error('title') <p>{{ $message }}</p> @enderror
+        <div class="form__field">
+            <label for="title" class="form__label">Title</label>
+            <input type="text" name="title" id="title" value="{{ old('title') }}" class="form__input">
+            @error('title') <p class="form__error">{{ $message }}</p> @enderror
         </div>
-        @error('parent_id') <p>{{ $message }}</p> @enderror
-        <button type="submit">Create page</button>
+        @error('parent_id') <p class="form__error">{{ $message }}</p> @enderror
+        <button type="submit" class="form__button">Create page</button>
     </form>
 </x-base>

@@ -27,9 +27,14 @@ body {
     padding: 0 rem(24);
     font-family: var(--font-sans);
     font-size: rem(14);
+}
 
-    * {
-        animation: day-progress-front 86400s steps(1, end) infinite;
-        animation-delay: var(--offset);
-    }
+body,
+a,
+button,
+input,
+select,
+textarea {
+    animation: day-progress-front 86400s steps(1, end) infinite;
+    animation-delay: var(--offset);
 }

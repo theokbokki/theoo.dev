@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CreatePageController;
+use App\Http\Controllers\EditPageController;
 use App\Http\Controllers\ShowLoginController;
 use App\Http\Controllers\ShowPageController;
 use App\Http\Controllers\StoreLoginController;
@@ -20,6 +21,10 @@ Route::post('/login', StoreLoginController::class)
 Route::get('/page/create/{parentId}', CreatePageController::class)
     ->middleware('auth')
     ->name('page.create');
+
+Route::post('/page/edit/{page?}', EditPageController::class)
+    ->middleware('auth')
+    ->name('page.edit');
 
 Route::post('/page/store', StorePageController::class)
     ->middleware('auth')

@@ -5,7 +5,7 @@
             <a href="{{ route('page.create', ['parentId' => $page->id]) }}" class="actions__action">New page</a>
             <button type="button" class="actions__action" data-action="editor">Toggle editor</button>
         </div>
-        <textarea name="editor" id="editor" class="editor">{!! $page->content !!}</textarea>
+        <textarea name="editor" id="editor" class="editor" data-route-key="{{ $page->getRouteKey() }}">{!! $page->content !!}</textarea>
     @endauth
     <div class="content">{!! str()->markdown($page->content) !!}</div>
     <div class="pages">

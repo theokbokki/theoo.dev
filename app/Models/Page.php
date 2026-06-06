@@ -14,14 +14,16 @@ use Spatie\Sluggable\SlugOptions;
 #[Unguarded]
 class Page extends Model
 {
-    use HasSlug, SoftDeletes;
+    use HasSlug;
+    use SoftDeletes;
 
     public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
             ->generateSlugsFrom('title')
             ->saveSlugsTo('slug')
-            ->selfHealing();
+            ->selfHealing()
+            ->skipGenerateWhen(fn () => $this->exists && $this->getOriginal('slug') === '');
     }
 
     public function parent(): BelongsTo

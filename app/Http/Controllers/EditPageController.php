@@ -10,10 +10,10 @@ class EditPageController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request, ?Page $page = null)
+    public function __invoke(Request $request, int $id)
     {
-        ($page ?? Page::findBySlug(''))->update([
-            'content' => $request->getContent(),
+        return view('page.edit', [
+            'page' => Page::query()->find($id),
         ]);
     }
 }

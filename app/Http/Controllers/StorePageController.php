@@ -22,6 +22,18 @@ class StorePageController extends Controller
                 'string',
                 'unique:pages',
             ],
+            'draft' => [
+                'required',
+                'boolean',
+            ],
+            'pinned' => [
+                'required',
+                'boolean',
+            ],
+            'private' => [
+                'required',
+                'boolean',
+            ],
         ]);
 
         $page = Page::query()->create($validated);

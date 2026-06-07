@@ -6,6 +6,7 @@ use App\Http\Controllers\ShowLoginController;
 use App\Http\Controllers\ShowPageController;
 use App\Http\Controllers\StoreLoginController;
 use App\Http\Controllers\StorePageController;
+use App\Http\Controllers\UpdatePageController;
 use Illuminate\Support\Facades\Route;
 
 // Auth
@@ -18,13 +19,17 @@ Route::post('/login', StoreLoginController::class)
     ->name('login.store');
 
 // Page
+Route::get('/page/edit/{id}', EditPageController::class)
+    ->middleware('auth')
+    ->name('page.edit');
+
+Route::post('/page/update/{id}', UpdatePageController::class)
+    ->middleware('auth')
+    ->name('page.update');
+
 Route::get('/page/create/{parentId}', CreatePageController::class)
     ->middleware('auth')
     ->name('page.create');
-
-Route::post('/page/edit/{page?}', EditPageController::class)
-    ->middleware('auth')
-    ->name('page.edit');
 
 Route::post('/page/store', StorePageController::class)
     ->middleware('auth')

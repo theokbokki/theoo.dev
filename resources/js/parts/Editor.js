@@ -31,9 +31,20 @@ export default class Editor {
     }
 
     async onInput(e) {
-        const response = await fetch("/page/edit/" + this.el.dataset.routeKey, {
+        const response = await fetch("/page/update/" + this.el.dataset.id, {
             method: "POST",
-            body: this.el.value,
+            headers: {
+                "Content-Type": "application/json",
+                "X-Requested-With": "XMLHttpRequest",
+                "X-CSRF-TOKEN": document.querySelector(
+                    'meta[name="csrf-token"]',
+                ).content,
+            },
+            body: JSON.stringify({ content: this.el.value }),
         });
+
+        const data = await response.json();
+
+        this.content.innerHTML = data.html;
     }
 }

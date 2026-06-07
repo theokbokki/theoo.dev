@@ -18,12 +18,6 @@
             &:before {
                 opacity: 1;
             }
-
-            .pages {
-                &__buttons {
-                    opacity: 1;
-                }
-            }
         }
 
         &:before {
@@ -49,34 +43,6 @@
             position: absolute;
             inset: 0;
             z-index: 1;
-        }
-    }
-
-    &__buttons {
-        display: flex;
-        gap: rem(8);
-        z-index: 2;
-        opacity: 0;
-        transition: opacity 100ms ease-out;
-    }
-
-    &__button {
-        padding: 0;
-        margin: 0;
-        background: none;
-        border: none;
-        cursor: pointer;
-
-        &:focus-visible {
-            outline: 2px solid
-                color-mix(in hsl, currentColor 20%, currentColor 20%);
-            outline-offset: 4px;
-            border-radius: 2px;
-        }
-
-        .icon {
-            width: rem(16);
-            height: rem(16);
         }
     }
 }

@@ -74,9 +74,21 @@
     }
 
     img {
-        display: block;
-        margin-top: 1rem;
-        width: min(100%, rem(320));
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem auto 0;
+        width: min(calc(100% - (clamp(1rem, 9vw, rem(35)) * 2)), rem(320));
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        padding: clamp(1rem, 9vw, rem(35));
+        z-index: 30;
+        background: color-mix(in hsl, currentColor 5%, currentColor 5%);
+
+        &:hover {
+            cursor: zoom-in;
+        }
     }
 
     pre {

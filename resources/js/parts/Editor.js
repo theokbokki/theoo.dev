@@ -11,6 +11,7 @@ export default class Editor {
 
     init() {
         this.show = false;
+        this.csrf = document.querySelector('meta[name="csrf-token"]').content;
     }
 
     getElements() {
@@ -20,7 +21,10 @@ export default class Editor {
 
     setEvents() {
         this.toggle.addEventListener("click", this.onToggle.bind(this));
+
         this.el.addEventListener("input", debounce(this.onInput.bind(this)));
+
+        this.el.addEventListener("paste", this.onPaste.bind(this));
     }
 
     onToggle() {
@@ -36,9 +40,7 @@ export default class Editor {
             headers: {
                 "Content-Type": "application/json",
                 "X-Requested-With": "XMLHttpRequest",
-                "X-CSRF-TOKEN": document.querySelector(
-                    'meta[name="csrf-token"]',
-                ).content,
+                "X-CSRF-TOKEN": this.csrf,
             },
             body: JSON.stringify({ content: this.el.value }),
         });
@@ -46,5 +48,67 @@ export default class Editor {
         const data = await response.json();
 
         this.content.innerHTML = data.html;
+    }
+
+    async onPaste(e) {
+        e.preventDefault();
+
+        const start = this.el.selectionStart;
+        const end = this.el.selectionEnd;
+
+        const items = e.clipboardData.items;
+
+        let text = null;
+
+        for (const item of items) {
+            if (item.type && item.type.startsWith("image/")) {
+                const blob = item.getAsFile();
+                if (!blob) break;
+
+                const file = new File([blob], "pasted-image", {
+                    type: blob.type,
+                });
+
+                const form = new FormData();
+                form.append(
+                    "file",
+                    blob,
+                    "pasted-image." + blob.type.split("/")[1],
+                );
+
+                const response = await fetch(
+                    "/page/upload/" + this.el.dataset.id,
+                    {
+                        method: "POST",
+                        headers: {
+                            "X-Requested-With": "XMLHttpRequest",
+                            "X-CSRF-TOKEN": this.csrf,
+                        },
+                        body: form,
+                    },
+                );
+
+                console.log(response);
+
+                const pos = this.el.selectionStart;
+
+                const data = await response.json();
+                text = `[![](${data.thumb})](${data.full})`;
+            }
+        }
+
+        if (!text) {
+            text = e.clipboardData.getData("text/plain") || "";
+        }
+
+        if (text.length > 0) {
+            this.el.value =
+                this.el.value.slice(0, start) + text + this.el.value.slice(end);
+
+            const newPos = start + text.length;
+            this.el.setSelectionRange(newPos, newPos);
+
+            this.onInput();
+        }
     }
 }

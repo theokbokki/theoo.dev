@@ -7,6 +7,7 @@ use App\Http\Controllers\ShowPageController;
 use App\Http\Controllers\StoreLoginController;
 use App\Http\Controllers\StorePageController;
 use App\Http\Controllers\UpdatePageController;
+use App\Http\Controllers\UploadPageController;
 use Illuminate\Support\Facades\Route;
 
 // Auth
@@ -22,6 +23,10 @@ Route::post('/login', StoreLoginController::class)
 Route::get('/page/edit/{id}', EditPageController::class)
     ->middleware('auth')
     ->name('page.edit');
+
+Route::post('/page/upload/{id}', UploadPageController::class)
+    ->middleware('auth')
+    ->name('page.upload');
 
 Route::post('/page/update/{id}', UpdatePageController::class)
     ->middleware('auth')

@@ -12,6 +12,11 @@
         align-items: center;
         padding: rem(12) rem(16);
         margin: 0 rem(-16);
+        line-height: 150%;
+
+        &[data-draft] {
+            opacity: 0.6;
+        }
 
         &:hover,
         &:focus-within {

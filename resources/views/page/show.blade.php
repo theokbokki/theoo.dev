@@ -15,7 +15,7 @@
     <div class="content">{!! str()->markdown($page->content) !!}</div>
     <div class="pages">
         @foreach($children as $child)
-            <div class="pages__page">
+            <div class="pages__page" @if($child->draft) data-draft @endif>
                 <a href="{{ route('page.show', ['page' => $child]) }}" class="pages__title">{{ $child->title }}</a>
             </div>
         @endforeach

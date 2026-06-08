@@ -35,7 +35,11 @@
         padding: rem(16) rem(24);
         position: relative;
         font-style: italic;
-        border: 2px dotted rgba(var(--black), 0.25);
+        border: 2px dotted color-mix(in hsl, currentColor 20%, currentColor 20%);
+
+        > :first-child {
+            margin-top: 0;
+        }
     }
 
     ul,
@@ -45,7 +49,7 @@
 
     li {
         position: relative;
-        margin-left: 4ch;
+        margin-left: 3ch;
 
         + li {
             margin-top: 0.5rem;
@@ -57,7 +61,7 @@
     }
 
     ul li::before {
-        content: "• ";
+        content: "- ";
         left: -2ch;
     }
 
@@ -96,7 +100,7 @@
         margin: rem(40) rem(30);
         padding: rem(16) rem(24);
         position: relative;
-        border: 2px dotted rgba(var(--black), 0.25);
+        border: 2px dotted color-mix(in hsl, currentColor 20%, currentColor 20%);
     }
 
     code {

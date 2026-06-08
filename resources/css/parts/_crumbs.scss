@@ -3,6 +3,8 @@
 .crumbs {
     display: flex;
     flex-wrap: wrap;
+    row-gap: rem(8);
+    line-height: 120%;
 
     &__crumb {
         text-decoration: none;

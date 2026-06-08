@@ -28,7 +28,7 @@ export default class Editor {
 
         this.el.addEventListener("paste", this.onPaste.bind(this));
 
-        this.imageBtn.addEventListener("click", () => this.imageInput.click());
+        this.imageBtn.onclick = () => this.imageInput.click();
 
         this.imageInput.addEventListener("change", this.onImage.bind(this));
     }
@@ -112,28 +112,27 @@ export default class Editor {
     async onImage() {
         if (!this.imageInput.files.length) return;
 
-        if (typeof ClipboardItem !== "undefined" && navigator.clipboard.write) {
-            const textPromise = this.uploadFiles(this.imageInput.files).then(
-                (text) => new Blob([text || ""], { type: "text/plain" }),
-            );
+        this.imageBtn.disabled = true;
+        this.imageBtn.textContent = "Uploading...";
 
-            navigator.clipboard.write([
-                new ClipboardItem({ "text/plain": textPromise }),
-            ]);
-        } else {
-            const text = await this.uploadFiles(this.imageInput.files);
+        const text = await this.uploadFiles(this.imageInput.files);
 
-            if (text) await navigator.clipboard.writeText(text);
+        if (text) {
+            this.imageBtn.textContent = "Tap to copy";
+            this.imageBtn.disabled = false;
+
+            this.imageBtn.onclick = () => {
+                navigator.clipboard.writeText(text);
+
+                this.imageBtn.textContent = "Image Copied!";
+
+                setTimeout(() => {
+                    this.imageBtn.textContent = "Add image";
+
+                    this.imageBtn.onclick = () => this.imageInput.click();
+                }, 2000);
+            };
         }
-
-        this.imageBtn.textContent = "Image Copied";
-        this.imageBtn.style.outline = "2px solid rgba(104, 125, 47, .5)";
-        this.imageBtn.style.outlineOffset = "2px";
-
-        setTimeout(() => {
-            this.imageBtn.textContent = "Add image";
-            this.imageBtn.style.outline = "none";
-        }, 2000);
 
         this.imageInput.value = "";
     }

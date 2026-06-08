@@ -16,6 +16,12 @@ class ShowPageController extends Controller
 
         return view('page.show', [
             'page' => $page,
+            'children' => $page->children()
+                ->unless(auth()->check(), fn ($q) => $q->where('draft', false)->where('private', false))
+                ->orderByDesc('pinned')
+                ->orderBy('draft')
+                ->orderByDesc('updated_at')
+                ->get(),
         ]);
     }
 }

@@ -14,7 +14,7 @@
     @endauth
     <div class="content">{!! str()->markdown($page->content) !!}</div>
     <div class="pages">
-        @foreach($page->children as $child)
+        @foreach($children as $child)
             <div class="pages__page">
                 <a href="{{ route('page.show', ['page' => $child]) }}" class="pages__title">{{ $child->title }}</a>
             </div>

@@ -112,20 +112,28 @@ export default class Editor {
     async onImage() {
         if (!this.imageInput.files.length) return;
 
-        const text = await this.uploadFiles(this.imageInput.files);
+        if (typeof ClipboardItem !== "undefined" && navigator.clipboard.write) {
+            const textPromise = this.uploadFiles(this.imageInput.files).then(
+                (text) => new Blob([text || ""], { type: "text/plain" }),
+            );
 
-        if (text) {
-            await navigator.clipboard.writeText(text);
+            navigator.clipboard.write([
+                new ClipboardItem({ "text/plain": textPromise }),
+            ]);
+        } else {
+            const text = await this.uploadFiles(this.imageInput.files);
 
-            this.imageBtn.textContent = "Image Copied";
-            this.imageBtn.style.outline = "2px solid rgba(104, 125, 47, .5)";
-            this.imageBtn.style.outlineOffset = "2px";
-
-            setTimeout(() => {
-                this.imageBtn.textContent = "Add image";
-                this.imageBtn.style.outline = "none";
-            }, 2000);
+            if (text) await navigator.clipboard.writeText(text);
         }
+
+        this.imageBtn.textContent = "Image Copied";
+        this.imageBtn.style.outline = "2px solid rgba(104, 125, 47, .5)";
+        this.imageBtn.style.outlineOffset = "2px";
+
+        setTimeout(() => {
+            this.imageBtn.textContent = "Add image";
+            this.imageBtn.style.outline = "none";
+        }, 2000);
 
         this.imageInput.value = "";
     }

@@ -14,6 +14,10 @@ class ShowPageController extends Controller
     {
         $page ??= Page::findBySlug('');
 
+        if (($page->draft || $page->private) && ! auth()->check()) {
+            return redirect()->route('page.show', ['page' => Page::findBySlug('')]);
+        }
+
         return view('page.show', [
             'page' => $page,
             'children' => $page->children()

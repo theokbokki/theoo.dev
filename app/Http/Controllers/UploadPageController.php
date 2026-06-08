@@ -15,7 +15,7 @@ class UploadPageController extends Controller
     {
         $request->validate([
             'files' => ['required', 'array'],
-            'files.*' => ['file', 'mimetypes:image/*', 'max:10240'],
+            'files.*' => ['file', 'mimetypes:image/*'],
         ]);
 
         File::ensureDirectoryExists(Storage::disk('public')->path('images'));

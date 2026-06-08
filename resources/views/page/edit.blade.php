@@ -1,4 +1,4 @@
-<x-base>
+<x-base title="Edit page">
     <h1 class="form__title">Edit page</h1>
     <form action="{{ route('page.update', ['id' => $page->id]) }}" method="POST" class="form">
         @csrf

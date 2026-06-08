@@ -1,4 +1,4 @@
-<x-base>
+<x-base :title="$page->title">
     <x-crumbs :$page/>
     @auth()
         <div class="actions">

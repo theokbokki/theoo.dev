@@ -1,4 +1,4 @@
-<x-base>
+<x-base title="Create page">
     <h1 class="form__title">Create page</h1>
     <form action="{{ route('page.store') }}" method="POST" class="form">
         @csrf

@@ -1,4 +1,4 @@
-<x-base>
+<x-base title="Login">
     <h1 class="form__title">Login</h1>
     <form action="{{ route('login.store') }}" method="POST" class="form">
         @csrf

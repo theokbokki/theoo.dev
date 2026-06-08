@@ -23,7 +23,7 @@
         <meta name="msapplication-TileImage" content="{{ Vite::asset('resources/favicons/ms-icon-144x144.png') }}">
         <meta name="theme-color" content="#ffffff">
 
-        <title>{{ config('app.name') }}</title>
+        <title>{{ config('app.name').' • '.$title }}</title>
 
         @vite(['resources/css/app.scss', 'resources/js/app.js'])
     </head>

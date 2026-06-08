@@ -15,7 +15,8 @@ class UpdatePageController extends Controller
         if ($request->ajax()) {
             $validated = $request->validate([
                 'content' => [
-                    'required',
+                    'nullable',
+                    'present',
                     'string',
                 ],
             ]);

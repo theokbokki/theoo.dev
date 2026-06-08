@@ -2,6 +2,7 @@
 
 .actions {
     display: flex;
+    flex-wrap: wrap;
     gap: rem(8);
     margin-top: rem(16);
 

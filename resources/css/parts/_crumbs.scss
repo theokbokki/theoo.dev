@@ -2,6 +2,7 @@
 
 .crumbs {
     display: flex;
+    flex-wrap: wrap;
 
     &__crumb {
         text-decoration: none;

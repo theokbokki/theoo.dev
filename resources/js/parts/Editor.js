@@ -17,6 +17,8 @@ export default class Editor {
     getElements() {
         this.toggle = document.querySelector('[data-action="editor"]');
         this.content = document.querySelector(".content");
+        this.imageBtn = document.querySelector('[data-action="image"]');
+        this.imageInput = document.querySelector("#image");
     }
 
     setEvents() {
@@ -25,6 +27,10 @@ export default class Editor {
         this.el.addEventListener("input", debounce(this.onInput.bind(this)));
 
         this.el.addEventListener("paste", this.onPaste.bind(this));
+
+        this.imageBtn.addEventListener("click", () => this.imageInput.click());
+
+        this.imageInput.addEventListener("change", this.onImage.bind(this));
     }
 
     onToggle() {
@@ -34,7 +40,7 @@ export default class Editor {
         this.show = !this.show;
     }
 
-    async onInput(e) {
+    async onInput() {
         const response = await fetch("/page/update/" + this.el.dataset.id, {
             method: "POST",
             headers: {
@@ -50,65 +56,77 @@ export default class Editor {
         this.content.innerHTML = data.html;
     }
 
-    async onPaste(e) {
-        e.preventDefault();
+    async uploadFiles(files) {
+        const images = [...files]
+            .filter((f) => f.type.startsWith("image/"))
+            .filter(Boolean);
 
+        if (!images.length) return null;
+
+        const form = new FormData();
+        images.forEach((file) => form.append("files[]", file));
+
+        const response = await fetch("/page/upload/" + this.el.dataset.id, {
+            method: "POST",
+            headers: {
+                "X-Requested-With": "XMLHttpRequest",
+                "X-CSRF-TOKEN": this.csrf,
+            },
+            body: form,
+        });
+
+        const results = await response.json();
+
+        return results
+            .map((img) => `[![](${img.thumb})](${img.full})`)
+            .join("\n\n");
+    }
+
+    insertText(text) {
         const start = this.el.selectionStart;
         const end = this.el.selectionEnd;
 
-        const items = e.clipboardData.items;
+        this.el.value =
+            this.el.value.slice(0, start) + text + this.el.value.slice(end);
 
-        let text = null;
+        const newPos = start + text.length;
+        this.el.setSelectionRange(newPos, newPos);
 
-        for (const item of items) {
-            if (item.type && item.type.startsWith("image/")) {
-                const blob = item.getAsFile();
-                if (!blob) break;
+        this.onInput();
+    }
 
-                const file = new File([blob], "pasted-image", {
-                    type: blob.type,
-                });
+    async onPaste(e) {
+        e.preventDefault();
 
-                const form = new FormData();
-                form.append(
-                    "file",
-                    blob,
-                    "pasted-image." + blob.type.split("/")[1],
-                );
+        const images = [...e.clipboardData.items]
+            .map((item) => item.getAsFile())
+            .filter((f) => f?.type.startsWith("image/"));
 
-                const response = await fetch(
-                    "/page/upload/" + this.el.dataset.id,
-                    {
-                        method: "POST",
-                        headers: {
-                            "X-Requested-With": "XMLHttpRequest",
-                            "X-CSRF-TOKEN": this.csrf,
-                        },
-                        body: form,
-                    },
-                );
+        const text = images.length
+            ? await this.uploadFiles(images)
+            : e.clipboardData.getData("text/plain") || "";
 
-                console.log(response);
+        if (text) this.insertText(text);
+    }
 
-                const pos = this.el.selectionStart;
+    async onImage() {
+        if (!this.imageInput.files.length) return;
 
-                const data = await response.json();
-                text = `[![](${data.thumb})](${data.full})`;
-            }
+        const text = await this.uploadFiles(this.imageInput.files);
+
+        if (text) {
+            await navigator.clipboard.writeText(text);
+
+            this.imageBtn.textContent = "Image Copied";
+            this.imageBtn.style.outline = "2px solid rgba(104, 125, 47, .5)";
+            this.imageBtn.style.outlineOffset = "2px";
+
+            setTimeout(() => {
+                this.imageBtn.textContent = "Add image";
+                this.imageBtn.style.outline = "none";
+            }, 2000);
         }
 
-        if (!text) {
-            text = e.clipboardData.getData("text/plain") || "";
-        }
-
-        if (text.length > 0) {
-            this.el.value =
-                this.el.value.slice(0, start) + text + this.el.value.slice(end);
-
-            const newPos = start + text.length;
-            this.el.setSelectionRange(newPos, newPos);
-
-            this.onInput();
-        }
+        this.imageInput.value = "";
     }
 }

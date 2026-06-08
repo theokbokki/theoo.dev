@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Intervention\Image\Drivers\Gd\Driver;
+use Intervention\Image\Drivers\Imagick\Driver;
 use Intervention\Image\ImageManager;
 
 class UploadPageController extends Controller
@@ -14,26 +14,32 @@ class UploadPageController extends Controller
     public function __invoke(Request $request, int $id)
     {
         $request->validate([
-            'file' => ['required', 'image', 'max:10240'],
+            'files' => ['required', 'array'],
+            'files.*' => ['file', 'mimetypes:image/*', 'max:10240'],
         ]);
 
-        $filename = Str::uuid();
         File::ensureDirectoryExists(Storage::disk('public')->path('images'));
-
         $manager = ImageManager::usingDriver(Driver::class);
-        $image = $manager->decode($request->file('file'));
+        $results = [];
 
-        $image->save(Storage::disk('public')->path("images/{$filename}.webp"));
+        foreach ($request->file('files') as $file) {
+            $filename = Str::uuid();
+            $image = $manager->decode($file);
 
-        $image->scaleDown(width: 640, height: 640)
-            ->save(
-                Storage::disk('public')->path("images/{$filename}-thumb.webp"),
-                quality: 85,
-            );
+            $image->save(Storage::disk('public')->path("images/{$filename}.webp"));
 
-        return response()->json([
-            'full' => Storage::url("images/{$filename}.webp"),
-            'thumb' => Storage::url("images/{$filename}-thumb.webp"),
-        ]);
+            $image->scaleDown(width: 640, height: 640)
+                ->save(
+                    Storage::disk('public')->path("images/{$filename}-thumb.webp"),
+                    quality: 85,
+                );
+
+            $results[] = [
+                'full' => Storage::url("images/{$filename}.webp"),
+                'thumb' => Storage::url("images/{$filename}-thumb.webp"),
+            ];
+        }
+
+        return response()->json($results);
     }
 }

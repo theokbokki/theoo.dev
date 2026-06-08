@@ -5,6 +5,10 @@
             <a href="{{ route('page.create', ['parentId' => $page->id]) }}" class="actions__action">New page</a>
             <a href="{{ route('page.edit', ['id' => $page->id]) }}" class="actions__action">Edit page</a>
             <button type="button" class="actions__action" data-action="editor">Toggle editor</button>
+            <div>
+                <button type="button" class="actions__action" data-action="image">Add image</button>
+                <input type="file" id="image" accept="image/*" hidden multiple/>
+            </div>
         </div>
         <textarea name="editor" id="editor" class="editor" data-id="{{ $page->id }}">{!! $page->content !!}</textarea>
     @endauth

@@ -23,9 +23,10 @@
         animation: day-progress-front 86400s steps(1, end) infinite;
         animation-delay: var(--offset);
         text-underline-offset: 2px;
+        transition: opacity 100ms ease-out;
 
         &:hover {
-            opacity: 50%;
+            opacity: 66%;
         }
     }
 

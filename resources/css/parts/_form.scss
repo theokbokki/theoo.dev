@@ -45,6 +45,11 @@
             border 100ms ease-out,
             box-shadow 100ms ease-out;
 
+        &:hover {
+            border: 1px solid
+                color-mix(in hsl, currentColor 33%, currentColor 33%);
+        }
+
         &:focus-visible {
             border: 1px solid
                 color-mix(in hsl, currentColor 33%, currentColor 33%);
@@ -65,7 +70,7 @@
             appearance: none;
             border-radius: rem(4);
             border: 1px solid
-                color-mix(in hsl, currentColor 33%, currentColor 33%);
+                color-mix(in hsl, currentColor 20%, currentColor 20%);
 
             &:checked {
                 &:before {
@@ -81,9 +86,28 @@
     &__button {
         padding: rem(10) rem(16);
         line-height: 100%;
-        background: color-mix(in hsl, currentColor 10%, currentColor 10%);
+        background: color-mix(in hsl, currentColor 5%, currentColor 5%);
         border: none;
         cursor: pointer;
         border-radius: rem(8);
+        transition:
+            background 100ms ease-out,
+            transform 100ms ease-out;
+
+        &:hover {
+            background: color-mix(in hsl, currentColor 5%, currentColor 10%);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        &:focus-visible {
+            outline: none;
+            border-radius: rem(6);
+            transform: scale(1);
+            box-shadow: 0 0 0 2px
+                color-mix(in hsl, currentColor 20%, currentColor 20%);
+        }
     }
 }

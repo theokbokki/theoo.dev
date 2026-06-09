@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CreatePageController;
 use App\Http\Controllers\EditPageController;
+use App\Http\Controllers\RssFeedController;
 use App\Http\Controllers\ShowLoginController;
 use App\Http\Controllers\ShowPageController;
 use App\Http\Controllers\StoreLoginController;
@@ -9,6 +10,9 @@ use App\Http\Controllers\StorePageController;
 use App\Http\Controllers\UpdatePageController;
 use App\Http\Controllers\UploadPageController;
 use Illuminate\Support\Facades\Route;
+
+// RSS feed
+Route::get('/feed', RssFeedController::class)->name('rss');
 
 // Auth
 Route::get('/login', ShowLoginController::class)

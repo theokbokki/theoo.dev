@@ -28,7 +28,6 @@ class Content extends Component
         $doc = new \DOMDocument;
         @$doc->loadHTML(
             '<meta charset="utf-8">'.$html,
-            LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD,
         );
 
         $links = iterator_to_array($doc->getElementsByTagName('a'));

@@ -24,9 +24,14 @@
         animation-delay: var(--offset);
         text-underline-offset: 2px;
         transition: opacity 100ms ease-out;
+        white-space: nowrap;
 
         &:hover {
             opacity: 66%;
+        }
+
+        span:last-child {
+            white-space: wrap;
         }
     }
 
@@ -78,7 +83,7 @@
         left: -2.5ch;
     }
 
-    img {
+    img:not(.favicon) {
         position: relative;
         display: flex;
         align-items: center;
@@ -94,6 +99,14 @@
         &:hover {
             cursor: zoom-in;
         }
+    }
+
+    .favicon {
+        width: rem(16);
+        height: rem(16);
+        vertical-align: middle;
+        margin: 0 rem(4);
+        border-radius: rem(4);
     }
 
     pre {

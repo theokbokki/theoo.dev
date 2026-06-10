@@ -12,7 +12,7 @@
         </div>
         <textarea name="editor" id="editor" class="editor" data-id="{{ $page->id }}">{!! $page->content !!}</textarea>
     @endauth
-    <div class="content">{!! str()->markdown($page->content) !!}</div>
+    <x-content :content="$page->content"/>
     <div class="pages">
         @foreach($children as $child)
             <div class="pages__page" @if($child->draft) data-draft @endif>

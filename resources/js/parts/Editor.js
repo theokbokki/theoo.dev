@@ -77,9 +77,7 @@ export default class Editor {
 
         const results = await response.json();
 
-        return results
-            .map((img) => `[![](${img.thumb})](${img.full})`)
-            .join("\n\n");
+        return results.map((img) => `![](${img})`).join("\n\n");
     }
 
     insertText(text) {

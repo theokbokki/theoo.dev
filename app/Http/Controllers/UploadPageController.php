@@ -35,8 +35,7 @@ class UploadPageController extends Controller
                 );
 
             $results[] = [
-                'full' => Storage::url("images/{$filename}.webp"),
-                'thumb' => Storage::url("images/{$filename}-thumb.webp"),
+                Storage::url("images/{$filename}-thumb.webp"),
             ];
         }
 

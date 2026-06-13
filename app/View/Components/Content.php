@@ -26,12 +26,32 @@ class Content extends Component
 
         @$doc->loadHTML('<meta charset="utf-8">'.$html);
 
+        $this->images($doc);
         $this->favicons($doc);
 
         $output = $doc->saveHTML();
         $output = str_replace('<meta charset="utf-8">', '', $output);
 
         return trim($output);
+    }
+
+    protected function images(DOMDocument $doc): void
+    {
+        $images = iterator_to_array($doc->getElementsByTagName('img'));
+
+        foreach ($images as $image) {
+            if (! ($src = $image->getAttribute('src')) || ! str_contains($src, '-thumb')) {
+                continue;
+            }
+
+            $full = str_replace('-thumb', '', $src);
+
+            $anchor = $doc->createElement('a');
+            $anchor->setAttribute('href', $full);
+
+            $image->parentNode->replaceChild($anchor, $image);
+            $anchor->appendChild($image);
+        }
     }
 
     protected function favicons(DOMDocument $doc): void

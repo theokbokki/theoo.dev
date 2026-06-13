@@ -2,9 +2,10 @@
 
 namespace App\View\Components;
 
-use Carbon\Carbon;
 use Closure;
+use DOMDocument;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\Component;
@@ -20,16 +21,21 @@ class Content extends Component
 
     public function format(): string
     {
-        return str()->markdown($this->content) |> $this->favicons(...);
+        $html = str()->markdown($this->content);
+        $doc = new DOMDocument;
+
+        @$doc->loadHTML('<meta charset="utf-8">'.$html);
+
+        $this->favicons($doc);
+
+        $output = $doc->saveHTML();
+        $output = str_replace('<meta charset="utf-8">', '', $output);
+
+        return trim($output);
     }
 
-    protected function favicons(string $html): string
+    protected function favicons(DOMDocument $doc): void
     {
-        $doc = new \DOMDocument;
-        @$doc->loadHTML(
-            '<meta charset="utf-8">'.$html,
-        );
-
         $links = iterator_to_array($doc->getElementsByTagName('a'));
 
         foreach ($links as $link) {
@@ -66,11 +72,6 @@ class Content extends Component
             $link->appendChild($iconSpan);
             $link->appendChild($textSpan);
         }
-
-        $output = $doc->saveHTML();
-        $output = str_replace('<meta charset="utf-8">', '', $output);
-
-        return trim($output);
     }
 
     protected function getFavicon(string $host): string
@@ -84,14 +85,14 @@ class Content extends Component
             return '';
         }
 
-        $age = now()->diffInDays(\Illuminate\Support\Carbon::createFromTimestamp(
+        $age = now()->diffInDays(Carbon::createFromTimestamp(
             Storage::disk('public')->lastModified($path),
         ));
 
         $maxAge = 14 + (crc32($host) % 7);
 
         if ($age > $maxAge) {
-            dispatch(fn () => $this->fetchAndStoreFavicon($host, $path));
+            dispatch(fn () => $this->fetchAndStoreFavicon($host, $path))->afterResponse();
         }
 
         return Storage::url($path);

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "563aeb44e6a8e10a5d2f52970ecaf101",
+    "content-hash": "02a219991d3fe416441f6ce1fba03b1b",
     "packages": [
         {
             "name": "brick/math",
@@ -5787,6 +5787,34 @@
             "time": "2026-07-22T15:42:13+00:00"
         },
         {
+            "name": "theoo/common",
+            "version": "dev-mouth-space-dinos",
+            "dist": {
+                "type": "path",
+                "url": "modules/common",
+                "reference": "59080000d11c0b7c54b5f7764acffca0a33437e5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Common\\Providers\\CommonServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Common\\": "src/",
+                    "Modules\\Common\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Common\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "description": "Shared foundation: user, base classes, layout.",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "v2.4.0",
             "source": {
@@ -9614,7 +9642,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,

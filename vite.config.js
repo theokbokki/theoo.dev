@@ -9,7 +9,8 @@ export default defineConfig({
                 "modules/common/resources/js/common.js",
             ],
             assets: [
-                'app-modules/common/resources/images/**',
+                'modules/common/resources/images/**',
+                'modules/common/resources/icons/**',
             ],
             refresh: true,
         }),

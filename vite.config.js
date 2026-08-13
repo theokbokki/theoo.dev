@@ -5,8 +5,11 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                "modules/common/resources/css/common.css",
+                "modules/common/resources/css/common.scss",
                 "modules/common/resources/js/common.js",
+            ],
+            assets: [
+                'app-modules/common/resources/images/**',
             ],
             refresh: true,
         }),

@@ -101,6 +101,10 @@ export default class MagnetBackdrop {
         this.parent.addEventListener("pointermove", this.onPointerMove.bind(this));
 
         this.parent.addEventListener("pointerleave", this.onPointerLeave.bind(this));
+
+        this.parent.addEventListener("focusin", this.onFocusIn.bind(this));
+
+        this.parent.addEventListener("focusout", this.onFocusOut.bind(this));
     }
 
     onPointerMove(e) {
@@ -131,6 +135,33 @@ export default class MagnetBackdrop {
 
         clearTimeout(this.leaveTimeout);
         this.leaveTimeout = window.setTimeout(() => this.returnToRest(), 200);
+    }
+
+    onFocusIn(e) {
+        if (!this.ready) return;
+
+        const target = this.targets.find((t) => t.contains(e.target));
+        if (!target) return;
+
+        clearTimeout(this.leaveTimeout);
+
+        if (target === this.current) return;
+
+        this.current = target;
+        this.goTo(target);
+    }
+
+    onFocusOut(e) {
+        if (!this.ready) return;
+
+        requestAnimationFrame(() => {
+            const active = document.activeElement;
+            const stillInside = this.targets.some((t) => t.contains(active));
+
+            if (stillInside) return;
+
+            this.returnToRest();
+        });
     }
 
     killMove() {

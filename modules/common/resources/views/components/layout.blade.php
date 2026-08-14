@@ -9,6 +9,9 @@
         @vite(['modules/common/resources/css/common.scss', 'modules/common/resources/js/common.js'])
     </head>
     <body class="{{ $baseClass }}">
+        <script>
+            document.body.classList.add("js-loading");
+        </script>
         {{ $slot }}
     </body>
 </html>

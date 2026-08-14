@@ -4,7 +4,7 @@
         <span>{{ $text }}</span>
     </p>
 @else
-    <a class="tooltip__item" href="{{ route($route) }}">
+    <a class="tooltip__item" href="{{ route($route) }}" data-focus-ring>
         <x-common::icon :name="$icon"/>
         <span>{{ $text }}</span>
     </a>

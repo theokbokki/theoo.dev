@@ -22,7 +22,7 @@
 @mixin outline {
     &:focus-visible {
         outline-offset: rem(4);
-        outline: rem(2) solid #0080FF;
+        outline: rem(2) solid rgb(var(--blue));
         z-index: 1;
     }
 }

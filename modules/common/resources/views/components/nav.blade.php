@@ -1,4 +1,5 @@
 <nav class="nav" data-focus-section="nav">
+    <x-common::blur modifier="top" height="120" index="-1"/>
     <h2 class="sro">Main navigation</h2>
     <a href="#" class="nav__about" data-focus-ring>
         <span class="sro">Go to about page</span>
@@ -13,9 +14,12 @@
             <x-common::tooltip-item icon="bubble" route="feed" text="Feed"/>
         </x-common::tooltip>
     </div>
-    <div class="nav__menu no-js">
-        <x-common::nav-item route="home" text="Home"/>
-        <x-common::nav-item route="notes" text="Notes"/>
-        <x-common::nav-item route="feed" text="Feed"/>
-    </div>
+    <details class="nav__menu no-js">
+        <summary class="nav__button">Menu</summary>
+        <x-common::tooltip class="nav__tooltip">
+            <x-common::tooltip-item icon="house" route="home" text="Home"/>
+            <x-common::tooltip-item icon="pencil-scribble" route="notes" text="Notes"/>
+            <x-common::tooltip-item icon="bubble" route="feed" text="Feed"/>
+        </x-common::tooltip>
+    </details>
 </nav>

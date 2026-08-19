@@ -1,6 +1,8 @@
 @use "../utils" as *;
 
 .nav {
+    position: sticky;
+    top: rem(40);
     display: flex;
     flex-wrap: wrap;
     gap: rem(8);
@@ -100,38 +102,40 @@
         &.no-js {
             display: flex;
             flex-direction: column;
-            gap: rem(2);
-            width: 100%;
-            margin-top: rem(24);
-        }
-    }
 
-    &__item {
-        padding: rem(8) rem(12);
-        line-height: 150%;
-        border-radius: rem(12);
-        font-family: var(--font-sans);
-        color: rgb(var(--grey-25));
-        text-decoration: none;
-        transition: 150ms background ease-out, 150ms transform ease-out;
+            &[open] {
+                .tooltip {
+                    animation: openMenu 250ms ease-out;
+                }
+            }
 
-        @include outline;
+            .nav {
+                &__button {
+                    max-width: max-content;
 
-        &--active {
-            background: rgb(var(--grey-96));
-            cursor: not-allowed;
-            opacity: 75%;
-        }
+                    &::marker {
+                        content: "";
+                    }
+                }
+            }
 
-        &:hover,
-        &:focus-visible {
-            background: rgb(var(--grey-96));
-        }
-
-        &:not(.nav__item--active) {
-            &:active {
-                transform: scale(.975);
+            .tooltip {
+                right: 0;
+                width: rem(240);
+                transform: translate3d(0, rem(8), 0);
+                transform-origin: top right;
             }
         }
     }
+}
+
+@keyframes openMenu {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, rem(8), 0) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, rem(8), 0) scale(1);
+  }
 }

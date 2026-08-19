@@ -33,6 +33,16 @@
         &--active {
             cursor: not-allowed;
             opacity: 75%;
+
+            .no-js & {
+                background: rgb(var(--white));
+            }
+        }
+
+        .no-js & {
+            &:hover {
+                background: rgb(var(--white));
+            }
         }
 
         &:not(.tooltip__item--active) {

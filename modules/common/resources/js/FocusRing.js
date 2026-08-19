@@ -2,11 +2,19 @@ import { gsap } from "gsap";
 
 export default class FocusRing {
     constructor(settings = {}) {
-        this.navigationKeys = ["Tab", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Home", "End"];
+        this.navigationKeys = [
+            "Tab",
+            "ArrowUp",
+            "ArrowDown",
+            "ArrowLeft",
+            "ArrowRight",
+            "Home",
+            "End",
+        ];
         this.ringAttribute = "[data-focus-ring]";
         this.sectionAttribute = "[data-focus-section]";
 
-        this.fadeDuration = settings.fadeDuration ?? 0.2;
+        this.fadeDuration = settings.fadeDuration ?? 0.1;
         this.color = settings.color ?? "#0080FF";
         this.width = settings.width ?? 2;
         this.offset = settings.offset ?? 4;
@@ -17,6 +25,7 @@ export default class FocusRing {
         this.focusedSection = null;
         this.isVisible = false;
         this.isKeyboardActive = false;
+        this.isCrossFading = false;
 
         this.frameId = null;
         this.tick = this.tick.bind(this);
@@ -54,18 +63,26 @@ export default class FocusRing {
     suppressNativeOutline() {
         const sheet = document.createElement("style");
         sheet.textContent = `
-            ${this.ringAttribute}:focus,
-            ${this.ringAttribute}:focus-visible {
-                outline: none;
-            }
-        `;
+                ${this.ringAttribute}:focus,
+                ${this.ringAttribute}:focus-visible {
+                    outline: none;
+                }
+            `;
         document.head.appendChild(sheet);
         this.styleSheet = sheet;
     }
 
     listen() {
-        window.addEventListener("keydown", (event) => this.onKeyDown(event), true);
-        window.addEventListener("pointerdown", () => this.onPointerDown(), true);
+        window.addEventListener(
+            "keydown",
+            (event) => this.onKeyDown(event),
+            true,
+        );
+        window.addEventListener(
+            "pointerdown",
+            () => this.onPointerDown(),
+            true,
+        );
         document.addEventListener("focusin", (event) => this.onFocusIn(event));
         document.addEventListener("focusout", () => this.onFocusOut());
     }
@@ -90,7 +107,9 @@ export default class FocusRing {
     }
 
     findSection(element) {
-        return element.closest(this.sectionAttribute)?.dataset.focusSection ?? null;
+        return (
+            element.closest(this.sectionAttribute)?.dataset.focusSection ?? null
+        );
     }
 
     isNavigationKey(event) {
@@ -114,7 +133,8 @@ export default class FocusRing {
         }
 
         const section = this.findSection(target);
-        const changedSection = this.isVisible && section !== this.focusedSection;
+        const changedSection =
+            this.isVisible && section !== this.focusedSection;
 
         this.focusedElement = target;
         this.focusedSection = section;
@@ -138,7 +158,12 @@ export default class FocusRing {
 
     jumpTo(box) {
         this.setBorderRadius(box.borderRadius);
-        gsap.set(this.node, { x: box.x, y: box.y, width: box.width, height: box.height });
+        gsap.set(this.node, {
+            x: box.x,
+            y: box.y,
+            width: box.width,
+            height: box.height,
+        });
         this.moveX(box.x, box.x);
         this.moveY(box.y, box.y);
         this.moveWidth(box.width, box.width);
@@ -149,7 +174,11 @@ export default class FocusRing {
         this.jumpTo(this.measureFocusBox(element));
         this.isVisible = true;
         gsap.killTweensOf(this.node, "opacity");
-        gsap.to(this.node, { opacity: 1, duration: this.fadeDuration, ease: "power3.out" });
+        gsap.to(this.node, {
+            opacity: 1,
+            duration: this.fadeDuration,
+            ease: "power3.out",
+        });
     }
 
     glideTo(element) {
@@ -163,6 +192,7 @@ export default class FocusRing {
 
     jumpAcross(element) {
         const box = this.measureFocusBox(element);
+        this.isCrossFading = true;
         gsap.killTweensOf(this.node, "opacity");
         const timeline = gsap.timeline();
         timeline.to(this.node, {
@@ -171,17 +201,29 @@ export default class FocusRing {
             ease: "power3.out",
             onComplete: () => this.jumpTo(box),
         });
-        timeline.to(this.node, { opacity: 1, duration: this.fadeDuration, ease: "power3.out" });
+        timeline.to(this.node, {
+            opacity: 1,
+            duration: this.fadeDuration,
+            ease: "power3.out",
+            onComplete: () => {
+                this.isCrossFading = false;
+            },
+        });
     }
 
     hide() {
         if (!this.isVisible) return;
         this.isVisible = false;
+        this.isCrossFading = false;
         this.focusedElement = null;
         this.focusedSection = null;
         this.stopTracking();
         gsap.killTweensOf(this.node, "opacity");
-        gsap.to(this.node, { opacity: 0, duration: this.fadeDuration, ease: "power3.out" });
+        gsap.to(this.node, {
+            opacity: 0,
+            duration: this.fadeDuration,
+            ease: "power3.out",
+        });
     }
 
     startTracking() {
@@ -198,10 +240,15 @@ export default class FocusRing {
     tick() {
         this.frameId = requestAnimationFrame(this.tick);
         if (!this.focusedElement || !this.isVisible) return;
-        if (!this.focusedElement.isConnected) {
+        if (this.isCrossFading) return;
+
+        const rect = this.focusedElement.getBoundingClientRect();
+        const hasBox = rect.width > 0 && rect.height > 0;
+        if (!this.focusedElement.isConnected || !hasBox) {
             this.hide();
             return;
         }
+
         this.glideTo(this.focusedElement);
     }
 }

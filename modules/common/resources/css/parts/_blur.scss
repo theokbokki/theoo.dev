@@ -1,0 +1,28 @@
+@use "../utils" as *;
+
+.blur {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: var(--blur-height);
+    pointer-events: none;
+    z-index: var(--blur-index);
+
+    &--top {
+        top: 0;
+    }
+
+    &--bottom {
+        bottom: 0;
+        transform: scale(-1);
+    }
+
+    > div {
+        position: absolute;
+        inset: 0px;
+        -webkit-backdrop-filter: blur(var(--blur));
+        backdrop-filter: blur(var(--blur));
+        -webkit-mask-image: var(--mask);
+        mask-image: var(--mask);
+    }
+}

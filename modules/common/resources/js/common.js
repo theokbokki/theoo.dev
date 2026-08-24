@@ -1,5 +1,6 @@
 import FocusRing from "./FocusRing";
 import Nav from "./Nav";
+import PageTransition from "./PageTransition";
 
 window.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".js").forEach(el => el.classList.remove("js"));
@@ -7,8 +8,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     new FocusRing();
     new Nav();
+    new PageTransition();
 
     window.requestAnimationFrame(() => {
-        document.body.classList.remove('js-loading');
+        document.body.classList.remove("js-loading");
     });
 });

@@ -28,6 +28,8 @@
         color: rgb(var(--grey-25));
         text-decoration: none;
         border-radius: rem(9999);
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
         transition: 150ms background ease-out, 150ms transform ease-out;
 
         &--active {

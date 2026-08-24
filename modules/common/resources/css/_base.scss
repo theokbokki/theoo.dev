@@ -1,9 +1,13 @@
 body {
     opacity: 1;
-    transition: opacity 0.5s ease-out;
+    transition: opacity 0.15s ease-out;
 
     &.js-loading {
         opacity: 0;
         transition: none;
+    }
+
+    &.js-leaving {
+        opacity: 0;
     }
 }

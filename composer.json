@@ -12,7 +12,8 @@
         "php": "^8.3",
         "laravel/framework": "^13.8",
         "laravel/tinker": "^3.0",
-        "theoo/common": "*"
+        "theoo/common": "*",
+        "theoo/notes": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -25,7 +26,8 @@
         "pestphp/pest-plugin-laravel": "^5.0"
     },
     "repositories": [
-        { "type": "path", "url": "modules/common" }
+        { "type": "path", "url": "modules/common" },
+        { "type": "path", "url": "modules/notes" }
     ],
     "autoload": {
         "psr-4": {

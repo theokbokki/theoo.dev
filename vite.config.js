@@ -7,6 +7,8 @@ export default defineConfig({
             input: [
                 "modules/common/resources/css/common.scss",
                 "modules/common/resources/js/common.js",
+                "modules/notes/resources/css/notes.scss",
+                "modules/notes/resources/js/notes.js",
             ],
             assets: [
                 'modules/common/resources/images/**',
@@ -16,7 +18,6 @@ export default defineConfig({
         }),
     ],
     server: {
-        host: true,
         watch: {
             ignored: ["**/storage/framework/views/**"],
         },

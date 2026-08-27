@@ -1,0 +1,22 @@
+{
+    "name": "theoo/notes",
+    "description": "",
+    "type": "library",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Common\\": "src/",
+            "Modules\\Common\\Database\\Factories\\": "database/factories/",
+            "Modules\\Common\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Stub\\Providers\\NotesServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}

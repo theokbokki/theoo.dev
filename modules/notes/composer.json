@@ -6,15 +6,15 @@
     },
     "autoload": {
         "psr-4": {
-            "Modules\\Common\\": "src/",
-            "Modules\\Common\\Database\\Factories\\": "database/factories/",
-            "Modules\\Common\\Database\\Seeders\\": "database/seeders/"
+            "Modules\\Notes\\": "src/",
+            "Modules\\Notes\\Database\\Factories\\": "database/factories/",
+            "Modules\\Notes\\Database\\Seeders\\": "database/seeders/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Modules\\Stub\\Providers\\NotesServiceProvider"
+                "Modules\\Notes\\Providers\\NotesServiceProvider"
             ]
         }
     },

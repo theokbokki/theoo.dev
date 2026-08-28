@@ -10,7 +10,7 @@
         <button type="button" class="nav__button" data-focus-ring>Menu</button>
         <x-common::tooltip class="nav__tooltip">
             <x-common::tooltip-item icon="house" route="home" text="Home"/>
-            <x-common::tooltip-item icon="pencil-scribble" route="notes" text="Notes"/>
+            <x-common::tooltip-item icon="pencil-scribble" route="notes.index" text="Notes"/>
             <x-common::tooltip-item icon="bubble" route="feed" text="Feed"/>
         </x-common::tooltip>
     </div>
@@ -18,7 +18,7 @@
         <summary class="nav__button">Menu</summary>
         <x-common::tooltip class="nav__tooltip">
             <x-common::tooltip-item icon="house" route="home" text="Home"/>
-            <x-common::tooltip-item icon="pencil-scribble" route="notes" text="Notes"/>
+            <x-common::tooltip-item icon="pencil-scribble" route="notes.index" text="Notes"/>
             <x-common::tooltip-item icon="bubble" route="feed" text="Feed"/>
         </x-common::tooltip>
     </details>

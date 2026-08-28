@@ -1,10 +1,13 @@
 <?php
 
-namespace Modules\Stub\Http\Controllers;
+namespace Modules\Notes\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-abstract class NotesIndexController
+class NotesIndexController
 {
-    public function __invoke(Request $request) {}
+    public function __invoke(Request $request)
+    {
+        return view('notes::index');
+    }
 }

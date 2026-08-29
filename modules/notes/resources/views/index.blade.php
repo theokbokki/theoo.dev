@@ -4,12 +4,10 @@
     @endpush
     <h1 class="sro">Notes</h1>
     <x-common::nav/>
-    <div class="actions">
-        <form>
-            @csrf
-            <button formaction="{{ route('notes.create') }}" formmethod="POST" class="actions__action">New note</button>
-        </form>
-    </div>
+    <form class="actions">
+        @csrf
+        <button formaction="{{ route('notes.create') }}" formmethod="POST" class="actions__action">New note</button>
+    </form>
     <div class="notes__content">
         <p class="notes__text">These are my notes! It’s basically a blog but where I write like I  would in a notes app. I don’t correct or re-read or anything. I just say whatever I have in mind and try to write it down so it makes sense.</p>
         <br/>

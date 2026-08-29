@@ -2,19 +2,22 @@
 
 .actions {
     display: flex;
-    overflow-x: scroll;
+    gap: rem(8);
     width: 100%;
     padding: rem(6);
     margin-left: rem(-6);
     margin-top: rem(40);
+    overflow-x: scroll;
 
     &__action {
+        min-width: max-content;
         padding: rem(8) rem(12);
         margin: 0;
         background: rgb(var(--grey-96));
         border: none;
         border-radius: none;
         font-size: rem(16);
+        color: rgb(var(--black));
 
         &:hover {
             background: rgb(var(--grey-90));

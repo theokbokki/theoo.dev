@@ -2,6 +2,7 @@
 
 namespace Modules\Notes\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Tempest\Markdown\Markdown;
@@ -17,13 +18,20 @@ class NotesIndexController
     {
         $markdown = new Markdown();
 
-        return array_map(function ($note) use ($markdown) {
-            $title = $markdown->parse(Storage::disk('public')->get($note))->frontmatter['title'];
+        return collect(Storage::disk('public')->files('notes'))
+            ->filter(fn($note) => str_ends_with($note, '.md'))
+            ->map(function ($note) use ($markdown) {
+                $parsed = $markdown->parse(Storage::disk('public')->get($note));
+                $title = $parsed->frontmatter['title'];
 
-            return (object) [
-                'title' => $title,
-                'url' => route('notes.single', ['slug' => str()->slug($title)]),
-            ];
-        }, Storage::disk('public')->allFiles('notes'));
+                return (object) [
+                    'title' => $title,
+                    'updated_at' => Carbon::parse($parsed->frontmatter['updated_at']),
+                    'url' => route('notes.single', ['slug' => str()->slug($title)]),
+                ];
+            })
+            ->sortByDesc(fn($note) => $note->updated_at)
+            ->values()
+            ->all();
     }
 }

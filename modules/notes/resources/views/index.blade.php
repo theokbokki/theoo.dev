@@ -1,9 +1,18 @@
 <x-common::layout baseClass="notes">
-    <h1 class="notes__title">Notes</h1>
-    <ul>
+    @push('styles')
+        @vite(['modules/notes/resources/css/notes.scss'])
+    @endpush
+    <h1 class="sro">Notes</h1>
+    <x-common::nav/>
+    <div class="notes__content">
+        <p class="notes__text">These are my notes! It’s basically a blog but where I write like I  would in a notes app. I don’t correct or re-read or anything. I just say whatever I have in mind and try to write it down so it makes sense.</p>
+        <br/>
+        <p class="notes__text">You might find something interesting, who knows!</p>
+    </div>
+    <ul class="notes__list">
         @foreach($notes as $note)
-            <li>
-                <a href="{{ $note->url }}">{{ $note->title }}</a>
+            <li class="notes__item">
+                <a href="{{ $note->url }}" class="notes__link">{{ $note->title }}</a>
             </li>
         @endforeach
     </ul>

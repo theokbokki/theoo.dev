@@ -1,17 +1,22 @@
-@use "../utils" as *;
+@use "../../../../common/resources/css/utils" as *;
 
-.home {
+.notes {
     padding: rem(8) rem(8) rem(80);
 
     &__content {
         margin-top: rem(40);
     }
 
-    &__text {
+    &__text,
+    &__link {
         max-width: 65ch;
         font-family: var(--font-sans);
         line-height: 150%;
         text-wrap: pretty;
+    }
+
+    &__list {
+        margin-top: rem(40);
     }
 
     &__link {

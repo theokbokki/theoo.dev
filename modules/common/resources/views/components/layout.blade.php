@@ -7,6 +7,8 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         @vite(['modules/common/resources/css/common.scss', 'modules/common/resources/js/common.js'])
+        @stack('scripts')
+        @stack('styles')
     </head>
     <body class="{{ $baseClass }}">
         <script>

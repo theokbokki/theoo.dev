@@ -1,21 +1,16 @@
-import { defineConfig } from "vite";
-import laravel from "laravel-vite-plugin";
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
     plugins: [
         laravel({
-            input: ["resources/css/app.scss", "resources/js/app.js"],
-            assets: [
-                "resources/icons/**",
-                "resources/images/**",
-                "resources/favicons/**",
-            ],
+            input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
     ],
     server: {
         watch: {
-            ignored: ["**/storage/framework/views/**"],
+            ignored: ['**/storage/framework/views/**'],
         },
     },
 });

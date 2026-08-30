@@ -66,15 +66,20 @@ table {
 nav {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .25rem;
     margin-bottom: 2.5rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 /* Txt syles */
 
 body {
     max-width: 65ch;
-    padding: .5rem;
+    padding: .5rem .5rem 5rem;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     font-size: .875rem;
     line-height: 150%;
@@ -93,6 +98,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Paragraphs */
 p {
     margin-top: 1rem;
+}
+
+a {
+    text-underline-offset: 2px;
 }
 
 /* Blockquotes */
@@ -115,6 +124,7 @@ ul, ol {
 li {
     position: relative;
     margin-left: 2ch;
+    margin-top: 8px;
 }
 
 li:before {

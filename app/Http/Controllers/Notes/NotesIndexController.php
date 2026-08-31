@@ -21,7 +21,7 @@ class NotesIndexController extends Controller
             ->map(fn (string $note) => Storage::disk('public')->path($note))
             ->map(fn (string $note) => (object) [
                 'title' => ltrim(fgets(fopen($note, 'r')), '# '),
-                'slug' => ltrim(pathinfo($note, PATHINFO_FILENAME), '-'),
+                'slug' => pathinfo($note, PATHINFO_FILENAME),
                 'status' => str_starts_with(pathinfo($note, PATHINFO_FILENAME),'-') ? NoteStatus::Draft : NoteStatus::Published,
                 'updated_at' => Carbon::parse(File::lastModified($note)),
             ])

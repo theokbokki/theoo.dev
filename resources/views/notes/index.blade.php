@@ -4,20 +4,14 @@
         <x-nav/>
     </header>
     <main>
-        <ul>
-            @foreach($notes['published'] as $note)
-                <li>
-                    <a href="#">{{ $note->title }}</a>
-                </li>
-            @endforeach
-        </ul>
-
-        <ul>
-            @foreach($notes['draft'] as $note)
-                <li>
-                    <a href="#">{{ $note->title }}</a>
-                </li>
-            @endforeach
-        </ul>
+        @foreach($notes as $group)
+            <ul>
+                @foreach($group as $note)
+                    <li>
+                        <a href="{{ route('notes.show', ['slug' => $note->slug]) }}">{{ $note->title }}</a>
+                    </li>
+                @endforeach
+            </ul>
+        @endforeach
     </main>
 </x-layout>

@@ -4,6 +4,7 @@
         <x-nav/>
     </header>
     <form class="actions">
+        @csrf
         <a href="{{ route('notes.edit', ['slug' => $note->slug]) }}" class="actions__action">Edit note</a>
     </form>
     <main>

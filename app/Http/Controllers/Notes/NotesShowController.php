@@ -10,6 +10,8 @@ class NotesShowController extends Controller
 {
     public function __invoke(Request $request, string $slug)
     {
+        if (str_starts_with($slug, '_')) return abort(404);
+
         $note = Storage::disk('public')->get('notes/'.$slug.'.md');
 
         if (! $note) return abort(404);

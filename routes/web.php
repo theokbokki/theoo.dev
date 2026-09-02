@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Notes\NotesCreateController;
+use App\Http\Controllers\Notes\NotesDeleteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Notes\NotesIndexController;
@@ -23,3 +24,5 @@ Route::get('/notes/edit/{slug}', NotesEditController::class)->name('notes.edit')
 Route::post('/notes/create', NotesCreateController::class)->name('notes.create');
 
 Route::post('/notes/update/{slug}', NotesUpdateController::class)->name('notes.update');
+
+Route::post('/notes/delete/{slug}', NotesDeleteController::class)->name('notes.delete');

@@ -107,11 +107,16 @@ header {
 .actions__action {
     padding: .5rem .75rem;
     font-size: .8125rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     background: hsl(0 0 94);
     border: none;
     border-radius: 0;
     text-decoration: none;
     color: black;
+}
+
+.actions__action--danger {
+    color: red;
 }
 
 .actions__action:hover {

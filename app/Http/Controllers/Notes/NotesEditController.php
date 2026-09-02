@@ -10,6 +10,8 @@ class NotesEditController extends Controller
 {
     public function __invoke(Request $request, string $slug)
     {
+        if (str_starts_with($slug, '_')) return abort(404);
+
         $path = 'notes/'.$slug.'.md';
         $content = Storage::disk('public')->get($path);
 

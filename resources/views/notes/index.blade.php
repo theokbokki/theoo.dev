@@ -4,6 +4,7 @@
         <x-nav/>
     </header>
     <form class="actions">
+        @csrf
         <button type="submit" formaction="{{ route('notes.create') }}" formmethod="POST" class="actions__action">New note</button>
     </form>
     <main>

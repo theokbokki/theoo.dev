@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\Storage;
 
 class NotesShowController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
     public function __invoke(Request $request, string $slug)
     {
         $note = Storage::disk('public')->get('notes/'.$slug.'.md');
@@ -22,8 +19,8 @@ class NotesShowController extends Controller
         array_shift($note);
         $content = str()->markdown(implode("\n", $note));
 
-
         $note = (object) [
+            'slug' => $slug,
             'title' => $title,
             'content' => $content,
         ];

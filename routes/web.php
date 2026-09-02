@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\Notes\NotesCreateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Notes\NotesIndexController;
 use App\Http\Controllers\Notes\NotesShowController;
+use App\Http\Controllers\Notes\NotesEditController;
+use App\Http\Controllers\Notes\NotesUpdateController;
 
 /* HOME */
 
@@ -14,3 +17,9 @@ Route::get('/', HomeController::class)->name('home');
 Route::get('/notes', NotesIndexController::class)->name('notes.index');
 
 Route::get('/notes/{slug}', NotesShowController::class)->name('notes.show');
+
+Route::get('/notes/edit/{slug}', NotesEditController::class)->name('notes.edit');
+
+Route::post('/notes/create', NotesCreateController::class)->name('notes.create');
+
+Route::post('/notes/update/{slug}', NotesUpdateController::class)->name('notes.update');

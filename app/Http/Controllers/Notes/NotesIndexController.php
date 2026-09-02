@@ -11,9 +11,6 @@ use App\Enums\Notes\NoteStatus;
 
 class NotesIndexController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
     public function __invoke(Request $request)
     {
         $notes = collect(Storage::disk('public')->files('notes'))

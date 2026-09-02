@@ -75,6 +75,50 @@ header {
     flex-direction: column-reverse;
 }
 
+/* NOTES */
+.note__content {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0;
+    border: none;
+    resize: none;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    line-height: 130%;
+    field-sizing: content;
+    font-size: .8125rem;
+    background: transparent;
+}
+
+.note__content:focus-visible {
+    outline: none;
+}
+
+.note__error {
+    color: red;
+}
+
+/* ACTIONS */
+.actions {
+    display: flex;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+.actions__action {
+    padding: .5rem .75rem;
+    font-size: .8125rem;
+    background: hsl(0 0 94);
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.actions__action:hover {
+    background: hsl(0 0 90);
+    cursor: pointer;
+}
+
 /* Txt syles */
 
 body {

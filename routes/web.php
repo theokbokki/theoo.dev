@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Notes\NotesCreateController;
 use App\Http\Controllers\Notes\NotesDeleteController;
+use App\Http\Controllers\Notes\NotesStatusController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Notes\NotesIndexController;
@@ -29,3 +30,5 @@ Route::post('/notes/update/{slug}', NotesUpdateController::class)->name('notes.u
 Route::post('/notes/delete/{slug}', NotesDeleteController::class)->name('notes.delete');
 
 Route::post('/notes/image', NotesImageController::class)->name('notes.image');
+
+Route::post('/notes/status/{slug}', NotesStatusController::class)->name('notes.status');

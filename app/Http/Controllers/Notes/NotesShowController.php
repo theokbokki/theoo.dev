@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Notes;
 
+use App\Enums\Notes\NoteStatus;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -23,6 +24,7 @@ class NotesShowController extends Controller
 
         $note = (object) [
             'slug' => $slug,
+            'status' => str_starts_with($slug, '-') ? NoteStatus::Published : NoteStatus::Draft,
             'title' => $title,
             'content' => $content,
         ];

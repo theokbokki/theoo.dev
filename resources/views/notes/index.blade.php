@@ -8,14 +8,24 @@
         <button type="submit" formaction="{{ route('notes.create') }}" formmethod="POST" class="actions__action">New note</button>
     </form>
     <main>
-        @foreach($notes as $group)
+        @isset($notes['published'])
             <ul>
-                @foreach($group as $note)
+                @foreach($notes['published'] as $note)
                     <li>
                         <a href="{{ route('notes.show', ['slug' => $note->slug]) }}">{{ $note->title }}</a>
                     </li>
                 @endforeach
             </ul>
-        @endforeach
+        @endisset
+
+        @isset($notes['draft'])
+            <ul>
+                @foreach($notes['draft'] as $note)
+                    <li>
+                        <a href="{{ route('notes.show', ['slug' => $note->slug]) }}">{{ $note->title }}</a>
+                    </li>
+                @endforeach
+            </ul>
+        @endisset
     </main>
 </x-layout>

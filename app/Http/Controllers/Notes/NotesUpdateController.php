@@ -13,7 +13,7 @@ class NotesUpdateController extends Controller
     {
         $validated = $request->validate(['content' => ['required']]);
 
-        File::delete(Storage::disk('public')->path('notes/'.$slug.'.md'));
+        File::delete(Storage::disk('public')->path('notes/notes/'.$slug.'.md'));
 
         $content = $validated['content'];
         $slug = explode("\n", $content);
@@ -21,7 +21,7 @@ class NotesUpdateController extends Controller
         $slug = ltrim($slug, '# ');
         $slug = str()->slug($slug);
 
-        Storage::disk('public')->put('/notes/'.$slug.'.md', $content);
+        Storage::disk('public')->put('/notes/notes/'.$slug.'.md', $content);
 
         return redirect(route('notes.edit', ['slug' => $slug]));
     }

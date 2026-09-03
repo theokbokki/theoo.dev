@@ -13,7 +13,7 @@ class NotesIndexController extends Controller
 {
     public function __invoke(Request $request)
     {
-        $notes = collect(Storage::disk('public')->files('notes'))
+        $notes = collect(Storage::disk('public')->files('notes/notes'))
             ->filter(fn (string $note) => str_ends_with($note, '.md') && !str_starts_with(pathinfo($note, PATHINFO_FILENAME), '_'))
             ->map(fn (string $note) => Storage::disk('public')->path($note))
             ->map(fn (string $note) => (object) [

@@ -12,7 +12,7 @@ class NotesEditController extends Controller
     {
         if (str_starts_with($slug, '_')) return abort(404);
 
-        $path = 'notes/'.$slug.'.md';
+        $path = 'notes/notes/'.$slug.'.md';
         $content = Storage::disk('public')->get($path);
 
         if (! $content) return abort(404);

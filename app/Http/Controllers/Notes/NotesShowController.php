@@ -12,7 +12,7 @@ class NotesShowController extends Controller
     {
         if (str_starts_with($slug, '_')) return abort(404);
 
-        $note = Storage::disk('public')->get('notes/'.$slug.'.md');
+        $note = Storage::disk('public')->get('notes/notes/'.$slug.'.md');
 
         if (! $note) return abort(404);
 

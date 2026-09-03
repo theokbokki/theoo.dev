@@ -8,6 +8,7 @@ use App\Http\Controllers\Notes\NotesIndexController;
 use App\Http\Controllers\Notes\NotesShowController;
 use App\Http\Controllers\Notes\NotesEditController;
 use App\Http\Controllers\Notes\NotesUpdateController;
+use App\Http\Controllers\Notes\NotesImageController;
 
 /* HOME */
 
@@ -26,3 +27,5 @@ Route::post('/notes/create', NotesCreateController::class)->name('notes.create')
 Route::post('/notes/update/{slug}', NotesUpdateController::class)->name('notes.update');
 
 Route::post('/notes/delete/{slug}', NotesDeleteController::class)->name('notes.delete');
+
+Route::post('/notes/image', NotesImageController::class)->name('notes.image');

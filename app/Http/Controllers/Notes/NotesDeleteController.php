@@ -12,8 +12,8 @@ class NotesDeleteController extends Controller
     public function __invoke(Request $request, string $slug)
     {
         File::move(
-            Storage::disk('public')->path('notes/'.$slug.'.md'),
-            Storage::disk('public')->path('notes/_'.$slug.'.md'),
+            Storage::disk('public')->path('notes/notes'.$slug.'.md'),
+            Storage::disk('public')->path('notes/notes/_'.$slug.'.md'),
         );
 
         return redirect(route('notes.index'));

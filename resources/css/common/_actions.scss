@@ -1,0 +1,27 @@
+@use "../utils" as *;
+
+.actions {
+    display: flex;
+    gap: rem(8);
+    margin: rem(16) 0;
+
+    &__action {
+        padding: rem(8) rem(12);
+        font-size: rem(13);
+        font-family: var(--font-mono);
+        background: hsl(0 0 94);
+        border: none;
+        border-radius: 0;
+        text-decoration: none;
+        color: black;
+
+        &--danger {
+            color: red;
+        }
+
+        &:hover {
+            background: hsl(0 0 90);
+            cursor: pointer;
+        }
+    }
+}

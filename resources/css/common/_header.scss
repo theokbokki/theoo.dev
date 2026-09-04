@@ -1,0 +1,14 @@
+@use "../utils" as *;
+
+.header {
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    &__back {
+        margin-bottom: rem(16);
+    }
+}

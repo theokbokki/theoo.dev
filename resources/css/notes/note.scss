@@ -1,0 +1,29 @@
+.note {
+    max-width: 80ch;
+    padding: .5rem .5rem 5rem;
+    font-family: var(--font-mono);
+    font-size: .8125rem;
+    line-height: 130%;
+    text-wrap: pretty;
+
+    &__edit {
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0;
+        border: none;
+        resize: none;
+        font-family: var(--font-mono);
+        line-height: 130%;
+        field-sizing: content;
+        font-size: .8125rem;
+        background: transparent;
+
+        &:focus-visible {
+            outline: none;
+        }
+
+        &__error {
+            color: red;
+        }
+    }
+}

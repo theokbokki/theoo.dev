@@ -1,0 +1,115 @@
+@use "../utils" as *;
+
+.prose {
+    :first-child {
+        margin-top: 0;
+    }
+
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: rem(16);
+        text-transform: uppercase;
+    }
+
+    /* Paragraphs */
+    p {
+        margin-top: rem(16);
+    }
+
+    a {
+        text-underline-offset: rem(2);
+    }
+
+    /* Blockquotes */
+    blockquote {
+        margin: rem(16) 0 0 2ch;
+        position: relative;
+    }
+
+    blockquote:before {
+        content: '>';
+        position: absolute;
+        left: -2ch;
+    }
+
+    /* Lists */
+    ul, ol {
+        margin-top: rem(16);
+    }
+
+    li {
+        position: relative;
+        margin-left: 2ch;
+        margin-top: rem(8);
+    }
+
+    li:before {
+        position: absolute;
+    }
+
+    ul li::before {
+        content: "- ";
+        left: -2ch;
+    }
+
+    ol {
+        counter-reset: count;
+    }
+
+    ol li {
+        counter-increment: count;
+    }
+
+    ol li::before {
+        content: counter(count) ". ";
+        left: -2.5ch;
+    }
+
+    /* Images */
+    img {
+        display: block;
+        margin-top: rem(16);
+        max-width: rem(420);
+        max-height: rem(420);
+    }
+
+    /* Code blocks */
+    pre {
+        margin-left: 2ch;
+    }
+
+    pre:before,
+    pre:after {
+        content: "```";
+        display: block;
+    }
+
+    pre code:before,
+    pre code:after {
+        content: unset;
+    }
+
+    /* Inline code */
+    code:before,
+    code:after {
+        content: "`";
+    }
+
+    /* Horizontal rule */
+    hr {
+        border: none;
+    }
+
+    hr:before {
+        content: "---";
+    }
+
+    /* Inline formatting */
+    em {
+        font-style: italic;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+}

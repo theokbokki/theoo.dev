@@ -1,7 +1,7 @@
-<x-layout>
+<x-layout baseClass="home">
     <h1 class="sro">Théoo's website</h1>
     <x-nav/>
-    <main>
+    <main class="prose">
         <p>Hey there, welcome to my website!</p>
         <p>I’m Théo, and I run this place :))</p>
         <p>Please take a seat, a cup of good coffee and stay for as long as you’d like.</p>

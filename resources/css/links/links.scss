@@ -1,0 +1,72 @@
+@use "../utils" as *;
+
+.links {
+    padding: .5rem .5rem 5rem;
+    font-family: var(--font-mono);
+    font-size: .8125rem;
+    line-height: 130%;
+    text-wrap: pretty;
+
+    &__table {
+        margin-top: rem(16);
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: rem(16) 0;
+
+        &:hover {
+            background: hsl(0 0 96);
+        }
+    }
+
+    &__favicon {
+        width: rem(16);
+        height: rem(16);
+        margin-right: rem(8);
+    }
+
+    &__url {
+        min-width: rem(320);
+        width: rem(320);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+        margin-right: rem(40);
+
+        &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+        }
+    }
+
+    &__description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+    }
+
+    @media screen and (max-width: rem(800)) {
+        &__link {
+            flex-wrap: wrap;
+            gap: rem(8);
+        }
+
+        &__url {
+            width: 100%;
+            overflow: visible;
+            text-wrap: unset;
+            text-wrap: pretty;
+        }
+
+        &__description {
+            overflow: visible;
+            text-wrap: unset;
+            text-wrap: pretty;
+        }
+    }
+}

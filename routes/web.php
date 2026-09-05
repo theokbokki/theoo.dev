@@ -10,6 +10,7 @@ use App\Http\Controllers\Notes\NotesShowController;
 use App\Http\Controllers\Notes\NotesEditController;
 use App\Http\Controllers\Notes\NotesUpdateController;
 use App\Http\Controllers\Notes\NotesImageController;
+use App\Http\Controllers\Links\LinksIndexController;
 
 /* HOME */
 
@@ -32,3 +33,7 @@ Route::post('/notes/delete/{slug}', NotesDeleteController::class)->name('notes.d
 Route::post('/notes/image', NotesImageController::class)->name('notes.image');
 
 Route::post('/notes/status/{slug}', NotesStatusController::class)->name('notes.status');
+
+/* LINKS */
+
+Route::get('/links', LinksIndexController::class)->name('links.index');

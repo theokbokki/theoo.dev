@@ -1,3 +1,5 @@
+@use "../utils" as *;
+
 .note {
     max-width: 80ch;
     padding: .5rem .5rem 5rem;
@@ -25,5 +27,44 @@
         &__error {
             color: red;
         }
+    }
+
+    &__zoom {
+        background: none;
+        padding: 0;
+        margin: 0;
+        border: none;
+        cursor: zoom-in;
+    }
+
+    &__dialog {
+        width: max-content;
+        height: max-content;
+        padding: 0;
+        background: none;
+        border: none;
+
+        &::backdrop {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+    }
+
+    &__full {
+        max-width: 90dvw;
+        max-height: 90dvh;
+    }
+
+    &__close {
+        position: fixed;
+        top: rem(8);
+        right: rem(8);
+        color: white;
+        font-size: rem(24);
+        background: none;
+        border: none;
+        width: rem(32);
+        height: rem(32);
+        cursor: pointer;
     }
 }

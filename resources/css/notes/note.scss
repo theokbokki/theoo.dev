@@ -46,13 +46,14 @@
 
         &::backdrop {
             background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(rem(3));
         }
     }
 
     &__full {
         max-width: 90dvw;
         max-height: 90dvh;
+        margin-top: 0;
     }
 
     &__close {

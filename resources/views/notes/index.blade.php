@@ -3,10 +3,12 @@
         <h1 class="header__title">Notes</h1>
         <x-nav/>
     </header>
+    @auth()
     <form class="actions">
         @csrf
         <button type="submit" formaction="{{ route('notes.create') }}" formmethod="POST" class="actions__action">New note</button>
     </form>
+    @endauth
     <main class="prose">
         @isset($notes['published'])
             <ul>

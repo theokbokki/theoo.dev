@@ -5,52 +5,24 @@ namespace Database\Seeders;
 use App\Models\Link;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
-use Intervention\Image\Drivers\Imagick\Driver;
-use Intervention\Image\ImageManager;
 
 class LinkSeeder extends Seeder
 {
-    protected ImageManager $manager;
-
     public function run(): void
     {
         Storage::disk('public')->deleteDirectory('links/favicons');
         File::ensureDirectoryExists(Storage::disk('public')->path('links/favicons'));
 
-        $this->manager = ImageManager::usingDriver(Driver::class);
-
-        foreach ($this->links() as $link) {
+        foreach (array_reverse($this->links()) as $link) {
             Link::create([
-                'favicon' => $this->fetchFavicon($link['url']),
+                'favicon' => Link::fetchFavicon($link['url']),
                 'url' => $link['url'],
                 'description' => $link['description'] ?: null,
             ]);
         }
     }
 
-    protected function fetchFavicon(string $url): string
-    {
-        $host = parse_url($url, PHP_URL_HOST);
-
-        $response = Http::timeout(10)->get('https://www.google.com/s2/favicons', [
-            'domain' => $host,
-            'sz' => 128,
-        ]);
-
-        $filename = Str::uuid();
-
-        $this->manager->decode($response->body())
-            ->cover(32, 32)
-            ->save(
-                Storage::disk('public')->path("links/favicons/{$filename}.webp"),
-                quality: 85,
-            );
-
-        return "links/favicons/{$filename}.webp";
-    }
 
     protected function links(): array
     {

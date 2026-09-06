@@ -10,6 +10,8 @@ class LinksIndexController extends Controller
 {
     public function __invoke(Request $request)
     {
-        return view('links.index', ['links' => Link::all()]);
+        return view('links.index', [
+            'links' => Link::orderByDesc('created_at')->get()
+        ]);
     }
 }

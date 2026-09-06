@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Links\LinksCreateController;
+use App\Http\Controllers\Links\LinksDeleteController;
 use App\Http\Controllers\Links\LinksDraftController;
+use App\Http\Controllers\Links\LinksUpdateController;
 use App\Http\Controllers\Notes\NotesCreateController;
 use App\Http\Controllers\Notes\NotesDeleteController;
 use App\Http\Controllers\Notes\NotesStatusController;
@@ -12,6 +15,7 @@ use App\Http\Controllers\Notes\NotesEditController;
 use App\Http\Controllers\Notes\NotesUpdateController;
 use App\Http\Controllers\Notes\NotesImageController;
 use App\Http\Controllers\Links\LinksIndexController;
+use App\Http\Controllers\Links\LinksEditController;
 
 /* HOME */
 
@@ -40,3 +44,11 @@ Route::post('/notes/status/{slug}', NotesStatusController::class)->name('notes.s
 Route::get('/links', LinksIndexController::class)->name('links.index');
 
 Route::get('/links/draft', LinksDraftController::class)->name('links.draft');
+
+Route::post('/links/create', LinksCreateController::class)->name('links.create');
+
+Route::get('/links/edit/{link}', LinksEditController::class)->name('links.edit');
+
+Route::post('/links/update/{link}', LinksUpdateController::class)->name('links.update');
+
+Route::post('/links/delete/{link}', LinksDeleteController::class)->name('links.delete');

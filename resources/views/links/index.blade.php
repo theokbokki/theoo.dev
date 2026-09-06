@@ -13,6 +13,16 @@
                 <img alt="" src="/storage/{{ $link->favicon }}" class="links__favicon"/>
                 <a href="{{ $link->url }}" class="links__url" target="_blank">{!! preg_replace('~([/.?#&=_-])~', '$1<wbr>', $link->url) !!}</a>
                 <p class="links__description">{{ $link->description }}</p>
+                <form class="links__actions">
+                    <a href="{{ route('links.edit', ['link' => $link]) }}" class="links__action">
+                        <span class="sro">Edit</span>
+                        <x-icon name="edit"/>
+                    </a>
+                    <button type="submit" formaction="{{ route('links.delete', ['link' => $link]) }}" formmethod="POST" class="links__action links__action--danger">
+                        <span class="sro">Delete</span>
+                        <x-icon name="trash"/>
+                    </button>
+                </form>
             </div>
         @endforeach
     </main>

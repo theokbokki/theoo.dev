@@ -30,7 +30,7 @@
     }
 
     &__url {
-        min-width: rem(320);
+        flex-shrink: 0;
         width: rem(320);
         overflow: hidden;
         text-overflow: ellipsis;
@@ -50,16 +50,67 @@
         text-wrap: nowrap;
     }
 
+    &__form {
+        max-width: 80ch;
+        margin-top: rem(32);
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+
+        + .links__field {
+            margin-top: rem(24);
+        }
+    }
+
+    &__label {
+        padding-bottom: rem(4);
+    }
+
+    &__input {
+        box-sizing: border-box;
+        padding: rem(9.8461538464) rem(14.7692307696);
+        font-size: rem(16);
+        border: rem(1.2307692308) solid hsl(0 0 66);
+        border-radius: 0;
+        font-family: var(--font-mono);
+        transform: scale(0.8125);
+        transform-origin: top left;
+        width: 123.07692308%;
+    }
+
+    &__submit {
+        padding: rem(8) rem(12);
+        margin-top: rem(32);
+        font-size: rem(13);
+        font-family: var(--font-mono);
+        background: hsl(0 0 94);
+        border: none;
+        border-radius: 0;
+        color: black;
+
+        &:hover {
+            background: hsl(0 0 90);
+            cursor: pointer;
+        }
+    }
+
     @media screen and (max-width: rem(800)) {
         &__link {
             flex-wrap: wrap;
             gap: rem(8);
         }
 
+        &__favicon {
+            margin: 0;
+        }
+
         &__url {
             width: 100%;
+            margin: 0;
             overflow: visible;
-            text-wrap: unset;
+            text-wrap: wrap;
             text-wrap: pretty;
         }
 

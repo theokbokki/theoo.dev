@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Links\LinksDraftController;
 use App\Http\Controllers\Notes\NotesCreateController;
 use App\Http\Controllers\Notes\NotesDeleteController;
 use App\Http\Controllers\Notes\NotesStatusController;
@@ -37,3 +38,5 @@ Route::post('/notes/status/{slug}', NotesStatusController::class)->name('notes.s
 /* LINKS */
 
 Route::get('/links', LinksIndexController::class)->name('links.index');
+
+Route::get('/links/draft', LinksDraftController::class)->name('links.draft');

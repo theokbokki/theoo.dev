@@ -9,7 +9,7 @@
         padding: rem(8) rem(12);
         font-size: rem(13);
         font-family: var(--font-mono);
-        background: hsl(0 0 94);
+        background: hsl(0 0 94%);
         border: none;
         border-radius: 0;
         text-decoration: none;
@@ -20,7 +20,7 @@
         }
 
         &:hover {
-            background: hsl(0 0 90);
+            background: hsl(0 0 90%);
             cursor: pointer;
         }
     }

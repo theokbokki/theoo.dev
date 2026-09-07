@@ -17,13 +17,10 @@
         flex-wrap: nowrap;
         align-items: center;
         padding: rem(16) 0;
+        border-bottom: 1px dashed black;
 
         &:hover {
-            background: hsl(0 0 96);
-
-            .links__actions {
-                display: flex;
-            }
+            background: hsl(0 0 96%);
         }
     }
 
@@ -49,17 +46,18 @@
     }
 
     &__description {
+        flex-grow: 1;
         overflow: hidden;
         text-overflow: ellipsis;
         text-wrap: nowrap;
     }
 
     &__actions {
-        position: absolute;
-        right: rem(8);
-        display: none;
+        position: relative;
+        display: flex;
         align-items: center;
         gap: rem(8);
+        z-index: 1;
     }
 
     &__action {
@@ -67,8 +65,8 @@
         align-items: center;
         justify-content: center;
         padding: rem(8);
-        background: white;
         color: rgba(0, 0, 0, .6);
+        background: none;
         border: none;
         border-radius: 0;
         cursor: pointer;
@@ -78,8 +76,8 @@
         }
 
         .icon {
-            width: rem(16);
-            height: rem(16);
+            width: rem(13);
+            height: rem(13);
         }
     }
 
@@ -109,7 +107,7 @@
         box-sizing: border-box;
         padding: rem(9.8461538464) rem(14.7692307696);
         font-size: rem(16);
-        border: rem(1.2307692308) solid hsl(0 0 66);
+        border: rem(1.2307692308) solid hsl(0 0 66%);
         border-radius: 0;
         font-family: var(--font-mono);
         transform: scale(0.8125);
@@ -122,13 +120,13 @@
         margin-top: rem(32);
         font-size: rem(13);
         font-family: var(--font-mono);
-        background: hsl(0 0 94);
+        background: hsl(0 0 94%);
         border: none;
         border-radius: 0;
         color: black;
 
         &:hover {
-            background: hsl(0 0 90);
+            background: hsl(0 0 90%);
             cursor: pointer;
         }
     }
@@ -152,13 +150,10 @@
         }
 
         &__description {
+            width: 100%;
             overflow: visible;
             text-wrap: unset;
             text-wrap: pretty;
-        }
-
-        &__actions {
-            top: rem(8);
         }
     }
 }

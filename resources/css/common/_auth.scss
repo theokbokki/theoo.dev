@@ -44,7 +44,7 @@
         box-sizing: border-box;
         padding: rem(9.8461538464) rem(14.7692307696);
         font-size: rem(16);
-        border: rem(1.2307692308) solid hsl(0 0 66);
+        border: rem(1.2307692308) solid hsl(0 0 66%);
         border-radius: 0;
         font-family: var(--font-mono);
         transform: scale(0.8125);
@@ -80,13 +80,13 @@
         margin-top: rem(32);
         font-size: rem(13);
         font-family: var(--font-mono);
-        background: hsl(0 0 94);
+        background: hsl(0 0 94%);
         border: none;
         border-radius: 0;
         color: black;
 
         &:hover {
-            background: hsl(0 0 90);
+            background: hsl(0 0 90%);
             cursor: pointer;
         }
     }

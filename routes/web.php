@@ -8,6 +8,7 @@ use App\Http\Controllers\Links\LinksUpdateController;
 use App\Http\Controllers\Notes\NotesCreateController;
 use App\Http\Controllers\Notes\NotesDeleteController;
 use App\Http\Controllers\Notes\NotesStatusController;
+use App\Http\Controllers\Posts\PostsIndexController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Notes\NotesIndexController;
@@ -63,3 +64,7 @@ Route::get('/links/edit/{link}', LinksEditController::class)->name('links.edit')
 Route::post('/links/update/{link}', LinksUpdateController::class)->name('links.update')->middleware('auth');
 
 Route::post('/links/delete/{link}', LinksDeleteController::class)->name('links.delete')->middleware('auth');
+
+/* POSTS */
+
+Route::get('/feed', PostsIndexController::class)->name('posts.index');

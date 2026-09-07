@@ -1,0 +1,133 @@
+@use "../utils" as *;
+
+.posts {
+    padding: .5rem .5rem 5rem;
+    font-family: var(--font-mono);
+    font-size: .8125rem;
+    line-height: 130%;
+    text-wrap: pretty;
+
+    &__post {
+        position: relative;
+        display: flex;
+        gap: 5ch;
+        padding: rem(32) 0;
+        border-bottom: 1px dashed black;
+    }
+
+    &__date {
+        min-width: 10ch;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: 52ch;
+    }
+
+    &__content {
+        text-wrap: pretty;
+    }
+
+    &__attachments {
+        display: flex;
+        gap: rem(8);
+        margin-top: rem(16);
+        padding-left: 15ch;
+        margin-left: -15ch;
+        overflow: scroll;
+        width: calc(100vw - 15ch - rem(8));
+    }
+
+    &__zoom {
+        background: none;
+        padding: 0;
+        margin: 0;
+        border: none;
+        cursor: zoom-in;
+    }
+
+    &__attachment {
+        &--thumb {
+            max-width: rem(240);
+            max-height: rem(240);
+        }
+
+        &--full {
+            max-width: 90dvw;
+            max-height: 90dvh;
+        }
+    }
+
+    &__dialog {
+        width: max-content;
+        height: max-content;
+        padding: 0;
+        background: none;
+        border: none;
+
+        &::backdrop {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(rem(3));
+        }
+    }
+
+    &__close {
+        position: fixed;
+        top: rem(8);
+        right: rem(8);
+        color: white;
+        font-size: rem(24);
+        background: none;
+        border: none;
+        width: rem(32);
+        height: rem(32);
+        cursor: pointer;
+    }
+
+    &__actions {
+        display: flex;
+        align-self: start;
+        align-items: center;
+        gap: rem(8);
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: rem(8);
+        background: none;
+        color: rgba(0, 0, 0, .6);
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+
+        &--danger {
+            color: red;
+        }
+
+        .icon {
+            width: rem(13);
+            height: rem(13);
+        }
+    }
+
+    @media screen and (max-width: calc(80ch + 16px)) {
+        &__post {
+            flex-direction: column;
+            gap: rem(16);
+        }
+
+        &__main {
+            max-width: 100%;
+        }
+
+        &__attachments {
+            margin-left: 0;
+            padding: 0;
+            width: calc(100% + rem(8));
+        }
+    }
+}

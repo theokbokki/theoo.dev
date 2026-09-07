@@ -114,6 +114,29 @@
         }
     }
 
+    &__error {
+        color: red;
+    }
+
+    &__textarea {
+        width: 123.07692308%;
+        padding: 0;
+        margin-top: rem(16);
+        border: none;
+        resize: none;
+        font-family: var(--font-mono);
+        line-height: 160%;
+        field-sizing: content;
+        font-size: rem(16);
+        background: transparent;
+        transform: scale(0.8125);
+        transform-origin: top left;
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
     @media screen and (max-width: calc(80ch + 16px)) {
         &__post {
             flex-direction: column;

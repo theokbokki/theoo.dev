@@ -9,16 +9,18 @@
     text-wrap: pretty;
 
     &__edit {
-        width: 100%;
-        margin-top: 1rem;
+        width: 123.07692308%;
+        margin-top: rem(16);
         padding: 0;
         border: none;
         resize: none;
         font-family: var(--font-mono);
-        line-height: 130%;
+        line-height: 160%;
         field-sizing: content;
-        font-size: .8125rem;
+        font-size: rem(16);
         background: transparent;
+        transform: scale(0.8125);
+        transform-origin: top left;
 
         &:focus-visible {
             outline: none;

@@ -6,7 +6,7 @@
     @auth()
     <form class="actions">
         @csrf
-        <a href="{{ route('links.draft') }}" class="actions__action">New post</a>
+        <a href="{{ route('posts.draft') }}" class="actions__action">New post</a>
     </form>
     @endauth
     <main class="posts__list">

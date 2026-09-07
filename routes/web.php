@@ -8,6 +8,7 @@ use App\Http\Controllers\Links\LinksUpdateController;
 use App\Http\Controllers\Notes\NotesCreateController;
 use App\Http\Controllers\Notes\NotesDeleteController;
 use App\Http\Controllers\Notes\NotesStatusController;
+use App\Http\Controllers\Posts\PostsCreateController;
 use App\Http\Controllers\Posts\PostsDraftController;
 use App\Http\Controllers\Posts\PostsIndexController;
 use Illuminate\Support\Facades\Route;
@@ -71,3 +72,5 @@ Route::post('/links/delete/{link}', LinksDeleteController::class)->name('links.d
 Route::get('/feed', PostsIndexController::class)->name('posts.index');
 
 Route::get('/feed/draft', PostsDraftController::class)->name('posts.draft');
+
+Route::post('/feed/create', PostsCreateController::class)->name('posts.create');

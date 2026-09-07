@@ -6,7 +6,7 @@
     <form class="posts__form posts__form--draft">
         @csrf
         <div class="actions">
-            <button type="submit" formaction="#" formmethod="POST" class="actions__action">Save</button>
+            <button type="submit" formaction="{{ route('posts.create') }}" formmethod="POST" class="actions__action">Save</button>
             <div>
                 <button type="button" class="actions__action" data-action="attachments">Add image</button>
                 <input type="file" id="attachments" name="attachments" accept="image/*" hidden multiple/>

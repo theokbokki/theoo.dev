@@ -3,13 +3,13 @@
         <h1 class="header__title">New post</h1>
         <x-nav/>
     </header>
-    <form class="posts__form posts__form--draft">
+    <form class="posts__form posts__form--draft" enctype="multipart/form-data">
         @csrf
         <div class="actions">
             <button type="submit" formaction="{{ route('posts.create') }}" formmethod="POST" class="actions__action">Save</button>
             <div>
-                <button type="button" class="actions__action" data-action="attachments">Add image</button>
-                <input type="file" id="attachments" name="attachments" accept="image/*" hidden multiple/>
+                <label for="attachments" class="actions__action">Add image</label>
+                <input type="file" id="attachments" name="attachments[]" accept="image/*" multiple class="sro"/>
             </div>
         </div>
         <textarea id="content" name="content" class="posts__textarea" value="{{ old('content') }}" placeholder="Thoughts here..."></textarea>

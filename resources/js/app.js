@@ -1,4 +1,5 @@
 import ImageUpload from "./notes/ImageUpload";
+
 class App {
     constructor() {
         this.notes();

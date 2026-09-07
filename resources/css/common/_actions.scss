@@ -2,10 +2,12 @@
 
 .actions {
     display: flex;
+    align-items: center;
     gap: rem(8);
     margin: rem(16) 0;
 
     &__action {
+        display: block;
         padding: rem(8) rem(12);
         font-size: rem(13);
         font-family: var(--font-mono);

@@ -32,7 +32,6 @@
 
     &__attachments {
         display: flex;
-        gap: rem(8);
         margin-top: rem(16);
         padding-left: 15ch;
         margin-left: -15ch;
@@ -44,13 +43,13 @@
         background: none;
         padding: 0;
         margin: 0;
+        margin-right: rem(8);
         border: none;
         cursor: zoom-in;
     }
 
     &__attachment {
         &--thumb {
-            max-width: rem(240);
             max-height: rem(240);
         }
 

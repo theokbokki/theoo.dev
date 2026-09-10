@@ -12,6 +12,7 @@ use App\Http\Controllers\Posts\PostsCreateController;
 use App\Http\Controllers\Posts\PostsDraftController;
 use App\Http\Controllers\Posts\PostsIndexController;
 use App\Http\Controllers\Posts\AttachmentsUploadController;
+use App\Http\Controllers\Posts\PostsEditController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Notes\NotesIndexController;
@@ -77,3 +78,5 @@ Route::get('/feed/draft', PostsDraftController::class)->name('posts.draft')->mid
 Route::post('/feed/create', PostsCreateController::class)->name('posts.create')->middleware('auth');
 
 Route::post('/feed/attachments/upload', AttachmentsUploadController::class)->name('posts.attachments.upload')->middleware('auth');
+
+Route::get('/feed/edit/{post}', PostsEditController::class)->name('posts.edit')->middleware('auth');

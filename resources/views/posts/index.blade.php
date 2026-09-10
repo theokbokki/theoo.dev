@@ -40,7 +40,7 @@
                 @auth()
                     <form class="posts__actions">
                         @csrf
-                        <a href="#" class="posts__action">
+                        <a href="{{ route('posts.edit', ['post' => $post]) }}" class="posts__action">
                             <span class="sro">Edit</span>
                             <x-icon name="edit"/>
                         </a>

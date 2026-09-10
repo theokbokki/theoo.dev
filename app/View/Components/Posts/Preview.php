@@ -12,8 +12,11 @@ class Preview extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public DataUri $file, public string $id)
-    {}
+    public function __construct(
+        public DataUri|string $file,
+        public string $id,
+        public ?string $alt = null,
+    ) {}
 
     /**
      * Get the view / contents that represent the component.

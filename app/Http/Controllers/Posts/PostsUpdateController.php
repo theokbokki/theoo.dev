@@ -60,19 +60,9 @@ class PostsUpdateController extends Controller
                 $attachment->alt = $existing[$attachment->id] ?? null;
                 $attachment->save();
             } else {
-                $this->deleteAttachment($attachment);
+                $attachment->delete();
             }
         }
-    }
-
-    protected function deleteAttachment(Attachment $attachment): void
-    {
-        Storage::disk('public')->delete([
-            "posts/full/{$attachment->src}.webp",
-            "posts/thumb/{$attachment->src}.webp",
-        ]);
-
-        $attachment->delete();
     }
 
     protected function createAttachments(Post $post, array $attachments, array $alts): void

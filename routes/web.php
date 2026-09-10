@@ -9,6 +9,7 @@ use App\Http\Controllers\Notes\NotesCreateController;
 use App\Http\Controllers\Notes\NotesDeleteController;
 use App\Http\Controllers\Notes\NotesStatusController;
 use App\Http\Controllers\Posts\PostsCreateController;
+use App\Http\Controllers\Posts\PostsDeleteController;
 use App\Http\Controllers\Posts\PostsDraftController;
 use App\Http\Controllers\Posts\PostsIndexController;
 use App\Http\Controllers\Posts\AttachmentsUploadController;
@@ -83,3 +84,5 @@ Route::post('/feed/attachments/upload', AttachmentsUploadController::class)->nam
 Route::get('/feed/edit/{post}', PostsEditController::class)->name('posts.edit')->middleware('auth');
 
 Route::post('/feed/update/{post}', PostsUpdateController::class)->name('posts.update')->middleware('auth');
+
+Route::post('/feed/delete/{post}', PostsDeleteController::class)->name('posts.delete')->middleware('auth');

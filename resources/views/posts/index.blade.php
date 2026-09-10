@@ -44,7 +44,7 @@
                             <span class="sro">Edit</span>
                             <x-icon name="edit"/>
                         </a>
-                        <button type="submit" formaction="#" formmethod="POST" class="posts__action posts__action--danger">
+                        <button type="submit" formaction="{{ route('posts.delete', ['post' => $post]) }}" formmethod="POST" class="posts__action posts__action--danger">
                             <span class="sro">Delete</span>
                             <x-icon name="trash"/>
                         </button>

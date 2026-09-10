@@ -25,13 +25,13 @@
                         <div class="posts__attachments">
                             @foreach($post->attachments as $attachment)
                                 <button type="button" class="posts__zoom" command="show-modal" commandfor="attachment-{{ $attachment->id }}">
-                                    <img alt="" src="/storage/posts/thumb/{{ $attachment->src }}.webp" class="posts__attachment posts__attachment--thumb"/>
+                                    <img alt="{{ $attachment->alt }}" src="/storage/posts/thumb/{{ $attachment->src }}.webp" class="posts__attachment posts__attachment--thumb"/>
                                 </button>
                                 <dialog id="attachment-{{ $attachment->id }}" closedby="any" class="posts__dialog">
                                     <button type="button" class="posts__close" command="close" commandfor="attachment-{{ $attachment->id }}" autofocus="" aria-label="Close">
                                         <span aria-hidden="true">✕</span>
                                     </button>
-                                    <img src="/storage/posts/full/{{ $attachment->src }}.webp" alt="" class="posts__attachment--full" loading="lazy"></dialog>
+                                    <img src="/storage/posts/full/{{ $attachment->src }}.webp" alt="{{ $attachment->alt }}" class="posts__attachment--full" loading="lazy">
                                 </dialog>
                             @endforeach
                         </div>

@@ -12,7 +12,8 @@
                 <input type="file" id="attachments" name="attachments[]" accept="image/*" multiple class="sro"/>
             </div>
         </div>
-        <textarea id="content" name="content" class="posts__textarea" value="{{ old('content') }}" placeholder="Thoughts here..."></textarea>
+        <div class="posts__previews"></div>
+        <textarea id="content" name="content" class="posts__textarea" placeholder="Thoughts here...">{{ old('content') }}</textarea>
         @error('content') <p class="posts__error">{{ $message }}</p> @enderror
     </form>
 </x-layout>

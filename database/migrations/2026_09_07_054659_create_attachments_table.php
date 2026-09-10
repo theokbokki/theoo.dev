@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->morphs('attachable');
             $table->string('src');
+            $table->text('alt')->nullable();
             $table->timestamps();
         });
     }

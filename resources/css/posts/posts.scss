@@ -157,6 +157,7 @@
     &__preview {
         &--thumb {
             height: rem(120);
+            max-width: 100%;
         }
 
         &--full {

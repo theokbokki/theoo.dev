@@ -6,7 +6,7 @@
     <form class="posts__form posts__form--edit" enctype="multipart/form-data">
         @csrf
         <div class="actions">
-            <button type="submit" formaction="{{ route('posts.create') }}" formmethod="POST" class="actions__action">Update</button>
+            <button type="submit" formaction="{{ route('posts.update', ['post' => $post]) }}" formmethod="POST" class="actions__action">Update</button>
             <div>
                 <label for="attachments" class="actions__action">Add image</label>
                 <input type="file" id="attachments" name="attachments[]" accept="image/*" multiple class="sro"/>

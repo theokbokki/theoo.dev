@@ -1,5 +1,5 @@
 import ImageUpload from "./notes/ImageUpload";
-import PostsDraft from "./posts/PostsDraft";
+import Posts from "./posts/Posts";
 
 class App {
     constructor() {
@@ -16,11 +16,7 @@ class App {
     }
 
     posts() {
-        const postsDraftForm = document.querySelector(".posts__form--draft");
-
-        if (! postsDraftForm) return;
-
-        new PostsDraft(postsDraftForm);
+        new Posts();
     }
 }
 

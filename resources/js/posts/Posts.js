@@ -1,18 +1,18 @@
-export default class PostsDraft {
-    constructor(el) {
-        this.el = el;
-
-        this.attachments = new Map();
-
+export default class Posts {
+    constructor() {
         this.init();
+
+        if (!this.form) return;
+
         this.getEls();
         this.setEvents();
+        this.registerExistingPreviews();
     }
 
     init() {
         this.settings = {
             selectors: {
-                form: ".posts__form--draft",
+                form: ".posts__form--draft, .posts__form--edit",
                 attachmentsInput: "#attachments",
                 previews: ".posts__previews",
                 content: "#content",
@@ -31,14 +31,16 @@ export default class PostsDraft {
             heicExtension: /\.hei[cf]$/i,
             indexedFieldExpr: /\.(\d+)$/,
         };
+
+        this.attachments = new Map();
+        this.form = document.querySelector(this.settings.selectors.form);
     }
 
     getEls() {
-        this.form = this.el;
-        this.attachmentsInput = this.el.querySelector(this.settings.selectors.attachmentsInput);
-        this.previews = this.el.querySelector(this.settings.selectors.previews);
-        this.contentField = this.el.querySelector(this.settings.selectors.content);
-        this.csrfToken = this.el.querySelector(this.settings.selectors.csrfToken)?.value;
+        this.attachmentsInput = this.form.querySelector(this.settings.selectors.attachmentsInput);
+        this.previews = this.form.querySelector(this.settings.selectors.previews);
+        this.contentField = this.form.querySelector(this.settings.selectors.content);
+        this.csrfToken = this.form.querySelector(this.settings.selectors.csrfToken)?.value;
     }
 
     setEvents() {
@@ -46,6 +48,18 @@ export default class PostsDraft {
         this.previews.addEventListener("input", this.handleAltEdited.bind(this));
         this.previews.addEventListener("click", this.handleDeleteClicked.bind(this));
         this.form.addEventListener("submit", this.handleSaveRequested.bind(this));
+    }
+
+    registerExistingPreviews() {
+        [...this.previews.children].forEach((node) => {
+            const altField = node.querySelector(this.settings.selectors.altField);
+
+            this.attachments.set(this.readPreviewId(node), {
+                file: null,
+                alt: altField?.value ?? "",
+                existing: true,
+            });
+        });
     }
 
     async handleFilesSelected() {
@@ -61,7 +75,6 @@ export default class PostsDraft {
     takeSelectedImages() {
         const images = [...this.attachmentsInput.files].filter((file) => this.isImage(file));
         this.attachmentsInput.value = "";
-
         return images;
     }
 
@@ -81,24 +94,22 @@ export default class PostsDraft {
 
     registerPreviews(fragments, images) {
         fragments.forEach((fragment, index) => {
-            const previewNode = this.appendPreview(fragment);
-            const id = this.readPreviewId(previewNode);
+            const node = this.appendPreview(fragment);
+            const id = this.readPreviewId(node);
 
-            this.attachments.set(id, { file: images[index], alt: "" });
+            this.attachments.set(id, { file: images[index], alt: "", existing: false });
         });
     }
 
     appendPreview(fragment) {
         this.previews.insertAdjacentHTML("beforeend", fragment);
-
         return this.previews.lastElementChild;
     }
 
-    readPreviewId(previewNode) {
-        const { action } = previewNode.querySelector(this.settings.selectors.deleteButton).dataset;
+    readPreviewId(node) {
+        const { action } = node.querySelector(this.settings.selectors.deleteButton).dataset;
         return action.replace(this.settings.deleteActionPrefix, "");
     }
-
 
     handleAltEdited(e) {
         const field = e.target.closest(this.settings.selectors.altField);
@@ -108,14 +119,16 @@ export default class PostsDraft {
     }
 
     idFromAltField(field) {
-        return field.name.slice(this.settings.altNamePrefix.length, -this.settings.altNameSuffix.length);
+        return field.name.slice(
+            this.settings.altNamePrefix.length,
+            -this.settings.altNameSuffix.length,
+        );
     }
 
     setAlt(id, alt) {
         const attachment = this.attachments.get(id);
         if (attachment) attachment.alt = alt;
     }
-
 
     handleDeleteClicked(e) {
         const button = e.target.closest(this.settings.selectors.deleteButton);
@@ -126,16 +139,16 @@ export default class PostsDraft {
         this.removePreview(button.closest(this.settings.selectors.previewItem));
     }
 
-    removePreview(previewNode) {
-        previewNode?.querySelector(this.settings.selectors.openDialog)?.close();
-        previewNode?.remove();
+    removePreview(node) {
+        node?.querySelector(this.settings.selectors.openDialog)?.close();
+        node?.remove();
     }
 
     async handleSaveRequested(e) {
         e.preventDefault();
         this.clearErrors();
 
-        const response = await this.post(this.saveUrl(e), this.buildDraft());
+        const response = await this.post(this.saveUrl(e), this.buildPayload());
         await this.handleSaveResponse(response);
     }
 
@@ -143,31 +156,33 @@ export default class PostsDraft {
         return e.submitter?.formAction || this.form.action;
     }
 
-    buildDraft() {
-        const draft = new FormData();
-        draft.append("content", this.contentField.value);
+    buildPayload() {
+        const data = new FormData();
+        data.append("content", this.contentField.value);
 
         let index = 0;
-        for (const { file, alt } of this.attachments.values()) {
-            draft.append(`attachments[${index}]`, file);
-            draft.append(`alts[${index}]`, alt);
+        for (const [id, { file, alt, existing }] of this.attachments) {
+            if (existing) {
+                data.append(`existing[${id}]`, alt ?? "");
+                continue;
+            }
 
+            data.append(`attachments[${index}]`, file);
+            data.append(`alts[${index}]`, alt ?? "");
             index += 1;
         }
 
-        return draft;
+        return data;
     }
 
     async handleSaveResponse(response) {
         if (response.ok) {
             window.location.assign(response.url);
-
             return;
         }
 
         if (response.status === 422) {
             const { errors } = await response.json();
-
             this.showErrors(errors);
         }
     }
@@ -196,13 +211,11 @@ export default class PostsDraft {
         paragraph.className = this.settings.errorClass;
         paragraph.dataset.errorField = field;
         paragraph.textContent = message;
-
         return paragraph;
     }
 
     indexFromField(field) {
         const match = field.match(this.settings.indexedFieldExpr);
-
         return match ? Number(match[1]) : null;
     }
 

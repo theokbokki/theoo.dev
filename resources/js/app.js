@@ -1,22 +1,10 @@
-import ImageUpload from "./notes/ImageUpload";
 import Posts from "./posts/Posts";
+import Notes from "./notes/Notes";
 
 class App {
     constructor() {
-        this.notes();
-        this.posts();
-    }
-
-    notes() {
-        const editForm = document.getElementById("edit-note");
-
-        if (! editForm) return;
-
-        new ImageUpload(editForm);
-    }
-
-    posts() {
-        new Posts();
+        new Notes;
+        new Posts;
     }
 }
 

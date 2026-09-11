@@ -2,16 +2,26 @@
 
 namespace App\Http\Controllers\Notes;
 
+use App\Enums\Notes\NoteStatus;
 use App\Http\Controllers\Controller;
+use App\Models\Note;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class NotesCreateController extends Controller
 {
     public function __invoke(Request $request)
     {
-        Storage::disk('public')->put('/notes/notes/untitled.md', "# Untitled");
+        $validated = $request->validate(['content' => ['required']]);
 
-        return redirect(route('notes.edit', ['slug' => 'untitled']));
+        $title = trim(ltrim(explode("\n", $validated['content'])[0], '# '));
+
+        $note = Note::create([
+            'slug' => str()->slug($title),
+            'title' => $title,
+            'content' => $validated['content'],
+            'status' => NoteStatus::Draft,
+        ]);
+
+        return redirect(route('notes.edit', ['note' => $note]));
     }
 }

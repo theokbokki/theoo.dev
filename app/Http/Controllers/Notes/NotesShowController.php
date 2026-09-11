@@ -4,43 +4,32 @@ namespace App\Http\Controllers\Notes;
 
 use App\Enums\Notes\NoteStatus;
 use App\Http\Controllers\Controller;
+use App\Models\Note;
 use DOMDocument;
+use DOMNode;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class NotesShowController extends Controller
 {
-    public function __invoke(Request $request, string $slug)
+    public function __invoke(Request $request, Note $note)
     {
-        if (str_starts_with($slug, '_')) return abort(404);
+        if ($note->status === NoteStatus::Draft && !auth()->check()) {
+            return abort(404);
+        }
 
-        if (str_starts_with($slug, '-') && ! auth()->check()) return abort(404);
-
-        $note = Storage::disk('public')->get('notes/notes/'.$slug.'.md');
-
-        if (! $note) return abort(404);
-
-        $note = explode("\n", $note);
-        $title = ltrim(array_shift($note), '# ');
-        array_shift($note);
-        $content = implode("\n", $note);
-
-        $note = (object) [
-            'slug' => $slug,
-            'status' => str_starts_with($slug, '-') ? NoteStatus::Published : NoteStatus::Draft,
-            'title' => $title,
-            'content' => $this->parseContent($content),
-        ];
+        $note->content = $this->parseContent($note->content);
+        $note->status = $note->status === NoteStatus::Draft ? NoteStatus::Published : NoteStatus::Draft;
 
         return view('notes.show', ['note' => $note]);
     }
 
     protected function parseContent(string $content)
     {
+        $content = substr($content, strpos($content, "\n") + 1);
         $html = str()->markdown($content);
-        $doc = new DOMDocument;
+        $doc = new DOMDocument();
 
-        @$doc->loadHTML('<meta charset="utf-8">'.$html);
+        @$doc->loadHTML('<meta charset="utf-8">' . $html);
 
         $this->images($doc);
 
@@ -56,36 +45,36 @@ class NotesShowController extends Controller
         $body = $doc->getElementsByTagName('body')->item(0);
 
         foreach ($images as $i => $image) {
-            if (! ($src = $image->getAttribute('src')) || ! str_contains($src, 'thumb')) {
+            if (!($src = $image->getAttribute('src')) || !str_contains($src, 'thumb')) {
                 continue;
             }
 
             $full = str_replace('thumb', 'full', $src);
-            $id = 'note-image-'.$i;
+            $id = 'note-image-' . $i;
             $alt = $image->getAttribute('alt');
 
-            $image->setAttribute('class', 'note__thumbnail');
+            $image->setAttribute('class', 'notes__thumbnail');
 
             $zoom = $doc->createElement('button');
             $zoom->setAttribute('type', 'button');
-            $zoom->setAttribute('class', 'note__zoom');
+            $zoom->setAttribute('class', 'notes__zoom');
             $zoom->setAttribute('command', 'show-modal');
             $zoom->setAttribute('commandfor', $id);
             if ($alt !== '') {
-                $zoom->setAttribute('aria-label', 'Zoom image : '.$alt);
+                $zoom->setAttribute('aria-label', 'Zoom image : ' . $alt);
             }
 
             $dialog = $doc->createElement('dialog');
             $dialog->setAttribute('id', $id);
             $dialog->setAttribute('closedby', 'any');
-            $dialog->setAttribute('class', 'note__dialog');
+            $dialog->setAttribute('class', 'notes__dialog');
             if ($alt !== '') {
                 $dialog->setAttribute('aria-label', $alt);
             }
 
             $close = $doc->createElement('button');
             $close->setAttribute('type', 'button');
-            $close->setAttribute('class', 'note__close');
+            $close->setAttribute('class', 'notes__close');
             $close->setAttribute('command', 'close');
             $close->setAttribute('commandfor', $id);
             $close->setAttribute('autofocus', '');
@@ -99,16 +88,38 @@ class NotesShowController extends Controller
             $fullImg = $doc->createElement('img');
             $fullImg->setAttribute('src', $full);
             $fullImg->setAttribute('alt', $alt);
-            $fullImg->setAttribute('class', 'note__full');
+            $fullImg->setAttribute('class', 'notes__full');
             $fullImg->setAttribute('loading', 'lazy');
 
             $dialog->appendChild($close);
             $dialog->appendChild($fullImg);
 
-            $image->parentNode->replaceChild($zoom, $image);
+            $target = $this->imageContainer($image);
+            $target->parentNode->replaceChild($zoom, $target);
             $zoom->appendChild($image);
 
             $body?->appendChild($dialog);
         }
+    }
+
+    protected function imageContainer(DOMNode $image): DOMNode
+    {
+        $parent = $image->parentNode;
+
+        if (strtolower($parent->nodeName) !== 'p') {
+            return $image;
+        }
+
+        foreach ($parent->childNodes as $child) {
+            if ($child === $image) {
+                continue;
+            }
+            if ($child->nodeType === XML_TEXT_NODE && trim($child->textContent) === '') {
+                continue;
+            }
+            return $image;
+        }
+
+        return $parent;
     }
 }

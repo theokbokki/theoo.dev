@@ -26,17 +26,15 @@ class NotesImageController extends Controller
             $filename = $request->uuids[$index];
             $image = $manager->decode($file);
 
-            $image->scaleDown(width: 1440, height: 1440)
-                ->save(
-                    Storage::disk('public')->path("notes/full/{$filename}.webp"),
-                    quality: 85,
-                );
+            $image->scaleDown(width: 1440, height: 1440)->save(
+                Storage::disk('public')->path("notes/full/{$filename}.webp"),
+                quality: 85,
+            );
 
-            $image->scaleDown(width: 640, height: 640)
-                ->save(
-                    Storage::disk('public')->path("notes/thumb/{$filename}.webp"),
-                    quality: 85,
-                );
+            $image->scaleDown(width: 640, height: 640)->save(
+                Storage::disk('public')->path("notes/thumb/{$filename}.webp"),
+                quality: 85,
+            );
         }
     }
 }

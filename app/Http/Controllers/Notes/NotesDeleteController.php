@@ -3,18 +3,14 @@
 namespace App\Http\Controllers\Notes;
 
 use App\Http\Controllers\Controller;
+use App\Models\Note;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
 
 class NotesDeleteController extends Controller
 {
-    public function __invoke(Request $request, string $slug)
+    public function __invoke(Request $request, Note $note)
     {
-        File::move(
-            Storage::disk('public')->path('notes/notes'.$slug.'.md'),
-            Storage::disk('public')->path('notes/notes/_'.$slug.'.md'),
-        );
+        $note->delete();
 
         return redirect(route('notes.index'));
     }

@@ -3,26 +3,23 @@
 namespace App\Http\Controllers\Notes;
 
 use App\Http\Controllers\Controller;
+use App\Models\Note;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
 
 class NotesUpdateController extends Controller
 {
-    public function __invoke(Request $request, string $slug)
+    public function __invoke(Request $request, Note $note)
     {
         $validated = $request->validate(['content' => ['required']]);
 
-        File::delete(Storage::disk('public')->path('notes/notes/'.$slug.'.md'));
+        $title = trim(ltrim(explode("\n", $validated['content'])[0], '# '));
 
-        $content = $validated['content'];
-        $slug = explode("\n", $content);
-        $slug = array_shift($slug);
-        $slug = ltrim($slug, '# ');
-        $slug = str()->slug($slug);
+        $note->update([
+            'slug' => str()->slug($title),
+            'title' => $title,
+            'content' => $validated['content'],
+        ]);
 
-        Storage::disk('public')->put('/notes/notes/'.$slug.'.md', $content);
-
-        return redirect(route('notes.edit', ['slug' => $slug]));
+        return redirect(route('notes.edit', ['note' => $note]));
     }
 }

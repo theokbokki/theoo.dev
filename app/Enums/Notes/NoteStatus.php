@@ -9,8 +9,7 @@ enum NoteStatus: string
 
     public function label()
     {
-        return match($this)
-        {
+        return match ($this) {
             self::Draft => 'Make Draft',
             self::Published => 'Publish',
         };

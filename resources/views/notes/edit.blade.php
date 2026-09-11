@@ -1,20 +1,20 @@
-<x-layout baseClass="note">
+<x-layout baseClass="notes">
     <header class="header">
         <h1 class="header__title">Edit note "{{ $note->title }}"</h1>
-        <a href="{{ route('notes.show', ['slug' => $note->slug]) }}" class="header__back">← Back to note</a>
+        <a href="{{ route('notes.show', ['note' => $note]) }}" class="header__back">← Back to note</a>
         <x-nav/>
     </header>
-    <form id="edit-note">
+    <form class="notes__form notes__form--edit">
         @csrf
         <div class="actions">
-            <button type="submit" formaction="{{ route('notes.update', ['slug' => $note->slug]) }}" formmethod="POST" class="actions__action">Save</button>
+            <button type="submit" formaction="{{ route('notes.update', ['note' => $note]) }}" formmethod="POST" class="actions__action">Save</button>
             <div>
-                <button type="button" class="actions__action" id="upload-image-btn">Add image</button>
-                <input type="file" id="upload-image-input" accept="image/*" hidden multiple/>
+                <label for="upload-image" class="actions__action">Add image</button>
+                <input type="file" name="upload-image" id="upload-image" accept="image/*" hidden multiple/>
             </div>
-            <button type="submit" formaction="{{ route('notes.delete', ['slug' => $note->slug]) }}" formmethod="POST" class="actions__action actions__action--danger">Delete</button>
+            <button type="submit" formaction="{{ route('notes.delete', ['note' => $note]) }}" formmethod="POST" class="actions__action actions__action--danger">Delete</button>
         </div>
-        <textarea name="content" id="content" class="note__edit">{!! old('content', $note->content) !!}</textarea>
-        @error('content') <p class="note__error">{{ $message }}</p> @enderror
+        <textarea name="content" id="content" placeholder="Blablabla..." class="notes__edit">{!! old('content', $note->content) !!}</textarea>
+        @error('content') <p class="notes__error">{{ $message }}</p> @enderror
     </form>
 </x-layout>

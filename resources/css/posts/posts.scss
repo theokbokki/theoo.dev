@@ -46,6 +46,7 @@
         margin-right: rem(8);
         border: none;
         cursor: zoom-in;
+        scroll-snap-align: center;
 
         &--preview {
             margin-right: 0;
@@ -55,6 +56,7 @@
     &__attachment {
         &--thumb {
             max-height: rem(240);
+            max-width: rem(320);
         }
 
         &--full {
@@ -199,6 +201,7 @@
             margin-left: 0;
             padding: 0;
             width: calc(100% + rem(8));
+            scroll-snap-type: x mandatory;
         }
     }
 }

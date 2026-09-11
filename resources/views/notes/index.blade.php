@@ -20,14 +20,16 @@
             </ul>
         @endisset
 
-        @isset($notes['draft'])
-            <ul>
-                @foreach($notes['draft'] as $note)
-                    <li>
-                        <a href="{{ route('notes.show', ['slug' => $note->slug]) }}">{{ $note->title }}</a>
-                    </li>
-                @endforeach
-            </ul>
-        @endisset
+        @auth()
+            @isset($notes['draft'])
+                <ul>
+                    @foreach($notes['draft'] as $note)
+                        <li>
+                            <a href="{{ route('notes.show', ['slug' => $note->slug]) }}">{{ $note->title }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+            @endisset
+        @endauth
     </main>
 </x-layout>

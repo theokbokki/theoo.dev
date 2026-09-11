@@ -14,6 +14,8 @@ class NotesShowController extends Controller
     {
         if (str_starts_with($slug, '_')) return abort(404);
 
+        if (str_starts_with($slug, '-') && ! auth()->check()) return abort(404);
+
         $note = Storage::disk('public')->get('notes/notes/'.$slug.'.md');
 
         if (! $note) return abort(404);

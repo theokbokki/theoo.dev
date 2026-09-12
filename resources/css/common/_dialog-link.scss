@@ -1,0 +1,32 @@
+@use "../utils" as *;
+
+.dialog-link {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    padding: rem(8) rem(12);
+    font-family: var(--font-sans);
+    font-size: rem(16);
+    line-height: 150%;
+    text-decoration: none;
+    color: var(--grey-25);
+    border-radius: rem(8);
+    transition: background 150ms ease-out, transform 150ms ease-out;
+
+    &:not(:first-of-type) {
+        margin-top: rem(2);
+    }
+
+    &:hover {
+        background: rgb(var(--grey-92));
+    }
+
+    &:hover {
+        background: rgb(var(--grey-90));
+    }
+
+    .icon {
+        color: var(--grey-33);
+        width: rem(14);
+    }
+}

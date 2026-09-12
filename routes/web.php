@@ -26,7 +26,6 @@ use App\Http\Controllers\Posts\PostsDraftController;
 use App\Http\Controllers\Posts\PostsEditController;
 use App\Http\Controllers\Posts\PostsIndexController;
 use App\Http\Controllers\Posts\PostsUpdateController;
-use App\Http\Controllers\RssFeedController;
 use Illuminate\Support\Facades\Route;
 
 /* AUTH */
@@ -36,9 +35,6 @@ Route::get('/login', LoginShowController::class)->name('login')->middleware('gue
 Route::post('/login', LoginStoreController::class)->name('login.store')->middleware('guest');
 
 Route::get('/logout', LogoutController::class)->name('logout')->middleware('auth');
-
-/* RSS */
-Route::get('/rss', RssFeedController::class)->name('rss');
 
 /* HOME */
 

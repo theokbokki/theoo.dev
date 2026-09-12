@@ -1,4 +1,4 @@
-.sro {
+@mixin sro {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -8,6 +8,10 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+}
+
+.sro {
+    @include sro;
 }
 
 @function rem($value) {

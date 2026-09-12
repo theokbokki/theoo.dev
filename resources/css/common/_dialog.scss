@@ -1,0 +1,20 @@
+@use "../utils" as *;
+
+.dialog {
+    &::backdrop {
+        background: rgba(var(--black), .5);
+        backdrop-filter: blur(rem(3));
+    }
+
+    width: calc(100% - rem(16) - rem(24));
+    margin: auto rem(8) rem(8);
+    padding: rem(12);
+    background: rgb(var(--white));
+    border: none;
+    border-radius: rem(12);
+
+    @media screen and (min-width: rem(540)) {
+        margin: auto;
+        max-width: rem(540);
+    }
+}

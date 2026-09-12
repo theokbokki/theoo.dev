@@ -10,7 +10,7 @@ class NotesIndexController extends Controller
 {
     public function __invoke(Request $request)
     {
-        $notes = Note::query()->orderByDesc('updated_at')->get()->groupBy('status');
+        $notes = Note::query()->orderByDesc('updated_at')->get();
 
         return view('notes.index', ['notes' => $notes]);
     }

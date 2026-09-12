@@ -1,15 +1,28 @@
 @use "../utils" as *;
 
 .nav {
-    display: flex;
-    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     padding: rem(12);
     background: rgb(var(--white));
     box-shadow: 0 rem(1) 0 0 rgb(var(--grey-92));
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        max-width: rem(800);
+        margin: 0 auto;
+    }
 
     &__avatar {
         width: rem(32);
         height: rem(32);
         border-radius: rem(999);
+    }
+
+    &__actions {
+        display: flex;
+        gap: rem(4);
     }
 }

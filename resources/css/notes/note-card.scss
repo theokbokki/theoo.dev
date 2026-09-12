@@ -1,0 +1,33 @@
+@use "../utils" as *;
+
+.note-card {
+    position: relative;
+    padding: rem(24) rem(12);
+    box-shadow: 0 rem(1) 0 0 rgb(var(--grey-92));
+    font-family: var(--font-sans);
+    line-height: 150%;
+    transition: background 150ms ease-out;
+
+    &:hover {
+        background: rgb(var(--grey-96));
+    }
+
+    &__title {
+        font-weight: 500;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: rgb(var(--grey-25));
+
+        &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+        }
+    }
+
+    &__subtitle {
+        color: rgb(var(--grey-40));
+    }
+}

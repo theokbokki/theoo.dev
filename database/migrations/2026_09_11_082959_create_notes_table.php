@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->id();
             $table->string('slug');
             $table->string('title');
+            $table->string('subtitle')->nullable();
             $table->text('content');
             $table->enum('status', NoteStatus::cases());
             $table->timestamps();

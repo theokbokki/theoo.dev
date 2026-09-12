@@ -1,33 +1,22 @@
 <x-layout baseClass="notes">
-    <header class="header">
-        <h1 class="header__title">Notes</h1>
-        <x-nav/>
-    </header>
-    @auth()
-    <form class="actions">
-        @csrf
-        <a href="{{ route('notes.draft') }}" class="actions__action">New note</a>
-    </form>
-    @endauth
-    <main class="prose">
-            <ul>
-                @foreach($notes['published'] as $note)
-                    <li>
-                        <a href="{{ route('notes.show', ['note' => $note]) }}">{{ $note->title }}</a>
-                    </li>
-                @endforeach
-            </ul>
-
+    <h1 class="sro">Notes</h1>
+    <x-nav>
         @auth()
-            @isset($notes['draft'])
-                <ul>
-                    @foreach($notes['draft'] as $note)
-                        <li>
-                            <a href="{{ route('notes.show', ['note' => $note]) }}">{{ $note->title }}</a>
-                        </li>
-                    @endforeach
-                </ul>
-            @endisset
+            <x-slot:actions>
+                <x-button :href="route('notes.draft')" title="New note" modifiers="icon secondary" icon="plus"/>
+            </x-slot>
         @endauth
+    </x-nav>
+    <main class="notes__list">
+        @foreach($notes as $note)
+            <article class="note-card">
+                <h3 class="note-card__title">
+                    <a href="{{ route('notes.show', ['note' => $note]) }}" class="note-card__link">{{ $note->title }}</a>
+                </h3>
+                @isset($note->subtitle)
+                    <p class="note-card__subtitle">{{ $note->subtitle }}</p>
+                @endisset
+            </article>
+        @endforeach
     </main>
 </x-layout>

@@ -11,7 +11,7 @@
     text-decoration: none;
     color: var(--grey-25);
     border-radius: rem(8);
-    transition: background 150ms ease-out, transform 150ms ease-out;
+    transition: background 150ms ease-out;
 
     &:not(:first-of-type) {
         margin-top: rem(2);

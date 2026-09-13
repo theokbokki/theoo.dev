@@ -1,18 +1,26 @@
-<x-layout baseClass="notes">
-    <header class="header">
-        <h1 class="header__title">New note</h1>
-        <x-nav/>
-    </header>
-    <form class="notes__form notes__form--draft">
-        @csrf
-        <div class="actions">
-            <button type="submit" formaction="{{ route('notes.create') }}" formmethod="POST" class="actions__action">Save</button>
-            <div>
-                <label for="upload-image" class="actions__action">Add image</button>
-                <input type="file" name="upload-image" id="upload-image" accept="image/*" hidden multiple/>
-            </div>
+<x-layout baseClass="notes-form">
+    <x-form-header title="New note" :href="route('notes.index')">
+        <x-slot:actions>
+            <x-button type="submit" formaction="{{ route('notes.create') }}" formmethod="POST">Create</x-button>
+        </x-slot>
+    </x-form-header>
+    <div class="notes-form__tools">
+        <div class="notes-form__container">
+            <x-button type="button" data-action="image" icon="image" modifiers="icon transparent">Upload image</x-button>
+            <x-button type="button" data-action="link" icon="link" modifiers="icon transparent">Add link</x-button>
+            <x-button type="button" data-action="quote" icon="quote" modifiers="icon transparent">Add quote</x-button>
+            <x-button type="button" data-action="bold" icon="bold" modifiers="icon transparent">Make bold</x-button>
+            <x-button type="button" data-action="bold" icon="italic" modifiers="icon transparent">Make italic</x-button>
         </div>
-        <textarea name="content" id="content" class="notes__edit" placeholder="Blablabla...">{!! old('content') !!}</textarea>
-        @error('content') <p class="note__error">{{ $message }}</p> @enderror
+    </div>
+    <form class="notes-form__form">
+        @csrf
+        <textarea name="titile" id="title" class="notes-form__title" placeholder="Note title...">{!! old('title') !!}</textarea>
+        @error('title') <p class="notes-form__error">{{ $message }}</p> @enderror
+
+        <textarea name="subtitle" id="subtitle" class="notes-form__subtitle" placeholder="Subtitle...">{!! old('subtitle') !!}</textarea>
+
+        <textarea name="content" id="content" class="notes-form__content" placeholder="Blablabla...">{!! old('content') !!}</textarea>
+        @error('content') <p class="notes-form__error">{{ $message }}</p> @enderror
     </form>
 </x-layout>

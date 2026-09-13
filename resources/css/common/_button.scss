@@ -8,6 +8,7 @@
     font-size: rem(16);
     font-family: var(--font-sans);
     line-height: 150%;
+    text-decoration: none;
     color: rgb(var(--white));
     background: rgb(var(--primary));
     border: none;
@@ -46,6 +47,19 @@
         &:active:not(:disabled),
         &:focus-visible {
             background: rgb(var(--grey-90));
+        }
+    }
+
+    &--transparent {
+        background: transparent;
+
+        &:hover:not(:disabled) {
+            background: rgb(var(--grey-94));
+        }
+
+        &:active:not(:disabled),
+        &:focus-visible {
+            background: rgb(var(--grey-94));
         }
     }
 

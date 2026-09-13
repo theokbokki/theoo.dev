@@ -1,0 +1,50 @@
+@use "../utils" as *;
+
+.form-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: rem(12);
+    background: rgb(var(--white));
+    border-bottom: rem(1) solid rgb(var(--grey-92));
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: rem(800);
+        margin: 0 auto;
+    }
+
+    &__title {
+        position: absolute;
+        left: 50%;
+        font-family: var(--font-sans);
+        font-weight: 500;
+        color: rgb(var(--grey-25));
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    &__actions {
+        display: flex;
+        gap: rem(4);
+    }
+
+    &__close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(36);
+        height: rem(36);
+        color: rgb(var(--grey-33));
+        transition: background 150ms ease-out;
+
+        &:hover {
+            background: rgb(var(--grey-94));
+        }
+
+        .icon {
+            width: rem(14);
+        }
+    }
+}

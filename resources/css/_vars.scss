@@ -2,7 +2,8 @@
     /* COLORS */
     --black: 0, 0, 0;
     --grey-25: 64, 64, 64;
-    --gret-33: 84, 84, 84;
+    --grey-33: 84, 84, 84;
+    --grey-66: 168, 168, 168;
     --grey-90: 230, 230, 230;
     --grey-92: 235, 235, 235;
     --grey-94: 240, 240, 240;
@@ -12,7 +13,10 @@
     --primary: 255, 98, 0;
     --primary-dark: 249, 115, 31;
 
+    --red: 255, 0, 0;
+
     /* FONTS */
     --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
 }

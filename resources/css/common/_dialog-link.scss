@@ -4,14 +4,18 @@
     display: flex;
     align-items: center;
     gap: rem(8);
+    width: 100%;
     padding: rem(8) rem(12);
     font-family: var(--font-sans);
     font-size: rem(16);
     line-height: 150%;
     text-decoration: none;
     color: var(--grey-25);
+    background: none;
     border-radius: rem(8);
+    border: none;
     transition: background 150ms ease-out;
+    box-sizing: border-box;
 
     &:not(:first-of-type) {
         margin-top: rem(2);
@@ -19,6 +23,10 @@
 
     &:hover {
         background: rgb(var(--grey-94));
+    }
+
+    &--danger {
+        color: rgb(var(--red));
     }
 
     .icon {

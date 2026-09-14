@@ -1,8 +1,207 @@
 @use "../utils" as *;
 
 .notes {
+    &--show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav {
+        order: -2;
+    }
+
     &__list {
         max-width: 80ch;
         margin: rem(24) auto;
+    }
+
+    &__title {
+        width: min(calc(100dvw - rem(24)), rem(640));
+        padding: 0 rem(12);
+        margin: 0 auto rem(16);
+        font-size: rem(32);
+        font-family: var(--font-serif);
+        line-height: 110%;
+        color: rgb(var(--grey-25));
+    }
+
+    &__back {
+        width: min(calc(100dvw - rem(24)), rem(640));
+        padding: 0 rem(12);
+        margin: rem(32) auto rem(16);
+        font-size: rem(16);
+        font-family: var(--font-sans);
+        line-height: 150%;
+        text-decoration: none;
+        color: rgb(var(--grey-40));
+        transition: color 150ms ease-out;
+        order: -1;
+
+        &:hover {
+            color: rgb(var(--grey-25));
+        }
+    }
+
+    &__subtitle {
+        width: min(calc(100dvw - rem(24)), rem(640));
+        padding: 0 rem(12);
+        margin: 0 auto rem(40);
+        font-size: rem(18);
+        font-family: var(--font-serif);
+        line-height: 150%;
+        color: rgb(var(--grey-33));
+    }
+
+    &__content {
+        width: min(calc(100dvw - rem(24)), rem(640));
+        padding: 0 rem(12);
+        margin: 0 auto rem(80);
+        font-size: rem(18);
+        font-family: var(--font-serif);
+        line-height: 150%;
+        color: rgb(var(--grey-33));
+
+        /* Paragraphs */
+        p {
+            margin-top: rem(16);
+        }
+
+        a {
+            text-underline-offset: rem(2);
+            color: rgb(var(--primary));
+
+            &:hover {
+                color: rgb(var(--primary-dark));
+                transition: color 150ms ease-out;
+            }
+        }
+
+        /* Blockquotes */
+        blockquote {
+            margin: rem(16) 0 0 2ch;
+            position: relative;
+        }
+
+        blockquote:before {
+            content: '>';
+            position: absolute;
+            left: -2ch;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-top: rem(16);
+        }
+
+        li {
+            position: relative;
+            margin-left: 2ch;
+            margin-top: rem(8);
+        }
+
+        li:before {
+            position: absolute;
+        }
+
+        ul li::before {
+            content: "- ";
+            left: -2ch;
+        }
+
+        ol {
+            counter-reset: count;
+        }
+
+        ol li {
+            counter-increment: count;
+        }
+
+        ol li::before {
+            content: counter(count) ". ";
+            left: -2.5ch;
+        }
+
+        /* Images */
+        :where(img) {
+            display: block;
+            margin-top: rem(16);
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* Code blocks */
+        pre {
+            margin-left: 2ch;
+        }
+
+        pre:before,
+        pre:after {
+            content: "```";
+            display: block;
+        }
+
+        pre code:before,
+        pre code:after {
+            content: unset;
+        }
+
+        /* Inline code */
+        code:before,
+        code:after {
+            content: "`";
+        }
+
+        /* Horizontal rule */
+        hr {
+            margin: 0;
+            margin-top: 1rem;
+            border: none;
+        }
+
+        hr:before {
+            content: "---";
+        }
+
+        /* Inline formatting */
+        em {
+            font-style: italic;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    }
+
+    &__zoom {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: transparent;
+        cursor: zoom-in;
+    }
+
+    &__dialog {
+        &::backdrop {
+            background: rgba(var(--black), .5);
+            backdrop-filter: blur(rem(3));
+        }
+
+        border: none;
+        background: transparent
+    }
+
+    &__close {
+        position: fixed;
+        top: rem(12);
+        right: rem(12);
+        background: none;
+        border: none;
+        color: rgb(var(--white));
+        font-size: rem(24);
+        cursor: pointer;
+    }
+
+    &__full {
+        max-height: 90dvh;
     }
 }

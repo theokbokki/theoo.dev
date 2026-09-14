@@ -25,7 +25,6 @@ class NotesShowController extends Controller
 
     protected function parseContent(string $content)
     {
-        $content = substr($content, strpos($content, "\n") + 1);
         $html = str()->markdown($content);
         $doc = new DOMDocument();
 

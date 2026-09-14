@@ -1,5 +1,5 @@
 <x-layout baseClass="notes-form">
-    <x-form-header title="New note" :href="route('notes.index')">
+    <x-form-header title="New note" :href="route('notes.show', ['note' => $note])">
         <x-slot:actions>
             <x-button type="submit" formaction="{{ route('notes.update', ['note' => $note]) }}" formmethod="POST" form="note-edit-form">Edit</x-button>
         </x-slot>

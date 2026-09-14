@@ -10,16 +10,19 @@ class NotesUpdateController extends Controller
 {
     public function __invoke(Request $request, Note $note)
     {
-        $validated = $request->validate(['content' => ['required']]);
-
-        $title = trim(ltrim(explode("\n", $validated['content'])[0], '# '));
+        $validated = $request->validate([
+            'title' => ['required'],
+            'subtitle' => ['nullable'],
+            'content' => ['required'],
+        ]);
 
         $note->update([
-            'slug' => str()->slug($title),
-            'title' => $title,
+            'slug' => str()->slug($validated['title']),
+            'title' => $validated['title'],
+            'subtitle' => $validated['subtitle'],
             'content' => $validated['content'],
         ]);
 
-        return redirect(route('notes.edit', ['note' => $note]));
+        return redirect(route('notes.show', ['note' => $note]));
     }
 }

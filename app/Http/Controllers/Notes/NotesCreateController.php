@@ -11,13 +11,16 @@ class NotesCreateController extends Controller
 {
     public function __invoke(Request $request)
     {
-        $validated = $request->validate(['content' => ['required']]);
+        $validated = $request->validate([
+            'title' => ['required'],
+            'subtitle' => ['nullable'],
+            'content' => ['required'],
+        ]);
 
-        $title = trim(ltrim(explode("\n", $validated['content'])[0], '# '));
-
-        $note = Note::create([
-            'slug' => str()->slug($title),
-            'title' => $title,
+        $note = Note::query()->create([
+            'slug' => str()->slug($validated['title']),
+            'title' => $validated['title'],
+            'subtitle' => $validated['subtitle'],
             'content' => $validated['content'],
             'status' => NoteStatus::Draft,
         ]);

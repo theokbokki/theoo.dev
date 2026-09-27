@@ -13,8 +13,8 @@
         </div>
     </div>
     <x-dialog id="menu">
-        <x-dialog-link :href="route('notes.index')" title="Notes" icon="edit"/>
-        <x-dialog-link :href="route('posts.index')" title="Feed" icon="feed"/>
-        <x-dialog-link :href="route('links.index')" title="Links" icon="link"/>
+        <x-dialog-link :href="route('notes.index')" icon="edit">Notes</x-dialog-link>
+        <x-dialog-link :href="route('posts.index')" icon="feed">Feed</x-dialog-link>
+        <x-dialog-link :href="route('links.index')" icon="link">Links</x-dialog-link>
     </x-dialog>
 </nav>

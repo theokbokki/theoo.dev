@@ -1,22 +1,35 @@
 <x-layout baseClass="posts">
-    <header class="header">
-        <h1 class="header__title">Feed</h1>
-        <x-nav/>
-    </header>
-    @auth()
-    <form class="actions">
-        @csrf
-        <a href="{{ route('posts.draft') }}" class="actions__action">New post</a>
-    </form>
-    @endauth
+    <h1 class="sro">Feed</h1>
+    <x-nav>
+        <x-slot:actions>
+            @auth()
+                <x-button :href="route('posts.draft') " icon="plus" modifiers="icon secondary">New post</x-button>
+            @endauth
+        </x-slot>
+    </x-nav>
     <main class="posts__list">
         @foreach($posts as $post)
             <div class="posts__post">
-                <p class="posts__date">
-                    <time datetime="{{ $post->created_at }}">
-                        {{ $post->created_at->year > 2025 ? $post->created_at->format('d-m-Y') : 2025 }}
-                    </time>
-                </p>
+                <header class="posts__header">
+                    <p class="posts__date">
+                        <time datetime="{{ $post->created_at }}">
+                            {{ $post->created_at->year > 2025 ? $post->created_at->humanDate() : 2025 }}
+                        </time>
+                    </p>
+                    @auth()
+                        <x-button type="button" command="show-modal" commandfor="post-{{ $post->id }}" icon="ellipsis" modifiers="icon transparent" title="Post actions"/>
+                        <x-dialog id="post-{{ $post->id }}">
+                            <form>
+                                <x-dialog-link :href="route('posts.edit', ['post' => $post])" icon="edit">
+                                    Edit post
+                                </x-dialog-link>
+                                <x-dialog-link type="submit" modifiers="danger" formaction="{{ route('posts.delete', ['post' => $post]) }}" formmethod="POST" icon="trash">
+                                    Delete post
+                                </x-dialog-link>
+                            </form>
+                        </x-dialog>
+                    @endauth
+                </header>
                 <div class="posts__main">
                     <div class="posts__content">
                         {!! str()->markdown($post->content) !!}
@@ -37,19 +50,6 @@
                         </div>
                     @endif
                 </div>
-                @auth()
-                    <form class="posts__actions">
-                        @csrf
-                        <a href="{{ route('posts.edit', ['post' => $post]) }}" class="posts__action">
-                            <span class="sro">Edit</span>
-                            <x-icon name="edit"/>
-                        </a>
-                        <button type="submit" formaction="{{ route('posts.delete', ['post' => $post]) }}" formmethod="POST" class="posts__action posts__action--danger">
-                            <span class="sro">Delete</span>
-                            <x-icon name="trash"/>
-                        </button>
-                    </form>
-                @endauth
             </div>
         @endforeach
     </main>

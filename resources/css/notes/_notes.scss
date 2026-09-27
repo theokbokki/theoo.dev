@@ -45,7 +45,7 @@
     &__subtitle {
         width: min(calc(100dvw - rem(24)), rem(640));
         padding: 0 rem(12);
-        margin: 0 auto rem(40);
+        margin: 0 auto;
         font-size: rem(18);
         font-family: var(--font-serif);
         line-height: 150%;
@@ -55,7 +55,7 @@
     &__content {
         width: min(calc(100dvw - rem(24)), rem(640));
         padding: 0 rem(12);
-        margin: 0 auto rem(80);
+        margin: rem(40) auto rem(80);
         font-size: rem(18);
         font-family: var(--font-serif);
         line-height: 150%;

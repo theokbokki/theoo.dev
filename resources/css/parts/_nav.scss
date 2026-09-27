@@ -1,0 +1,58 @@
+@use "../utils" as *;
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: rem(800);
+    padding: 0 rem(16);
+    margin: rem(16) auto rem(40);
+
+    &__about {
+        width: rem(32);
+        height: rem(32);
+        border-radius: rem(999);
+        overflow: hidden;
+        transition: transform 150ms ease-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &:active {
+            transform: scale(.95);
+        }
+    }
+
+    &__avatar {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__menu {
+        display: flex;
+        padding: rem(6) rem(12);
+        font-family: var(--font-sans);
+        text-decoration: none;
+        line-height: 150%;
+        color: rgba(var(--grey-32));
+        background: rgba(var(--grey-96));
+        border-radius: rem(8);
+        box-shadow:
+            0 rem(4) rem(4) 0 rgba(var(--black), .05),
+            rem(1) 0 rem(1) rem(-.5) rgba(var(--black), .15),
+            rem(-1) 0 rem(1) rem(-.5) rgba(var(--black), .15),
+            0 rem(0.5) rem(1) 0 rgba(var(--black), .1),
+            0 rem(-1) rem(.5) 0 rgba(var(--white), .75) inset,
+            0 rem(-.75) rem(1) 0 rgba(var(--black), .15),
+            0 rem(1) rem(.5) 0 rgba(var(--white), .75) inset;
+        transition: background 150ms ease-out, transform 150ms ease-out;
+
+        &:hover {
+            background: rgba(var(--grey-92));
+        }
+
+        &:active {
+            transform: scale(.95);
+        }
+    }
+}

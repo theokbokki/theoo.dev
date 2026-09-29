@@ -1,0 +1,78 @@
+@use "../utils" as *;
+
+.menu {
+    max-width: rem(540);
+    padding: rem(40) rem(12);
+    margin: 0 auto;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .icon {
+            color: rgb(var(--grey-50));
+            width: rem(24);
+            height: rem(24);
+        }
+    }
+
+    &__close {
+
+    }
+
+    &__title {
+        padding: 0 rem(12);
+        font-family: var(--font-sans);
+        font-size: rem(32);
+        font-weight: bold;
+        line-height: 100%;
+        color: rgb(var(--grey-24));
+    }
+
+    &__nav {
+        margin-top: rem(40);
+    }
+
+    &__subtitle {
+        padding: 0 rem(12);
+        font-size: rem(14);
+        font-family: var(--font-sans);
+        line-height: 100%;
+        color: rgb(var(--grey-50));
+    }
+
+    &__list {
+        margin-top: rem(8);
+    }
+
+    &__item {
+        &:not(:first-child) {
+            margin-top: rem(4);
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: rem(6);
+        padding: rem(6) rem(12);
+        font-family: var(--font-sans);
+        line-height: 150%;
+        text-decoration: none;
+        color: rgb(var(--grey-33));
+        border-radius: rem(8);
+        transition: background 150ms ease-out;
+
+        &:hover {
+            background: rgb(var(--grey-96));
+            transition: background 0s ease-out;
+        }
+
+        & .icon {
+            width: rem(24);
+            height: rem(24);
+            color: var(--icon-color);
+        }
+    }
+}

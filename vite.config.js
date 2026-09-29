@@ -6,7 +6,10 @@ export default defineConfig({
         laravel({
             input: ['resources/css/app.scss', 'resources/js/app.js'],
             refresh: true,
-            assets: ['resources/img/*', 'resources/icons/*']
+            assets: [
+                'resources/img/**',
+                'resources/icons/**',
+            ]
         }),
     ],
     server: {

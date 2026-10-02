@@ -1,0 +1,42 @@
+@use "../utils" as *;
+
+.home {
+    background: rgb(var(--home-bg));
+
+    &__header {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &__title {
+        width: 100%;
+        max-width: rem(422);
+        margin: 0 auto;
+        padding: 0 rem(16);
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__main {
+        width: 100%;
+        max-width: rem(422);
+        margin: rem(40) auto;
+        padding: 0 rem(16);
+    }
+
+    &__text {
+        margin-top: rem(16);
+        font-family: var(--font-comic), var(--font-sans);
+        line-height: 175%;
+        text-wrap: pretty;
+        text-align: justify;
+        color: rgb(var(--grey-24));
+    }
+
+    &__link {
+        color: rgb(var(--home-link-color));
+    }
+}

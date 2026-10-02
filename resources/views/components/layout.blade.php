@@ -6,6 +6,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+        @fonts
         @vite(['resources/css/app.scss', 'resources/js/app.js'])
     </head>
     <body class="{{ $baseClass }}">

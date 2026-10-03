@@ -14,4 +14,5 @@
             </article>
         @endforeach
     </main>
+    <x-note-backdrop/>
 </x-layout>

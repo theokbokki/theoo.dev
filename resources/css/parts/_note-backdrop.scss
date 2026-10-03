@@ -1,0 +1,59 @@
+@use "../utils" as *;
+
+.note-backdrop {
+    position: fixed;
+    min-height: 100dvh;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: #cfbcb0;
+
+    &__window {
+        position: absolute;
+        width: rem(900);
+        height: rem(723);
+        transform: rotate(-5deg);
+        filter: blur(rem(10));
+        z-index: -1;
+        background-color: #f6e2d5;
+        box-shadow: 0 0 rem(20) rem(20) inset #cfbcb0;
+
+        &--right {
+            right: rem(-105);
+            top: 5vh;
+        }
+
+        &--left {
+            right: rem(822);
+            top: calc(5vh + rem(85));
+        }
+    }
+
+    &__leaves {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        filter: blur(rem(15));
+    }
+
+    &__leaf {
+        position: absolute;
+        width: rem(80);
+        height: rem(80);
+        border-radius: 0 rem(70);
+        background: #cfbcb0;
+        transform: rotate(var(--r));
+        animation: note-backdrop-leaf-sway var(--sway-duration) ease-in-out infinite alternate;
+        animation-delay: var(--sway-delay);
+    }
+}
+
+@keyframes note-backdrop-leaf-sway {
+    from {
+        transform: rotate(var(--r)) translateX(0);
+    }
+    to {
+        transform: rotate(var(--r)) translateX(var(--sway-distance));
+    }
+}

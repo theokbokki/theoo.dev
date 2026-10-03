@@ -2,6 +2,8 @@
     <header class="notes__header">
         <h1 class="notes__title">Notes</h1>
         <x-nav/>
+        <p class="notes__intro">This is my notes page. It’s basically a blog but where I write like I would in a notes app. I don’t perfect or re-read or anything. I just say whatever I have in mind and try to write it down so it makes sense.</p>
+        <p class="notes__intro">You might find something interesting, who knows!</p>
     </header>
     <hr class="notes__divider">
     <main class="notes__list">

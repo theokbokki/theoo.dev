@@ -36,7 +36,7 @@
         text-decoration: none;
         line-height: 150%;
         color: rgba(var(--grey-32));
-        background: rgba(var(--grey-96));
+        background: rgba(var(--grey-96), .75);
         border-radius: rem(8);
         box-shadow:
             0 rem(4) rem(4) 0 rgba(var(--black), .05),
@@ -49,7 +49,7 @@
         transition: background 150ms ease-out, transform 150ms ease-out;
 
         &:hover {
-            background: rgba(var(--grey-92));
+            background: rgba(var(--grey-92), .75);
         }
 
         &:active {

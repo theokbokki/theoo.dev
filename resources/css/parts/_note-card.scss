@@ -1,0 +1,47 @@
+@use "../utils" as *;
+
+.note-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+    padding: rem(8) rem(12);
+    transition: background 150ms ease-out;
+
+    &:hover {
+        .note-card__link {
+            &:before {
+                transform: scale(1);
+                background: rgba(var(--black), 0.05);
+            }
+        }
+    }
+
+    &__title {
+        font-family: var(--font-junicode);
+        font-size: rem(20);
+        line-height: 150%;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: rgb(var(--grey-24));
+
+        &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: rem(12);
+            transform: scale(.95);
+            transition: background 150ms ease-out, transform 150ms ease-out;
+        }
+    }
+
+    &__subtitle {
+        font-family: var(--font-junicode);
+        font-size: rem(20);
+        font-style: italic;
+        line-height: 150%;
+        color: rgb(var(--grey-32));
+    }
+}

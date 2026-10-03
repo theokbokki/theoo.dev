@@ -1,6 +1,6 @@
-<li class="menu__item" style="--icon-color: {{ $color }}">
+<li class="menu__item">
     <a href="{{ $href }}" class="menu__link">
-        <x-icon name="{{ $icon }}"/>
+        <x-icon name="{{ $icon }}" style="color: {{ $color }}"/>
         <span>{{ $slot }}</span>
     </a>
 </li>

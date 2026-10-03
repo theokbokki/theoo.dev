@@ -2,8 +2,28 @@
 
 namespace App\Enums;
 
-enum NoteStatus: string
+use Filament\Support\Contracts\HasColor;
+use Filament\Support\Contracts\HasLabel;
+use Illuminate\Contracts\Support\Htmlable;
+
+enum NoteStatus: string implements HasLabel, HasColor
 {
     case Draft = 'draft';
     case Published = 'published';
+
+    public function getLabel(): string|Htmlable|null
+    {
+        return match ($this) {
+            self::Draft => 'Draft',
+            self::Published => 'Published',
+        };
+    }
+
+    public function getColor(): string|array|null
+    {
+        return match ($this) {
+            self::Draft => 'gray',
+            self::Published => 'success',
+        };
+    }
 }

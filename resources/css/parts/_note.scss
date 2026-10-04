@@ -3,18 +3,6 @@
 .note {
     margin-bottom: rem(80);
 
-    &:after {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background: url("../../img/noise.webp");
-        background-size: 15%;
-        opacity: 0.06;
-        mix-blend-mode: multiply;
-        z-index: 10;
-        pointer-events: none;
-    }
-
     &__header {
         display: flex;
         flex-direction: column;
@@ -129,7 +117,6 @@
 
         a {
             position: relative;
-            white-space: nowrap;
             color: rgb(var(--grey-33));
             text-decoration-skip-ink: none;
             text-decoration-thickness: rem(8);

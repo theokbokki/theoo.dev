@@ -18,7 +18,7 @@ class NotesTable
             ->columns([
                 TextColumn::make('title')
                     ->sortable()
-                    ->description(fn(Note $record): string => $record->subtitle)
+                    ->description(fn(Note $record): string => $record->subtitle ?? '')
                     ->searchable(),
 
                 TextColumn::make('status')->badge()->searchable(),

@@ -1,5 +1,21 @@
 @use "../utils" as *;
 
+html:has(.note-backdrop) {
+    background: #ece4df;
+    
+    &:after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url("../../img/noise.webp");
+        background-size: 15%;
+        opacity: 0.06;
+        mix-blend-mode: multiply;
+        z-index: 10;
+        pointer-events: none;
+    }
+}
+
 .note-backdrop {
     position: fixed;
     min-height: 100dvh;

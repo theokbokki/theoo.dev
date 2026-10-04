@@ -1,18 +1,6 @@
 @use "../utils" as *;
 
 .notes {
-    &:after {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background: url("../../img/noise.webp");
-        background-size: 15%;
-        opacity: 0.06;
-        mix-blend-mode: multiply;
-        z-index: 10;
-        pointer-events: none;
-    }
-
     &__header {
         display: flex;
         flex-direction: column;

@@ -10,9 +10,11 @@
         @foreach($notes as $note)
             <article class="notes__card note-card">
                 <h3 class="note-card__title">
-                    <a href="#" class="note-card__link">{{ $note->title }}</a>
+                    <a href="{{ route('notes.show', ['note' => $note]) }}" class="note-card__link">{{ $note->title }}</a>
                 </h3>
-                <p class="note-card__subtitle">{{ $note->subtitle }}</p>
+                @isset($note->subtitle)
+                    <p class="note-card__subtitle">{{ $note->subtitle }}</p>
+                @endisset
             </article>
         @endforeach
     </main>

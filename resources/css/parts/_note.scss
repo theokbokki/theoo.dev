@@ -1,0 +1,232 @@
+@use "../utils" as *;
+
+.note {
+    margin-bottom: rem(80);
+
+    &:after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url("../../img/noise.webp");
+        background-size: 15%;
+        opacity: 0.06;
+        mix-blend-mode: multiply;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+
+        .nav {
+            order: -2;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        max-width: rem(572);
+        margin: 0 auto;
+        padding: 0 rem(16);
+        font-family: var(--font-junicode);
+        font-size: rem(32);
+        line-height: 130%;
+        text-wrap: pretty;
+        color: rgb(var(--grey-24));
+    }
+
+    &__back {
+        order: -1;
+        width: 100%;
+        max-width: rem(572);
+        margin: 0 auto rem(24);
+        padding: 0 rem(16);
+        font-family: var(--font-sans);
+        text-decoration: none;
+        color: rgb(var(--grey-32));
+        transition: 100ms opacity ease-out;
+
+        &:hover {
+            opacity: .66;
+        }
+    }
+
+    &__intro {
+        width: 100%;
+        max-width: rem(572);
+        margin: rem(8) auto 0;
+        padding: 0 rem(16);
+        font-family: var(--font-junicode);
+        font-style: italic;
+        font-size: rem(20);
+        line-height: 150%;
+        text-wrap: pretty;
+        text-align: justify;
+        color: rgb(var(--grey-32));
+
+        & + .notes__intro {
+            margin-top: rem(16);
+        }
+    }
+
+    &__divider {
+        margin: 0 auto;
+        border: unset;
+        text-align: center;
+
+        &:before {
+            content: "𖡼𖤣𖥧𖡼𓋼𖤣𖥧𓋼𓍊";
+            display: block;
+            line-height: rem(148);
+            color: rgb(var(--grey-32));
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: rem(572);
+        margin: 0 auto;
+        padding: 0 rem(16);
+        font-family: var(--font-junicode);
+        font-size: rem(20);
+        line-height: 150%;
+        text-wrap: pretty;
+        text-align: justify;
+        color: rgb(var(--grey-32));
+
+        :first-child {
+            margin-top: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: rem(20);
+        }
+
+        p {
+            margin-top: rem(20);
+            hyphens: auto;
+            text-indent: 2ch each-line;
+        }
+
+        & > p:first-child {
+            text-indent: rem(0);
+
+            &:first-letter {
+                font-size: rem(40);
+            }
+        }
+
+        a {
+            text-underline-offset: rem(2);
+            transition: opacity 100ms ease-out;
+            white-space: nowrap;
+            color: var(--grey-32);
+
+            &:hover {
+                opacity: 66%;
+            }
+        }
+
+        blockquote {
+            margin: rem(40) 0;
+            padding: rem(16) rem(24);
+            position: relative;
+            font-style: italic;
+            border: 2px dotted
+                color-mix(in hsl, currentColor 20%, currentColor 20%);
+
+            > :first-child {
+                margin-top: 0;
+            }
+        }
+
+        ul,
+        ol {
+            margin: 1rem 0 0;
+        }
+
+        li {
+            position: relative;
+            margin-left: 3ch;
+
+            + li {
+                margin-top: 0.5rem;
+            }
+        }
+
+        li:before {
+            position: absolute;
+        }
+
+        ul li::before {
+            content: "• ";
+            left: -2ch;
+        }
+
+        ol {
+            counter-reset: count;
+        }
+
+        ol li {
+            counter-increment: count;
+        }
+
+        ol li::before {
+            content: counter(count) ". ";
+            left: -2.5ch;
+        }
+
+        img {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem auto 0;
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: contain;
+            padding: rem(32);
+            z-index: 30;
+            background: color-mix(in hsl, currentColor 5%, currentColor 5%);
+        }
+
+        pre {
+            margin: rem(40) 0;
+            padding: rem(16) rem(24);
+            position: relative;
+            border: 2px dotted
+                color-mix(in hsl, currentColor 20%, currentColor 20%);
+        }
+
+        code {
+            font-family: Menlo, Courier, monospace;
+            font-size: rem(16);
+        }
+
+        hr {
+            border: unset;
+            text-align: center;
+
+            &:before {
+                content: "𖡼𖤣𖥧𖡼𓋼𖤣𖥧𓋼𓍊";
+                display: block;
+                line-height: rem(148);
+                color: rgb(var(--grey-32));
+            }
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    }
+}

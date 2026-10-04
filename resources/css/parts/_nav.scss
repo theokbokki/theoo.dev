@@ -1,12 +1,14 @@
 @use "../utils" as *;
 
 .nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: rem(832);
     padding: 0 rem(16);
     margin: rem(24) auto rem(40);
+    z-index: 20;
 
     &__about {
         width: rem(32);

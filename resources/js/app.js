@@ -1,4 +1,5 @@
 import NoteBackdrop from "./NoteBackdrop";
+import NoteSmallCaps from "./NoteSmallCaps";
 
 class App {
     constructor() {
@@ -7,8 +8,10 @@ class App {
 
     notes() {
         const backdrop = document.querySelector(".note-backdrop");
+        const content = document.querySelector(".note__content");
 
         if (backdrop) new NoteBackdrop(backdrop);
+        if (content) new NoteSmallCaps(content);
     }
 }
 

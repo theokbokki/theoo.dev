@@ -48,7 +48,7 @@
         transition: 100ms opacity ease-out;
 
         &:hover {
-            opacity: .66;
+            opacity: 0.66;
         }
     }
 
@@ -128,13 +128,18 @@
         }
 
         a {
-            text-underline-offset: rem(2);
-            transition: opacity 100ms ease-out;
+            position: relative;
             white-space: nowrap;
-            color: var(--grey-32);
+            color: rgb(var(--grey-33));
+            text-decoration-skip-ink: none;
+            text-decoration-thickness: rem(8);
+            text-underline-offset: rem(-4);
+            text-decoration-color: #FFDB66;
+            transition: text-underline-offset 100ms ease-out, text-decoration-thickness 100ms ease-out;
 
             &:hover {
-                opacity: 66%;
+                text-underline-offset: rem(-16);
+                text-decoration-thickness: rem(20);
             }
         }
 

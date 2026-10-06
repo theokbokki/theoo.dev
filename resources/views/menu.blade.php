@@ -11,7 +11,7 @@
         <ul class="menu__list">
             <x-menu-item icon="house" :href="route('home')" color="#FFBB00">Home</x-menu-item>
             <x-menu-item icon="pencil-and-scribble" :href="route('notes.index')" color="#FF0000">Notes</x-menu-item>
-            <x-menu-item icon="rectangle-stack" :href="route('home')" color="#FF00DD">Feed</x-menu-item>
+            <x-menu-item icon="rectangle-stack" :href="route('posts.index')" color="#FF00DD">Feed</x-menu-item>
             <x-menu-item icon="bookmark" :href="route('home')" color="#001EFF">Links</x-menu-item>
             <x-menu-item icon="paintbrush" :href="route('home')" color="#21B200">Designs</x-menu-item>
         </ul>

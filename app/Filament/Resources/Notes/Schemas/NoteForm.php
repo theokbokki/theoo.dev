@@ -34,7 +34,7 @@ class NoteForm
                     $source = $file->getRealPath();
 
                     Image::fromPath($source)
-                        ->scale(width: 1920)
+                        ->scale(width: 1280)
                         ->toWebp()
                         ->quality(85)
                         ->storePubliclyAs($directory, "{$name}.webp", disk: 'public');

@@ -12,7 +12,7 @@ class Post extends Model
 {
     use HasAttachments;
 
-    public const LEGACY_DATE = '2025-01-01';
+    public const LEGACY_DATE = '2025-08-28';
 
     protected function displayDate(): Attribute
     {

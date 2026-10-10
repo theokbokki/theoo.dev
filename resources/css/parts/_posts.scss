@@ -7,7 +7,7 @@
         gap: rem(40);
         width: 100%;
         max-width: rem(572);
-        margin: 0 auto;
+        margin: 0 auto rem(120);
         padding: 0 rem(16);
     }
 
@@ -117,11 +117,13 @@
     }
 
     &__content {
+        max-width: max-content;
         padding: rem(8) rem(12);
         font-family: var(--font-sans);
         line-height: 150%;
+        text-wrap: pretty;
         background: rgb(var(--grey-96));
         color: rgb(var(--grey-32));
-        border-radius: rem(12);
+        border-radius: rem(16);
     }
 }

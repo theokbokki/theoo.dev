@@ -15,6 +15,7 @@ class PostsIndexController extends Controller
     {
         $postsByDay = Post::query()
             ->orderByDesc('created_at')
+            ->orderByDesc('id')
             ->get()
             ->groupBy(fn(Post $post) => $post->display_date);
 

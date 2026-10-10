@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\LinkCategory;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,6 +17,7 @@ return new class extends Migration
             $table->string('url');
             $table->string('description');
             $table->string('favicon');
+            $table->enum('category', LinkCategory::cases());
             $table->timestamps();
         });
     }

@@ -12,6 +12,9 @@ enum LinkCategory: string implements HasLabel, HasColor
     case Friends = 'friends';
     case Cool = 'cool';
     case Articles = 'articles';
+    case Collections = 'collections';
+    case Personal = 'personal';
+    case Tool = 'tool';
 
     public function getLabel(): string|Htmlable|null
     {
@@ -19,6 +22,9 @@ enum LinkCategory: string implements HasLabel, HasColor
             self::Friends => 'Friends',
             self::Cool => 'Cool',
             self::Articles => 'Articles',
+            self::Collections => 'Collections',
+            self::Personal => 'Personal',
+            self::Tool => 'Tool',
         };
     }
 
@@ -28,6 +34,9 @@ enum LinkCategory: string implements HasLabel, HasColor
             self::Friends => Color::Pink,
             self::Cool => Color::Amber,
             self::Articles => Color::Blue,
+            self::Collections => Color::Lime,
+            self::Personal => Color::Olive,
+            self::Tool => Color::Purple,
         };
     }
 }

@@ -1,0 +1,1298 @@
+[
+    {
+        "id": 216,
+        "url": "https://wttr.in/",
+        "description": "ASCII weather",
+        "category": "cool"
+    },
+    {
+        "id": 215,
+        "url": "https://noneventivefeedback.neocities.org/linkfarm",
+        "description": "Links page of Noneventive Feedback",
+        "category": "collections"
+    },
+    {
+        "id": 214,
+        "url": "https://vegan-recipes.org/",
+        "description": "Simple HTML vegan recipes",
+        "category": "collections"
+    },
+    {
+        "id": 213,
+        "url": "https://special.fish/garden",
+        "description": "Community based light social media",
+        "category": "cool"
+    },
+    {
+        "id": 212,
+        "url": "https://www.ocf.berkeley.edu/~abhishek/chicmath.htm",
+        "description": "An old list of math books",
+        "category": "cool"
+    },
+    {
+        "id": 211,
+        "url": "https://nocss.club/",
+        "description": "A list of websites without CSS",
+        "category": "collections"
+    },
+    {
+        "id": 210,
+        "url": "https://thricegreat.neocities.org/",
+        "description": "A sort of plaintext blog",
+        "category": "personal"
+    },
+    {
+        "id": 209,
+        "url": "https://covers.brunoimbrizi.com",
+        "description": "Album cover search engine based on visual similarity",
+        "category": "cool"
+    },
+    {
+        "id": 208,
+        "url": "https://nabiu.studio/",
+        "description": "The digital garden of Núria",
+        "category": "personal"
+    },
+    {
+        "id": 207,
+        "url": "http://www.celer.jp/",
+        "description": "Celer's website",
+        "category": "personal"
+    },
+    {
+        "id": 206,
+        "url": "https://transit.jp/regular/tunisia/misato-shimizu_sauna_vol15/",
+        "description": "A cool japanese magazine",
+        "category": "cool"
+    },
+    {
+        "id": 205,
+        "url": "https://blog.jim-nielsen.com/2026/small-html-pages/",
+        "description": "An article about using small html pages",
+        "category": "articles"
+    },
+    {
+        "id": 204,
+        "url": "https://architectureofsilence.com/",
+        "description": "A bunch of small posts about the virtues of silence",
+        "category": "collections"
+    },
+    {
+        "id": 203,
+        "url": "https://practicalbetterments.com/",
+        "description": "A list of small things to make your life better",
+        "category": "collections"
+    },
+    {
+        "id": 202,
+        "url": "https://keliz.xyz/",
+        "description": "A strange green labyrinth",
+        "category": "cool"
+    },
+    {
+        "id": 201,
+        "url": "https://mindyseu.com/",
+        "description": "The website of Mindy Seu",
+        "category": "personal"
+    },
+    {
+        "id": 200,
+        "url": "https://www.spottedinprod.com/",
+        "description": "A showcase of mobile app designs",
+        "category": "collections"
+    },
+    {
+        "id": 199,
+        "url": "https://geokash.com/",
+        "description": "The website of Katarina Lingat",
+        "category": "personal"
+    },
+    {
+        "id": 198,
+        "url": "https://valuesbased.software/",
+        "description": "Links to a few talks about simple web topics",
+        "category": "collections"
+    },
+    {
+        "id": 197,
+        "url": "https://vimm.net/vault/DS/",
+        "description": "Roms for the DS",
+        "category": "collections"
+    },
+    {
+        "id": 196,
+        "url": "http://jeuxnintendods.free.fr/",
+        "description": "French roms for the DS",
+        "category": "collections"
+    },
+    {
+        "id": 195,
+        "url": "https://farayan.me/",
+        "description": "The website of Fara Yan",
+        "category": "personal"
+    },
+    {
+        "id": 194,
+        "url": "https://txt.dev/ana-piligrim/slow-design-in-a-fast-world",
+        "description": "Article about slow design in a fast world",
+        "category": "articles"
+    },
+    {
+        "id": 193,
+        "url": "https://keyavadgama.com",
+        "description": "The website of Keya Vadgama",
+        "category": "personal"
+    },
+    {
+        "id": 192,
+        "url": "https://mac.are.na/",
+        "description": "Community based playlist tool of Are.na",
+        "category": "cool"
+    },
+    {
+        "id": 191,
+        "url": "https://textonly.website/",
+        "description": "A list of mostly text based websites",
+        "category": "collections"
+    },
+    {
+        "id": 190,
+        "url": "https://unwissen.blog/",
+        "description": "A German blog",
+        "category": "personal"
+    },
+    {
+        "id": 189,
+        "url": "https://blog.absurdpirate.com/",
+        "description": "The blog of Absurd Pirate",
+        "category": "personal"
+    },
+    {
+        "id": 188,
+        "url": "https://grainrad.com/",
+        "description": "An image modification tool",
+        "category": "tool"
+    },
+    {
+        "id": 187,
+        "url": "https://www.shader.se/",
+        "description": "Website of Shader Development Studio",
+        "category": "cool"
+    },
+    {
+        "id": 186,
+        "url": "hhttps://www.bguillaume.info/ttps://www.bguillaume.info/",
+        "description": "Portfolio site of Guillaume, designer at Anagram",
+        "category": "personal"
+    },
+    {
+        "id": 185,
+        "url": "https://www.arcoty.pe/",
+        "description": "A font searching tool",
+        "category": "tool"
+    },
+    {
+        "id": 184,
+        "url": "https://thehtml.review",
+        "description": "The HTML review",
+        "category": "cool"
+    },
+    {
+        "id": 183,
+        "url": "https://tangiblelife.net/",
+        "description": "A cute little blog",
+        "category": "personal"
+    },
+    {
+        "id": 182,
+        "url": "https://smallcypress.bearblog.dev/blog/",
+        "description": "Small cypress's blog",
+        "category": "personal"
+    },
+    {
+        "id": 181,
+        "url": "https://www.write-on.org/",
+        "description": "An old style website",
+        "category": "personal"
+    },
+    {
+        "id": 180,
+        "url": "https://home.elliott.computer/",
+        "description": "The list of all of elliott's work on the web",
+        "category": "collections"
+    },
+    {
+        "id": 179,
+        "url": "https://www.nicksimson.com/posts/2026-lost-in-the-met",
+        "description": "An article recollecting visiting the MET",
+        "category": "articles"
+    },
+    {
+        "id": 178,
+        "url": "https://cloudlord.management/",
+        "description": "An internet surreal estate holding company",
+        "category": "cool"
+    },
+    {
+        "id": 177,
+        "url": "https://bitmap.designfamilymarket.com/#/",
+        "description": "A bitmap image edition tool",
+        "category": "tool"
+    },
+    {
+        "id": 176,
+        "url": "https://www.ko-collective.com/",
+        "description": "The website of a dope production company",
+        "category": "cool"
+    },
+    {
+        "id": 175,
+        "url": "https://denimtears.com/",
+        "description": "Fashion brand website",
+        "category": "cool"
+    },
+    {
+        "id": 174,
+        "url": "https://blog.geocities.institute/",
+        "description": "One Terabyte of Kilobyte Age",
+        "category": "collections"
+    },
+    {
+        "id": 173,
+        "url": "https://lilguy.net/",
+        "description": "Website for a cool looking wearable",
+        "category": "cool"
+    },
+    {
+        "id": 172,
+        "url": "https://50centadjustedforinflation.com/",
+        "description": "50 cents adjusted for inflation",
+        "category": "cool"
+    },
+    {
+        "id": 171,
+        "url": "https://www.ciggies.app/",
+        "description": "Chinese cigarette museum",
+        "category": "cool"
+    },
+    {
+        "id": 170,
+        "url": "https://www.lochieaxon.com/",
+        "description": "Website of Lochie Axon",
+        "category": "personal"
+    },
+    {
+        "id": 169,
+        "url": "https://compress.lochie.me/",
+        "description": "A tool to compress videos on and for the web",
+        "category": "tool"
+    },
+    {
+        "id": 168,
+        "url": "https://www.wuweicoffee.com/blogs/blog/zen-and-the-art-of-coffee-a-mindful-morning-ritual",
+        "description": "An article about the zen act of making coffee",
+        "category": "articles"
+    },
+    {
+        "id": 167,
+        "url": "https://2011-present.bendenzer.com",
+        "description": "Archive of Ben Denzer's life in pictures",
+        "category": "cool"
+    },
+    {
+        "id": 166,
+        "url": "https://www.emilyz.sh/",
+        "description": "Emily Zhang's website",
+        "category": "personal"
+    },
+    {
+        "id": 165,
+        "url": "https://lelezhang.design/",
+        "description": "The website of Lele Zhang",
+        "category": "personal"
+    },
+    {
+        "id": 164,
+        "url": "https://futuraresistenza.bandcamp.com/",
+        "description": "The bandcamp of a small record label",
+        "category": "cool"
+    },
+    {
+        "id": 163,
+        "url": "https://permacomputing.net/principles/",
+        "description": "Principles for permacomputing",
+        "category": "collections"
+    },
+    {
+        "id": 162,
+        "url": "https://leseditionsdesmondesafaire.net/produit/vivre-avec-le-trouble/",
+        "description": "Single page of a good book",
+        "category": "cool"
+    },
+    {
+        "id": 161,
+        "url": "https://wildproject.org/livres/les-diplomates-poche",
+        "description": "Page of the book \"Les diplomates\" by Baptiste Morizot",
+        "category": "cool"
+    },
+    {
+        "id": 160,
+        "url": "https://entremonde.net/reenchanter-le-monde",
+        "description": "Réenchanter le monde",
+        "category": "cool"
+    },
+    {
+        "id": 159,
+        "url": "https://lltg.co/",
+        "description": "Arun's photographs",
+        "category": "personal"
+    },
+    {
+        "id": 158,
+        "url": "https://www.alexandriamasse.com/",
+        "description": "Alexandria Masse's crochet website",
+        "category": "personal"
+    },
+    {
+        "id": 157,
+        "url": "https://emilysneddon.com/fran-sans-essay",
+        "description": "Essay about the font on the displays of SF light rail vehicles",
+        "category": "articles"
+    },
+    {
+        "id": 156,
+        "url": "https://brianlovin.com/",
+        "description": "Brian Lovin's website",
+        "category": "personal"
+    },
+    {
+        "id": 155,
+        "url": "https://nondairydiary.com/recipe/vegan-vol-au-vent",
+        "description": "Vegan vol-au-vent recipe",
+        "category": "articles"
+    },
+    {
+        "id": 154,
+        "url": "https://app.electricitymaps.com/map/live/fifteen_minutes",
+        "description": "Electricity map",
+        "category": "cool"
+    },
+    {
+        "id": 153,
+        "url": "https://www.nicchan.me",
+        "description": "Website of Nic Chan",
+        "category": "personal"
+    },
+    {
+        "id": 152,
+        "url": "https://gkeenan.co/avgb/",
+        "description": "Keenan's blog",
+        "category": "personal"
+    },
+    {
+        "id": 151,
+        "url": "https://ericwbailey.website/published/",
+        "description": "Blog of Eric W Bailey",
+        "category": "personal"
+    },
+    {
+        "id": 150,
+        "url": "https://fershad.com/writing",
+        "description": "Blog of Fershad Irani",
+        "category": "personal"
+    },
+    {
+        "id": 149,
+        "url": "https://piccalil.li/blog/taking-a-shot-at-the-double-focus-ring-problem-using-modern-css/",
+        "description": "An article about focus rings",
+        "category": "articles"
+    },
+    {
+        "id": 148,
+        "url": "https://ifyouknewmewouldyoulove.me/",
+        "description": "Chia's website asks If you knew me would you love me?",
+        "category": "cool"
+    },
+    {
+        "id": 147,
+        "url": "https://kayserifserif.place/",
+        "description": "The website of Katherine Yang",
+        "category": "personal"
+    },
+    {
+        "id": 146,
+        "url": "https://aartaka.me/",
+        "description": "Artyom's cahotic blog",
+        "category": "personal"
+    },
+    {
+        "id": 145,
+        "url": "https://jeffhuang.com/designed_to_last/",
+        "description": "A Manifesto for Preserving Content on the Web",
+        "category": "articles"
+    },
+    {
+        "id": 144,
+        "url": "https://williamdenis.be/",
+        "description": "Website of William Denis",
+        "category": "personal"
+    },
+    {
+        "id": 143,
+        "url": "https://juliedelfour.com/",
+        "description": "Website of Julie Delfour",
+        "category": "personal"
+    },
+    {
+        "id": 142,
+        "url": "https://hippolytelesseliers.be/",
+        "description": "Website of Hippolyte Lesseliers",
+        "category": "personal"
+    },
+    {
+        "id": 141,
+        "url": "https://roscosmic.com/",
+        "description": "Speculative space agency",
+        "category": "cool"
+    },
+    {
+        "id": 140,
+        "url": "https://abcdinamo.com/",
+        "description": "Dynamo typefaces",
+        "category": "cool"
+    },
+    {
+        "id": 139,
+        "url": "https://f37foundry.com/fonts/f37-caligari",
+        "description": "F37 foundry",
+        "category": "cool"
+    },
+    {
+        "id": 138,
+        "url": "https://www.205.tf/typefaces",
+        "description": "205 Typefaces",
+        "category": "cool"
+    },
+    {
+        "id": 137,
+        "url": "https://colorpalette.pro/",
+        "description": "Color palette maker",
+        "category": "tool"
+    },
+    {
+        "id": 136,
+        "url": "https://www.incommonwith.com/",
+        "description": "Website with a cool light effect",
+        "category": "cool"
+    },
+    {
+        "id": 135,
+        "url": "https://tarneo.fr/posts/minimal_web/",
+        "description": "A post about the minimal web",
+        "category": "articles"
+    },
+    {
+        "id": 134,
+        "url": "https://theoatmeal.com/comics/unhappy",
+        "description": "A comic about being unhappy",
+        "category": "articles"
+    },
+    {
+        "id": 133,
+        "url": "https://tink.uk/perceived-affordances-and-the-functionality-mismatch/",
+        "description": "Article about affordances",
+        "category": "articles"
+    },
+    {
+        "id": 132,
+        "url": "https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/",
+        "description": "Making an accessible theme picker",
+        "category": "articles"
+    },
+    {
+        "id": 131,
+        "url": "https://pjonori.blog/posts/i-dont-want-your-email/",
+        "description": "A hate post about newsletters",
+        "category": "articles"
+    },
+    {
+        "id": 130,
+        "url": "https://mtwb.blog/posts/2025/blaugust2025/not-every-blog-post-needs-to-be-epic/",
+        "description": "A post about simple posts",
+        "category": "articles"
+    },
+    {
+        "id": 129,
+        "url": "https://kedara.eu/organising-feeds-permaculture",
+        "description": "Permaculture applied to RSS",
+        "category": "articles"
+    },
+    {
+        "id": 128,
+        "url": "https://cursor.com/",
+        "description": "I hate Cursor but their website looks good",
+        "category": "cool"
+    },
+    {
+        "id": 127,
+        "url": "https://eva.town/",
+        "description": "The website of Ky Decker",
+        "category": "personal"
+    },
+    {
+        "id": 126,
+        "url": "https://chotrin.org/philosophy/unreachable.html",
+        "description": "an ode to being unreachable",
+        "category": "articles"
+    },
+    {
+        "id": 125,
+        "url": "https://birming.com/",
+        "description": "Website of Robert Birming",
+        "category": "personal"
+    },
+    {
+        "id": 124,
+        "url": "https://tonsky.me/blog/centering/",
+        "description": "An article about centering divs",
+        "category": "articles"
+    },
+    {
+        "id": 123,
+        "url": "https://www.holovaty.com/writing/chatgpt-fake-feature/",
+        "description": "An article about fake AI features having to be made",
+        "category": "articles"
+    },
+    {
+        "id": 122,
+        "url": "https://tonsky.me/blog/lockfiles/",
+        "description": "An article about versionning",
+        "category": "articles"
+    },
+    {
+        "id": 121,
+        "url": "https://rscottjones.com/getting-the-most-out-of-a-bad-situation/",
+        "description": "Getting the most out of a bad situation",
+        "category": "articles"
+    },
+    {
+        "id": 120,
+        "url": "https://birming.com/2025/09/21/publish-dont-polish/",
+        "description": "The publish don't polish philosophy",
+        "category": "articles"
+    },
+    {
+        "id": 119,
+        "url": "http://kira.eight45.net/deconstruction-mindset.html",
+        "description": "About viewing objects for more than their purpose",
+        "category": "articles"
+    },
+    {
+        "id": 118,
+        "url": "https://romi.link",
+        "description": "The website of Romina Malta",
+        "category": "personal"
+    },
+    {
+        "id": 117,
+        "url": "https://midnightpond.com",
+        "description": "Website of poems",
+        "category": "cool"
+    },
+    {
+        "id": 116,
+        "url": "https://www.door.link",
+        "description": "Musical doors",
+        "category": "cool"
+    },
+    {
+        "id": 115,
+        "url": "https://romi.link/journal",
+        "description": "The journal or Romina Malta",
+        "category": "personal"
+    },
+    {
+        "id": 114,
+        "url": "https://jpolak.org/photo/best-macos-text-editors/",
+        "description": "An article discussing the best macos text editors",
+        "category": "articles"
+    },
+    {
+        "id": 113,
+        "url": "https://www.shipsltd.co.jp/pages/sp_50th_anniversary.aspx",
+        "description": "A website made with strings",
+        "category": "cool"
+    },
+    {
+        "id": 112,
+        "url": "https://www.nan.fyi/database",
+        "description": "An article explaining how to build your own database",
+        "category": "articles"
+    },
+    {
+        "id": 111,
+        "url": "https://emmiwu.com/playground",
+        "description": "Emi Wu's infinite canvas of images",
+        "category": "cool"
+    },
+    {
+        "id": 110,
+        "url": "https://stephango.com/style",
+        "description": "Style is a set of constraints that you stick to",
+        "category": "articles"
+    },
+    {
+        "id": 109,
+        "url": "https://stephango.com/understand",
+        "description": "Article about delegating understanding",
+        "category": "articles"
+    },
+    {
+        "id": 108,
+        "url": "https://www.netmeister.org/blog/the-art-of-plain-text.html",
+        "description": "The Art of Plain Text",
+        "category": "articles"
+    },
+    {
+        "id": 107,
+        "url": "https://generaux.services/projects",
+        "description": "Services Généraux",
+        "category": "cool"
+    },
+    {
+        "id": 106,
+        "url": "https://gijs.garden/#",
+        "description": "A Garden of Care Tools",
+        "category": "cool"
+    },
+    {
+        "id": 105,
+        "url": "https://www.dayroselane.com/hydrants",
+        "description": "The hydrant directory",
+        "category": "cool"
+    },
+    {
+        "id": 104,
+        "url": "https://ainsleyromero.com/",
+        "description": "The website of Ainsley Romero",
+        "category": "personal"
+    },
+    {
+        "id": 103,
+        "url": "https://c82.net/mineralogy/#",
+        "description": "Pretty rocks rock",
+        "category": "cool"
+    },
+    {
+        "id": 102,
+        "url": "https://findmy.vitra.com/en-en/questionnaire/chairs",
+        "description": "A delightful office chair finder",
+        "category": "cool"
+    },
+    {
+        "id": 101,
+        "url": "http://whispersgame.com/",
+        "description": "A sequential art game",
+        "category": "cool"
+    },
+    {
+        "id": 100,
+        "url": "https://www.benoitjeannet.ch/",
+        "description": "The portfolio of Benoit Jeannet",
+        "category": "personal"
+    },
+    {
+        "id": 99,
+        "url": "https://huynhkristi.com/",
+        "description": "Kristi Huynh's website",
+        "category": "personal"
+    },
+    {
+        "id": 98,
+        "url": "https://kaiem.ch/",
+        "description": "Cool bags",
+        "category": "cool"
+    },
+    {
+        "id": 97,
+        "url": "https://rotating.parts/",
+        "description": "Rotating parts",
+        "category": "cool"
+    },
+    {
+        "id": 96,
+        "url": "https://veronique.ink",
+        "description": "The website of Véronique",
+        "category": "personal"
+    },
+    {
+        "id": 95,
+        "url": "https://landonorris.com",
+        "description": "Presentation website for Lando Norris. It's disco",
+        "category": "cool"
+    },
+    {
+        "id": 94,
+        "url": "https://tarneo.fr/",
+        "description": "Tarneo's blog",
+        "category": "personal"
+    },
+    {
+        "id": 93,
+        "url": "https://messenger.abeto.co/",
+        "description": "A web based videogame",
+        "category": "cool"
+    },
+    {
+        "id": 92,
+        "url": "https://departure.blog",
+        "description": "A parenthetical departure",
+        "category": "personal"
+    },
+    {
+        "id": 91,
+        "url": "https://oliverobscure.xyz/",
+        "description": "The blog of Oliver",
+        "category": "personal"
+    },
+    {
+        "id": 90,
+        "url": "https://pjonori.blog/",
+        "description": "PJ Onori's blog",
+        "category": "personal"
+    },
+    {
+        "id": 89,
+        "url": "https://lmnt.me/",
+        "description": "Louie Mantia's website",
+        "category": "personal"
+    },
+    {
+        "id": 88,
+        "url": "https://johnprovencher.com/",
+        "description": "John Provencher's portfolio",
+        "category": "personal"
+    },
+    {
+        "id": 87,
+        "url": "https://spencer.place/",
+        "description": "The website of Spencer Chang",
+        "category": "personal"
+    },
+    {
+        "id": 86,
+        "url": "https://guillaumevg.substack.com/",
+        "description": "Great vegan recipes",
+        "category": "collections"
+    },
+    {
+        "id": 85,
+        "url": "https://walknotes.com/",
+        "description": "Walknotes",
+        "category": "personal"
+    },
+    {
+        "id": 84,
+        "url": "https://www.makingsoftware.com/",
+        "description": "A web book about making software",
+        "category": "collections"
+    },
+    {
+        "id": 83,
+        "url": "https://internetphonebook.net/",
+        "description": "Internet phonebook",
+        "category": "cool"
+    },
+    {
+        "id": 82,
+        "url": "https://reubenson.com/",
+        "description": "The website of Reuben Son",
+        "category": "personal"
+    },
+    {
+        "id": 81,
+        "url": "https://atto.si/",
+        "description": "Website of Atto",
+        "category": "personal"
+    },
+    {
+        "id": 80,
+        "url": "https://patrickfry.co.uk/",
+        "description": "Patrick Fry's website",
+        "category": "personal"
+    },
+    {
+        "id": 79,
+        "url": "https://peopleandblogs.com/",
+        "description": "People and blogs interviews",
+        "category": "collections"
+    },
+    {
+        "id": 78,
+        "url": "https://carlbarenbrug.com/",
+        "description": "The website of Carl Barenbrug",
+        "category": "personal"
+    },
+    {
+        "id": 77,
+        "url": "https://hturan.com/writing/complex-numbers-glsl",
+        "description": "An article about visualizing complex numbers using GLSL",
+        "category": "articles"
+    },
+    {
+        "id": 76,
+        "url": "https://alexharri.com/blog/webgl-gradients",
+        "description": "An article about WEBGL gradients",
+        "category": "articles"
+    },
+    {
+        "id": 75,
+        "url": "https://www.mmmx.cloud/",
+        "description": "Nim's Memex",
+        "category": "personal"
+    },
+    {
+        "id": 74,
+        "url": "https://os.ryo.lu/",
+        "description": "Ryo OS",
+        "category": "personal"
+    },
+    {
+        "id": 73,
+        "url": "https://www.mayabakir.com/desktop.html",
+        "description": "Website of Maya Bakir",
+        "category": "personal"
+    },
+    {
+        "id": 72,
+        "url": "https://aintnotrash.com/en",
+        "description": "A vintage furniture store",
+        "category": "cool"
+    },
+    {
+        "id": 71,
+        "url": "https://ericreh.de/en",
+        "description": "The website of Eric Reh",
+        "category": "personal"
+    },
+    {
+        "id": 70,
+        "url": "https://mutantx.bip-liege.org/",
+        "description": "Mutantx",
+        "category": "cool"
+    },
+    {
+        "id": 69,
+        "url": "https://www.pathem.es/",
+        "description": "Website for a photo book",
+        "category": "cool"
+    },
+    {
+        "id": 68,
+        "url": "https://koto.studio/work/amazon/",
+        "description": "Koto studio Amazon case study",
+        "category": "articles"
+    },
+    {
+        "id": 67,
+        "url": "https://godly.website/",
+        "description": "Design inspiration",
+        "category": "collections"
+    },
+    {
+        "id": 66,
+        "url": "https://loadmo.re/",
+        "description": "Mobile site design inspiration",
+        "category": "collections"
+    },
+    {
+        "id": 65,
+        "url": "https://httpster.net/",
+        "description": "Website design inspiration",
+        "category": "collections"
+    },
+    {
+        "id": 64,
+        "url": "https://minimal.gallery/",
+        "description": "Website design inspiration",
+        "category": "collections"
+    },
+    {
+        "id": 63,
+        "url": "https://www.siteinspire.com/",
+        "description": "Website design inspiration",
+        "category": "collections"
+    },
+    {
+        "id": 62,
+        "url": "https://maxibestof.one/",
+        "description": "Website design inspiration",
+        "category": "collections"
+    },
+    {
+        "id": 61,
+        "url": "https://deadsimplesites.com/",
+        "description": "The most minimal sites on the web, curated in one place.",
+        "category": "collections"
+    },
+    {
+        "id": 60,
+        "url": "https://www.are.na/anne-lee/alt-web-ddwo8t9ndfw",
+        "description": "A cool are.na channel",
+        "category": "collections"
+    },
+    {
+        "id": 59,
+        "url": "https://www.funnyfriends.com/celestial",
+        "description": "A cute plushie shop",
+        "category": "cool"
+    },
+    {
+        "id": 58,
+        "url": "https://appstacks.club/",
+        "description": "Talks about the stacks behind apps",
+        "category": "collections"
+    },
+    {
+        "id": 57,
+        "url": "https://test.roelof.info/",
+        "description": "Roel roscam abbing",
+        "category": "personal"
+    },
+    {
+        "id": 56,
+        "url": "https://www.verdeil.net/",
+        "description": "The website of Marie Verdeil",
+        "category": "personal"
+    },
+    {
+        "id": 55,
+        "url": "https://www.specs.work/",
+        "description": "A architecture studio website",
+        "category": "cool"
+    },
+    {
+        "id": 54,
+        "url": "https://meyboom.space/",
+        "description": "Meyboom Artist Run Spaces",
+        "category": "cool"
+    },
+    {
+        "id": 53,
+        "url": "https://surma.dev/things/ditherpunk/",
+        "description": "Article about ditherpunk",
+        "category": "articles"
+    },
+    {
+        "id": 52,
+        "url": "https://jamesg.blog/",
+        "description": "Jame's coffee blog",
+        "category": "personal"
+    },
+    {
+        "id": 51,
+        "url": "https://solar.lowtechmagazine.com/",
+        "description": "A solar powered website",
+        "category": "cool"
+    },
+    {
+        "id": 50,
+        "url": "https://www.figma.com/blog/making-space-for-a-handmade-web/",
+        "description": "Figma on handmade web — How ironic",
+        "category": "articles"
+    },
+    {
+        "id": 49,
+        "url": "https://gjphenry.be/",
+        "description": "The website of GJP",
+        "category": "friends"
+    },
+    {
+        "id": 48,
+        "url": "https://jonathanrixhon.dev/",
+        "description": "The website of Jonathan",
+        "category": "friends"
+    },
+    {
+        "id": 47,
+        "url": "https://leloup.dev/",
+        "description": "The website of Void",
+        "category": "friends"
+    },
+    {
+        "id": 46,
+        "url": "https://melonking.net/",
+        "description": "Melon king's kingdom",
+        "category": "personal"
+    },
+    {
+        "id": 45,
+        "url": "https://justinjay.wang/methods-for-random-gradients/",
+        "description": "An article about generating gradients",
+        "category": "articles"
+    },
+    {
+        "id": 44,
+        "url": "https://dev.to/thepassle/events-are-the-shit-b3i",
+        "description": "An article about js events",
+        "category": "articles"
+    },
+    {
+        "id": 43,
+        "url": "https://grugbrain.dev/",
+        "description": "Grug brain dev",
+        "category": "articles"
+    },
+    {
+        "id": 42,
+        "url": "https://abhisaha.com/blog/exploring-browser-rendering-process",
+        "description": "Article explaining browser rendering",
+        "category": "articles"
+    },
+    {
+        "id": 41,
+        "url": "https://longform.asmartbear.com/slc/",
+        "description": "MVP < SLC",
+        "category": "articles"
+    },
+    {
+        "id": 40,
+        "url": "https://btxx.org/",
+        "description": "Bradley Taunt's website",
+        "category": "personal"
+    },
+    {
+        "id": 39,
+        "url": "https://modalzmodalzmodalz.com/",
+        "description": "A website against modals",
+        "category": "cool"
+    },
+    {
+        "id": 38,
+        "url": "https://marioecg.com/",
+        "description": "Mario Carrillo's website",
+        "category": "personal"
+    },
+    {
+        "id": 37,
+        "url": "https://www.easing.dev/",
+        "description": "An easing generator",
+        "category": "tool"
+    },
+    {
+        "id": 36,
+        "url": "https://www.cosmos.so/cosmos/genesis/canvas",
+        "description": "Cosmos Genesis",
+        "category": "cool"
+    },
+    {
+        "id": 35,
+        "url": "https://www.stitson.com/pub/book_html/node89.html",
+        "description": "Ed, the line editor",
+        "category": "articles"
+    },
+    {
+        "id": 34,
+        "url": "https://michaeluloth.com/neovim-switch-configs/",
+        "description": "How to switch configs in nvim",
+        "category": "articles"
+    },
+    {
+        "id": 33,
+        "url": "https://blog.jim-nielsen.com/2024/sanding-ui/",
+        "description": "Article about clicking over and over",
+        "category": "articles"
+    },
+    {
+        "id": 32,
+        "url": "https://arc.net/search",
+        "description": "Arc mobile browser",
+        "category": "cool"
+    },
+    {
+        "id": 31,
+        "url": "https://cursor.design/",
+        "description": "Copyable macos cursors",
+        "category": "tool"
+    },
+    {
+        "id": 30,
+        "url": "https://teenage.engineering/products/ep-1320",
+        "description": "A modern medieval instrument",
+        "category": "cool"
+    },
+    {
+        "id": 29,
+        "url": "https://motion-primitives.com/",
+        "description": "UI kit to make beautiful, animated interfaces, faster.",
+        "category": "tool"
+    },
+    {
+        "id": 28,
+        "url": "https://linusrogge.com/",
+        "description": "Linus Rogge's website",
+        "category": "personal"
+    },
+    {
+        "id": 27,
+        "url": "https://inventory.linusrogge.com/",
+        "description": "The inventory of Linus Rogge",
+        "category": "personal"
+    },
+    {
+        "id": 26,
+        "url": "https://valuable-colleagues-147045.framer.app/",
+        "description": "It's red, it's cool",
+        "category": "cool"
+    },
+    {
+        "id": 25,
+        "url": "https://www.beciorpin.com/",
+        "description": "The website of Beci Orpin",
+        "category": "personal"
+    },
+    {
+        "id": 24,
+        "url": "https://thedesignfiles.net/2022/08/studio-visit-beci-orpin-ellie-king",
+        "description": "An article visiting Beci Orpin's studio",
+        "category": "articles"
+    },
+    {
+        "id": 23,
+        "url": "https://www.wimpdecaf.com/",
+        "description": "Decaf brand",
+        "category": "cool"
+    },
+    {
+        "id": 22,
+        "url": "https://naotofukasawa.com/",
+        "description": "The website of Nekoto Fukasawa",
+        "category": "personal"
+    },
+    {
+        "id": 21,
+        "url": "https://www.citationneeded.news/we-can-have-a-different-web/",
+        "description": "An article about a different web",
+        "category": "articles"
+    },
+    {
+        "id": 20,
+        "url": "https://oem.care/",
+        "description": "A new drugstore",
+        "category": "cool"
+    },
+    {
+        "id": 19,
+        "url": "https://nicolasgallagher.com/about-html-semantics-front-end-architecture/",
+        "description": "Old article on semantics",
+        "category": "articles"
+    },
+    {
+        "id": 18,
+        "url": "https://cameronaskin.com/",
+        "description": "The website of Cameron Askin",
+        "category": "personal"
+    },
+    {
+        "id": 17,
+        "url": "https://www.interface.watch/",
+        "description": "WatchOs inspiration",
+        "category": "collections"
+    },
+    {
+        "id": 16,
+        "url": "https://airtraveldesign.guide/Guide",
+        "description": "How to design plane related stuff",
+        "category": "cool"
+    },
+    {
+        "id": 15,
+        "url": "https://toonvandenbos.com/",
+        "description": "The website of Toon Van Den Bos",
+        "category": "friends"
+    },
+    {
+        "id": 14,
+        "url": "https://jakub.kr/",
+        "description": "The website of Jakub Krehel",
+        "category": "personal"
+    },
+    {
+        "id": 13,
+        "url": "https://higherorderco.com/",
+        "description": "Website for the bend programming language",
+        "category": "cool"
+    },
+    {
+        "id": 12,
+        "url": "https://littlefatboy.com/",
+        "description": "Asian American cooking",
+        "category": "collections"
+    },
+    {
+        "id": 11,
+        "url": "https://gomakethings.com/",
+        "description": "Chris Ferdinandi's website",
+        "category": "personal"
+    },
+    {
+        "id": 10,
+        "url": "https://www.cameronsworld.net/",
+        "description": "A tribute to geocities",
+        "category": "cool"
+    },
+    {
+        "id": 9,
+        "url": "https://softglossary.space/",
+        "description": "A place to learn web dev",
+        "category": "tool"
+    },
+    {
+        "id": 8,
+        "url": "https://barbaraschussmann.de/",
+        "description": "The website of Barbara Schussmann",
+        "category": "personal"
+    },
+    {
+        "id": 7,
+        "url": "https://pierre.co/",
+        "description": "Like github but cool",
+        "category": "cool"
+    },
+    {
+        "id": 6,
+        "url": "https://www.lemarais407.be/",
+        "description": "Co-working space in Brussels",
+        "category": "cool"
+    },
+    {
+        "id": 5,
+        "url": "https://emilkowal.ski/ui/great-animations",
+        "description": "Emil Kowalski article on great animations",
+        "category": "articles"
+    },
+    {
+        "id": 4,
+        "url": "https://animejs.com/",
+        "description": "JS animation library",
+        "category": "tool"
+    },
+    {
+        "id": 3,
+        "url": "https://slrncl.com/",
+        "description": "The website of Nicolas Solerieu",
+        "category": "personal"
+    },
+    {
+        "id": 2,
+        "url": "https://blogroll.org/",
+        "description": "A list of blogs",
+        "category": "collections"
+    },
+    {
+        "id": 1,
+        "url": "https://manuelmoreale.com",
+        "description": "The website of Manuel Moreale",
+        "category": "personal"
+    }
+]

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Links\LinksIndexController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\Notes\NotesIndexController;
 use App\Http\Controllers\Notes\NotesShowController;
@@ -17,3 +18,6 @@ Route::get('/notes/{note}', NotesShowController::class)->name('notes.show');
 
 // POSTS
 Route::get('/posts', PostsIndexController::class)->name('posts.index');
+
+// LINKS
+Route::get('/links', LinksIndexController::class)->name('links.index');

@@ -39,4 +39,16 @@ enum LinkCategory: string implements HasLabel, HasColor
             self::Tool => Color::Purple,
         };
     }
+
+    public function getOrder(): int
+    {
+        return match ($this) {
+            self::Friends => 1,
+            self::Cool => 2,
+            self::Articles => 3,
+            self::Collections => 4,
+            self::Personal => 5,
+            self::Tool => 6,
+        };
+    }
 }

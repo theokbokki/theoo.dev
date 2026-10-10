@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Links;
 
 use App\Http\Controllers\Controller;
+use App\Models\Link;
 use Illuminate\Http\Request;
 
 class LinksIndexController extends Controller
@@ -12,6 +13,12 @@ class LinksIndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('links.index');
+        $linksByCategory = Link::query()
+            ->orderByDesc('created_at')
+            ->get()
+            ->sortBy(fn (Link $link) => $link->category->getOrder())
+            ->groupBy(fn (Link $link) => $link->category->getLabel());
+
+        return view('links.index', ['linksByCategory' => $linksByCategory]);
     }
 }

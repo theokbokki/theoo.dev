@@ -123,6 +123,7 @@
             text-underline-offset: rem(-4);
             text-decoration-color: #FFDB66;
             transition: text-underline-offset 100ms ease-out, text-decoration-thickness 100ms ease-out;
+            overflow-wrap: break-word;
 
             &:hover {
                 text-underline-offset: rem(-16);

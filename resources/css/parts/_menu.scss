@@ -9,6 +9,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0 rem(12);
 
         & .icon {
             color: rgb(var(--grey-50));
@@ -18,7 +19,6 @@
     }
 
     &__title {
-        padding: 0 rem(12);
         font-family: var(--font-sans);
         font-size: rem(32);
         font-weight: bold;

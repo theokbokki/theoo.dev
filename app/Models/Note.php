@@ -28,4 +28,9 @@ class Note extends Model
     {
         $query->where('status', NoteStatus::Published);
     }
+    
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
 }

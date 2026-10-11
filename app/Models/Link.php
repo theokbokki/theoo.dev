@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Attributes\Guarded;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Image;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 #[Guarded([])]
@@ -28,20 +29,26 @@ class Link extends Model
 
     public function fetchFavicon(): string
     {
-        $host = parse_url($this->url, PHP_URL_HOST);
+        $host = Str::lower(parse_url($this->url, PHP_URL_HOST));
+        $name = md5($this->url) . '.webp';
+        $path = "links/favicons/{$name}";
+
+        if (Storage::disk('public')->exists($path)) {
+            return $path;
+        }
 
         $response = Http::timeout(10)->get('https://www.google.com/s2/favicons', [
             'domain' => $host,
             'sz' => 128,
         ]);
 
-        $path = Image::fromBytes($response->body())
+        $stored = Image::fromBytes($response->body())
             ->cover(32, 32)
             ->toWebp()
             ->quality(85)
-            ->storePubliclyAs('links/favicons', Str::uuid() . '.webp', disk: 'public');
+            ->storePubliclyAs('links/favicons', $name, disk: 'public');
 
-        throw_if($path === false, new \RuntimeException("Could not store favicon for {$host}."));
+        throw_if($stored === false, new \RuntimeException("Could not store favicon for {$host}."));
 
         return $path;
     }

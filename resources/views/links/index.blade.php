@@ -6,8 +6,8 @@
     </header>
     <main class="links__main">
         @foreach($linksByCategory as $category => $links)
-            <section class="links__group">
-                <h2 class="links__label">{{ $category }}</h2>
+            <details class="links__group" open>
+                <summary class="links__label">{{ $category }}</summary>
                 <ul class="links__list">
                     @foreach($links as $link)
                     <li class="links__item">
@@ -15,11 +15,14 @@
                             <img src="storage/{{ $link->favicon }}" alt="" class="links__favicon"/>
                             <span class="links__url">{{ str($link->url)->chopStart(['https://', 'http://'])->chopStart('www.')->chopEnd('/') }}</span>
                         </a>
-                        <p>{{ $link->description }}</p>
+                        <p class="links__description">{{ $link->description }}</p>
                     </li>
                     @endforeach
                 </ul>
-            </section>
+            </details>
         @endforeach
     </main>
+    <footer class="links__footer">
+        <a href="#" class="links__top">Back to top ↑</a>
+    </footer>
 </x-layout>

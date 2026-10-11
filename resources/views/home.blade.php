@@ -20,8 +20,8 @@
             This is my home on the web, a place for me to share and collect many things.
         </p>
         <p class="home__text">
-            By clicking around, you may end up reading <a href="#" class="home__link">my notes</a> or <a href="#" class="home__link">my personal timeline</a>.</br>
-            You could also look at <a href="#" class="home__link">some designs I made</a> or click on <a href="#" class="home__link">some links I like</a>.
+            By clicking around, you may end up reading <a href="{{ route('notes.index') }}" class="home__link">my notes</a> or <a href="{{ route('posts.index') }}" class="home__link">my personal timeline</a>.</br>
+            You could also look at <a href="#" class="home__link">some designs I made</a> or click on <a href="{{ route('links.index') }}" class="home__link">some links I like</a>.
         </p>
         <p class="home__text">
             If you want to learn more about me, click on my face in the top left corner, and if you ever get lost, the menu button in the top right should get you back on track.

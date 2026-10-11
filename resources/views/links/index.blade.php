@@ -11,7 +11,7 @@
                 <ul class="links__list">
                     @foreach($links as $link)
                     <li class="links__item">
-                        <a href="{{ $link->url }}" class="links__link">
+                        <a href="{{ $link->url }}" class="links__link" target="_blank">
                             <img src="storage/{{ $link->favicon }}" alt="" class="links__favicon"/>
                             <span class="links__url">{{ str($link->url)->chopStart(['https://', 'http://'])->chopStart('www.')->chopEnd('/') }}</span>
                         </a>

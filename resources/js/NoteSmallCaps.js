@@ -2,7 +2,7 @@ export default class NoteSmallCaps {
     constructor(el) {
         this.el = el;
         this.firstP = this.el.querySelector('p');
-        this.content = this.firstP.textContent;
+        this.content = this.firstP.innerHTML;
 
         this.firstLetter = this.content.charAt(0);
 

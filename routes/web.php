@@ -7,6 +7,7 @@ use App\Http\Controllers\Notes\NotesIndexController;
 use App\Http\Controllers\Notes\NotesShowController;
 use App\Http\Controllers\Posts\PostsIndexController;
 use App\Http\Controllers\Life\LifeIndexController;
+use App\Http\Controllers\Life\LifeUpdateController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
@@ -25,3 +26,4 @@ Route::get('/links', LinksIndexController::class)->name('links.index');
 
 // LIFE
 Route::get('/life', LifeIndexController::class)->middleware('auth')->name('life.index');
+Route::get('/life/{life}', LifeUpdateController::class)->middleware('auth')->name('life.update');

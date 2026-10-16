@@ -1,0 +1,21 @@
+@use "../utils" as *;
+
+.life {
+    &__content {
+        width: calc(100vw - rem(16));
+        max-width: 65ch;
+        padding: rem(8) rem(8) rem(40);
+        margin: 0;
+        font-family: var(--font-mono);
+        font-size:rem(16);
+        line-height: 150%;
+        color: rgb(var(--grey-24));
+        border: none;
+        resize: none;
+        field-sizing: content;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

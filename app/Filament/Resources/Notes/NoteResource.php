@@ -20,7 +20,7 @@ class NoteResource extends Resource
 {
     protected static ?string $model = Note::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::PencilSquare;
 
     protected static ?string $recordTitleAttribute = 'title';
 

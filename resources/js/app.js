@@ -1,9 +1,11 @@
+import Life from "./Life";
 import NoteBackdrop from "./NoteBackdrop";
 import NoteSmallCaps from "./NoteSmallCaps";
 
 class App {
     constructor() {
         this.notes();
+        this.life();
     }
 
     notes() {
@@ -12,6 +14,12 @@ class App {
 
         if (backdrop) new NoteBackdrop(backdrop);
         if (content) new NoteSmallCaps(content);
+    }
+
+    life() {
+        const form = document.querySelector(".life__form");
+
+        if (form) new Life(form)
     }
 }
 

@@ -15,6 +15,8 @@ class LifeUpdateController extends Controller
     {
         $validated = $request->validate(['content' => ['nullable', 'string']]);
 
-        Life::update($validated);
+        $life->update($validated);
+
+        return response()->noContent();
     }
 }

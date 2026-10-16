@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('lives', function (Blueprint $table) {
             $table->id();
-            $table->text('content');
+            $table->text('content')->nullable();
             $table->timestamps();
         });
     }

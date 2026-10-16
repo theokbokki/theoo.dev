@@ -15,6 +15,6 @@ class LifeIndexController extends Controller
     {
         $life = Life::firstOrCreate([]);
 
-        return view('life.index');
+        return view('life.index', ['life' => $life]);
     }
 }

@@ -12,7 +12,7 @@
         .note-card__link {
             &:before {
                 transform: scale(1);
-                background: rgba(var(--black), .04);
+                opacity: 1;
             }
         }
     }
@@ -31,9 +31,11 @@
             content: "";
             position: absolute;
             inset: 0;
+            background: rgba(var(--black), .04);
             border-radius: rem(12);
+            opacity: 0;
             transform: scale(.95);
-            transition: background 150ms ease-out, transform 150ms ease-out;
+            transition: opacity 150ms ease-out, transform 150ms ease-out;
         }
     }
 

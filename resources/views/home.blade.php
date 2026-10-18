@@ -21,10 +21,10 @@
         </p>
         <p class="home__text">
             By clicking around, you may end up reading <a href="{{ route('notes.index') }}" class="home__link">my notes</a> or <a href="{{ route('posts.index') }}" class="home__link">my personal timeline</a>.</br>
-            You could also look at <a href="#" class="home__link">some designs I made</a> or click on <a href="{{ route('links.index') }}" class="home__link">some links I like</a>.
+            You could also look at <a href="https://design.theoo.dev" class="home__link">some designs I made</a> or click on <a href="{{ route('links.index') }}" class="home__link">some links I like</a>.
         </p>
         <p class="home__text">
-            If you want to learn more about me, click on my face in the top left corner, and if you ever get lost, the menu button in the top right should get you back on track.
+            If you want to learn more <a href="{{ route('about') }}" class="home__link">about me or the website</a>, click on my face in the top left corner, and if you ever get lost, the menu button in the top right should get you back on track.
         </p>
         <p class="home__text">
             I love chatting, so if you want to talk about something like your favourite dinosaur or share some juicy story, you can do it at <a href="mailto:hello@theoo.dev" class="home__link">hello@theoo.dev</a> or on <a href="https://instagram.com/theokbokki" class="home__link">Instagram</a>.

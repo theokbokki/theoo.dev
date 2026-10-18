@@ -7,7 +7,11 @@ export default defineConfig({
         laravel({
             input: ["resources/css/app.scss", "resources/js/app.js"],
             refresh: true,
-            assets: ["resources/img/**", "resources/icons/**"],
+            assets: [
+                "resources/img/**",
+                "resources/icons/**",
+                "resources/favicons/**",
+            ],
             fonts: [
                 local("Comic Sans MS", {
                     alias: "comic",
@@ -40,7 +44,7 @@ export default defineConfig({
                                 "resources/fonts/junicode/JunicodeVF-Italic.ttf",
                             ],
                             weight: 400,
-                            style: 'italic',
+                            style: "italic",
                         },
                     ],
                 }),

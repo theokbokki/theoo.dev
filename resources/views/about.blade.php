@@ -15,9 +15,9 @@
             <p class="about__text">I guess that if you came here, it means you want to either know more about me, or <a href="#colophon" class="about__link">about the website</a>.</p>
             <p class="about__text">I am the proud parent of 3 pets, Matcha, Tsuki and Neko.</p>
             <div class="about__pets">
-                <img src="{{ Vite::asset('resources/img/matcha.webp') }}" alt="" class="about__pet"/>
-                <img src="{{ Vite::asset('resources/img/tsuki.webp') }}" alt="" class="about__pet"/>
-                <img src="{{ Vite::asset('resources/img/neko.webp') }}" alt="" class="about__pet"/>
+                <img src="{{ Vite::asset('resources/img/matcha.webp') }}" alt="My cat Matcha yawning from up close. She's a tiny tabby cat." class="about__pet"/>
+                <img src="{{ Vite::asset('resources/img/tsuki.webp') }}" alt="My cat Tsuki in a 0.5x lens laying on the cat tree. He's a tuxedo boy." class="about__pet"/>
+                <img src="{{ Vite::asset('resources/img/neko.webp') }}" alt="My dog Neko in the park. She's coming towards the camera with her tongue sticking and a white feather on her nose. She's a medium size black and brown dog." class="about__pet"/>
             </div>
             <details class="about__more">
                 <summary class="about__text">More about Matcha</summary>

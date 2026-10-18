@@ -9,6 +9,7 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\Notes\NotesIndexController;
 use App\Http\Controllers\Notes\NotesShowController;
 use App\Http\Controllers\Posts\PostsIndexController;
+use App\Http\Controllers\RssFeedController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
@@ -16,6 +17,8 @@ Route::get('/', HomeController::class)->name('home');
 Route::get('/menu', MenuController::class)->name('menu');
 
 Route::get('/about', AboutController::class)->name('about');
+
+Route::get('/feed', RssFeedController::class)->name('feed');
 
 // NOTES
 Route::get('/notes', NotesIndexController::class)->name('notes.index');

@@ -1,0 +1,129 @@
+@use "../utils" as *;
+
+:root:has(.about) {
+    scroll-behavior: smooth;
+}
+
+.about {
+    background: rgb(var(--black));
+
+    &__main {
+        width: 100%;
+        max-width: rem(422);
+        padding: 0 rem(16) rem(80);
+        margin: 0 auto;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: rem(12);
+    }
+
+    &__avatar {
+        width: rem(64);
+        height: rem(64);
+        border-radius: rem(9999);
+    }
+
+    &__name {
+        font-family: var(--font-sans);
+        line-height: 150%;
+        color: rgb(var(--white));
+    }
+
+    &__email {
+        font-family: var(--font-sans);
+        line-height: 150%;
+        text-decoration: none;
+        color: rgba(var(--white), 0.66);
+    }
+
+    &__content {
+        margin-top: rem(24);
+        scroll-margin-top: rem(40);
+    }
+
+    &__text {
+        font-family: var(--font-sans);
+        line-height: 150%;
+        text-wrap: pretty;
+        text-align: justify;
+        color: rgb(var(--white));
+
+        &:not(:first-child) {
+            margin-top: rem(16);
+        }
+    }
+
+    &__link {
+        font-family: var(--font-sans);
+        line-height: 150%;
+        color: rgb(var(--white));
+    }
+
+    &__pets {
+        display: flex;
+        gap: rem(12);
+        margin-top: rem(48);
+        margin-bottom: rem(24);
+    }
+
+    &__pet {
+        display: inline;
+        min-width: 0;
+        width: 100%;
+        border-radius: rem(24);
+        box-shadow: 0 12px 24px -6px rgb(var(--black));
+        transition: 150ms transform ease-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:not(:first-child, :last-child) {
+            margin-top: rem(-24);
+            margin-bottom: rem(24);
+        }
+
+        &:first-child {
+            transform: rotate(-5deg);
+            z-index: 1;
+
+            &:hover {
+                transform: rotate(-7.5deg) scale(1.1);
+            }
+        }
+
+        &:last-child {
+            transform: rotate(5deg);
+            z-index: 1;
+
+            &:hover {
+                transform: rotate(7.5deg) scale(1.1);
+            }
+        }
+    }
+
+    &__more {
+        margin-top: rem(16)
+    }
+
+    &__divider {
+        border: none;
+        margin: rem(48) 0;
+
+        &:before {
+            content: "---";
+            display: block;
+            color: rgba(var(--white), .66);
+        }
+    }
+
+    &__img {
+        display: block;
+        max-width: 100%;
+        margin: rem(24) auto;
+        border-radius: rem(24);
+    }
+}

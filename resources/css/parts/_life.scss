@@ -1,10 +1,15 @@
 @use "../utils" as *;
 
 .life {
+    &__form {
+        width: max-content;
+        margin: 0 auto;
+    }
+
     &__content {
-        width: calc(100vw - rem(16));
+        width: calc(100vw - rem(32));
         max-width: 65ch;
-        padding: rem(8) rem(8) rem(40);
+        padding: rem(16) 0 rem(40);
         margin: 0;
         font-family: var(--font-mono);
         font-size:rem(16);

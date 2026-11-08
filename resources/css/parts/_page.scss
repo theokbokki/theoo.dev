@@ -1,7 +1,7 @@
 @use "../utils" as *;
 
 .page {
-    min-height: 100dvh;
+    height: calc(100dvh - rem(40));
     padding-bottom: rem(40);
     background-color: hsl(var(--hue) 97% 23%);
     background-attachment: fixed;

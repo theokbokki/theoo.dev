@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Life\LifeIndexController;
 use App\Http\Controllers\Life\LifeUpdateController;
+use App\Http\Controllers\Pages\PageShowController;
 use App\Http\Controllers\Links\LinksIndexController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\Notes\NotesIndexController;
@@ -33,3 +34,8 @@ Route::get('/links', LinksIndexController::class)->name('links.index');
 // LIFE
 Route::get('/life', LifeIndexController::class)->middleware('auth')->name('life.index');
 Route::put('/life/{life}', LifeUpdateController::class)->middleware('auth')->name('life.update');
+
+// Pages
+Route::get('/garden/{path?}', PageShowController::class)
+    ->where('path', '.*')
+    ->name('pages.show');

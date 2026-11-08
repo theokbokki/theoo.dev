@@ -1,11 +1,13 @@
 import Life from "./Life";
 import NoteBackdrop from "./NoteBackdrop";
 import NoteSmallCaps from "./NoteSmallCaps";
+import Page from "./Page";
 
 class App {
     constructor() {
         this.notes();
         this.life();
+        this.pages();
     }
 
     notes() {
@@ -20,6 +22,12 @@ class App {
         const form = document.querySelector(".life__form");
 
         if (form) new Life(form)
+    }
+
+    pages() {
+        const page = document.querySelector(".page");
+
+        if (page) new Page(page);
     }
 }
 

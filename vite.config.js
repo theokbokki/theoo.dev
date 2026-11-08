@@ -48,6 +48,28 @@ export default defineConfig({
                         },
                     ],
                 }),
+                local("Newsreader", {
+                    alias: "newsreader",
+                    variants: [
+                        {
+                            src: [
+                                "resources/fonts/newsreader/Newsreader-Regular.woff2",
+                                "resources/fonts/newsreader/Newsreader-Regular.woff",
+                                "resources/fonts/newsreader/Newsreader-Regular.ttf",
+                            ],
+                            weight: 400,
+                        },
+                        {
+                            src: [
+                                "resources/fonts/newsreader/Newsreader-Italic.woff2",
+                                "resources/fonts/newsreader/Newsreader-Italic.woff",
+                                "resources/fonts/newsreader/Newsreader-Italic.ttf",
+                            ],
+                            weight: 400,
+                            style: "italic",
+                        },
+                    ],
+                }),
             ],
         }),
     ],

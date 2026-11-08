@@ -1,4 +1,9 @@
 <x-layout baseClass="page">
+    <style>
+        :root {
+            --hue: {{ rand(0, 360) }}deg
+        }
+    </style>
     <x-nav/>
     @isset ($page->parent)
         <a href="{{ $page->parent->url() }}" class="page__back">← Back</a>
@@ -8,7 +13,11 @@
 
     @if($page->children->count())
         <details class="page__subpages">
-            <summary class="page__subtitle">Subpages</summary>
+            <summary class="page__subtitle">
+                <span>Subpages</span>
+                <x-icon name="chevron"/>
+            </summary>
+            <hr class="page__divider"/>
             <ul class="page__list">
                 @foreach($page->children as $child)
                     <li class="page__item">

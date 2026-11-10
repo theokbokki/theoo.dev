@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Life\LifeIndexController;
+use App\Http\Controllers\Gallery\GalleryIndexController;
 use App\Http\Controllers\Life\LifeUpdateController;
 use App\Http\Controllers\Pages\PageShowController;
 use App\Http\Controllers\Links\LinksIndexController;
@@ -39,3 +40,6 @@ Route::put('/life/{life}', LifeUpdateController::class)->middleware('auth')->nam
 Route::get('/garden/{path?}', PageShowController::class)
     ->where('path', '.*')
     ->name('pages.show');
+
+// Gallery
+Route::get('/gallery', GalleryIndexController::class)->name('gallery.index');

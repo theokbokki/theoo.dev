@@ -1,9 +1,11 @@
 <x-layout baseClass="page">
-    <style>
-        :root {
-            --hue: {{ rand(0, 360) }}deg
-        }
-    </style>
+    @if(request()->query('color'))
+        <style>
+            :root {
+                --color: {{ request()->query('color') }}deg;
+            }
+        </style>
+    @endif
     <x-nav/>
     @isset ($page->parent)
         <a href="{{ $page->parent->url() }}" class="page__back">← Back</a>
@@ -17,7 +19,6 @@
                 <span>Subpages</span>
                 <x-icon name="chevron"/>
             </summary>
-            <hr class="page__divider"/>
             <ul class="page__list">
                 @foreach($page->children as $child)
                     <li class="page__item">

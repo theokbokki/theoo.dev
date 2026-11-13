@@ -73,6 +73,7 @@
         padding: rem(16);
         background: rgb(var(--white));
         transition: background 150ms ease-out;
+        list-style-type: "";
 
         &:hover {
             background: rgba(var(--grey-96));

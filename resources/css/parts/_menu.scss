@@ -43,6 +43,8 @@
     }
 
     &__item {
+        list-style-type: "";
+
         &:not(:first-child) {
             margin-top: rem(4);
         }

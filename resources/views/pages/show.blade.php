@@ -1,15 +1,16 @@
 <x-layout baseClass="page">
-    @if(request()->query('color'))
-        <style>
-            :root {
-                --color: {{ request()->query('color') }}deg;
-            }
-        </style>
-    @endif
     <x-nav/>
+
     @isset ($page->parent)
         <a href="{{ $page->parent->url() }}" class="page__back">← Back</a>
     @endisset
+
+    <div aria-hidden="true" class="page__theme">
+        <button type="button" class="page__toggle" data-theme="amber">Amber</button>
+        <button type="button" class="page__toggle" data-theme="green">Green</button>
+        <button type="button" class="page__toggle" data-theme="cyan">Cyan</button>
+        <button type="button" class="page__toggle" data-theme="magenta">Magenta</button>
+    </div>
 
     <h1 class="page__title">{{ $page->title }}</h1>
 

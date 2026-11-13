@@ -3,6 +3,18 @@
 :root:has(.page) {
     --hue: var(--color, 320);
 
+    &:after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url("../../img/noise.webp");
+        background-size: 15%;
+        opacity: 0.1;
+        mix-blend-mode: overlay;
+        z-index: 10;
+        pointer-events: none;
+    }
+
     ::selection {
         background: hsl(var(--hue), 73%, 60%, 0.5);
         color: hsl(var(--hue), 48%, 88%);
@@ -42,6 +54,100 @@
         font-weight: bold;
         line-height: 110%;
         text-wrap: pretty;
+    }
+
+    &__theme {
+        display: none;
+        gap: rem(2);
+        width: 100%;
+        max-width: rem(672);
+        padding: rem(16);
+        margin: 0 auto rem(40);
+    }
+
+    &__toggle {
+        flex: 1;
+        display: inline-block;
+        padding: rem(12);
+        font-family: var(--font-martian-mono), var(--font-mono);
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        background: hsl(var(--hue), 8%, 18%);
+        border-radius: rem(2);
+        border: none;
+        box-shadow:
+            0 rem(16) rem(16) rem(-4) rgba(var(--black), .8),
+            0 rem(-0.5) rem(1) 0 rgba(var(--white), .1) inset,
+            0 rem(1) rem(1) 0 rgba(var(--white), .25) inset,
+            rem(0.5) 0 rem(1) 0 rgba(var(--white), .1) inset,
+            rem(-1) 0 rem(1) 0 rgba(var(--white), .25) inset,
+            0 0 rem(1) rem(2) rgba(var(--black), .8);
+
+        &:first-child {
+            border-top-left-radius: rem(12);
+            border-bottom-left-radius: rem(12);
+        }
+
+        &:last-child {
+            border-top-right-radius: rem(12);
+            border-bottom-right-radius: rem(12);
+        }
+
+        &[data-active=true] {
+            z-index: -1;
+        }
+
+        &[data-theme=amber] {
+            color: hsl(19, 73%, 60%, .5);
+
+            &[data-active=true] {
+                box-shadow:
+                    0 0 rem(4) rem(1) rgba(var(--black), .25) inset,
+                    0 0 rem(1) rem(2) rgba(var(--black), .25),
+                    rem(-16) 0 rem(16) rem(-4) rgba(var(--black), .25) inset;
+                color: hsl(19, 73%, 60%, 1);
+            }
+        }
+
+        &[data-theme=green] {
+            color: hsl(120, 73%, 60%, .5);
+
+            &[data-active=true] {
+                box-shadow:
+                    0 0 rem(4) rem(1) rgba(var(--black), .25) inset,
+                    0 0 rem(1) rem(2) rgba(var(--black), .25),
+                    rem(-16) 0 rem(16) rem(-4) rgba(var(--black), .25) inset,
+                    rem(16) 0 rem(16) rem(-4) rgba(var(--black), .25) inset;
+                color: hsl(120, 73%, 60%, 1);
+            }
+        }
+
+        &[data-theme=cyan] {
+            color: hsl(180, 73%, 60%, .5);
+
+            &[data-active=true] {
+                box-shadow:
+                    0 0 rem(4) rem(1) rgba(var(--black), .25) inset,
+                    0 0 rem(1) rem(2) rgba(var(--black), .25),
+                    rem(-16) 0 rem(16) rem(-4) rgba(var(--black), .25) inset,
+                    rem(16) 0 rem(16) rem(-4) rgba(var(--black), .25) inset;
+                color: hsl(180, 73%, 60%, 1);
+            }
+        }
+
+        &[data-theme=magenta] {
+            color: hsl(320, 73%, 60%, .5);
+
+            &[data-active=true] {
+                box-shadow:
+                    0 0 rem(4) rem(1) rgba(var(--black), .25) inset,
+                    0 0 rem(1) rem(2) rgba(var(--black), .25),
+                    rem(16) 0 rem(16) rem(-4) rgba(var(--black), .25) inset;
+                color: hsl(320, 73%, 60%, 1);
+            }
+        }
     }
 
     &__subpages {

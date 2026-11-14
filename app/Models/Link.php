@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 #[Guarded([])]
 class Link extends Model
@@ -18,13 +19,6 @@ class Link extends Model
         static::creating(function (Link $link) {
             $link->favicon ??= $link->fetchFavicon();
         });
-    }
-
-    protected function casts(): array
-    {
-        return [
-            'category' => LinkCategory::class,
-        ];
     }
 
     public function fetchFavicon(): string
@@ -51,5 +45,10 @@ class Link extends Model
         throw_if($stored === false, new \RuntimeException("Could not store favicon for {$host}."));
 
         return $path;
+    }
+
+    public function tags(): BelongsToMany
+    {
+        return $this->belongsToMany(LinkTag::class);
     }
 }

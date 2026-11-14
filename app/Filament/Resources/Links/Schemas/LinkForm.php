@@ -16,7 +16,19 @@ class LinkForm
 
             TextInput::make('description')->required()->columnSpanFull(),
 
-            Select::make('category')->options(LinkCategory::class)->required()->columnSpanFull(),
+            Select::make('tags')
+                ->relationship('tags', 'name')
+                ->multiple()
+                ->searchable()
+                ->preload()
+                ->createOptionForm([
+                    TextInput::make('name')
+                        ->required()
+                        ->maxLength(255)
+                        ->unique(LinkTag::class, 'name'),
+                ])
+                ->required()
+                ->columnSpanFull(),
         ]);
     }
 }

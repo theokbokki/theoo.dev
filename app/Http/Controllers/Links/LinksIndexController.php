@@ -13,12 +13,8 @@ class LinksIndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $linksByCategory = Link::query()
-            ->orderByDesc('created_at')
-            ->get()
-            ->sortBy(fn (Link $link) => $link->category->getOrder())
-            ->groupBy(fn (Link $link) => $link->category->getLabel());
+        $links = Link::query()->orderByDesc('created_at')->get();
 
-        return view('links.index', ['linksByCategory' => $linksByCategory]);
+        return view('links.index', ['links' => $links]);
     }
 }

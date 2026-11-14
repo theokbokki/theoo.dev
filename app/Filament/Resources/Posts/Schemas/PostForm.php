@@ -11,7 +11,7 @@ class PostForm
     public static function configure(Schema $schema): Schema
     {
         return $schema->components([
-            Textarea::make('content')->required()->columnSpanFull(),
+            Textarea::make('content')->columnSpanFull(),
 
             Attachment::repeater(),
         ]);

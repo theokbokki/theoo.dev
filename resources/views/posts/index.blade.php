@@ -23,7 +23,9 @@
                                 @endforeach
                             </div>
                         @endif
-                        <p class="posts__content">{{ $post->content}}</p>
+                        @isset($post->content)
+                            <p class="posts__content">{{ $post->content}}</p>
+                        @endisset
                     </div>
                 @endforeach
             </div>

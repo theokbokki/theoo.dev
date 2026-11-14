@@ -328,6 +328,7 @@
             margin: rem(24) 0;
             background: hsl(var(--hue), 73%, 60%, 0.1);
             box-shadow: 0 rem(6) 0 0 hsl(var(--hue), 48%, 88%, .25) inset;
+            overflow: scroll;
         }
 
         code:not(pre *) {

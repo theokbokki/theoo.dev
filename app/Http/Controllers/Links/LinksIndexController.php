@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Links;
 
 use App\Http\Controllers\Controller;
 use App\Models\Link;
+use App\Models\LinkTag;
 use Illuminate\Http\Request;
 
 class LinksIndexController extends Controller
@@ -13,8 +14,12 @@ class LinksIndexController extends Controller
      */
     public function __invoke(Request $request)
     {
+        $tags = LinkTag::all();
         $links = Link::query()->orderByDesc('created_at')->get();
 
-        return view('links.index', ['links' => $links]);
+        return view('links.index', [
+            'tags' => $tags,
+            'links' => $links,
+        ]);
     }
 }

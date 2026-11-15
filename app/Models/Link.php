@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 #[Guarded([])]
 class Link extends Model
@@ -45,6 +46,16 @@ class Link extends Model
         throw_if($stored === false, new \RuntimeException("Could not store favicon for {$host}."));
 
         return $path;
+    }
+
+
+    protected function getImage(): Attribute
+    {
+        if (!$this->image) {
+            return Attribute::get(fn() => $this->favicon);
+        }
+
+        return Attribute::get(fn() => preg_replace('/(\.\w+)$/', '_thumb$1', $this->image));
     }
 
     public function tags(): BelongsToMany

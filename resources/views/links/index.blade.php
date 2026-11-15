@@ -1,15 +1,20 @@
 <x-layout base-class="links">
     <header class="links__header">
-        <h1 class="links__title">Links</h1>
         <x-nav/>
-        <p class="links__intro">A place to share and bookmark websites, articles, recipes and all other internet stuff I like.</p>
+        <h1 class="links__title">Links</h1>
+        <p class="links__intro">Saving stuff I come across online for later.</p>
+        <div class="links__tags">
+            @foreach($tags as $tag)
+                <a href="{{ route('links.tag', ['tag' => $tag->slug]) }}" class="link__tag">{{ $tag->name }}</a>
+            @endforeach
+        </div>
     </header>
     <main class="links__main">
         <ul class="links__list">
             @foreach($links as $link)
                 <li class="links__item">
                     <a href="{{ $link->url }}" class="links__link" target="_blank">
-                        <img src="storage/{{ $link->favicon }}" alt="" class="links__favicon"/>
+                        <img src="storage/{{ $link->getImage }}" alt="" class="links__favicon"/>
                         <span class="links__url">{{ str($link->url)->chopStart(['https://', 'http://'])->chopStart('www.')->chopEnd('/') }}</span>
                     </a>
                     <p class="links__description">{{ $link->description }}</p>

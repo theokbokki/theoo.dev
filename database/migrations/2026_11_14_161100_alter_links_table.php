@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('links', function (Blueprint $table) {
             $table->dropColumn('category');
+            $table->string('image')->nullable();
         });
     }
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\Gallery\GalleryIndexController;
 use App\Http\Controllers\Life\LifeUpdateController;
 use App\Http\Controllers\Pages\PageShowController;
 use App\Http\Controllers\Links\LinksIndexController;
+use App\Http\Controllers\Links\LinksTagController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\Notes\NotesIndexController;
 use App\Http\Controllers\Notes\NotesShowController;
@@ -31,6 +32,7 @@ Route::get('/posts', PostsIndexController::class)->name('posts.index');
 
 // LINKS
 Route::get('/links', LinksIndexController::class)->name('links.index');
+Route::get('/links/{tag}', LinksTagController::class)->name('links.tag');
 
 // LIFE
 Route::get('/life', LifeIndexController::class)->middleware('auth')->name('life.index');

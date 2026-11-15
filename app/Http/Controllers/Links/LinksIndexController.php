@@ -12,12 +12,17 @@ class LinksIndexController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)
+    public function __invoke(Request $request, ?string $tag = null)
     {
         $tags = LinkTag::all();
-        $links = Link::query()->orderByDesc('created_at')->get();
+
+        $links = Link::query()
+            ->when($tag, fn ($query) => $query->whereRelation('tags', 'name', $tag))
+            ->orderByDesc('created_at')
+            ->get();
 
         return view('links.index', [
+            'current' => $tag,
             'tags' => $tags,
             'links' => $links,
         ]);

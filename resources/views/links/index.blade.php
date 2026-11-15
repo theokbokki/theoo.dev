@@ -4,6 +4,12 @@
         <h1 class="links__title">Links</h1>
         <p class="links__intro">Saving stuff I come across online for later.</p>
         <div class="links__tags">
+            <a
+                href="{{ route('links.index') }}"
+                class="links__tag {{ is_null($current) ? 'links__tag--current' : null }}"
+            >
+                All the things
+            </a>
             @foreach($tags as $tag)
                 <a
                     href="{{ route('links.index', ['tag' => $tag->slug]) }}"
@@ -18,11 +24,11 @@
         <ul class="links__list">
             @foreach($links as $link)
                 <li class="links__item">
-                    <a href="{{ $link->url }}" class="links__link" target="_blank">
-                        <img src="/storage/{{ $link->getImage }}" alt="" class="links__favicon"/>
-                        <span class="links__url">{{ str($link->url)->chopStart(['https://', 'http://'])->chopStart('www.')->chopEnd('/') }}</span>
-                    </a>
+                    <img src="/storage/{{ $link->getImage }}" alt="" class="links__img"/>
                     <p class="links__description">{{ $link->description }}</p>
+                    <a href="{{ $link->url }}" class="links__link" target="_blank">
+                        {{ str($link->url)->chopStart(['https://', 'http://'])->chopStart('www.')->chopEnd('/') }}
+                    </a>
                 </li>
             @endforeach
         </ul>

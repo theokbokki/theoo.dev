@@ -23,7 +23,7 @@ class LinksTable
                     ->description(fn(Link $record): string => $record->description ?? '')
                     ->searchable(),
 
-                TextColumn::make('tags')->badge()->searchable(),
+                TextColumn::make('tags.name')->badge()->searchable(),
 
                 TextColumn::make('created_at')->sortable(),
             ])

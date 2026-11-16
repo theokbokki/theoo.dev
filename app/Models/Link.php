@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Enums\LinkCategory;
 use Illuminate\Database\Eloquent\Attributes\Guarded;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Http;

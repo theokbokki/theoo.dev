@@ -8,11 +8,19 @@ use Illuminate\Database\Eloquent\Attributes\Guarded;
 use Spatie\Sluggable\Attributes\Sluggable;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
+use App\Enums\LinkTagColor;
 
 #[Guarded([])]
 class LinkTag extends Model
 {
     use HasSlug;
+
+    public function casts(): array
+    {
+        return [
+            'hue' => LinkTagColor::class,
+        ];
+    }
 
     public function links(): BelongsToMany
     {

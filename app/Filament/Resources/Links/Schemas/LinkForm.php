@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources\Links\Schemas;
 
-use App\Enums\LinkCategory;
+use App\Enums\LinkTagColor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
@@ -33,6 +33,10 @@ class LinkForm
                         ->required()
                         ->maxLength(255)
                         ->unique(LinkTag::class, 'name'),
+
+                    Select::make('hue')
+                        ->options(LinkTagColor::class)
+                        ->required(),
                 ])
                 ->required()
                 ->columnSpanFull(),

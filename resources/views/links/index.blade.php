@@ -7,6 +7,7 @@
             <a
                 href="{{ route('links.index') }}"
                 class="links__tag {{ is_null($current) ? 'links__tag--current' : null }}"
+                style="--hue: 234"
             >
                 All the things
             </a>
@@ -14,6 +15,7 @@
                 <a
                     href="{{ route('links.index', ['tag' => $tag->slug]) }}"
                     class="links__tag {{ $tag->slug === $current ? 'links__tag--current' : null }}"
+                    style="--hue: {{ $tag->hue->getHue() }}"
                 >
                     {{ $tag->name }}
                 </a>

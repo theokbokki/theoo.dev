@@ -17,7 +17,7 @@ class LinksIndexController extends Controller
         $tags = LinkTag::all();
 
         $links = Link::query()
-            ->when($tag, fn ($query) => $query->whereRelation('tags', 'name', $tag))
+            ->when($tag, fn ($query) => $query->whereRelation('tags', 'slug', $tag))
             ->orderByDesc('created_at')
             ->get();
 

@@ -41,16 +41,16 @@
     &__tag {
         width: max-content;
         padding: rem(6) rem(10);
-        background: rgb(var(--grey-96));
         font-family: var(--font-sans);
         font-size: rem(14);
         text-decoration: none;
-        color: rgb(var(--grey-32));
+        color: hsl(var(--hue) 100% 25%);
+        background: hsl(var(--hue) 100% 96%);
         border-radius: rem(999);
 
         &--current {
-            color: rgb(var(--grey-96));
-            background: rgb(var(--grey-32));
+            background: hsl(var(--hue) 100% 25%);
+            color: hsl(var(--hue) 100% 96%);
         }
     }
 

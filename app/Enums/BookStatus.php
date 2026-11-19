@@ -5,6 +5,7 @@ namespace App\Enums;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasLabel;
 use Illuminate\Contracts\Support\Htmlable;
+use Filament\Support\Colors\Color;
 
 enum BookStatus: string implements HasLabel, HasColor
 {
@@ -28,8 +29,8 @@ enum BookStatus: string implements HasLabel, HasColor
         return match ($this) {
             self::Wishlist => Color::Fuchsia,
             self::ToRead => Color::Orange,
-            self::Reading => Color::Blue,
-            self::Read => Color::Green,
+            self::Reading => Color::Sky,
+            self::Read => Color::Lime,
         };
     }
 }

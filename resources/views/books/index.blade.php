@@ -9,9 +9,13 @@
         <ul class="books__list">
             @foreach($books as $book)
                 <li class="books__item">
-                    <a href="#" class="books__link">{{ $book->title.' by '.$book->author }}</a>
-                    <img src="/storage/{{ $book->cover }}" alt="" class="books__cover" />
-                    <p class="book__status">{{ $book->status->getLabel() }}</p>
+                    <a href="#" class="books__link">
+                        <span class="sro">{{ $book->title.' by '.$book->author }}</span>
+                    </a>
+                    <figure class="books__book">
+                        <img src="/storage/{{ $book->cover }}" alt="" class="books__cover" />
+                    </figure>
+                    <p class="books__status" style="--color: {{ $book->status->getColor()[600] }}">{{ $book->status->getLabel() }}</p>
                 </li>
             @endforeach
         </ul>

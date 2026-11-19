@@ -16,6 +16,7 @@
             <x-menu-item icon="leaf" :href="route('pages.show')" color="#21B200">Garden</x-menu-item>
             <x-menu-item icon="paintbrush" href="https://design.theoo.dev" color="#FF5100">Designs</x-menu-item>
             <x-menu-item icon="gallery" :href="route('gallery.index')" color="#8000FF">Gallery</x-menu-item>
+            <x-menu-item icon="book" :href="route('books.index')" color="#00E5C7">Books</x-menu-item>
         </ul>
     </nav>
     <nav class="menu__nav">

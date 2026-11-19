@@ -81,6 +81,16 @@
             );
             border-radius: rem(8)
         }
+
+        &:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            mix-blend-mode: multiply;
+            background: url('../../img/noise.webp');
+            border-radius: rem(8)
+        }
     }
 
     &__cover {

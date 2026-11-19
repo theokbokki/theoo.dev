@@ -11,6 +11,7 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\Notes\NotesIndexController;
 use App\Http\Controllers\Notes\NotesShowController;
 use App\Http\Controllers\Posts\PostsIndexController;
+use App\Http\Controllers\Books\BooksIndexController;
 use App\Http\Controllers\RssFeedController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,3 +44,6 @@ Route::get('/garden/{path?}', PageShowController::class)
 
 // Gallery
 Route::get('/gallery', GalleryIndexController::class)->name('gallery.index');
+
+// Books
+Route::get('/books', BooksIndexController::class)->name('books.index');
